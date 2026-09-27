@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "evaluar": "node --experimental-strip-types scripts/evaluacion.mjs",
+    "generar-pdfs": "python3 scripts/generar_pdfs.py"
   },
   "dependencies": {
     "next": "16.3.6",
@@ -17,5 +20,6 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "typescript": "^5"
-  }
+  },
+  "description": "Chatbot especializado en el Dia de Muertos en Mexico, con base de conocimiento local y fuentes institucionales verificadas."
 }

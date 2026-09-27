@@ -1,0 +1,66 @@
+{
+  "descripcion": "Conjunto de preguntas de evaluación del chatbot, agrupadas por nivel. El script scripts/evaluacion.mjs ejecuta estas preguntas contra lib/buscador.ts y guarda los resultados en docs/evaluacion.md.",
+  "grupos": [
+    {
+      "nivel": "Básicas",
+      "objetivo": "Verificar que el chatbot explica la celebración, sus fechas y la ofrenda.",
+      "preguntas": [
+        { "pregunta": "¿Qué es el Día de Muertos?", "debeResponder": true, "temaEsperado": "Qué es el Día de Muertos" },
+        { "pregunta": "¿Cuándo se celebra el Día de Muertos?", "debeResponder": true, "temaEsperado": "Fechas de la celebración" },
+        { "pregunta": "¿Qué es una ofrenda?", "debeResponder": true, "temaEsperado": "La ofrenda o altar" }
+      ]
+    },
+    {
+      "nivel": "Intermedias",
+      "objetivo": "Verificar que el chatbot explica elementos concretos de la ofrenda y su significado.",
+      "preguntas": [
+        { "pregunta": "¿Qué significa el cempasúchil?", "debeResponder": true, "temaEsperado": "El cempasúchil" },
+        { "pregunta": "¿Por qué se colocan veladoras?", "debeResponder": true, "temaEsperado": "Veladoras y velas" },
+        { "pregunta": "¿Qué elementos forman parte de una ofrenda?", "debeResponder": true, "temaEsperado": "Elementos de una ofrenda" },
+        { "pregunta": "¿Por qué se pone agua en la ofrenda?", "debeResponder": true, "temaEsperado": "El agua en la ofrenda" },
+        { "pregunta": "¿Para qué sirve la sal en la ofrenda?", "debeResponder": true, "temaEsperado": "La sal en la ofrenda" },
+        { "pregunta": "¿Por qué se colocan fotografías?", "debeResponder": true, "temaEsperado": "Las fotografías en la ofrenda" },
+        { "pregunta": "¿Qué es el pan de muerto?", "debeResponder": true, "temaEsperado": "El pan de muerto" },
+        { "pregunta": "¿Qué son las calaveritas de azúcar?", "debeResponder": true, "temaEsperado": "Calaveras y calaveritas" },
+        { "pregunta": "¿Qué es el papel picado?", "debeResponder": true, "temaEsperado": "El papel picado" }
+      ]
+    },
+    {
+      "nivel": "Comparativas",
+      "objetivo": "Verificar que el chatbot distingue el Día de Muertos de Halloween.",
+      "preguntas": [
+        { "pregunta": "¿Cuál es la diferencia entre el Día de Muertos y Halloween?", "debeResponder": true, "temaEsperado": "Día de Muertos frente a Halloween" },
+        { "pregunta": "¿No es lo mismo que Halloween?", "debeResponder": true, "temaEsperado": "Día de Muertos frente a Halloween" }
+      ]
+    },
+    {
+      "nivel": "Culturales",
+      "objetivo": "Verificar que el chatbot explica la diversidad regional y el significado cultural.",
+      "preguntas": [
+        { "pregunta": "¿El Día de Muertos se celebra igual en todo México?", "debeResponder": true, "temaEsperado": "Variaciones regionales" },
+        { "pregunta": "¿Por qué existen diferentes formas de celebrar esta tradición?", "debeResponder": true, "temaEsperado": "Variaciones regionales" },
+        { "pregunta": "¿Por qué es importante el Día de Muertos?", "debeResponder": true, "temaEsperado": "Significado cultural" },
+        { "pregunta": "¿Cuál es el origen prehispánico de esta tradición?", "debeResponder": true, "temaEsperado": "Origen prehispánico" },
+        { "pregunta": "¿Qué es el sincretismo en el Día de Muertos?", "debeResponder": true, "temaEsperado": "Sincretismo religioso" },
+        { "pregunta": "¿Quién es La Catrina?", "debeResponder": true, "temaEsperado": "La Catrina" },
+        { "pregunta": "¿El Día de Muertos es patrimonio de la humanidad?", "debeResponder": true, "temaEsperado": "Declaración de patrimonio de la UNESCO" },
+        { "pregunta": "¿Qué es Mictlantecuhtli?", "debeResponder": true, "temaEsperado": "Mictlantecuhtli y el inframundo" },
+        { "pregunta": "¿Cómo se celebra hoy en día?", "debeResponder": true, "temaEsperado": "Cómo se celebra en la actualidad" }
+      ]
+    },
+    {
+      "nivel": "De control (fuera de alcance)",
+      "objetivo": "Verificar que el chatbot reconoce los límites de su base de conocimiento y no inventa respuestas.",
+      "preguntas": [
+        { "pregunta": "¿Cuál es la capital de Francia?", "debeResponder": false },
+        { "pregunta": "¿Cuánto cuesta un boleto de avión a Oaxaca?", "debeResponder": false },
+        { "pregunta": "Explícame la Segunda Guerra Mundial.", "debeResponder": false },
+        { "pregunta": "¿Qué clima hace mañana en la Ciudad de México?", "debeResponder": false },
+        { "pregunta": "¿Quién ganó el mundial de fútbol de 1998?", "debeResponder": false },
+        { "pregunta": "Dame la receta de las enchiladas verdes.", "debeResponder": false },
+        { "pregunta": "¿Cómo se hace un transistor?", "debeResponder": false },
+        { "pregunta": "¿Cuántos habitantes tiene Tokio?", "debeResponder": false }
+      ]
+    }
+  ]
+}

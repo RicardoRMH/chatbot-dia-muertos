@@ -1,0 +1,244 @@
+.contenedor {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.encabezado {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.titulo {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  line-height: 1.2;
+  color: #f3e7d3;
+  letter-spacing: 0.02em;
+}
+
+.subtitulo {
+  margin: 0 auto;
+  max-width: 46rem;
+  color: #c9b79a;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.marca {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  margin-bottom: 0.9rem;
+  border: 1px solid #7a4b2a;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #d9b98c;
+}
+
+.panel {
+  background: #1c1613;
+  border: 1px solid #3a2b22;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: 480px;
+  max-height: 70vh;
+  overflow: hidden;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: #241c17;
+  border-bottom: 1px solid #3a2b22;
+  font-size: 0.85rem;
+  color: #c9b79a;
+}
+
+.estado {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7fbf6a;
+}
+
+.botonLimpiar {
+  background: transparent;
+  border: 1px solid #4a372b;
+  color: #c9b79a;
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  cursor: pointer;
+}
+
+.botonLimpiar:hover {
+  border-color: #d9b98c;
+  color: #f3e7d3;
+}
+
+.hilo {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.mensaje {
+  max-width: 82%;
+  padding: 0.75rem 0.95rem;
+  border-radius: 12px;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  font-size: 0.95rem;
+}
+
+.mensajeUsuario {
+  align-self: flex-end;
+  background: #5a2f22;
+  color: #fdf6ec;
+  border-bottom-right-radius: 3px;
+}
+
+.mensajeBot {
+  align-self: flex-start;
+  background: #2a211b;
+  color: #ecdfcd;
+  border: 1px solid #3d2e25;
+  border-bottom-left-radius: 3px;
+}
+
+.mensajeBot p {
+  margin: 0 0 0.7rem;
+}
+
+.mensajeBot p:last-child {
+  margin-bottom: 0;
+}
+
+.autor {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b08a5e;
+  margin-bottom: 0.35rem;
+}
+
+.fuentes {
+  margin-top: 0.7rem;
+  padding-top: 0.55rem;
+  border-top: 1px dashed #4a372b;
+  font-size: 0.8rem;
+}
+
+.fuentesTitulo {
+  color: #b08a5e;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.fuenteEnlace {
+  display: block;
+  color: #d9b98c;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.fuenteEnlace:hover {
+  text-decoration: underline;
+}
+
+.sinFuente {
+  align-self: flex-start;
+  background: #2a1f1a;
+  border: 1px solid #5a4030;
+  color: #e8d5bd;
+  border-radius: 12px;
+  border-bottom-left-radius: 3px;
+  padding: 0.75rem 0.95rem;
+  max-width: 82%;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.sugerencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0 1.1rem 0.8rem;
+}
+
+.sugerencia {
+  background: #241c17;
+  border: 1px solid #4a372b;
+  color: #d9b98c;
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.sugerencia:hover {
+  border-color: #d9b98c;
+}
+
+.formulario {
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.85rem 1.1rem 1rem;
+  border-top: 1px solid #3a2b22;
+  background: #201915;
+}
+
+.entrada {
+  flex: 1;
+  background: #14100d;
+  border: 1px solid #4a372b;
+  border-radius: 8px;
+  color: #f3e7d3;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+}
+
+.entrada:focus {
+  outline: none;
+  border-color: #d9b98c;
+}
+
+.botonEnviar {
+  background: #b4551f;
+  border: none;
+  color: #fff3e4;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.botonEnviar:hover {
+  background: #cf6226;
+}
+
+.aviso {
+  margin: 1rem auto 0;
+  max-width: 46rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #9c8b72;
+}
