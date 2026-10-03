@@ -1,55 +1,104 @@
 # Chatbot del Día de Muertos
 
-Chatbot web especializado en el **Día de Muertos en México**. Funciona con una base de
-conocimiento local en archivos JSON y con un buscador de palabras clave: no usa ninguna
-API de inteligencia artificial, ninguna base de datos externa ni ningún servicio de pago.
+Chatbot web especializado en el **Día de Muertos en México**. Responde con una base de
+conocimiento local en archivos JSON y un buscador de palabras clave: **no usa ninguna API
+de inteligencia artificial, ni modelos de lenguaje, ni vectores, ni embeddings, ni servicios
+de pago**. Cada respuesta muestra su fuente, y cuando no encuentra información suficiente lo
+declara en lugar de inventar.
 
-El chatbot muestra la fuente de cada respuesta y, cuando no encuentra información
-suficiente, lo declara en lugar de inventar.
+```text
+¿Qué es?      → un chatbot que explica el Día de Muertos y cita sus fuentes
+¿Cómo funciona?→ comparación de palabras clave y sinónimos sobre 50 entradas
+¿Qué archivos importan? → app/ · components/ · lib/ · data/
+¿Cómo lo ejecuto? → npm install && npm run dev
+¿Cómo lo despliego? → Vercel, importando el repositorio
+```
 
-## Datos del proyecto
+---
 
-| Dato | Valor |
+## Objetivo
+
+Servir como fuente de información confiable y citada sobre la tradición mexicana del Día de
+Muertos: qué es, cuándo se celebra, su origen prehispánico, el contacto con el calendario
+católico, las ofrendas y cada uno de sus elementos, las fechas para niños, adultos y mascotas,
+las variaciones por región, la Catrina, las calaveras literarias, las actividades prácticas
+con niños y su declaración como patrimonio de la UNESCO.
+
+Todo el conocimiento está en el repositorio: el proyecto no depende de ningún servicio
+externo para funcionar.
+
+## Tecnologías
+
+| Tecnología | Uso |
 | --- | --- |
-| Entradas de conocimiento | 50 |
-| Palabras clave | 738 |
-| Sinónimos y formas alternativas | 212 |
-| Preguntas de ejemplo | 209 |
-| Conceptos del catálogo | 29 |
-| Fuentes documentadas | 29 |
-| Resultado de la evaluación | 50 de 50 aciertos (más 10 de 10 controles fuera de alcance) |
+| Next.js 16.3.6 (App Router, Turbopack) | Framework y servidor |
+| React 19 + TypeScript | Interfaz y lógica |
+| CSS Modules | Estilos, sin dependencias extra |
+| Archivos JSON locales | Base de conocimiento, fuentes y casos de evaluación |
+| `@supabase/supabase-js` | **Opcional.** Bitácora de interacciones, no parte del conocimiento |
+| Python 3 + ReportLab | Generación de los tres PDF de entrega |
 
-Las 50 entradas tienen versión para niños. De ellas, 18 declaran explícitamente si su
-contenido es un dato documentado, una tradición, una recomendación práctica o un criterio
-del propio proyecto, para que la respuesta no presente una costume familiar como regla
-general.
+## Estructura
+
+```text
+chatbot-dia-muertos/
+├── app/
+│   ├── layout.tsx            # estructura HTML y metadatos
+│   ├── page.tsx              # página principal: solo monta el chatbot
+│   ├── globals.css           # estilos generales
+│   └── favicon.ico
+├── components/
+│   ├── Chatbot.tsx           # interfaz del chat, memoria de la conversación
+│   └── Chatbot.module.css    # estilos de la interfaz
+├── lib/
+│   ├── motor.ts              # normalización, catálogo de conceptos, puntaje y umbral
+│   ├── buscador.ts           # carga los datos y arma la respuesta con sus fuentes
+│   ├── supabase.ts           # registro opcional de interacciones
+│   └── tipos.ts              # tipos de TypeScript
+├── data/
+│   ├── conocimiento.json     # 50 entradas de conocimiento
+│   ├── fuentes.json          # 29 fuentes con institución, URL y justificación
+│   └── evaluacion.json       # 50 preguntas de evaluación + 10 de control
+├── scripts/
+│   ├── evaluacion.mjs        # corre la evaluación y genera docs/evaluacion.md
+│   ├── diagnostico.mjs       # ranking de entradas por pregunta (depuración)
+│   └── generar_pdfs.py       # genera los tres documentos PDF
+├── docs/
+│   ├── 1-fundamentacion.pdf
+│   ├── 2-documentacion-tecnica.pdf
+│   ├── 3-guia-despliegue.pdf
+│   ├── evaluacion.md         # resultados de la última evaluación (generado)
+│   └── SUPABASE.md           # detalle del registro de interacciones (opcional)
+├── .env.example              # plantilla de variables, sin valores
+├── package.json
+└── next.config.ts
+```
 
 ## Requisitos
 
 - Node.js 20 o superior
 - npm
 
-No se necesita ninguna otra cosa: ni llaves de API, ni cuentas de pago. El chatbot
-arranca sin configurar nada; las variables de entorno solo hacen falta si quieres
-registrar las interacciones en Supabase (ver `docs/SUPABASE.md`).
+No hace falta ninguna otra cosa: ni llaves de API, ni cuentas de pago, ni base de datos. El
+chatbot arranca sin configurar nada.
 
-## Ejecutar localmente
+## Instalar y ejecutar
 
 ```bash
 npm install
 npm run dev
 ```
 
-Después abre <http://localhost:3000>.
+Abre <http://localhost:3000>.
 
-## Otros comandos
+### Otros comandos
 
 ```bash
-npm run build       # compila la versión de producción
-npm run start       # ejecuta la versión compilada
-npm run typecheck   # revisa los tipos de TypeScript
-npm run evaluar     # ejecuta las preguntas de prueba y regenera docs/evaluacion.md
-npm run generar-pdfs # regenera los tres documentos PDF
+npm run build        # compila la versión de producción
+npm run start        # ejecuta la versión compilada
+npm run typecheck    # revisa los tipos de TypeScript
+npm run evaluar      # ejecuta las 60 preguntas de prueba y regenera docs/evaluacion.md
+npm run generar-pdfs # regenera los tres documentos PDF (requiere: pip install reportlab)
 ```
 
 Para depurar por qué una pregunta se resuelve con una entrada y no con otra:
@@ -59,153 +108,124 @@ node --experimental-strip-types scripts/diagnostico.mjs            # ranking de 
 node --experimental-strip-types scripts/diagnostico.mjs --fallos   # solo las que fallan
 ```
 
-## Estructura
+## Componentes importantes
 
-```text
-chatbot-dia-muertos/
-├── app/
-│   ├── page.tsx              # página principal
-│   ├── layout.tsx            # estructura HTML y metadatos
-│   └── globals.css           # estilos generales
-├── components/
-│   ├── Chatbot.tsx           # interfaz del chat
-│   └── Chatbot.module.css    # estilos de la interfaz
-├── lib/
-│   ├── motor.ts              # normalización, puntaje y umbral de búsqueda
-│   ├── buscador.ts           # carga los datos y arma la respuesta con fuentes
-│   ├── supabase.ts           # registra cada interacción en Supabase
-│   └── tipos.ts              # tipos de TypeScript
-├── data/
-│   ├── conocimiento.json     # base de conocimiento (50 entradas)
-│   ├── fuentes.json          # fuentes con institución, URL y justificación
-│   └── evaluacion.json       # 50 preguntas de evaluación + 10 de control
-├── scripts/                  # herramientas en uso (las que ejecuta npm run)
-│   ├── evaluacion.mjs        # corre la evaluación y genera el reporte
-│   ├── diagnostico.mjs       # muestra el ranking de entradas por pregunta
-│   └── generar_pdfs.py       # genera los tres documentos PDF
-├── docs/                     # entregables y notas
-│   ├── 1-fundamentacion.pdf
-│   ├── 2-documentacion-tecnica.pdf
-│   ├── 3-guia-despliegue.pdf
-│   ├── SUPABASE.md           # cómo conectar la base de datos de interacciones
-│   ├── evaluacion.md         # resultados de las pruebas (generado)
-│   └── ampliacion-de-conocimientos.md  # apuntes de investigación
-├── .env.example              # plantilla de variables, sin valores
-└── iteraciones/              # histórico del proceso de supervisión
-    ├── evaluar-linea-base-iteracion-{1,3,5,6}.mjs
-    └── iteracion-{1,3,5,6}-linea-base.json
-```
+| Archivo | Responsabilidad |
+| --- | --- |
+| `app/page.tsx` | Punto de entrada. Renderiza `<Chatbot />`. |
+| `components/Chatbot.tsx` | **Componente cliente.** Estado del hilo, envío de preguntas, sugerencias, memoria del último turno y registro de la interacción. |
+| `lib/motor.ts` | Normaliza el texto (minúsculas, sin acentos ni signos), detecta el dominio del chatbot, activa conceptos y calcula el puntaje de cada entrada. |
+| `lib/buscador.ts` | Importa los JSON, decide qué respuesta se muestra, resuelve sus fuentes y arma el mensaje de fuera de alcance. |
+| `lib/supabase.ts` | Registro opcional en Supabase. Nunca lanza: si falla, solo escribe en la consola. |
+| `lib/tipos.ts` | Tipos compartidos (`EntradaConocimiento`, `Fuente`, `RespuestaBot`…). |
+| `data/*.json` | El conocimiento. Editar aquí es la única forma de cambiar lo que sabe el chatbot. |
 
-`iteraciones/` es archivo histórico: cada pareja script + reporte guarda el estado de la
-línea base en la iteración correspondiente del proceso de supervisión. No forma parte del
-flujo actual — la evaluación que se mantiene es `scripts/evaluacion.mjs`, la que ejecuta
-`npm run evaluar` y de la que salen `docs/evaluacion.md` y los tres PDF. Los scripts
-archivados se lanzan a mano y escriben su reporte dentro de `iteraciones/`:
+### Flujo de una pregunta
 
-```bash
-node --experimental-strip-types iteraciones/evaluar-linea-base-iteracion-6.mjs
-```
+1. El usuario escribe en `components/Chatbot.tsx`, que llama a `responder()`.
+2. `lib/motor.ts` normaliza la pregunta y comprueba que pertenezca al tema (lista `DOMINIO`,
+   229 términos). Si no, el chatbot declara que no tiene esa información.
+3. Se activan los conceptos del catálogo que la pregunta menciona.
+4. Se comparan palabras clave y sinónimos contra cada entrada. Las claves que aparecen en
+   pocas entradas valen más; las frases largas valen un poco más.
+5. Se suma el puntaje de coincidencias, el bonus de conceptos, el de las preguntas de ejemplo
+   parecidas y el del título del tema, y se ordena.
+6. Si la mejor entrada supera el umbral (puntaje ≥ 3), `lib/buscador.ts` devuelve su respuesta
+   y sus fuentes. Si no, devuelve el mensaje de fuera de alcance.
 
-`evaluar-linea-base-iteracion-5.mjs` está archivado sin poder ejecutarse: importa
-`lib/buscador.ts`, cuyos imports sin extensión (`./motor`, `./tipos`) solo resuelve el
-empaquetador de Next.js, no el cargador de módulos de Node. Se conserva como registro.
+**Un detalle que resultó clave.** Al activar un concepto se añaden sus alias a la pregunta,
+para que "flor naranja" alcance la entrada del cempasúchil. Como esa expansión sumaba peso
+completo por cada alias, la entrada con más sinónimos ganaba siempre. Por eso las
+coincidencias se separan en **directas** (peso completo) y **de alias** (peso fraccionado,
+con máximo de dos por entrada): la expansión sigue encontrando la entrada correcta, pero ya
+no decide el resultado.
 
-## Cómo funciona, en corto
+## Base de conocimiento y fuentes
 
-1. El usuario escribe una pregunta en `components/Chatbot.tsx`.
-2. `lib/motor.ts` normaliza el texto (minúsculas, sin acentos ni signos) y comprueba
-   que la pregunta pertenezca al tema con la lista `DOMINIO`.
-3. Se activan los conceptos del catálogo que la pregunta menciona (flor, ofrenda,
-   niveles, manualidades, obligación, etc.).
-4. Se comparan las palabras clave y sinónimos de cada entrada contra la pregunta. Las
-   que aparecen en pocas entradas valen más y las frases de varias palabras valen un poco
-   más. Las claves repetidas tras normalizar ("fotografía" y "fotografia") se cuentan
-   una sola vez.
-5. Se suma el peso de las coincidencias, el bonus de los conceptos activados, el de las
-   preguntas de ejemplo parecidas y el del título del tema, y se ordena por puntaje.
-6. Si la mejor entrada supera el umbral, `lib/buscador.ts` devuelve su respuesta, su
-   fuente y la nota de nivel correspondiente. Si no, devuelve el mensaje de fuera de
-   alcance.
+Contenido real de `data/`:
 
-### Un detalle que resultó clave
+| Dato | Valor |
+| --- | --- |
+| Entradas de conocimiento | 50, en 21 categorías |
+| Palabras clave | 773 |
+| Sinónimos y formas alternativas | 214 |
+| Preguntas de ejemplo | 209 |
+| Conceptos del catálogo | 30 |
+| Entradas con versión para niños | 50 (todas) |
+| Entradas que declaran su nivel de información | 18 |
+| Fuentes documentadas | 29 |
 
-Al activar un concepto se añaden sus alias a la pregunta, para que "flor naranja" alcance
-la entrada del cempasúchil aunque el usuario nunca escriba esa palabra. Esa expansión
-sumaba peso completo por cada alias encontrado, y hacía que la entrada con más sinónimos
-ganara siempre: "¿Qué significado tiene el pan de muerto?" terminaba en la entrada de
-comida, que además de "pan de muerto" declara tamales, mole, atole, pulque y dulce.
+Cada entrada guarda su respuesta, sus palabras clave, sus sinónimos, sus preguntas de ejemplo,
+su prioridad, sus fuentes y —opcionalmente— una versión para niños, sinónimos, conceptos, el
+nivel con el que debe presentarse (`documentado`, `tradicion`, `recomendacion`, `proyecto`) y
+una nota o advertencia.
 
-Por eso las coincidencias se separan en dos: las **directas**, que escribió el usuario y
-valen su peso completo, y las **de alias**, que solo sirven de pista y valen una fracción
-del peso, con un máximo de dos por entrada. La expansión sigue encontrando la entrada
-correcta, pero ya no decide el resultado.
-
-No hay modelos de lenguaje, vectores ni embeddings: solo comparación de textos.
+Las 29 fuentes están en `data/fuentes.json`, clasificadas por naturaleza: 11 institucionales,
+9 académicas, 5 de prensa, 3 de divulgación y 1 propia del proyecto. De cada una se guarda la
+institución, el documento, la URL, la información obtenida, por qué es apropiada y qué parte
+del chatbot fundamenta. Las 29 están citadas por al menos una entrada y la evaluación comprueba
+que no queden referencias rotas.
 
 ## Evaluación
 
-`data/evaluacion.json` contiene las 50 preguntas de evaluación repartidas en seis bloques
-—básicas, cultura, razonamiento y aplicación, detección de información incorrecta,
-aplicación práctica y preguntas difíciles— más un bloque de 10 preguntas de control que
-el chatbot debe rechazar por estar fuera de su base de conocimiento.
+`data/evaluacion.json` contiene 60 preguntas: 50 de evaluación en seis bloques (básicas,
+cultura, razonamiento y aplicación, detección de información incorrecta, aplicación práctica y
+preguntas difíciles) y 10 de control, que el chatbot debe rechazar por estar fuera de su base.
 
 ```bash
 npm run evaluar
 ```
 
 El comando escribe `docs/evaluacion.md` con, para cada pregunta, el tema encontrado, el
-puntaje, las palabras que coincidieron, el segundo candidato y las fuentes citadas. Además
-separa el resultado de las 50 preguntas de evaluación del de las de control, y reporta
-por escrito las preguntas que fallan y las que se resolvieron con un tema distinto al
-esperado.
+puntaje, las palabras que coincidieron, el segundo candidato y las fuentes citadas; separa el
+resultado de las 50 preguntas del de las de control, y reporta las que fallan y las que se
+resolvieron con un tema distinto al esperado.
 
-## Registro de interacciones
+**Resultado actual: 60/60 (50/50 de evaluación y 10/10 de control), 0 fallas y 0 referencias
+rotas.**
 
-Cada turno de conversación se guarda en la tabla `interacciones` de Supabase con la
-pregunta, la respuesta que se mostró y las fuentes citadas. El registro ocurre en
-`lib/supabase.ts`, desde el navegador y **después** de que la respuesta ya esté en
-pantalla: si Supabase no está configurado, está caído o rechaza el INSERT, el chatbot
-responde igual y el error solo aparece en la consola con el prefijo `[supabase]`.
+## Registro de interacciones (opcional)
 
-La base de datos se usa únicamente como bitácora para analizar después dónde falla la
-búsqueda. No entrena nada, no altera el conocimiento y la evaluación del proyecto sigue
-siendo `npm run evaluar`.
+Cada turno se puede guardar en la tabla `interacciones` de Supabase con la pregunta, la
+respuesta mostrada y los identificadores de las fuentes citadas. El registro ocurre **después**
+de que la respuesta ya esté en pantalla, así que si Supabase no está configurado, está caído o
+rechaza el `INSERT`, el chatbot responde igual y el error solo aparece en la consola con el
+prefijo `[supabase]`.
 
-Para conectarla hace falta crear la tabla y su política RLS, y definir dos variables de
-entorno. Todo el paso a paso está en **`docs/SUPABASE.md`**; la plantilla de variables
-está en `.env.example`:
+La base de datos se usa **solo como bitácora** para analizar después dónde falla la búsqueda:
+no entrena nada, no altera el conocimiento y la evaluación del proyecto sigue siendo
+`npm run evaluar`.
 
-```bash
-cp .env.example .env.local   # y rellenar con tus credenciales
-```
+Solo hay dos variables de entorno, ambas opcionales:
 
-## Fuentes
+| Variable | Para qué sirve |
+| --- | --- |
+| `NEXT_PUBLIC_SUPABASE_URL` | URL del proyecto de Supabase. |
+| `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Clave publicable, que autoriza el `INSERT` junto con la política RLS. |
 
-Las 29 fuentes están documentadas en `data/fuentes.json` y se clasifican por naturaleza:
-11 institucionales, 9 académicas, 5 de prensa, 3 de divulgación y 1 propia del proyecto.
-Todas las externas incluyen institución, documento, URL, la información obtenida, por qué
-es apropiada y qué parte del chatbot fundamenta. Las 29 están citadas por al menos una
-entrada de la base, y la evaluación comprueba que no haya referencias rotas.
+Copia `.env.example` a `.env.local` si quieres activarlo. El detalle de la tabla y de la
+política RLS está en [`docs/SUPABASE.md`](docs/SUPABASE.md).
 
-## Documentos del proyecto
+## Despliegue
+
+El proyecto es un Next.js estándar, sin servidor propio ni variables obligatorias, así que se
+despliega en [Vercel](https://vercel.com) importando el repositorio de GitHub y pulsando
+**Deploy**. No hay nada que configurar para que funcione.
+
+Si quieres registrar interacciones en producción, añade las dos variables de Supabase en
+**Project Settings → Environment Variables** y vuelve a desplegar. Los pasos completos están
+en `docs/3-guia-despliegue.pdf`.
+
+## Documentos de entrega
 
 - `docs/1-fundamentacion.pdf` — Fundamentación del Chatbot del Día de Muertos
-- `docs/2-documentacion-tecnica.pdf` — Documentación técnica del Chatbot del Día de Muertos
-- `docs/3-guia-despliegue.pdf` — Guía de despliegue del Chatbot
+- `docs/2-documentacion-tecnica.pdf` — Documentación técnica
+- `docs/3-guia-despliegue.pdf` — Guía de despliegue
 
-Los tres PDF se generan con un script de Python para que sus cifras (entradas, fuentes,
-resultados) siempre coincidan con el código:
+Los tres se generan con un script de Python que lee el estado real del repositorio, de modo que
+sus cifras (entradas, fuentes, resultados) no puedan desincronizarse del código:
 
 ```bash
 pip install reportlab
 npm run generar-pdfs
 ```
-
-## Despliegue
-
-El proyecto es un Next.js estándar, así que se despliega en Vercel conectando el
-repositorio de GitHub: importar el repositorio y pulsar Deploy. Si quieres registrar
-las interacciones en producción, añade en Vercel las variables `NEXT_PUBLIC_SUPABASE_URL`
-y `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` y vuelve a desplegar; sin ellas el chatbot
-funciona igual, solo que no queda registro. Los pasos completos están en
-`docs/3-guia-despliegue.pdf` y las variables se explican en `docs/SUPABASE.md`.

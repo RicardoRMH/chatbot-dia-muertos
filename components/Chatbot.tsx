@@ -4,8 +4,6 @@ import { useEffect, useRef, useState } from "react";
 
 import {
   MENSAJE_FUERA_DE_ALCANCE,
-  TOTAL_ENTRADAS,
-  TOTAL_FUENTES,
   responder,
 } from "@/lib/buscador";
 import { registrarInteraccion } from "@/lib/supabase";
