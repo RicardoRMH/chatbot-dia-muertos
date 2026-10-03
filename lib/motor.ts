@@ -1111,6 +1111,139 @@ export function puntuarEntrada(
   };
 }
 
+export type TipoInteraccionSocial =
+  | "saludo"
+  | "agradecimiento"
+  | "despedida"
+  | "cortesia"
+  | "confirmacion"
+  | "identidad";
+
+export function clasificarInteraccionSocial(
+  preguntaNormalizada: string
+): TipoInteraccionSocial | null {
+  if (!preguntaNormalizada) return null;
+  const texto = ` ${preguntaNormalizada} `;
+
+  const patrones = {
+    saludo: [
+      "hola",
+      "buenos dias",
+      "buenas tardes",
+      "buenas noches",
+      "que tal",
+      "saludos",
+      "buen dia",
+      "que onda",
+      "quiubole",
+      "quiubole",
+      "buenas",
+      "hola bot",
+      "hey",
+      "que hubo",
+      "buenas buenas",
+      "hola compa",
+      "que tal amigos",
+      "hola a todos",
+      "que milagro",
+      "hola buenas",
+      "amigo",
+      "hola amigo",
+    ],
+    agradecimiento: [
+      "gracias",
+      "muchas gracias",
+      "mil gracias",
+      "te lo agradezco",
+      "muy amable",
+      "gracias por la ayuda",
+      "excelente",
+      "gracias por tu ayuda",
+      "gracias por la informacion",
+      "muy amable gracias",
+      "gracias bot",
+      "gracias amigo",
+    ],
+    despedida: [
+      "adios",
+      "hasta luego",
+      "hasta pronto",
+      "nos vemos",
+      "chao",
+      "bye",
+      "hasta manana",
+      "me despido",
+      "que tengas buen dia",
+      "hasta la proxima",
+      "que pases buen dia",
+      "nos vemos pronto",
+      "que tengas buena tarde",
+      "hasta luego gracias",
+    ],
+    cortesia: [
+      "de nada",
+      "por nada",
+      "no hay de que",
+      "con gusto",
+      "para servirte",
+      "a la orden",
+      "un placer",
+      "igualmente",
+      "gracias a ti",
+      "a ti buen dia",
+    ],
+    confirmacion: [
+      " ok ",
+      "ok ",
+      " ok",
+      "vale",
+      "entendido",
+      "de acuerdo",
+      "perfecto",
+      "muy bien",
+      "quedo claro",
+      "ya veo",
+      "comprendo",
+      "listo",
+      "excelente explicacion",
+    ],
+    identidad: [
+      "como estas",
+      "como te va",
+      "quien eres",
+      "como te llamas",
+      "eres un robot",
+      "eres una inteligencia artificial",
+      "que puedes hacer",
+      "que tal tu dia",
+      "de que podemos hablar",
+      "en que me puedes ayudar",
+      "disculpa me puedes ayudar",
+      "por favor ayudame",
+      "una pregunta por favor",
+    ],
+  };
+
+  for (const [tipo, claves] of Object.entries(patrones)) {
+    for (const clave of claves) {
+      if (texto.includes(` ${clave} `) || texto.startsWith(`${clave} `) || texto.endsWith(` ${clave}`) || texto === ` ${clave} `) {
+        if (clave.length > 1 && texto.includes(clave)) {
+          // comprobación simple
+        }
+        return tipo as TipoInteraccionSocial;
+      }
+    }
+  }
+  // Casos especiales con regex
+  if (/\b(ok|vale)\b/.test(preguntaNormalizada)) return "confirmacion";
+  if (/\b(gracias)\b/.test(preguntaNormalizada)) return "agradecimiento";
+  if (/\b(hola|buenos\s+dias|buenas\s+tardes|buenas\s+noches)\b/.test(preguntaNormalizada)) return "saludo";
+  if (/\b(adios|hasta\s+luego|hasta\s+pronto|nos\s+vemos|chao|bye)\b/.test(preguntaNormalizada)) return "despedida";
+  if (/\b(de\s+nada|por\s+nada|no\s+hay\s+de\s+que|con\s+gusto)\b/.test(preguntaNormalizada)) return "cortesia";
+  if (/\b(quien\s+eres|como\s+te\s+llamas|que\s+puedes\s+hacer|como\s+estas)\b/.test(preguntaNormalizada)) return "identidad";
+  return null;
+}
+
 export function ordenarPorPuntaje(
   evaluadas: EvaluacionEntrada[]
 ): EvaluacionEntrada[] {

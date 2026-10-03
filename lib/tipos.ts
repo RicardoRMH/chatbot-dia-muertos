@@ -63,6 +63,14 @@ export interface BaseFuentes {
   fuentes: Fuente[];
 }
 
+export type TipoInteraccionSocial =
+  | "saludo"
+  | "agradecimiento"
+  | "despedida"
+  | "cortesia"
+  | "confirmacion"
+  | "identidad";
+
 export interface RespuestaBot {
   encontrado: boolean;
   texto: string;

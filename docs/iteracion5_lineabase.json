@@ -1,0 +1,1009 @@
+{
+  "resumen": {
+    "aciertos": 97,
+    "rechazadasConError": 0,
+    "sobrecargadasInadecuadas": 0
+  },
+  "resultados": [
+    {
+      "id": 1,
+      "categoria": "saludo",
+      "entrada": "Hola",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 2,
+      "categoria": "saludo",
+      "entrada": "Buenos días",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 3,
+      "categoria": "saludo",
+      "entrada": "Buenas tardes",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 4,
+      "categoria": "saludo",
+      "entrada": "Buenas noches",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 5,
+      "categoria": "saludo",
+      "entrada": "Hola bot",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 6,
+      "categoria": "saludo",
+      "entrada": "Saludos",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 7,
+      "categoria": "saludo",
+      "entrada": "Buen día",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 8,
+      "categoria": "saludo",
+      "entrada": "Hey hola",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 9,
+      "categoria": "saludo",
+      "entrada": "Hola qué tal",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 10,
+      "categoria": "saludo",
+      "entrada": "Hola amigo",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 11,
+      "categoria": "saludo_coloquial",
+      "entrada": "Qué onda",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 12,
+      "categoria": "saludo_coloquial",
+      "entrada": "Quiúbole",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 13,
+      "categoria": "saludo_coloquial",
+      "entrada": "Qué hubo",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 14,
+      "categoria": "saludo_coloquial",
+      "entrada": "Buenas buenas",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 15,
+      "categoria": "saludo_coloquial",
+      "entrada": "Buenas",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 16,
+      "categoria": "saludo_coloquial",
+      "entrada": "Hola compa",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 17,
+      "categoria": "saludo_coloquial",
+      "entrada": "Qué tal amigos",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 18,
+      "categoria": "saludo_coloquial",
+      "entrada": "Hola a todos",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 19,
+      "categoria": "saludo_coloquial",
+      "entrada": "Qué milagro",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 20,
+      "categoria": "saludo_coloquial",
+      "entrada": "Hola buenas",
+      "tipoEsperado": "social_saludo",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 21,
+      "categoria": "agradecimiento",
+      "entrada": "Gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 22,
+      "categoria": "agradecimiento",
+      "entrada": "Muchas gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 23,
+      "categoria": "agradecimiento",
+      "entrada": "Mil gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 24,
+      "categoria": "agradecimiento",
+      "entrada": "Te lo agradezco",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 25,
+      "categoria": "agradecimiento",
+      "entrada": "Muchas gracias por la información",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 26,
+      "categoria": "agradecimiento",
+      "entrada": "Muy amable, gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 27,
+      "categoria": "agradecimiento",
+      "entrada": "Gracias por tu ayuda",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 28,
+      "categoria": "agradecimiento",
+      "entrada": "Excelente, gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 29,
+      "categoria": "agradecimiento",
+      "entrada": "Muchas gracias bot",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 30,
+      "categoria": "agradecimiento",
+      "entrada": "Gracias amigo",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 31,
+      "categoria": "despedida",
+      "entrada": "Adiós",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 32,
+      "categoria": "despedida",
+      "entrada": "Hasta luego",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 33,
+      "categoria": "despedida",
+      "entrada": "Hasta pronto",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 34,
+      "categoria": "despedida",
+      "entrada": "Nos vemos",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 35,
+      "categoria": "despedida",
+      "entrada": "Chao",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 36,
+      "categoria": "despedida",
+      "entrada": "Bye bye",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 37,
+      "categoria": "despedida",
+      "entrada": "Me despido",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 38,
+      "categoria": "despedida",
+      "entrada": "Que tengas buen día",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 39,
+      "categoria": "despedida",
+      "entrada": "Hasta mañana",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 40,
+      "categoria": "despedida",
+      "entrada": "Hasta la próxima",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 41,
+      "categoria": "confirmacion",
+      "entrada": "OK",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 42,
+      "categoria": "confirmacion",
+      "entrada": "Entendido",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 43,
+      "categoria": "confirmacion",
+      "entrada": "Vale",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 44,
+      "categoria": "confirmacion",
+      "entrada": "De acuerdo",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 45,
+      "categoria": "confirmacion",
+      "entrada": "Perfecto",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 46,
+      "categoria": "confirmacion",
+      "entrada": "Muy bien",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 47,
+      "categoria": "confirmacion",
+      "entrada": "Quedó claro",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 48,
+      "categoria": "confirmacion",
+      "entrada": "Ya veo",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 49,
+      "categoria": "confirmacion",
+      "entrada": "Comprendo",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?"
+    },
+    {
+      "id": 50,
+      "categoria": "confirmacion",
+      "entrada": "Excelente explicación",
+      "tipoEsperado": "social_confirmacion",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 51,
+      "categoria": "cortesia",
+      "entrada": "De nada",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 52,
+      "categoria": "cortesia",
+      "entrada": "Por nada",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 53,
+      "categoria": "cortesia",
+      "entrada": "No hay de qué",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 54,
+      "categoria": "cortesia",
+      "entrada": "Con gusto",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 55,
+      "categoria": "cortesia",
+      "entrada": "Para servirte",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 56,
+      "categoria": "cortesia",
+      "entrada": "A la orden",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 57,
+      "categoria": "cortesia",
+      "entrada": "Un placer",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 58,
+      "categoria": "cortesia",
+      "entrada": "Igualmente",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy."
+    },
+    {
+      "id": 59,
+      "categoria": "cortesia",
+      "entrada": "Gracias a ti",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 60,
+      "categoria": "cortesia",
+      "entrada": "A ti, buen día",
+      "tipoEsperado": "social_cortesia",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 61,
+      "categoria": "identidad",
+      "entrada": "¿Cómo estás?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 62,
+      "categoria": "identidad",
+      "entrada": "¿Cómo te va?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 63,
+      "categoria": "identidad",
+      "entrada": "¿Quién eres?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 64,
+      "categoria": "identidad",
+      "entrada": "¿Cómo te llamas?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 65,
+      "categoria": "identidad",
+      "entrada": "¿Eres un robot?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 66,
+      "categoria": "identidad",
+      "entrada": "¿Eres una inteligencia artificial?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 67,
+      "categoria": "identidad",
+      "entrada": "¿Qué puedes hacer?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 68,
+      "categoria": "identidad",
+      "entrada": "¿Qué tal tu día?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 69,
+      "categoria": "identidad",
+      "entrada": "¿De qué podemos hablar?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 70,
+      "categoria": "identidad",
+      "entrada": "¿En qué me puedes ayudar?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 71,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola, ¿qué es el Día de Muertos?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Qué es el Día de Muertos",
+      "textoRespuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecid"
+    },
+    {
+      "id": 72,
+      "categoria": "saludo_pregunta",
+      "entrada": "Buenos días, ¿qué elementos lleva una ofrenda?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Elementos de la ofrenda y su significado",
+      "textoRespuesta": "Estos son los elementos principales y su significado:\n\n- Cempasúchil: la flor que da la bienvenida y"
+    },
+    {
+      "id": 73,
+      "categoria": "saludo_pregunta",
+      "entrada": "Buenas tardes, ¿cuándo llegan las almas?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": false,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres co"
+    },
+    {
+      "id": 74,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola bot, ¿qué significa el cempasúchil?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": false,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Los significados del cempasúchil",
+      "textoRespuesta": "No. El cempasúchil tiene varios significados documentados y ninguno de ellos es el significado ofici"
+    },
+    {
+      "id": 75,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola, ¿por qué se pone sal en la ofrenda?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "La sal en la ofrenda",
+      "textoRespuesta": "La sal es el elemento de purificación de la ofrenda.\n\nSu significado es de cuidado: se ofrece para q"
+    },
+    {
+      "id": 76,
+      "categoria": "saludo_pregunta",
+      "entrada": "Buen día, ¿qué representa el pan de muerto?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume "
+    },
+    {
+      "id": 77,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola qué tal, ¿cuál es la diferencia con Halloween?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Día de Muertos frente a Halloween",
+      "textoRespuesta": "No son lo mismo. Conviene distinguir sus orígenes y sus prácticas.\n\nEl Día de Muertos mexicano tiene"
+    },
+    {
+      "id": 78,
+      "categoria": "saludo_pregunta",
+      "entrada": "Buenas noches, ¿qué son las calaveritas literarias?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Calaveras literarias",
+      "textoRespuesta": "Las calaveras literarias son un género mexicano: versos que se escriben en vísperas del Día de Muert"
+    },
+    {
+      "id": 79,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola, ¿quién fue José Guadalupe Posada?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de"
+    },
+    {
+      "id": 80,
+      "categoria": "saludo_pregunta",
+      "entrada": "Saludos, ¿cómo se hace una ofrenda sencilla?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Cómo hacer una ofrenda sencilla",
+      "textoRespuesta": "Una ofrenda sencilla no es una ofrenda incompleta: es una ofrenda con lo que hay. La tradición no ex"
+    },
+    {
+      "id": 81,
+      "categoria": "saludo_pregunta",
+      "entrada": "Qué onda, ¿cuándo llegan los perros y gatos?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": false,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 82,
+      "categoria": "saludo_pregunta",
+      "entrada": "Buenas, ¿qué significa el papel picado?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "El papel picado",
+      "textoRespuesta": "El papel picado es el adorno de papel de las ofrendas, las tumbas y los caminos de la festividad. Se"
+    },
+    {
+      "id": 83,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola, ¿para qué se enciende copal?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "El copal y el incienso",
+      "textoRespuesta": "El copal es la resina que se quema para sahumar el lugar. La National Geographic lo explica así: su "
+    },
+    {
+      "id": 84,
+      "categoria": "saludo_pregunta",
+      "entrada": "Buen día, ¿qué es el Mictlán?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Mictlantecuhtli y el inframundo",
+      "textoRespuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muerto"
+    },
+    {
+      "id": 85,
+      "categoria": "saludo_pregunta",
+      "entrada": "Hola amigo, ¿por qué se ponen velas?",
+      "tipoEsperado": "mixto_saludo_pregunta",
+      "esAdecuado": true,
+      "tipoObtenido": "informativa",
+      "temaObtenido": "Veladoras y velas",
+      "textoRespuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se coloca"
+    },
+    {
+      "id": 86,
+      "categoria": "mixto_despedida",
+      "entrada": "Muchas gracias, adiós",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 87,
+      "categoria": "mixto_despedida",
+      "entrada": "Gracias por todo, hasta luego",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 88,
+      "categoria": "mixto_despedida",
+      "entrada": "Excelente explicación, muchas gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 89,
+      "categoria": "mixto_despedida",
+      "entrada": "Entendido, mil gracias por tu ayuda",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 90,
+      "categoria": "mixto_despedida",
+      "entrada": "Perfecto, me quedó muy claro. Adiós",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos."
+    },
+    {
+      "id": 91,
+      "categoria": "mixto_despedida",
+      "entrada": "Gracias amigo, que pases buen día",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?"
+    },
+    {
+      "id": 92,
+      "categoria": "mixto_despedida",
+      "entrada": "Ok gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 93,
+      "categoria": "mixto_despedida",
+      "entrada": "Vale, muchas gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 94,
+      "categoria": "mixto_despedida",
+      "entrada": "Listo, gracias",
+      "tipoEsperado": "social_agradecimiento",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 95,
+      "categoria": "mixto_despedida",
+      "entrada": "Disculpa, ¿me puedes ayudar?",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 96,
+      "categoria": "mixto_despedida",
+      "entrada": "Por favor ayúdame",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 97,
+      "categoria": "mixto_despedida",
+      "entrada": "Una pregunta por favor",
+      "tipoEsperado": "social_identidad",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofre"
+    },
+    {
+      "id": 98,
+      "categoria": "mixto_despedida",
+      "entrada": "Gracias, nos vemos pronto",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 99,
+      "categoria": "mixto_despedida",
+      "entrada": "Muy amable, que tengas buena tarde",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    },
+    {
+      "id": 100,
+      "categoria": "mixto_despedida",
+      "entrada": "Hasta luego, gracias por la información",
+      "tipoEsperado": "social_despedida",
+      "esAdecuado": true,
+      "tipoObtenido": "social",
+      "temaObtenido": null,
+      "textoRespuesta": "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?"
+    }
+  ]
+}
