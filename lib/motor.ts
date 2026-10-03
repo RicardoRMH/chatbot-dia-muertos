@@ -389,7 +389,90 @@ export const SINONIMOS_ADICIONALES: Record<string, string[]> = {
   manualidad: ["manualidades","artesania","dibujo","mascaras de catrina","mascara de catrina"],
 };
 
-export function normalizar(texto: string): string {
+/**
+ * Abreviaturas de chat que se escriben con frecuencia. Sin expandirlas, un
+ * "xq" o un "k" se cuelan como palabras sueltas y rompen la frase.
+ */
+const ABREVIATURAS: [RegExp, string][] = [
+  [/\bxq\b/g, "por que"],
+  [/\bxfa\b/g, "por favor"],
+  [/\bke\b/g, "que"],
+  [/\bk\b/g, "que"],
+  [/\bq\b/g, "que"],
+  [/\bcm\b/g, "como"],
+  [/\bd\b/g, "de"],
+];
+
+/**
+ * Únicas letras que sí se repiten en español. Cualquier otra letra repetida
+ * dos o más veces se interpreta como error de dedo y se reduce a una.
+ */
+const LETRAS_REPETIBLES = new Set(["r", "l", "c", "n"]);
+
+/**
+ * Palabras del dominio que los usuarios escriben pegadas. La clave es el
+ * fragmento pegado y el valor la frase ya separada.
+ */
+const CONCATENADOS: [string, string][] = [
+  ["comosehaceunaofrenda", "como se hace una ofrenda"],
+  ["floresdecempasuchil", "flores de cempasuchil"],
+  ["calaveritasdeazucar", "calaveritas de azucar"],
+  ["calaverasdeazucar", "calaveras de azucar"],
+  ["altardemuertos", "altar de muertos"],
+  ["comosehace", "como se hace"],
+  ["diademuertos", "dia de muertos"],
+  ["pandemuerto", "pan de muerto"],
+  ["papelpicado", "papel picado"],
+  ["cuandoes", "cuando es"],
+  ["quienfue", "quien fue"],
+  ["quees", "que es"],
+  ["mictlan", "mictlan"],
+];
+
+/**
+ * Palabras del dominio que los usuarios escriben partidas por espacios
+ * indebidos, separando una sílaba de la siguiente.
+ */
+const SILABAS_PARTIDAS: [string, string][] = [
+  ["pa pel pi ca do", "papel picado"],
+  ["ce men te rio", "cementerio"],
+  ["to dos san tos", "todos santos"],
+  ["cem pasu chil", "cempasuchil"],
+  ["ca la ve ra", "calavera"],
+  ["ca tri na", "catrina"],
+  ["muer tos", "muertos"],
+  ["mi ctl an", "mictlan"],
+  ["ofren da", "ofrenda"],
+  ["muer to", "muerto"],
+  ["al tar", "altar"],
+];
+
+/** Grafías que se oyen igual pero se escriben distinto. */
+const FONETICAS: Record<string, string> = {
+  halloweeen: "halloween",
+  hallowen: "halloween",
+  jalowin: "halloween",
+  sempasuchil: "cempasuchil",
+  zenpasuchil: "cempasuchil",
+  asucar: "azucar",
+  sensillo: "sencillo",
+  orijen: "origen",
+  tradision: "tradicion",
+  vuertos: "muertos",
+  belas: "velas",
+  uesos: "huesos",
+  salal: "sal al",
+};
+
+/** Los mapas de fragmentos se consultan del más largo al más corto. */
+const CONCATENADOS_ORDENADOS = [...CONCATENADOS].sort(
+  (a, b) => b[0].length - a[0].length
+);
+const SILABAS_PARTIDAS_ORDENADAS = [...SILABAS_PARTIDAS].sort(
+  (a, b) => b[0].length - a[0].length
+);
+
+function limpiar(texto: string): string {
   return texto
     .toLowerCase()
     .normalize("NFD")
@@ -399,24 +482,231 @@ export function normalizar(texto: string): string {
     .trim();
 }
 
+/**
+ * Palabras que el motor ya conoce de por sí: los términos del dominio, los de
+ * cada concepto y los alias que se inyectan al expandir una pregunta.
+ *
+ * Sirven de escudo para las correcciones de la normalización. "Mictlantecuhtli"
+ * contiene "mictlan" y "creencia" tiene una "ee" de más, pero ninguna de las
+ * dos es un error de dedo: son palabras que el chatbot ya usa. Solo se corrigen
+ * las palabras que no están en esta lista, que son las únicas que pueden venir
+ * mal escritas.
+ */
+const VOCABULARIO = new Set<string>();
+for (const termino of DOMINIO) VOCABULARIO.add(limpiar(termino));
+for (const concepto of CONCEPTOS) {
+  for (const termino of concepto.terminos) VOCABULARIO.add(limpiar(termino));
+}
+for (const alias of Object.values(SINONIMOS_ADICIONALES)) {
+  for (const termino of alias) VOCABULARIO.add(limpiar(termino));
+}
+
+function expandirAbreviaturas(texto: string): string {
+  let resultado = texto;
+  for (const [patron, expansion] of ABREVIATURAS) {
+    resultado = resultado.replace(patron, expansion);
+  }
+  return resultado;
+}
+
+/**
+ * Reduce las letras repetidas por error de dedo: "diaaa" -> "dia",
+ * "offrenda" -> "ofrenda", "veeladoras" -> "veladoras". Las parejas que sí
+ * existen en español (rr, ll, cc, nn) se conservan, de modo que "gollete" o
+ * "miccailhuitl" no se rompen.
+ */
+function colapsarRepeticiones(texto: string): string {
+  return texto
+    .split(" ")
+    .map((token) =>
+      VOCABULARIO.has(token)
+        ? token
+        : token
+            .replace(/(.)\1{2,}/g, "$1")
+            .replace(/([a-z])\1+/g, (parada, letra: string) =>
+              LETRAS_REPETIBLES.has(letra) ? parada : letra
+            )
+    )
+    .join(" ");
+}
+
+/**
+ * Abre las palabras del dominio que llegaron pegadas. Se recorre cada token
+ * buscando los fragmentos conocidos, de más largo a más corto, y se repite
+ * hasta que ya no quede nada que abrir: así "queeseldiademuertos" termina
+ * como "que es el dia de muertos" sin tener que enumerar cada caso.
+ */
+function separarConcatenados(texto: string): string {
+  let actual = texto;
+  for (let vuelta = 0; vuelta < 4; vuelta++) {
+    const abierto = actual
+      .split(" ")
+      .map((token) =>
+        VOCABULARIO.has(token)
+          ? token
+          : CONCATENADOS_ORDENADOS.reduce(
+              (resultado, [pegado, separado]) =>
+                resultado.includes(pegado)
+                  ? resultado.split(pegado).join(` ${separado} `)
+                  : resultado,
+              token
+            )
+      )
+      .join(" ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    if (abierto === actual) break;
+    actual = abierto;
+  }
+  return actual;
+}
+
+/** Vuelve a unir las palabras que llegaron partidas por espacios indebidos. */
+function unirSilabasPartidas(texto: string): string {
+  let resultado = texto;
+  for (const [partida, unida] of SILABAS_PARTIDAS_ORDENADAS) {
+    resultado = resultado.split(partida).join(unida);
+  }
+  return resultado.replace(/\s+/g, " ").trim();
+}
+
+function corregirFoneticas(texto: string): string {
+  return texto
+    .split(" ")
+    .map((token) => FONETICAS[token] ?? token)
+    .join(" ");
+}
+
+/**
+ * Normaliza el texto antes de buscarlo: minúsculas, sin acentos, sin
+ * puntuación y, además, con las correcciones que toleratea la forma en que la
+ * gente escribe de verdad: abreviaturas de chat, letras repetidas, palabras
+ * pegadas o partidas y confusiones fonéticas.
+ */
+export function normalizar(texto: string): string {
+  let resultado = limpiar(texto);
+  resultado = expandirAbreviaturas(resultado);
+  // Las palabras pegadas se abren antes de tratar las letras repetidas: si se
+  // hicera al revés, "queesel" se quedaría en "quesel" y la palabra pegada
+  // "quees" dejaría de reconocerse.
+  resultado = separarConcatenados(resultado);
+  resultado = colapsarRepeticiones(resultado);
+  resultado = unirSilabasPartidas(resultado);
+  resultado = corregirFoneticas(resultado);
+  return resultado.replace(/\s+/g, " ").trim();
+}
+
+/**
+ * Distancia de edición entre dos palabras: cuántos cambios de una letra por
+ * otra, de inserción o de borrado hay que hacer para pasar de una a otra.
+ * Se usa como medida de "error de dedo".
+ */
+export function distanciaLevenshtein(a: string, b: string): number {
+  if (a === b) return 0;
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  if (Math.abs(a.length - b.length) > 2) return Math.abs(a.length - b.length);
+
+  const d: number[][] = [];
+  for (let i = 0; i <= a.length; i++) {
+    d[i] = [i];
+  }
+  for (let j = 0; j <= b.length; j++) {
+    d[0][j] = j;
+  }
+
+  for (let i = 1; i <= a.length; i++) {
+    for (let j = 1; j <= b.length; j++) {
+      const costo = a[i - 1] === b[j - 1] ? 0 : 1;
+      d[i][j] = Math.min(
+        d[i - 1][j] + 1, // eliminación
+        d[i][j - 1] + 1, // inserción
+        d[i - 1][j - 1] + costo // sustitución
+      );
+    }
+  }
+  return d[a.length][b.length];
+}
+
 function contienePalabra(texto: string, palabra: string): boolean {
   return texto.includes(` ${palabra} `);
 }
 
 /**
+ * Dos palabras de la misma longitud que solo se diferencian en una letra
+ * intercambiada ("muerots" por "muertos") son una metátesis, un error de
+ * dedo. Si la diferencia es de otra letra ("mexico" por "mexica") son dos
+ * palabras distintas, y dar por pertenecer al dominio la segunda arrastraría
+ * preguntas que no son del tema.
+ */
+function esMetaesis(a: string, b: string): boolean {
+  if (a.length !== b.length) return false;
+  const distintos: number[] = [];
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) distintos.push(i);
+    if (distintos.length > 2) return false;
+  }
+  if (distintos.length !== 2) return false;
+  const [i, j] = distintos;
+  return j === i + 1 && a[i] === b[j] && a[j] === b[i];
+}
+
+function palabrasDe(texto: string): string[] {
+  return texto.split(" ").filter((p) => p.length > 0);
+}
+
+/**
+ * Términos del dominio de cinco letras o más. Solo estos intervienen en la
+ * verificación difusa: son los que un error de dedo puede volver irreconocibles
+ * y, a la vez, los que no se confunden con cualquier otra palabra.
+ */
+const DOMINIO_LARGOS = DOMINIO.filter((termino) => termino.length >= 5);
+
+/**
  * Decide si una pregunta queda fuera del alcance del chatbot.
  *
- * Solo se consulta el listado de términos del dominio y se comparan como
- * palabras completas. No se aceptan los conceptos activados como puerta de
- * entrada: una pregunta de control como "¿Cuánto cuesta un boleto de avión a
- * Oaxaca?" activa el concepto "regional" por la palabra Oaxaca, y eso no
- * significa que el chatbot sepa de viajes.
+ * Se consulta el listado de términos del dominio y se comparan como palabras
+ * completas. No se aceptan los conceptos activados como puerta de entrada: una
+ * pregunta de control como "¿Cuánto cuesta un boleto de avión a Oaxaca?"
+ * activa el concepto "regional" por la palabra Oaxaca, y eso no significa que
+ * el chatbot sepa de viajes.
+ *
+ * Cuando ninguna palabra completa coincide, se admiten dos recortes que no
+ * cambian el alcance, solo la forma de escribir:
+ *
+ * 1. un término del dominio escrito con un error de dedo ("ofremda");
+ * 2. una pregunta pegada que aun así contiene un término del dominio
+ *    ("queeseldiademuertos").
  */
 export function esFueraDelDominio(preguntaNormalizada: string): boolean {
-  if (preguntaNormalizada.length === 0) return true;
-  return !DOMINIO.some((termino) =>
-    contienePalabra(` ${preguntaNormalizada} `, termino)
+  const pregunta = preguntaNormalizada.trim();
+  if (pregunta.length === 0) return true;
+
+  const conEspacios = ` ${pregunta} `;
+  if (DOMINIO.some((termino) => contienePalabra(conEspacios, termino))) {
+    return false;
+  }
+
+  const tokens = palabrasDe(pregunta).filter(
+    (p) => p.length >= 4 && !PARADAS.has(p)
   );
+  for (const token of tokens) {
+    for (const termino of DOMINIO_LARGOS) {
+      if (token.length !== termino.length) {
+        // una letra de más o de menos: "murto" por "muerto"
+        if (distanciaLevenshtein(token, termino) <= 1) return false;
+        continue;
+      }
+      // mismo número de letras: solo vale si están cambiadas de sitio
+      if (esMetaesis(token, termino)) return false;
+    }
+  }
+
+  const pegada = pregunta.replace(/\s+/g, "");
+  if (DOMINIO_LARGOS.some((termino) => pegada.includes(termino))) return false;
+
+  return true;
 }
 
 /** Identificadores de los conceptos que se activan con la pregunta dada. */
@@ -525,6 +815,67 @@ export function pesosPorConcepto(
   return pesos;
 }
 
+/**
+ * Errores de dedo que se toleran en una palabra clave, según su longitud.
+ * Las palabras cortas no admiten aproximaciones: "pan" debe ser "pan".
+ */
+function toleranciaDeClave(clave: string): number {
+  if (clave.length >= 8) return 2;
+  if (clave.length >= 5) return 1;
+  return 0;
+}
+
+/**
+ * ¿Es la misma palabra en otro número? Las desinencias que se comprueban más
+ * abajo ya cubren el singular de la clave contra el plural de la pregunta.
+ * Estas dos formas son ese mismo caso al revés, y se dejan fuera de la
+ * comparación difusa para no contar dos veces la misma voz: si la entrada
+ * declara "fotografia" y "fotografias", una pregunta bien escrita debe puntuar
+ * igual que antes.
+ */
+function esMismaPalabraEnOtroNumero(clave: string, token: string): boolean {
+  return (
+    clave === `${token}s` ||
+    clave === `${token}es` ||
+    (clave.length > 3 && token === `${clave}s`) ||
+    (clave.length > 4 && token === `${clave}es`)
+  );
+}
+
+/**
+ * ¿Algún token de la pregunta es la palabra clave con un error de dedo?
+ * Solo se comparan longitudes parecidas, porque un mismo número de cambios no
+ * significa lo mismo en "cempasuchil" que en "flor".
+ *
+ * Con `exigirError` la coincidencia exacta deja de contar y solo vale una
+ * palabra realmente mal escrita.
+ */
+function coincideDifuso(
+  clave: string,
+  tokens: string[],
+  exigirError = false
+): boolean {
+  const tolerancia = toleranciaDeClave(clave);
+  if (tolerancia === 0) return false;
+
+  for (const token of tokens) {
+    if (exigirError && token === clave) continue;
+    if (Math.abs(token.length - clave.length) > tolerancia) continue;
+    if (esMismaPalabraEnOtroNumero(clave, token)) continue;
+    if (distanciaLevenshtein(token, clave) <= tolerancia) return true;
+  }
+  return false;
+}
+
+/**
+ * ¿La palabra clave aparece en la pregunta?
+ *
+ * Primero se busca tal cual, con las desinencias de género y número. Si no,
+ * se acepta que el usuario la haya escrito con un error de dedo: una palabra
+ * sola se compara con los tokens de la pregunta por distancia de edición, y
+ * una clave de varias palabras se acepta si todas sus partes aparecen, exacto
+ * o aproximado.
+ */
 export function coincidePalabraClave(
   claveNormalizada: string,
   preguntaNormalizada: string
@@ -533,12 +884,26 @@ export function coincidePalabraClave(
 
   if (claveNormalizada.includes(" ")) {
     if (conEspacios.includes(` ${claveNormalizada} `)) return true;
-    if (claveNormalizada.split(" ").length === 2) {
-      return claveNormalizada
-        .split(" ")
-        .every((p) => contienePalabra(conEspacios, p));
+
+    const partes = claveNormalizada.split(" ");
+    // Una clave de dos palabras se arma con que sus dos partes estén en la
+    // pregunta, como antes. Una clave más larga solo se arma por partes si
+    // alguna de ellas está mal escrita: si todas aparecen tal cual, se exige
+    // la frase completa, que es lo que evita que "que significa el pan de
+    // muerto" se le adune a cualquier pregunta que mencione el pan de
+    // muerto y mueva la respuesta de una pregunta bien escrita.
+    if (partes.length > 2) {
+      const tokens = palabrasDe(preguntaNormalizada);
+      const algunaMalEscrita = partes.some((p) =>
+        coincideDifuso(p, tokens, true)
+      );
+      if (!algunaMalEscrita) return false;
     }
-    return false;
+
+    const tokens = palabrasDe(preguntaNormalizada);
+    return partes.every(
+      (p) => contienePalabra(conEspacios, p) || coincideDifuso(p, tokens)
+    );
   }
 
   if (contienePalabra(conEspacios, claveNormalizada)) return true;
@@ -555,7 +920,7 @@ export function coincidePalabraClave(
     if (contienePalabra(conEspacios, `${claveNormalizada}es`)) return true;
   }
 
-  return false;
+  return coincideDifuso(claveNormalizada, palabrasDe(preguntaNormalizada));
 }
 
 export function esPreguntaInfantil(preguntaNormalizada: string): boolean {

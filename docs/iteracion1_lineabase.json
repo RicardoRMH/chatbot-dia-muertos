@@ -1,0 +1,1663 @@
+{
+  "resumen": {
+    "correctas": 71,
+    "respondidas": 93,
+    "noRespondidas": 7,
+    "temaErroneo": 22
+  },
+  "fallasPorCategoria": {
+    "palabras concatenadas": {
+      "total": 10,
+      "fallas": 2
+    },
+    "espacios indebidos": {
+      "total": 10,
+      "fallas": 2
+    },
+    "ausencia de acentos": {
+      "total": 10,
+      "fallas": 2
+    },
+    "mayúsculas caóticas": {
+      "total": 8,
+      "fallas": 2
+    },
+    "espacios múltiples": {
+      "total": 6,
+      "fallas": 1
+    },
+    "teclas adyacentes": {
+      "total": 12,
+      "fallas": 4
+    },
+    "confusión fonética": {
+      "total": 12,
+      "fallas": 5
+    },
+    "omisión de letras": {
+      "total": 10,
+      "fallas": 4
+    },
+    "duplicación de letras": {
+      "total": 10,
+      "fallas": 1
+    },
+    "transposición": {
+      "total": 6,
+      "fallas": 4
+    },
+    "múltiples errores": {
+      "total": 6,
+      "fallas": 2
+    }
+  },
+  "resultados": [
+    {
+      "id": 1,
+      "categoria": "palabras concatenadas",
+      "pregunta": "queeseldiademuertos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.2,
+      "palabrasCoincidentes": [
+        "que es el dia de muertos",
+        "que es"
+      ],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Qué es el Día de Muertos",
+      "textoRespuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Ocu"
+    },
+    {
+      "id": 2,
+      "categoria": "palabras concatenadas",
+      "pregunta": "pandemuerto",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.85,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 3,
+      "categoria": "palabras concatenadas",
+      "pregunta": "calaveritasdeazucar",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 27.25,
+      "palabrasCoincidentes": [
+        "calaveras",
+        "calaverita",
+        "calaveritas",
+        "calaveritas de azúcar",
+        "azucar",
+        "calaveritos",
+        "calaverito de azucar",
+        "calaveritos de azucar"
+      ],
+      "temaEsperado": "Calaveras y calaveritas",
+      "temaObtenido": "Calaveras y calaveritas",
+      "textoRespuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar, de chocolate y de amaranto, que se colocan en los altares junto con el pan de muerto. Su fo"
+    },
+    {
+      "id": 4,
+      "categoria": "palabras concatenadas",
+      "pregunta": "papelpicado",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12,
+      "palabrasCoincidentes": [
+        "papel picado",
+        "papel",
+        "picado"
+      ],
+      "temaEsperado": "El papel picado",
+      "temaObtenido": "El papel picado",
+      "textoRespuesta": "El papel picado es el adorno de papel de las ofrendas, las tumbas y los caminos de la festividad. Se reconoce por sus siluetas recortadas y por sus co"
+    },
+    {
+      "id": 5,
+      "categoria": "palabras concatenadas",
+      "pregunta": "altardemuertos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.41,
+      "palabrasCoincidentes": [
+        "altar",
+        "altar de muertos"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 6,
+      "categoria": "palabras concatenadas",
+      "pregunta": "comosehaceunaofrenda",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 10.38,
+      "palabrasCoincidentes": [
+        "ofrenda"
+      ],
+      "temaEsperado": "Cómo hacer una ofrenda sencilla",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 7,
+      "categoria": "palabras concatenadas",
+      "pregunta": "floresdecempasuchil",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.06,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "flores",
+        "flor",
+        "flores de cempasuchil"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 8,
+      "categoria": "palabras concatenadas",
+      "pregunta": "cuandoeseldiademuertos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 6.77,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Fechas de la celebración",
+      "temaObtenido": "Significado cultural",
+      "textoRespuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se mater"
+    },
+    {
+      "id": 9,
+      "categoria": "palabras concatenadas",
+      "pregunta": "quienfueposada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 7.15,
+      "palabrasCoincidentes": [
+        "posada"
+      ],
+      "temaEsperado": "La Catrina",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los"
+    },
+    {
+      "id": 10,
+      "categoria": "palabras concatenadas",
+      "pregunta": "queeselmictlan",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 8,
+      "palabrasCoincidentes": [
+        "mictlan"
+      ],
+      "temaEsperado": "Mictlantecuhtli y el inframundo",
+      "temaObtenido": "Mictlantecuhtli y el inframundo",
+      "textoRespuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muertos, más Tecutli, señor: el señor de la mansión de l"
+    },
+    {
+      "id": 11,
+      "categoria": "espacios indebidos",
+      "pregunta": "cem pasu chil",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 8.48,
+      "palabrasCoincidentes": [
+        "cempasuchil"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 12,
+      "categoria": "espacios indebidos",
+      "pregunta": "pan de muer to",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.85,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 13,
+      "categoria": "espacios indebidos",
+      "pregunta": "ca la ve ra de azucar",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 9.93,
+      "palabrasCoincidentes": [
+        "calavera",
+        "calaverita",
+        "azucar"
+      ],
+      "temaEsperado": "Calaveras y calaveritas",
+      "temaObtenido": "Calaveras y calaveritas",
+      "textoRespuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar, de chocolate y de amaranto, que se colocan en los altares junto con el pan de muerto. Su fo"
+    },
+    {
+      "id": 14,
+      "categoria": "espacios indebidos",
+      "pregunta": "ofren da de muertos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 10.05,
+      "palabrasCoincidentes": [
+        "ofrenda",
+        "ofrenda de muertos"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 15,
+      "categoria": "espacios indebidos",
+      "pregunta": "mi ctl an inframundo",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 6.67,
+      "palabrasCoincidentes": [
+        "mictlan",
+        "inframundo"
+      ],
+      "temaEsperado": "Mictlantecuhtli y el inframundo",
+      "temaObtenido": "Mictlantecuhtli y el inframundo",
+      "textoRespuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muertos, más Tecutli, señor: el señor de la mansión de l"
+    },
+    {
+      "id": 16,
+      "categoria": "espacios indebidos",
+      "pregunta": "al tar de muer tos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.41,
+      "palabrasCoincidentes": [
+        "altar",
+        "altar de muertos"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 17,
+      "categoria": "espacios indebidos",
+      "pregunta": "pa pel pi ca do",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12,
+      "palabrasCoincidentes": [
+        "papel picado",
+        "papel",
+        "picado"
+      ],
+      "temaEsperado": "El papel picado",
+      "temaObtenido": "El papel picado",
+      "textoRespuesta": "El papel picado es el adorno de papel de las ofrendas, las tumbas y los caminos de la festividad. Se reconoce por sus siluetas recortadas y por sus co"
+    },
+    {
+      "id": 18,
+      "categoria": "espacios indebidos",
+      "pregunta": "ca tri na de posada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.07,
+      "palabrasCoincidentes": [
+        "catrina",
+        "catrin",
+        "posada"
+      ],
+      "temaEsperado": "La Catrina",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los"
+    },
+    {
+      "id": 19,
+      "categoria": "espacios indebidos",
+      "pregunta": "to dos san tos",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 2.96,
+      "palabrasCoincidentes": [
+        "todos santos"
+      ],
+      "temaEsperado": "Fechas de la celebración",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 20,
+      "categoria": "espacios indebidos",
+      "pregunta": "ce men te rio y panteon",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 0,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Cómo se celebra en la actualidad",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 21,
+      "categoria": "ausencia de acentos",
+      "pregunta": "que es el dia de muertos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.2,
+      "palabrasCoincidentes": [
+        "que es el dia de muertos",
+        "que es"
+      ],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Qué es el Día de Muertos",
+      "textoRespuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Ocu"
+    },
+    {
+      "id": 22,
+      "categoria": "ausencia de acentos",
+      "pregunta": "cuando vienen las animas de los difuntos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 6.9,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Fechas de la celebración",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebr"
+    },
+    {
+      "id": 23,
+      "categoria": "ausencia de acentos",
+      "pregunta": "que lleva la tradicion de michoacan",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.39,
+      "palabrasCoincidentes": [
+        "michoacan"
+      ],
+      "temaEsperado": "Variaciones regionales",
+      "temaObtenido": "Variaciones regionales",
+      "textoRespuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recup"
+    },
+    {
+      "id": 24,
+      "categoria": "ausencia de acentos",
+      "pregunta": "donde esta el panteon de mixquic",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 2,
+      "palabrasCoincidentes": [
+        "mixquic"
+      ],
+      "temaEsperado": "Variaciones regionales",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 25,
+      "categoria": "ausencia de acentos",
+      "pregunta": "cempasuchil flor naranja",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 11.73,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "flor naranja",
+        "flor"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 26,
+      "categoria": "ausencia de acentos",
+      "pregunta": "que es una ofrenda indigena",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 10.55,
+      "palabrasCoincidentes": [
+        "ofrenda",
+        "que es una ofrenda"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 27,
+      "categoria": "ausencia de acentos",
+      "pregunta": "como se origino en mesoamerica",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 6.48,
+      "palabrasCoincidentes": [
+        "mesoamerica",
+        "mesoamericano"
+      ],
+      "temaEsperado": "Origen prehispánico",
+      "temaObtenido": "Origen prehispánico",
+      "textoRespuesta": "La raíz de la celebración es prehispánica. Los antiguos mexicanos, junto con los mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas, trasladaro"
+    },
+    {
+      "id": 28,
+      "categoria": "ausencia de acentos",
+      "pregunta": "que son las calaveras literarias",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 17.37,
+      "palabrasCoincidentes": [
+        "calaveritas literarias",
+        "calaveras literarias",
+        "Calaveras literarias"
+      ],
+      "temaEsperado": "Calaveras literarias",
+      "temaObtenido": "Calaveras literarias",
+      "textoRespuesta": "Las calaveras literarias son un género mexicano: versos que se escriben en vísperas del Día de Muertos para expresar humor frente a la muerte.\n\nSegún "
+    },
+    {
+      "id": 29,
+      "categoria": "ausencia de acentos",
+      "pregunta": "como explicarle a un nino la muerte",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 10.85,
+      "palabrasCoincidentes": [
+        "explicar a un nino",
+        "a un nino"
+      ],
+      "temaEsperado": "Explicar el Día de Muertos a un niño",
+      "temaObtenido": "Explicar el Día de Muertos a un niño",
+      "textoRespuesta": "Si se lo explicas a un niño, hazlo así: el Día de Muertos es el día en que recordamos a las personas que ya se fueron. Las familias ponen un altar con"
+    },
+    {
+      "id": 30,
+      "categoria": "ausencia de acentos",
+      "pregunta": "el papel picado y su tradicion",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 11.04,
+      "palabrasCoincidentes": [
+        "papel picado",
+        "papel",
+        "picado",
+        "El papel picado"
+      ],
+      "temaEsperado": "El papel picado",
+      "temaObtenido": "El papel picado",
+      "textoRespuesta": "El papel picado es el adorno de papel de las ofrendas, las tumbas y los caminos de la festividad. Se reconoce por sus siluetas recortadas y por sus co"
+    },
+    {
+      "id": 31,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "QuE Es El DiA dE mUeRtOs",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.2,
+      "palabrasCoincidentes": [
+        "que es el dia de muertos",
+        "que es"
+      ],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Qué es el Día de Muertos",
+      "textoRespuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Ocu"
+    },
+    {
+      "id": 32,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "cEmPaSuChIl y SuS pEtAlOs",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 12,
+      "palabrasCoincidentes": [
+        "petalos"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El camino de pétalos",
+      "textoRespuesta": "El camino de pétalos es la guía que la familia construye para que el difunto encuentre el camino de su casa. Es uno de los gestos más reconocibles de "
+    },
+    {
+      "id": 33,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "pAn De MuErTo TrAdIcIoNaL",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 11.69,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 34,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "lA cAtRiNa De PoSaDa",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 16.77,
+      "palabrasCoincidentes": [
+        "catrina",
+        "catrin",
+        "posada",
+        "la catrina de posada",
+        "La Catrina"
+      ],
+      "temaEsperado": "La Catrina",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los"
+    },
+    {
+      "id": 35,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "oFrEnDa De MuErToS y SuS eLeMeNtOs",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 8.88,
+      "palabrasCoincidentes": [
+        "ofrenda",
+        "ofrenda de muertos"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 36,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "aLtAr EsCaLoNaDo De SiEtE nIvElEs",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 17.57,
+      "palabrasCoincidentes": [
+        "niveles",
+        "nivel",
+        "siete niveles",
+        "escalonado",
+        "escalonada"
+      ],
+      "temaEsperado": "La estructura de niveles del altar",
+      "temaObtenido": "La estructura de niveles del altar",
+      "textoRespuesta": "No hay un número obligatorio de niveles. La estructura de niveles es una descripción de un tipo de ofrenda muy difundida, no una regla.\n\nEn el modelo "
+    },
+    {
+      "id": 37,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "mIcTlAn Y lAs NuEvE rEgIoNeS",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 8.01,
+      "palabrasCoincidentes": [
+        "region",
+        "regional",
+        "regiones"
+      ],
+      "temaEsperado": "Mictlantecuhtli y el inframundo",
+      "temaObtenido": "Variaciones regionales",
+      "textoRespuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recup"
+    },
+    {
+      "id": 38,
+      "categoria": "mayúsculas caóticas",
+      "pregunta": "vElAs Y cIrIoS pArA lOs DiFuNtOs",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.36,
+      "palabrasCoincidentes": [
+        "vela",
+        "velas",
+        "cirio",
+        "cirios"
+      ],
+      "temaEsperado": "Veladoras y velas",
+      "temaObtenido": "Veladoras y velas",
+      "textoRespuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino d"
+    },
+    {
+      "id": 39,
+      "categoria": "espacios múltiples",
+      "pregunta": "que   es   el   dia   de   muertos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.2,
+      "palabrasCoincidentes": [
+        "que es el dia de muertos",
+        "que es"
+      ],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Qué es el Día de Muertos",
+      "textoRespuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Ocu"
+    },
+    {
+      "id": 40,
+      "categoria": "espacios múltiples",
+      "pregunta": "como    hacer    un    altar    en   casa",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 5.37,
+      "palabrasCoincidentes": [
+        "altar"
+      ],
+      "temaEsperado": "Cómo hacer una ofrenda sencilla",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 41,
+      "categoria": "espacios múltiples",
+      "pregunta": "flor     de     cempasuchil",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.9,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "flor de cempasuchil",
+        "flor"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 42,
+      "categoria": "espacios múltiples",
+      "pregunta": "que     lleva    la    ofrenda",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 9.81,
+      "palabrasCoincidentes": [
+        "ofrenda lleva",
+        "que lleva la ofrenda"
+      ],
+      "temaEsperado": "Elementos de la ofrenda y su significado",
+      "temaObtenido": "Elementos de la ofrenda y su significado",
+      "textoRespuesta": "Estos son los elementos principales y su significado:\n\n- Cempasúchil: la flor que da la bienvenida y guía con su aroma a los difuntos.\n- Veladoras: la"
+    },
+    {
+      "id": 43,
+      "categoria": "espacios múltiples",
+      "pregunta": "significado      del      pan      de      muerto",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 17.85,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "significado del pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 44,
+      "categoria": "espacios múltiples",
+      "pregunta": "calaveritas     literarias     ejemplos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 17.37,
+      "palabrasCoincidentes": [
+        "calaveritas literarias",
+        "calaveras literarias",
+        "Calaveras literarias"
+      ],
+      "temaEsperado": "Calaveras literarias",
+      "temaObtenido": "Calaveras literarias",
+      "textoRespuesta": "Las calaveras literarias son un género mexicano: versos que se escriben en vísperas del Día de Muertos para expresar humor frente a la muerte.\n\nSegún "
+    },
+    {
+      "id": 45,
+      "categoria": "teclas adyacentes",
+      "pregunta": "quw es el dia de muertos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 5.6,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Significado cultural",
+      "textoRespuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se mater"
+    },
+    {
+      "id": 46,
+      "categoria": "teclas adyacentes",
+      "pregunta": "altsr de muertos elementos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 5.05,
+      "palabrasCoincidentes": [
+        "altar",
+        "altar de muertos"
+      ],
+      "temaEsperado": "Elementos de la ofrenda y su significado",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 47,
+      "categoria": "teclas adyacentes",
+      "pregunta": "pan de muetto mexicano",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.13,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 48,
+      "categoria": "teclas adyacentes",
+      "pregunta": "flores de cempasuxhil",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.35,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "flores",
+        "flor",
+        "flores de cempasuchil"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 49,
+      "categoria": "teclas adyacentes",
+      "pregunta": "calaveta de azucar tradicional",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 7.21,
+      "palabrasCoincidentes": [
+        "calavera",
+        "calaveras",
+        "calaverita",
+        "azucar"
+      ],
+      "temaEsperado": "Calaveras y calaveritas",
+      "temaObtenido": "Calaveras y calaveritas",
+      "textoRespuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar, de chocolate y de amaranto, que se colocan en los altares junto con el pan de muerto. Su fo"
+    },
+    {
+      "id": 50,
+      "categoria": "teclas adyacentes",
+      "pregunta": "la catrins y posada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.6,
+      "palabrasCoincidentes": [
+        "catrina",
+        "catrinas",
+        "catrin",
+        "posada",
+        "La Catrina"
+      ],
+      "temaEsperado": "La Catrina",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los"
+    },
+    {
+      "id": 51,
+      "categoria": "teclas adyacentes",
+      "pregunta": "vekas y cirios en la ofrenda",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.38,
+      "palabrasCoincidentes": [
+        "velas",
+        "cirio",
+        "cirios"
+      ],
+      "temaEsperado": "Veladoras y velas",
+      "temaObtenido": "Veladoras y velas",
+      "textoRespuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino d"
+    },
+    {
+      "id": 52,
+      "categoria": "teclas adyacentes",
+      "pregunta": "el mictlsn inframundo mexica",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 7.44,
+      "palabrasCoincidentes": [
+        "mictlan",
+        "inframundo"
+      ],
+      "temaEsperado": "Mictlantecuhtli y el inframundo",
+      "temaObtenido": "Mictlantecuhtli y el inframundo",
+      "textoRespuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muertos, más Tecutli, señor: el señor de la mansión de l"
+    },
+    {
+      "id": 53,
+      "categoria": "teclas adyacentes",
+      "pregunta": "incirnso y copal aromatico",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 9.4,
+      "palabrasCoincidentes": [
+        "copal",
+        "incienso"
+      ],
+      "temaEsperado": "El copal y el incienso",
+      "temaObtenido": "El copal y el incienso",
+      "textoRespuesta": "El copal es la resina que se quema para sahumar el lugar. La National Geographic lo explica así: su aroma sirve para limpiar el lugar de los malos esp"
+    },
+    {
+      "id": 54,
+      "categoria": "teclas adyacentes",
+      "pregunta": "papwl picado de colores",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": true,
+      "puntaje": 0,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "El papel picado",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 55,
+      "categoria": "teclas adyacentes",
+      "pregunta": "ofremda para difuntos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 3.89,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebr"
+    },
+    {
+      "id": 56,
+      "categoria": "teclas adyacentes",
+      "pregunta": "panteom de noche en michoacan",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.39,
+      "palabrasCoincidentes": [
+        "michoacan"
+      ],
+      "temaEsperado": "Variaciones regionales",
+      "temaObtenido": "Variaciones regionales",
+      "textoRespuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recup"
+    },
+    {
+      "id": 57,
+      "categoria": "confusión fonética",
+      "pregunta": "zenpasuchil flor amarilla",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 9.73,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "flor"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 58,
+      "categoria": "confusión fonética",
+      "pregunta": "sempasuchil camino de petalos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 18.24,
+      "palabrasCoincidentes": [
+        "camino de petalos",
+        "camino",
+        "petalos"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El camino de pétalos",
+      "textoRespuesta": "El camino de pétalos es la guía que la familia construye para que el difunto encuentre el camino de su casa. Es uno de los gestos más reconocibles de "
+    },
+    {
+      "id": 59,
+      "categoria": "confusión fonética",
+      "pregunta": "calaveras de asucar tradicionales",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.56,
+      "palabrasCoincidentes": [
+        "calavera",
+        "calaveras",
+        "calaveritas",
+        "calaveritas de azúcar",
+        "azucar"
+      ],
+      "temaEsperado": "Calaveras y calaveritas",
+      "temaObtenido": "Calaveras y calaveritas",
+      "textoRespuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar, de chocolate y de amaranto, que se colocan en los altares junto con el pan de muerto. Su fo"
+    },
+    {
+      "id": 60,
+      "categoria": "confusión fonética",
+      "pregunta": "sensillo altar de muertos en casa",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 10.08,
+      "palabrasCoincidentes": [
+        "altar",
+        "altar de muertos"
+      ],
+      "temaEsperado": "Cómo hacer una ofrenda sencilla",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 61,
+      "categoria": "confusión fonética",
+      "pregunta": "sincretis mo religioso y tradicional",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 9.7,
+      "palabrasCoincidentes": [
+        "sincretismo",
+        "religion",
+        "religiosa",
+        "sincretismo religioso",
+        "Sincretismo religioso"
+      ],
+      "temaEsperado": "Sincretismo religioso",
+      "temaObtenido": "Sincretismo religioso",
+      "textoRespuesta": "El sincretismo es la combinación de dos mundos: los ritos prehispánicos y las fiestas católicas que llegaron con los españoles en el siglo XVI.\n\nEl re"
+    },
+    {
+      "id": 62,
+      "categoria": "confusión fonética",
+      "pregunta": "orijen prehispanico de la fiesta",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 11.09,
+      "palabrasCoincidentes": [
+        "origen",
+        "prehispanico",
+        "prehispanica",
+        "Origen prehispánico"
+      ],
+      "temaEsperado": "Origen prehispánico",
+      "temaObtenido": "Origen prehispánico",
+      "textoRespuesta": "La raíz de la celebración es prehispánica. Los antiguos mexicanos, junto con los mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas, trasladaro"
+    },
+    {
+      "id": 63,
+      "categoria": "confusión fonética",
+      "pregunta": "tradision del dia de muertos unesco",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 8.19,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Declaración de patrimonio de la UNESCO",
+      "temaObtenido": "Significado cultural",
+      "textoRespuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se mater"
+    },
+    {
+      "id": 64,
+      "categoria": "confusión fonética",
+      "pregunta": "velas de sera en la ofrenda",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.38,
+      "palabrasCoincidentes": [
+        "vela",
+        "velas"
+      ],
+      "temaEsperado": "Veladoras y velas",
+      "temaObtenido": "Veladoras y velas",
+      "textoRespuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino d"
+    },
+    {
+      "id": 65,
+      "categoria": "confusión fonética",
+      "pregunta": "dia de vuertos en mexico",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 5.6,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Significado cultural",
+      "textoRespuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se mater"
+    },
+    {
+      "id": 66,
+      "categoria": "confusión fonética",
+      "pregunta": "belas y veladoras para guiar almas",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.36,
+      "palabrasCoincidentes": [
+        "veladora",
+        "veladoras",
+        "vela",
+        "velas"
+      ],
+      "temaEsperado": "Veladoras y velas",
+      "temaObtenido": "Veladoras y velas",
+      "textoRespuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino d"
+    },
+    {
+      "id": 67,
+      "categoria": "confusión fonética",
+      "pregunta": "uesos en el pan de muerto",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 16.89,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan",
+        "huesos",
+        "huesitos",
+        "El pan de muerto"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 68,
+      "categoria": "confusión fonética",
+      "pregunta": "dia de muerthos y difuntos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 3.6,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebr"
+    },
+    {
+      "id": 69,
+      "categoria": "omisión de letras",
+      "pregunta": "que es el da de muertos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 4.43,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebr"
+    },
+    {
+      "id": 70,
+      "categoria": "omisión de letras",
+      "pregunta": "flr de cempasuchil en el altar",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 10.28,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "El cempasúchil"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 71,
+      "categoria": "omisión de letras",
+      "pregunta": "pan de murto y chocolate",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.13,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 72,
+      "categoria": "omisión de letras",
+      "pregunta": "ofreda de muertos tradicional",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.01,
+      "palabrasCoincidentes": [
+        "ofrenda",
+        "ofrenda de muertos"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 73,
+      "categoria": "omisión de letras",
+      "pregunta": "calaverta de azucar con nombre",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.71,
+      "palabrasCoincidentes": [
+        "calavera",
+        "calaveras",
+        "calaverita",
+        "calaveritas",
+        "calaveritas de azúcar",
+        "azucar",
+        "calaverito de azucar"
+      ],
+      "temaEsperado": "Calaveras y calaveritas",
+      "temaObtenido": "Calaveras y calaveritas",
+      "textoRespuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar, de chocolate y de amaranto, que se colocan en los altares junto con el pan de muerto. Su fo"
+    },
+    {
+      "id": 74,
+      "categoria": "omisión de letras",
+      "pregunta": "catria de jose guadalupe posada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.9,
+      "palabrasCoincidentes": [
+        "catrina",
+        "catrinas",
+        "catrin",
+        "posada",
+        "guadalupe posada"
+      ],
+      "temaEsperado": "La Catrina",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los"
+    },
+    {
+      "id": 75,
+      "categoria": "omisión de letras",
+      "pregunta": "nivels de la ofrenda escalonada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 17.64,
+      "palabrasCoincidentes": [
+        "niveles",
+        "nivel",
+        "escalonado",
+        "escalonada",
+        "niveles de la ofrenda"
+      ],
+      "temaEsperado": "La estructura de niveles del altar",
+      "temaObtenido": "La estructura de niveles del altar",
+      "textoRespuesta": "No hay un número obligatorio de niveles. La estructura de niveles es una descripción de un tipo de ofrenda muy difundida, no una regla.\n\nEn el modelo "
+    },
+    {
+      "id": 76,
+      "categoria": "omisión de letras",
+      "pregunta": "almas de los difutos queridos",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 3.97,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Fechas de la celebración",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebr"
+    },
+    {
+      "id": 77,
+      "categoria": "omisión de letras",
+      "pregunta": "panteo en mixquic alumbrada",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 2,
+      "palabrasCoincidentes": [
+        "mixquic"
+      ],
+      "temaEsperado": "Variaciones regionales",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 78,
+      "categoria": "omisión de letras",
+      "pregunta": "tradicio mexicana de todos santos",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 2.49,
+      "palabrasCoincidentes": [
+        "todos santos"
+      ],
+      "temaEsperado": "Fechas de la celebración",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 79,
+      "categoria": "duplicación de letras",
+      "pregunta": "diaaa de muertos en mexico",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 5.6,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": "Significado cultural",
+      "textoRespuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se mater"
+    },
+    {
+      "id": 80,
+      "categoria": "duplicación de letras",
+      "pregunta": "pan de mueerrto con azucar",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.13,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 81,
+      "categoria": "duplicación de letras",
+      "pregunta": "offrenda tradicional mexicana",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.88,
+      "palabrasCoincidentes": [
+        "ofrenda"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 82,
+      "categoria": "duplicación de letras",
+      "pregunta": "ceempasuchil flor anaranjada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 9.73,
+      "palabrasCoincidentes": [
+        "cempasuchil",
+        "flor"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El cempasúchil",
+      "textoRespuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se "
+    },
+    {
+      "id": 83,
+      "categoria": "duplicación de letras",
+      "pregunta": "caalaverita literaria en rima",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 14.33,
+      "palabrasCoincidentes": [
+        "calaverita literaria",
+        "calavera literaria",
+        "rima"
+      ],
+      "temaEsperado": "Calaveras literarias",
+      "temaObtenido": "Calaveras literarias",
+      "textoRespuesta": "Las calaveras literarias son un género mexicano: versos que se escriben en vísperas del Día de Muertos para expresar humor frente a la muerte.\n\nSegún "
+    },
+    {
+      "id": 84,
+      "categoria": "duplicación de letras",
+      "pregunta": "catrinna elegante de posada",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 10.28,
+      "palabrasCoincidentes": [
+        "catrina",
+        "catrinas",
+        "posada"
+      ],
+      "temaEsperado": "La Catrina",
+      "temaObtenido": "La Catrina",
+      "textoRespuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los"
+    },
+    {
+      "id": 85,
+      "categoria": "duplicación de letras",
+      "pregunta": "miictlan y las pruebas mexicas",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 3.5,
+      "palabrasCoincidentes": [
+        "mictlan"
+      ],
+      "temaEsperado": "Mictlantecuhtli y el inframundo",
+      "temaObtenido": "Mictlantecuhtli y el inframundo",
+      "textoRespuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muertos, más Tecutli, señor: el señor de la mansión de l"
+    },
+    {
+      "id": 86,
+      "categoria": "duplicación de letras",
+      "pregunta": "copall e incienso en sahumador",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 8.86,
+      "palabrasCoincidentes": [
+        "copal",
+        "incienso"
+      ],
+      "temaEsperado": "El copal y el incienso",
+      "temaObtenido": "El copal y el incienso",
+      "textoRespuesta": "El copal es la resina que se quema para sahumar el lugar. La National Geographic lo explica así: su aroma sirve para limpiar el lugar de los malos esp"
+    },
+    {
+      "id": 87,
+      "categoria": "duplicación de letras",
+      "pregunta": "veeladoras encendidas en el altar",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.21,
+      "palabrasCoincidentes": [
+        "veladora",
+        "veladoras"
+      ],
+      "temaEsperado": "Veladoras y velas",
+      "temaObtenido": "Veladoras y velas",
+      "textoRespuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino d"
+    },
+    {
+      "id": 88,
+      "categoria": "duplicación de letras",
+      "pregunta": "halloweeen y dia de muertos diferencias",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 10.63,
+      "palabrasCoincidentes": [
+        "halloween",
+        "diferencia",
+        "diferencias",
+        "y halloween"
+      ],
+      "temaEsperado": "Día de Muertos frente a Halloween",
+      "temaObtenido": "Día de Muertos frente a Halloween",
+      "textoRespuesta": "No son lo mismo. Conviene distinguir sus orígenes y sus prácticas.\n\nEl Día de Muertos mexicano tiene raíces prehispánicas: es una fiesta de retorno de"
+    },
+    {
+      "id": 89,
+      "categoria": "transposición",
+      "pregunta": "dia de muerots tradicional",
+      "respondio": false,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 0.96,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Qué es el Día de Muertos",
+      "temaObtenido": null,
+      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+    },
+    {
+      "id": 90,
+      "categoria": "transposición",
+      "pregunta": "cemapsuchil camino para almas",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 7.07,
+      "palabrasCoincidentes": [
+        "camino"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "El camino de pétalos",
+      "textoRespuesta": "El camino de pétalos es la guía que la familia construye para que el difunto encuentre el camino de su casa. Es uno de los gestos más reconocibles de "
+    },
+    {
+      "id": 91,
+      "categoria": "transposición",
+      "pregunta": "ofredna de siete niveles",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 11.81,
+      "palabrasCoincidentes": [
+        "niveles",
+        "nivel",
+        "siete niveles"
+      ],
+      "temaEsperado": "La estructura de niveles del altar",
+      "temaObtenido": "La estructura de niveles del altar",
+      "textoRespuesta": "No hay un número obligatorio de niveles. La estructura de niveles es una descripción de un tipo de ofrenda muy difundida, no una regla.\n\nEn el modelo "
+    },
+    {
+      "id": 92,
+      "categoria": "transposición",
+      "pregunta": "calavrea de dulce tradicional",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 4.43,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "Calaveras y calaveritas",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 93,
+      "categoria": "transposición",
+      "pregunta": "alart de muertos en el hogar",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 3.6,
+      "palabrasCoincidentes": [],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "El regreso de las almas: creencia y cómo se entiende",
+      "textoRespuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebr"
+    },
+    {
+      "id": 94,
+      "categoria": "transposición",
+      "pregunta": "pan de meurto significado",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 3.83,
+      "palabrasCoincidentes": [
+        "pan"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    },
+    {
+      "id": 95,
+      "categoria": "múltiples errores",
+      "pregunta": "k e la ofremda de muertos",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.55,
+      "palabrasCoincidentes": [
+        "ofrenda",
+        "ofrenda de muertos"
+      ],
+      "temaEsperado": "La ofrenda o altar",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 96,
+      "categoria": "múltiples errores",
+      "pregunta": "ke significa el sempasuchil",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 17.07,
+      "palabrasCoincidentes": [
+        "que significa el cempasuchil",
+        "cempasuchil significa"
+      ],
+      "temaEsperado": "El cempasúchil",
+      "temaObtenido": "Los significados del cempasúchil",
+      "textoRespuesta": "No. El cempasúchil tiene varios significados documentados y ninguno de ellos es el significado oficial.\n\n- Guía: su aroma y su color guían a las ánima"
+    },
+    {
+      "id": 97,
+      "categoria": "múltiples errores",
+      "pregunta": "cm se ase una ofrendaa casera",
+      "respondio": true,
+      "esCorrecto": false,
+      "fueraDominio": false,
+      "puntaje": 5.88,
+      "palabrasCoincidentes": [
+        "ofrenda"
+      ],
+      "temaEsperado": "Cómo hacer una ofrenda sencilla",
+      "temaObtenido": "La ofrenda o altar",
+      "textoRespuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la "
+    },
+    {
+      "id": 98,
+      "categoria": "múltiples errores",
+      "pregunta": "kual es la diferensia kon jalowin",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 5.42,
+      "palabrasCoincidentes": [
+        "halloween",
+        "diferencia",
+        "diferencias"
+      ],
+      "temaEsperado": "Día de Muertos frente a Halloween",
+      "temaObtenido": "Día de Muertos frente a Halloween",
+      "textoRespuesta": "No son lo mismo. Conviene distinguir sus orígenes y sus prácticas.\n\nEl Día de Muertos mexicano tiene raíces prehispánicas: es una fiesta de retorno de"
+    },
+    {
+      "id": 99,
+      "categoria": "múltiples errores",
+      "pregunta": "xq se le pone salal altar y agua",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 12.28,
+      "palabrasCoincidentes": [
+        "sal",
+        "y sal"
+      ],
+      "temaEsperado": "La sal en la ofrenda",
+      "temaObtenido": "La sal en la ofrenda",
+      "textoRespuesta": "La sal es el elemento de purificación de la ofrenda.\n\nSu significado es de cuidado: se ofrece para que el cuerpo del difunto no se corrompa durante su"
+    },
+    {
+      "id": 100,
+      "categoria": "múltiples errores",
+      "pregunta": "xq se ponen uesos enel pandemuerto",
+      "respondio": true,
+      "esCorrecto": true,
+      "fueraDominio": false,
+      "puntaje": 13.81,
+      "palabrasCoincidentes": [
+        "pan de muerto",
+        "pan",
+        "huesos",
+        "huesitos"
+      ],
+      "temaEsperado": "El pan de muerto",
+      "temaObtenido": "El pan de muerto",
+      "textoRespuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su signif"
+    }
+  ]
+}

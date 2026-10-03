@@ -151,8 +151,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El pan de muerto
 - **Categoría:** elementos
-- **Puntaje:** 15.05 (umbral 3)
-- **Palabras clave coincidentes:** pan de muerto, pan, El pan de muerto
+- **Puntaje:** 19.55 (umbral 3)
+- **Palabras clave coincidentes:** pan de muerto, pan, que significa el pan de muerto, El pan de muerto
 - **Segundo candidato:** Significado cultural (4.85)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-gaceta-miccailhuitontli, unam-gaceta-colonia, cessa-pan-de-muerto, natgeo-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
@@ -189,7 +189,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** elementos
 - **Puntaje:** 12.54 (umbral 3)
 - **Palabras clave coincidentes:** elementos, que elementos, elemento
-- **Segundo candidato:** La ofrenda o altar (5.88)
+- **Segundo candidato:** La ofrenda o altar (9.38)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-global-ofrendas, lugares-inah-fiestas-indigenas, cultura-calaveritas-azucar, natgeo-ofrendas, expansion-ofrendas-fechas, eluniversal-guia-ofrendas, semillitas-ninos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -225,7 +225,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** patrimonio
 - **Puntaje:** 13.8 (umbral 3)
 - **Palabras clave coincidentes:** patrimonio, patrimonio cultural
-- **Segundo candidato:** Significado cultural (4.63)
+- **Segundo candidato:** Significado cultural (5.8)
 - **Fuentes citadas:** unesco-ich-00054, inah-diariodecampo-michoacan, vitabrevis-catrina
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -247,8 +247,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Variaciones regionales
 - **Categoría:** regional
-- **Puntaje:** 13.72 (umbral 3)
-- **Palabras clave coincidentes:** igual, region, regiones
+- **Puntaje:** 14.85 (umbral 3)
+- **Palabras clave coincidentes:** igual, region, regional, regiones
 - **Segundo candidato:** No existe una única forma correcta ni auténtica de celebrar (5.45)
 - **Fuentes citadas:** cdmx-tlahuac-fiddem, unam-gaceta-colonia, inah-diariodecampo-michoacan, cdmx-programacion, inpi-fiestas-pueblos, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
@@ -347,9 +347,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** No existe una única forma correcta ni auténtica de celebrar
 - **Categoría:** regional
-- **Puntaje:** 17.51 (umbral 3)
-- **Palabras clave coincidentes:** que elementos pueden variar, pueden variar, familia o region
-- **Segundo candidato:** Elementos de la ofrenda y su significado (4.72)
+- **Puntaje:** 24.51 (umbral 3)
+- **Palabras clave coincidentes:** que elementos pueden variar, pueden variar, varia segun la familia, varian segun la familia, familia o region
+- **Segundo candidato:** Variaciones regionales (8.85)
 - **Fuentes citadas:** unesco-ich-00054, inpi-fiestas-pueblos, cessa-pan-de-muerto, agricultura-cempasuchil, inpi-elementos-ofrenda
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -363,8 +363,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Lo que no es obligatorio en una ofrenda
 - **Categoría:** mitos
-- **Puntaje:** 23.77 (umbral 3)
-- **Palabras clave coincidentes:** es obligatorio, obligatorio, tequila
+- **Puntaje:** 25.77 (umbral 3)
+- **Palabras clave coincidentes:** es obligatorio, obligatorio, obligatoria, tequila
 - **Segundo candidato:** El pan de muerto (5.39)
 - **Fuentes citadas:** eluniversal-guia-ofrendas, unam-global-ofrendas, inpi-elementos-ofrenda, expansion-ofrendas-fechas, proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**
@@ -389,7 +389,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** origen
 - **Puntaje:** 15.48 (umbral 3)
 - **Palabras clave coincidentes:** nacio completamente en la epoca prehispanica, nacio completamente
-- **Segundo candidato:** Origen prehispánico (6.66)
+- **Segundo candidato:** Origen prehispánico (8.16)
 - **Fuentes citadas:** unamglobal-origenes, unesco-ich-00054, arqueologia-influencias-europeas, unam-gaceta-colonia, expansion-ofrendas-fechas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -435,8 +435,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Los significados del cempasúchil
 - **Categoría:** elementos
-- **Puntaje:** 16.43 (umbral 3)
-- **Palabras clave coincidentes:** unico significado, significado unico, significado oficial
+- **Puntaje:** 18.93 (umbral 3)
+- **Palabras clave coincidentes:** unico significado, significado unico, significado oficial, cempasuchil significa
 - **Segundo candidato:** El cempasúchil (11.56)
 - **Fuentes citadas:** agricultura-cempasuchil, unam-gaceta-colonia, lugares-inah-fiestas-indigenas
 - **Primeros 300 caracteres de la respuesta:**
@@ -523,8 +523,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Decoración de un salón escolar
 - **Categoría:** practico
-- **Puntaje:** 15 (umbral 3)
-- **Palabras clave coincidentes:** decorar, salon, salon escolar, como decorar
+- **Puntaje:** 17 (umbral 3)
+- **Palabras clave coincidentes:** decorar, decorado, salon, salon escolar, como decorar
 - **Segundo candidato:** Exposición escolar sobre el Día de Muertos (0.38)
 - **Fuentes citadas:** tiendanube-manualidades, lugares-inah-fiestas-indigenas, inpi-elementos-ofrenda, cdmx-programacion, proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**
@@ -549,7 +549,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** practico
 - **Puntaje:** 17.4 (umbral 3)
 - **Palabras clave coincidentes:** tradicion familiar, tradicion cultural, diferenciar
-- **Segundo candidato:** Significado cultural (1.46)
+- **Segundo candidato:** Significado cultural (2.99)
 - **Fuentes citadas:** proyecto-criterios, unesco-ich-00054, inpi-fiestas-pueblos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -575,8 +575,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Cómo se combinaron elementos indígenas y europeos
 - **Categoría:** influencia-europea
-- **Puntaje:** 22.91 (umbral 3)
-- **Palabras clave coincidentes:** combinaron, combinaron elementos, elementos indigenas y europeos, europeo, europeos
+- **Puntaje:** 24.91 (umbral 3)
+- **Palabras clave coincidentes:** combinaron, combinacion, combinaron elementos, elementos indigenas y europeos, europeo, europeos
 - **Segundo candidato:** Origen prehispánico (5.34)
 - **Fuentes citadas:** unam-gaceta-colonia, unamglobal-origenes, arqueologia-influencias-europeas, unam-global-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
@@ -587,8 +587,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Variaciones regionales
 - **Categoría:** regional
-- **Puntaje:** 6.89 (umbral 3)
-- **Palabras clave coincidentes:** region, regiones
+- **Puntaje:** 8.01 (umbral 3)
+- **Palabras clave coincidentes:** region, regional, regiones
 - **Segundo candidato:** No existe una única forma correcta ni auténtica de celebrar (2.51)
 - **Fuentes citadas:** cdmx-tlahuac-fiddem, unam-gaceta-colonia, inah-diariodecampo-michoacan, cdmx-programacion, inpi-fiestas-pueblos, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
