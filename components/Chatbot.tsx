@@ -101,10 +101,10 @@ export default function Chatbot() {
     setContexto(
       resultado.entrada
         ? {
-            temaPrevio: resultado.entrada.tema,
-            entradaPreviaId: resultado.entrada.id,
-            conceptosPrevios: resultado.entrada.conceptos ?? [],
-          }
+          temaPrevio: resultado.entrada.tema,
+          entradaPreviaId: resultado.entrada.id,
+          conceptosPrevios: resultado.entrada.conceptos ?? [],
+        }
         : contexto
     );
     setPregunta("");
@@ -134,14 +134,23 @@ export default function Chatbot() {
   return (
     <main className={estilos.contenedor}>
       <header className={estilos.encabezado}>
-        <span className={estilos.marca}>Proyecto universitario</span>
+        <div className={estilos.insignia}>UNAM</div>
+
         <h1 className={estilos.titulo}>Chatbot del Día de Muertos</h1>
-        <p className={estilos.subtitulo}>
-          Experto digital sobre el Día de Muertos en México. Funciona con una base
-          de conocimiento local de {TOTAL_ENTRADAS} temas y {TOTAL_FUENTES} fuentes
-          verificadas —institucionales, académicas, de prensa y de divulgación—, sin
-          usar servicios externos de pago.
-        </p>
+
+        <section className={estilos.metadatos}>
+          <p className={estilos.profesor}>
+            <span>Profesor:</span> Rosas Hernández Javier
+          </p>
+
+          <div className={estilos.alumnosSeccion}>
+            <span className={estilos.etiquetaAlumnos}>Alumnos:</span>
+            <ul className={estilos.listaAlumnos}>
+              <li>Toledo Hernández Misael</li>
+              <li>Martínez Hernández Ricardo Ramón</li>
+            </ul>
+          </div>
+        </section>
       </header>
 
       <section className={estilos.panel} aria-label="Conversación con el chatbot">
