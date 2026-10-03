@@ -1,8 +1,8 @@
 {
   "resumen": {
-    "correctas": 71,
-    "respondidas": 93,
-    "noRespondidas": 7,
+    "correctas": 73,
+    "respondidas": 95,
+    "noRespondidas": 5,
     "temaErroneo": 22
   },
   "fallasPorCategoria": {
@@ -16,7 +16,7 @@
     },
     "ausencia de acentos": {
       "total": 10,
-      "fallas": 2
+      "fallas": 1
     },
     "mayúsculas caóticas": {
       "total": 8,
@@ -36,7 +36,7 @@
     },
     "omisión de letras": {
       "total": 10,
-      "fallas": 4
+      "fallas": 3
     },
     "duplicación de letras": {
       "total": 10,
@@ -421,16 +421,16 @@
       "id": 24,
       "categoria": "ausencia de acentos",
       "pregunta": "donde esta el panteon de mixquic",
-      "respondio": false,
-      "esCorrecto": false,
+      "respondio": true,
+      "esCorrecto": true,
       "fueraDominio": false,
-      "puntaje": 2,
+      "puntaje": 5.9,
       "palabrasCoincidentes": [
         "mixquic"
       ],
       "temaEsperado": "Variaciones regionales",
-      "temaObtenido": null,
-      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+      "temaObtenido": "Variaciones regionales",
+      "textoRespuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recup"
     },
     {
       "id": 25,
@@ -786,7 +786,7 @@
       "respondio": true,
       "esCorrecto": false,
       "fueraDominio": false,
-      "puntaje": 5.05,
+      "puntaje": 5.04,
       "palabrasCoincidentes": [
         "altar",
         "altar de muertos"
@@ -1015,7 +1015,7 @@
       "respondio": true,
       "esCorrecto": false,
       "fueraDominio": false,
-      "puntaje": 10.08,
+      "puntaje": 10.07,
       "palabrasCoincidentes": [
         "altar",
         "altar de muertos"
@@ -1290,16 +1290,17 @@
       "id": 77,
       "categoria": "omisión de letras",
       "pregunta": "panteo en mixquic alumbrada",
-      "respondio": false,
-      "esCorrecto": false,
+      "respondio": true,
+      "esCorrecto": true,
       "fueraDominio": false,
-      "puntaje": 2,
+      "puntaje": 7.9,
       "palabrasCoincidentes": [
-        "mixquic"
+        "mixquic",
+        "alumbrada"
       ],
       "temaEsperado": "Variaciones regionales",
-      "temaObtenido": null,
-      "textoRespuesta": "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México: su origen, las fecha"
+      "temaObtenido": "Variaciones regionales",
+      "textoRespuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recup"
     },
     {
       "id": 78,
@@ -1632,7 +1633,7 @@
       "respondio": true,
       "esCorrecto": true,
       "fueraDominio": false,
-      "puntaje": 12.28,
+      "puntaje": 12.11,
       "palabrasCoincidentes": [
         "sal",
         "y sal"

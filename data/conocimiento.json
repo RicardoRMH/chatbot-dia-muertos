@@ -1658,7 +1658,22 @@
         "diferentes formas",
         "formas de celebrar",
         "distintas formas",
-        "todos los mexicanos"
+        "todos los mexicanos",
+        "mixquic",
+        "san andres mixquic",
+        "alumbrada",
+        "alumbrada de san andres mixquic",
+        "janitzio",
+        "tzintzuntzan",
+        "patzcuaro",
+        "xantolo",
+        "huasteca",
+        "hanal pixan",
+        "purepecha",
+        "purhepecha",
+        "yucatan",
+        "ofrenda tradicional purepecha",
+        "ofrenda tradicional"
       ],
       "sinonimos": [
         "cambia de region a region",
@@ -1676,7 +1691,8 @@
       ],
       "conceptos": [
         "regional",
-        "culturas"
+        "culturas",
+        "toponimos"
       ],
       "prioridad": 5
     },
@@ -1911,7 +1927,15 @@
         "no tengo dinero",
         "cuanto cuesta",
         "bajo costo",
-        "poco dinero"
+        "poco dinero",
+        "poco presupuesto",
+        "altar con poco dinero",
+        "altar con poco presupuesto",
+        "altar barato",
+        "altar economico",
+        "sin dinero",
+        "armar un altar barato",
+        "como hacer una ofrenda barata"
       ],
       "sinonimos": [
         "cuanto cuesta una ofrenda",
@@ -2342,13 +2366,27 @@
         "no inventas",
         "inventar",
         "limite del conocimiento",
-        "base de conocimiento"
+        "base de conocimiento",
+        "chatbot",
+        "este chatbot",
+        "de donde saca la informacion",
+        "de donde saca",
+        "de donde obtiene la informacion",
+        "de donde obtiene",
+        "de donde viene la informacion",
+        "fuentes del chatbot",
+        "fuentes usa",
+        "que fuentes usa",
+        "fuentes de este chatbot",
+        "base de datos"
       ],
       "sinonimos": [
         "cuando no sabes algo",
         "que haces si no hay informacion",
         "politica de alcance",
-        "por que no sabes la respuesta"
+        "por que no sabes la respuesta",
+        "de donde salen los datos",
+        "que fuentes del chatbot"
       ],
       "fuentes": [
         "proyecto-criterios"

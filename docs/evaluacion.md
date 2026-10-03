@@ -101,7 +101,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** elementos
 - **Puntaje:** 15.8 (umbral 3)
 - **Palabras clave coincidentes:** agua, por que se coloca agua
-- **Segundo candidato:** La sal en la ofrenda (3.68)
+- **Segundo candidato:** La sal en la ofrenda (3.63)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-global-ofrendas, expansion-ofrendas-fechas, natgeo-ofrendas, inpi-fiestas-pueblos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -623,8 +623,8 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Alcance del chatbot y límites de su base de conocimiento
 - **Categoría:** proyecto
-- **Puntaje:** 16.4 (umbral 3)
-- **Palabras clave coincidentes:** informacion suficiente, no tiene informacion
+- **Puntaje:** 18.4 (umbral 3)
+- **Palabras clave coincidentes:** informacion suficiente, no tiene informacion, chatbot
 - **Segundo candidato:** Lo que no es obligatorio en una ofrenda (3.52)
 - **Fuentes citadas:** proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**

@@ -4,6 +4,9 @@ import fuentesCrudo from "../data/fuentes.json";
 import {
   elegirEntrada,
   esPreguntaInfantil,
+  esPeticionParaNinos,
+  esPreguntaBreve,
+  esPreguntaSobreExcepciones,
   conceptosDePregunta,
   normalizar,
   UMBRAL_PUNTAJE,
@@ -67,6 +70,32 @@ function lineaFuentes(entrada: EntradaConocimiento): string {
   return `\n\nFuente${unicas.length > 1 ? "s" : ""}: ${unicas.join("; ")}.`;
 }
 
+/**
+ * Núcleo directo de una respuesta: el primer párrafo y, si es demasiado
+ * largo, solo las primeras oraciones. Es lo que se devuelve cuando el usuario
+ * pide una respuesta breve o un resumen.
+ */
+function recortarAlGrano(texto: string, oraciones = 2): string {
+  const [primerParrafo] = texto.trim().split(/\n\s*\n/);
+  const base = (primerParrafo ?? texto).trim();
+  const partes = base.match(/[^.!?]+[.!?]+|[^.!?]+$/g);
+  if (!partes) return base;
+  return partes
+    .slice(0, oraciones)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * Una salvedad es parte de la afirmación cuando la entrada no presenta un
+ * dato documentado sino una recomendación o un criterio del proyecto: sin la
+ * salvedad, el chatbot estaría afirmando más de lo que las fuentes sostienen.
+ */
+function esNotaCritica(entrada: EntradaConocimiento): boolean {
+  return entrada.nivel === "proyecto" || entrada.nivel === "recomendacion";
+}
+
 export function responder(
   pregunta: string,
   entradasActuales: EntradaConocimiento[] = entradas
@@ -90,7 +119,12 @@ export function responder(
 
   const entrada = mejor.entrada;
   const infantil = esPreguntaInfantil(normalizada);
-  const cuerpo = infantil && entrada.respuesta_ninos ? entrada.respuesta_ninos : entrada.respuesta;
+  const pideParaNinos = esPeticionParaNinos(normalizada);
+  const breve = esPreguntaBreve(normalizada);
+  const cuerpo =
+    (infantil || pideParaNinos) && entrada.respuesta_ninos
+      ? entrada.respuesta_ninos
+      : entrada.respuesta;
 
   const fuentesDeLaEntrada = entrada.fuentes
     .map((id) => obtenerFuente(id))
@@ -101,20 +135,33 @@ export function responder(
     .slice(0, 2)
     .map((a) => a.entrada);
 
-  const partes: string[] = [cuerpo.trim()];
+  const partes: string[] = [breve ? recortarAlGrano(cuerpo) : cuerpo.trim()];
 
   if (entrada.nivel && entrada.nivel !== "documentado") {
     partes.push(ETIQUETA_NIVEL[entrada.nivel]);
   }
-  if (entrada.nota) partes.push(`Salvedad: ${entrada.nota.trim()}`);
-  if (!infantil && entrada.respuesta_ninos) {
+
+  // La salvedad solo se agrega cuando el usuario pregunta por excepciones u
+  // obligatoriedad, o cuando la entrada no presenta un dato documentado: en
+  // una respuesta puntual sería información que no se pidió.
+  if (entrada.nota && !breve) {
+    const indagaExcepciones = esPreguntaSobreExcepciones(normalizada);
+    if (indagaExcepciones || esNotaCritica(entrada)) {
+      partes.push(`Salvedad: ${entrada.nota.trim()}`);
+    }
+  }
+
+  // La versión infantil se entrega solo cuando se pidió. Si la pregunta ya es
+  // infantil, el cuerpo de la respuesta ya es la versión infantil y repetirla
+  // con otro encabezado solo duplicaría el mismo texto.
+  if (!infantil && pideParaNinos && entrada.respuesta_ninos) {
     partes.push(
       `Para explicárselo a un niño: ${entrada.respuesta_ninos.trim()}`
     );
   }
 
   const lineaComplemento =
-    complementarias.length > 0
+    !breve && complementarias.length > 0
       ? `\n\nTambién hay información sobre: ${complementarias
           .map((e) => e.tema.toLowerCase())
           .join(", ")}.`

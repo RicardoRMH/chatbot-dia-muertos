@@ -80,13 +80,19 @@ export const DOMINIO = [
   "suficiente", "camino", "petalo", "petalos", "actividad", "actividades",
   "presupuesto", "pesos", "reciclado", "reciclados", "reciclar", "materiales",
   "autentica", "autentico", "distintas", "distintos", "creencias", "predominan",
-  "mistura", "combinacion", "combinaron",
+  "mistura", "combinacion", "combinaron", "fuentes", "fuente", "alumbrada",
   // Registro coloquial y variantes que los usuarios escriben en la práctica.
   "mesa", "mesas", "mesita", "calaverito", "calaveritos", "calaveritas de azucar",
   "tequila", "vino", "alcohol", "licor", "soda", "refresco", "necesario",
   "necesaria", "hijos", "hijas", "pequeno", "pequena", "pequenos", "pequenas",
   "espacio", "espacios", "colegio", "proyecto", "proyectos", "tarea",
   "celebro", "celebramos", "celebran", "recuerdo", "recuerdos", "memoria",
+  // Topónimos concretos de la fiesta. A diferencia de los nombres de estado,
+  // estos sí abren el dominio: no hay preguntas de control sobre Mixquic o
+  // Xantolo que invoquen al chatbot, y quien escribe esos topónimos lo hace
+  // preguntando por la fiesta.
+  "mixquic", "janitzio", "tzintzuntzan", "xantolo", "hanal pixan", "purepecha",
+  "purhepecha", "huasteca", "yucatan", "patzcuaro",
   // Los nombres de estado NO se incluyen aquí a propósito: un topónimo solo no
   // abre el dominio, para que "¿Cuánto cuesta un boleto de avión a Oaxaca?"
   // siga siendo una pregunta de control. Quien pregunta por un lugar lo hace
@@ -204,6 +210,14 @@ export const CONCEPTOS: Concepto[] = [
     ],
   },
   {
+    id: "toponimos",
+    terminos: [
+      "mixquic","san andres mixquic","alumbrada","alumbrada de san andres mixquic",
+      "janitzio","tzintzuntzan","patzcuaro","xantolo","huasteca","hanal pixan",
+      "purepecha","purhepecha","purahepecha","yucatan","penjamo",
+    ],
+  },
+  {
     id: "ninos",
     terminos: [
       "nino","nina","ninos","ninas","infantil","pequeno","pequena","pequenos",
@@ -244,6 +258,7 @@ export const CONCEPTOS: Concepto[] = [
       "alternativas","presupuesto","pesos","barato","economico","poco espacio",
       "materiales","material","sencilla","sencillo","simple","facil",
       "que pongo","pongo","tengo espacio","no hay espacio",
+      "poco dinero","sin dinero","dinero","barata","cuanto cuesta","bajo costo",
     ],
   },
   {
@@ -320,6 +335,9 @@ export const CONCEPTOS: Concepto[] = [
       "no sabe","no tienen informacion","informacion suficiente","fuera de alcance",
       "no puede","no inventas","inventar","limite","limites","alcance","alcances",
       "base de conocimiento","cuando no sabe","no lo se","puntaje",
+      "chatbot","este chatbot","fuentes","fuentes usa","de donde saca",
+      "de donde obtiene","de donde viene la informacion","base de datos",
+      "como sabe","de donde sale la informacion",
     ],
   },
   {
@@ -929,6 +947,57 @@ export function esPreguntaInfantil(preguntaNormalizada: string): boolean {
     "nino","nina","ninos","ninas","infantil","pequeno","pequena","pequenos",
     "pequenas","8 anos","ocho anos","angelito","angelitos","mi hija","mi hijo",
     "hijos","hijas","explicar a un","explicaselo","como le explico","para ninos",
+  ];
+  return marcadores.some((m) => conEspacios.includes(` ${m} `));
+}
+
+/**
+ * El usuario pide una versión para niños sin que la pregunta sea infantil, es
+ * decir, pide que se le explique algo a un niño en lugar de pedirle al chatbot
+ * una respuesta infantil.
+ */
+export function esPeticionParaNinos(preguntaNormalizada: string): boolean {
+  const conEspacios = ` ${preguntaNormalizada} `;
+  const marcadores = [
+    "explicar a un nino","explicar a los ninos","explicar a mi nino",
+    "explicar a mis ninos","explicarselo a un nino","explicarles a los ninos",
+    "como explico a un nino","como explico a los ninos","como le explico a un nino",
+    "como lo explico a un nino","como se lo explico a un nino",
+    "en palabras de nino","explicacion para ninos",
+  ];
+  return marcadores.some((m) => conEspacios.includes(` ${m} `));
+}
+
+/**
+ * El usuario pide que el chatbot respalde una afirmación: si algo es
+ * obligatorio, si hay excepciones o si una regla se cumple siempre. Es el
+ * único caso en que la salvedad de la entrada acompaña a la respuesta.
+ */
+export function esPreguntaSobreExcepciones(preguntaNormalizada: string): boolean {
+  const conEspacios = ` ${preguntaNormalizada} `;
+  const marcadores = [
+    "obligatorio","obligatoria","obligatorios","obligatorias","es obligatorio",
+    "hay que","tienen que","tiene que","es necesario","son necesarios",
+    "requisito","requisitos","excepcion","excepciones","se puede","se pueden",
+    "puedo poner","puede poner","no se puede","incorrecto",
+    "equivocado","equivocada","siempre es","nunca es",
+  ];
+  return marcadores.some((m) => conEspacios.includes(` ${m} `));
+}
+
+/**
+ * El usuario pide brevedad o un resumen: "en pocas palabras", "resume",
+ * "en un renglón". La respuesta debe reducirse al núcleo de la información en
+ * lugar de descargar la entrada completa.
+ */
+export function esPreguntaBreve(preguntaNormalizada: string): boolean {
+  const conEspacios = ` ${preguntaNormalizada} `;
+  const marcadores = [
+    "en pocas palabras","pocas palabras","breve","breves","brevemente",
+    "en breve","en resumen","resume","resumen","resumenes","resumeme",
+    "en un renglon","un renglon","en un parrafo","un parrafo","en una linea",
+    "version corta","de forma breve","sin mucho detalle","sin rodeos",
+    "lo mas corto","cuanto menos mejor",
   ];
   return marcadores.some((m) => conEspacios.includes(` ${m} `));
 }
