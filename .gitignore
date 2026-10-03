@@ -31,7 +31,10 @@ yarn-error.log*
 .pnpm-debug.log*
 
 # env files (can opt-in for committing if needed)
+# La regla .env* cubre .env.local y .env*.local; se exceptúa el archivo de
+# ejemplo, que solo contiene nombres de variables sin valores.
 .env*
+!.env.example
 
 # vercel
 .vercel

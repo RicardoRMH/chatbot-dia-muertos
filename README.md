@@ -29,8 +29,9 @@ general.
 - Node.js 20 o superior
 - npm
 
-No se necesita ninguna otra cosa: ni llaves de API, ni cuentas de pago, ni variables
-de entorno.
+No se necesita ninguna otra cosa: ni llaves de API, ni cuentas de pago. El chatbot
+arranca sin configurar nada; las variables de entorno solo hacen falta si quieres
+registrar las interacciones en Supabase (ver `docs/SUPABASE.md`).
 
 ## Ejecutar localmente
 
@@ -72,6 +73,7 @@ chatbot-dia-muertos/
 ├── lib/
 │   ├── motor.ts              # normalización, puntaje y umbral de búsqueda
 │   ├── buscador.ts           # carga los datos y arma la respuesta con fuentes
+│   ├── supabase.ts           # registra cada interacción en Supabase
 │   └── tipos.ts              # tipos de TypeScript
 ├── data/
 │   ├── conocimiento.json     # base de conocimiento (50 entradas)
@@ -85,8 +87,10 @@ chatbot-dia-muertos/
 │   ├── 1-fundamentacion.pdf
 │   ├── 2-documentacion-tecnica.pdf
 │   ├── 3-guia-despliegue.pdf
+│   ├── SUPABASE.md           # cómo conectar la base de datos de interacciones
 │   ├── evaluacion.md         # resultados de las pruebas (generado)
 │   └── ampliacion-de-conocimientos.md  # apuntes de investigación
+├── .env.example              # plantilla de variables, sin valores
 └── iteraciones/              # histórico del proceso de supervisión
     ├── evaluar-linea-base-iteracion-{1,3,5,6}.mjs
     └── iteracion-{1,3,5,6}-linea-base.json
@@ -155,6 +159,26 @@ separa el resultado de las 50 preguntas de evaluación del de las de control, y 
 por escrito las preguntas que fallan y las que se resolvieron con un tema distinto al
 esperado.
 
+## Registro de interacciones
+
+Cada turno de conversación se guarda en la tabla `interacciones` de Supabase con la
+pregunta, la respuesta que se mostró y las fuentes citadas. El registro ocurre en
+`lib/supabase.ts`, desde el navegador y **después** de que la respuesta ya esté en
+pantalla: si Supabase no está configurado, está caído o rechaza el INSERT, el chatbot
+responde igual y el error solo aparece en la consola con el prefijo `[supabase]`.
+
+La base de datos se usa únicamente como bitácora para analizar después dónde falla la
+búsqueda. No entrena nada, no altera el conocimiento y la evaluación del proyecto sigue
+siendo `npm run evaluar`.
+
+Para conectarla hace falta crear la tabla y su política RLS, y definir dos variables de
+entorno. Todo el paso a paso está en **`docs/SUPABASE.md`**; la plantilla de variables
+está en `.env.example`:
+
+```bash
+cp .env.example .env.local   # y rellenar con tus credenciales
+```
+
 ## Fuentes
 
 Las 29 fuentes están documentadas en `data/fuentes.json` y se clasifican por naturaleza:
@@ -179,6 +203,9 @@ npm run generar-pdfs
 
 ## Despliegue
 
-El proyecto es un Next.js estándar, sin variables de entorno, así que se despliega en
-Vercel conectando el repositorio de GitHub: importar el repositorio y pulsar Deploy.
-Los pasos completos están en `docs/3-guia-despliegue.pdf`.
+El proyecto es un Next.js estándar, así que se despliega en Vercel conectando el
+repositorio de GitHub: importar el repositorio y pulsar Deploy. Si quieres registrar
+las interacciones en producción, añade en Vercel las variables `NEXT_PUBLIC_SUPABASE_URL`
+y `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` y vuelve a desplegar; sin ellas el chatbot
+funciona igual, solo que no queda registro. Los pasos completos están en
+`docs/3-guia-despliegue.pdf` y las variables se explican en `docs/SUPABASE.md`.

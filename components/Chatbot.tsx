@@ -8,6 +8,7 @@ import {
   TOTAL_FUENTES,
   responder,
 } from "@/lib/buscador";
+import { registrarInteraccion } from "@/lib/supabase";
 import type { ContextoConversacion, Fuente } from "@/lib/tipos";
 import estilos from "./Chatbot.module.css";
 
@@ -86,6 +87,14 @@ export default function Chatbot() {
     };
 
     setMensajes((previos) => [...previos, delUsuario, delBot]);
+    // La respuesta ya está en pantalla: el registro en Supabase va después y sin
+    // esperar, para que un fallo de la base de datos nunca retrase ni impida
+    // que el usuario lea la respuesta.
+    void registrarInteraccion({
+      pregunta,
+      respuesta: delBot.texto,
+      fuentes: delBot.fuentes.map((fuente) => fuente.id),
+    });
     // Solo una respuesta informativa cambia el tema de la conversación: un
     // saludo, un agradecimiento o una pregunta fuera de alcance no borran lo
     // que se estaba tratando.
