@@ -321,8 +321,8 @@ console.log(`Respuestas con salvedad institucional pegada: ${conSalvedadNoPedida
 
 // Guardar informe JSON
 writeFileSync(
-  join(raiz, "docs", "iteracion3_lineabase.json"),
+  join(raiz, "iteraciones", "iteracion-3-linea-base.json"),
   JSON.stringify({ resumen: { aciertosTema, longitudPromedio, conTextoInfantilNoPedido, sobrecargadas, conSalvedadNoPedida }, resultados }, null, 2),
   "utf8"
 );
-console.log(`\nResultados guardados en docs/iteracion3_lineabase.json`);
+console.log(`\nResultados guardados en iteraciones/iteracion-3-linea-base.json`);

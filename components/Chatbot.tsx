@@ -8,7 +8,7 @@ import {
   TOTAL_FUENTES,
   responder,
 } from "@/lib/buscador";
-import type { Fuente } from "@/lib/tipos";
+import type { ContextoConversacion, Fuente } from "@/lib/tipos";
 import estilos from "./Chatbot.module.css";
 
 interface Mensaje {
@@ -53,6 +53,11 @@ export default function Chatbot() {
     },
   ]);
   const [pregunta, setPregunta] = useState("");
+  // Memoria de la conversación: lo que respondió el bot en el último turno,
+  // para que las preguntas de seguimiento se puedan resolver.
+  const [contexto, setContexto] = useState<ContextoConversacion | undefined>(
+    undefined
+  );
   const finHilo = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -71,7 +76,7 @@ export default function Chatbot() {
       fueraDeAlcance: false,
     };
 
-    const resultado = responder(pregunta);
+    const resultado = responder(pregunta, undefined, contexto);
     const delBot: Mensaje = {
       id: siguienteId(),
       autor: "bot",
@@ -81,6 +86,18 @@ export default function Chatbot() {
     };
 
     setMensajes((previos) => [...previos, delUsuario, delBot]);
+    // Solo una respuesta informativa cambia el tema de la conversación: un
+    // saludo, un agradecimiento o una pregunta fuera de alcance no borran lo
+    // que se estaba tratando.
+    setContexto(
+      resultado.entrada
+        ? {
+            temaPrevio: resultado.entrada.tema,
+            entradaPreviaId: resultado.entrada.id,
+            conceptosPrevios: resultado.entrada.conceptos ?? [],
+          }
+        : contexto
+    );
     setPregunta("");
   }
 
@@ -99,6 +116,7 @@ export default function Chatbot() {
         fueraDeAlcance: false,
       },
     ]);
+    setContexto(undefined);
   }
 
   const sugerenciasVisibles =

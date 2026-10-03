@@ -77,16 +77,34 @@ chatbot-dia-muertos/
 │   ├── conocimiento.json     # base de conocimiento (50 entradas)
 │   ├── fuentes.json          # fuentes con institución, URL y justificación
 │   └── evaluacion.json       # 50 preguntas de evaluación + 10 de control
-├── scripts/
+├── scripts/                  # herramientas en uso (las que ejecuta npm run)
 │   ├── evaluacion.mjs        # corre la evaluación y genera el reporte
 │   ├── diagnostico.mjs       # muestra el ranking de entradas por pregunta
 │   └── generar_pdfs.py       # genera los tres documentos PDF
-└── docs/
-    ├── 1-fundamentacion.pdf
-    ├── 2-documentacion-tecnica.pdf
-    ├── 3-guia-despliegue.pdf
-    └── evaluacion.md         # resultados de las pruebas
+├── docs/                     # entregables y notas
+│   ├── 1-fundamentacion.pdf
+│   ├── 2-documentacion-tecnica.pdf
+│   ├── 3-guia-despliegue.pdf
+│   ├── evaluacion.md         # resultados de las pruebas (generado)
+│   └── ampliacion-de-conocimientos.md  # apuntes de investigación
+└── iteraciones/              # histórico del proceso de supervisión
+    ├── evaluar-linea-base-iteracion-{1,3,5,6}.mjs
+    └── iteracion-{1,3,5,6}-linea-base.json
 ```
+
+`iteraciones/` es archivo histórico: cada pareja script + reporte guarda el estado de la
+línea base en la iteración correspondiente del proceso de supervisión. No forma parte del
+flujo actual — la evaluación que se mantiene es `scripts/evaluacion.mjs`, la que ejecuta
+`npm run evaluar` y de la que salen `docs/evaluacion.md` y los tres PDF. Los scripts
+archivados se lanzan a mano y escriben su reporte dentro de `iteraciones/`:
+
+```bash
+node --experimental-strip-types iteraciones/evaluar-linea-base-iteracion-6.mjs
+```
+
+`evaluar-linea-base-iteracion-5.mjs` está archivado sin poder ejecutarse: importa
+`lib/buscador.ts`, cuyos imports sin extensión (`./motor`, `./tipos`) solo resuelve el
+empaquetador de Next.js, no el cargador de módulos de Node. Se conserva como registro.
 
 ## Cómo funciona, en corto
 

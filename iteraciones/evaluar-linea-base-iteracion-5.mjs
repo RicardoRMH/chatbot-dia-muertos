@@ -226,8 +226,8 @@ console.log(`Interacciones sociales con ensayo largo no solicitado: ${sobrecarga
 
 // Guardar informe JSON
 writeFileSync(
-  join(raiz, "docs", "iteracion5_lineabase.json"),
+  join(raiz, "iteraciones", "iteracion-5-linea-base.json"),
   JSON.stringify({ resumen: { aciertos, rechazadasConError, sobrecargadasInadecuadas }, resultados }, null, 2),
   "utf8"
 );
-console.log(`\nResultados guardados en docs/iteracion5_lineabase.json`);
+console.log(`\nResultados guardados en iteraciones/iteracion-5-linea-base.json`);

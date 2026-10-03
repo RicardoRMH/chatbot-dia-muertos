@@ -15,6 +15,7 @@ import {
 import type {
   BaseConocimiento,
   BaseFuentes,
+  ContextoConversacion,
   EntradaConocimiento,
   Fuente,
   NivelInformacion,
@@ -124,7 +125,8 @@ function limpiarSaludoPregunta(texto: string): string {
 
 export function responder(
   pregunta: string,
-  entradasActuales: EntradaConocimiento[] = entradas
+  entradasActuales: EntradaConocimiento[] = entradas,
+  contexto?: ContextoConversacion
 ): RespuestaBot {
   const normalizada = normalizar(pregunta ?? "");
   const normalizadaOriginal = pregunta ?? "";
@@ -134,10 +136,11 @@ export function responder(
   const preguntaLimpia = limpiarSaludoPregunta(normalizadaOriginal);
   const normalizadaLimpia = normalizar(preguntaLimpia);
 
-  const { mejor, alternativos } = elegirEntrada(pregunta, entradasActuales);
+  const { mejor, alternativos } = elegirEntrada(pregunta, entradasActuales, contexto);
   const { mejor: mejorLimpio } = elegirEntrada(
     preguntaLimpia,
-    entradasActuales
+    entradasActuales,
+    contexto
   );
 
   const conceptos = conceptosDePregunta(normalizada);

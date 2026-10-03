@@ -71,6 +71,22 @@ export type TipoInteraccionSocial =
   | "confirmacion"
   | "identidad";
 
+/**
+ * Memoria de la conversación que se entrega a `responder` en cada turno.
+ *
+ * Sin ella el chatbot responde a cada pregunta en el vacío y las preguntas de
+ * seguimiento ("¿y para qué sirve?", "¿en qué recipiente?") no pueden
+ * remitirse al tema del turno anterior.
+ */
+export interface ContextoConversacion {
+  /** Tema de la entrada con la que respondió el bot en el turno anterior. */
+  temaPrevio?: string | null;
+  /** Identificador de esa misma entrada, para localizarla sin ambigüedad. */
+  entradaPreviaId?: string | null;
+  /** Conceptos del tema anterior, para saber de qué se estaba hablando. */
+  conceptosPrevios?: string[];
+}
+
 export interface RespuestaBot {
   encontrado: boolean;
   texto: string;

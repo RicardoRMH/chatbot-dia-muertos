@@ -1,4 +1,4 @@
-import type { EntradaConocimiento } from "./tipos";
+import type { ContextoConversacion, EntradaConocimiento } from "./tipos";
 
 /**
  * Puntaje mínimo para considerar que la base de conocimiento responde con
@@ -1002,6 +1002,155 @@ export function esPreguntaBreve(preguntaNormalizada: string): boolean {
   return marcadores.some((m) => conEspacios.includes(` ${m} `));
 }
 
+/**
+ * Bonus que recibe la entrada del turno anterior cuando la pregunta es de
+ * seguimiento.
+ *
+ * No es solo un punto de puntaje: con el contexto activo, la entrada del tema
+ * anterior se prioriza y este bonus es lo que hace que su respuesta supere el
+ * umbral mínimo y no vuelva a mostrarse como "fuera de alcance".
+ */
+export const PUNTO_ANCLA_CONTEXTO = UMBRAL_PUNTAJE + 1;
+
+/**
+ * Puntaje que necesita una entrada ajena al tema anterior para dejar de seguir
+ * al contexto: la pregunta tiene que nombrarla con fuerza, no solo rozarla.
+ */
+export const UMBRAL_DESVIO_CONTEXTO = 8;
+
+/**
+ * Marcadores de un cambio explícito de tema. Cuando aparecen, el contexto del
+ * turno anterior deja de influir en la búsqueda.
+ */
+const MARCADORES_CAMBIO_TEMA = [
+  "cambiando de tema", "cambio de tema", "cambiando el tema",
+  "ahora hablam de", "ahora hablamos de", "mejor hablam de",
+  "dejando eso de lado", "dejando esto de lado", "dejando de lado",
+  "otra pregunta sobre", "por cierto", "por otra parte",
+];
+
+/**
+ * Marcadores de una pregunta de seguimiento: anáforas ("eso", "ellos") y
+ * preguntas elípticas ("¿y para qué sirve?", "¿en qué recipiente?"), que solo
+ * se entienden si se recuerda de qué se estaba hablando en el turno anterior.
+ */
+const MARCADORES_SEGUIMIENTO = [
+  // Apertura elíptica: la pregunta repite el "y" y deja el objeto en el aire.
+  "y para", "y por que", "y como", "y donde", "y cuando", "y quien", "y que",
+  "y cual", "y si", "y a", "y en", "y al",
+  // Verbos y preguntas que piden un detalle del tema anterior.
+  "para que sirve", "para que es", "para que se", "por que se pone",
+  "por que se coloca", "por que se usa", "por que lleva", "por que llevan",
+  "por que ponen", "por que pone", "en que recipiente", "que pasa si no",
+  "que elemento", "que representa", "cual representa", "que personaje",
+  "que alimentos", "que platillos", "que cosas", "que significa",
+  "que significan", "que es lo", "lo minimo", "no puede faltar",
+  "que puntos", "puntos principales", "debo exponer", "necesito comprar",
+  "que tijeras", "tijeras", "que envases", "envases", "puedo usar",
+  "preparan alla", "alla", "desde donde hasta donde", "como puedo",
+  "como se hace", "como la", "como el", "originalmente", "su aroma",
+  "su color", "sus petalos", "sus huesos", "que se hace con ella",
+  // Anáforas y pronombres demostrativos.
+  "ese", "esa", "esos", "esas", "esto", "eso", "aquel", "aquella", "aquello",
+  "ellos", "ellas",
+  // Referencias al número de niveles o regiones del tema anterior.
+  "cuantos niveles", "cuantas regiones", "en que nivel", "en que escalon",
+  "que comida se les pone a ellos",
+];
+
+/**
+ * El usuario ha anunciado que quiere cambiar de tema. El contexto del turno
+ * anterior no debe usarse en ese caso.
+ */
+export function esCambioDeTema(preguntaNormalizada: string): boolean {
+  const conEspacios = ` ${preguntaNormalizada} `;
+  return MARCADORES_CAMBIO_TEMA.some((m) => conEspacios.includes(` ${m} `));
+}
+
+/**
+ * La pregunta depende de lo que se dijo en el turno anterior: usa un pronombre
+ * o deja el objeto de la pregunta en el aire.
+ */
+export function esPreguntaDeSeguimiento(preguntaNormalizada: string): boolean {
+  const conEspacios = ` ${preguntaNormalizada} `;
+  return MARCADORES_SEGUIMIENTO.some((m) => conEspacios.includes(` ${m} `));
+}
+
+/**
+ * Localiza la entrada con la que se respondió en el turno anterior. Se busca
+ * primero por identificador y, si no se conserva, por tema.
+ */
+function entradaPrevia(
+  contexto: ContextoConversacion,
+  entradas: EntradaConocimiento[]
+): EntradaConocimiento | null {
+  if (contexto.entradaPreviaId) {
+    const porId = entradas.find((e) => e.id === contexto.entradaPreviaId);
+    if (porId) return porId;
+  }
+  if (contexto.temaPrevio) {
+    const tema = normalizar(contexto.temaPrevio);
+    const porTema = entradas.find((e) => normalizar(e.tema) === tema);
+    if (porTema) return porTema;
+  }
+  return null;
+}
+
+/**
+ * Términos del tema anterior que se inyectan en la pregunta como pista de
+ * contexto: son los que permiten que un pronombre o una pregunta elíptica
+ * alcance la entrada del turno anterior.
+ */
+function pistasDeContexto(anterior: EntradaConocimiento): string {
+  return normalizar(
+    [anterior.tema, ...anterior.palabras_clave, ...(anterior.sinonimos ?? [])].join(" ")
+  );
+}
+
+/**
+ * Resuelve la pregunta dentro del tema del turno anterior.
+ *
+ * Mientras el usuario no nombre otro tema, la entrada anterior sigue siendo la
+ * respuesta y las demás quedan como alternativas. Solo se rompe el seguimiento
+ * cuando otra entrada ajena al tema anterior aparece con fuerza en la pregunta
+ * (por ejemplo "¿por qué se pone sal y agua?" después de hablar de las
+ * variaciones regionales): entonces la pregunta se está resolviendo sola y el
+ * tema previo ya no debe arrastrarla.
+ */
+function anclarEnTurnoAnterior(
+  evaluadas: EvaluacionEntrada[],
+  anterior: EntradaConocimiento | null,
+  conceptosPrevios: Set<string>
+): EvaluacionEntrada[] {
+  if (!anterior || conceptosPrevios.size === 0) return evaluadas;
+
+  let previa = evaluadas.find((r) => r.entrada.id === anterior.id);
+  if (!previa) {
+    previa = {
+      entrada: anterior,
+      puntaje: 0,
+      coincidencias: [],
+      conceptos: [],
+      similitudEjemplo: 0,
+    };
+    evaluadas.push(previa);
+  }
+
+  const desvio = evaluadas.some(
+    (r) =>
+      r.entrada.id !== anterior.id &&
+      r.puntaje >= UMBRAL_DESVIO_CONTEXTO &&
+      !(r.entrada.conceptos ?? []).some((c) => conceptosPrevios.has(c))
+  );
+  if (desvio) return evaluadas;
+
+  previa.puntaje += PUNTO_ANCLA_CONTEXTO;
+  const alternativas = ordenarPorPuntaje(
+    evaluadas.filter((r) => r.entrada.id !== anterior.id)
+  );
+  return [previa, ...alternativas];
+}
+
 /** Coeficiente de Dice entre la pregunta y un ejemplo, de 0 a 1. */
 export function similitudEjemplo(
   preguntaNormalizada: string,
@@ -1258,7 +1407,8 @@ export function ordenarPorPuntaje(
 
 export function elegirEntrada(
   pregunta: string,
-  entradas: EntradaConocimiento[]
+  entradas: EntradaConocimiento[],
+  contexto?: ContextoConversacion
 ): { mejor: EvaluacionEntrada | null; alternativos: EvaluacionEntrada[] } {
   const preguntaNormalizada = normalizar(pregunta ?? "");
 
@@ -1266,11 +1416,35 @@ export function elegirEntrada(
 
   const conceptosActivos = conceptosDePregunta(preguntaNormalizada);
 
-  if (esFueraDelDominio(preguntaNormalizada)) {
+  // Un cambio explícito de tema invalida el contexto: la pregunta se resuelve
+  // como si fuera el primer turno de la conversación.
+  const contextoVivo = esCambioDeTema(preguntaNormalizada) ? null : contexto ?? null;
+
+  const seguimiento = Boolean(
+    contextoVivo &&
+      esPreguntaDeSeguimiento(preguntaNormalizada) &&
+      (contextoVivo.entradaPreviaId ||
+        contextoVivo.temaPrevio ||
+        (contextoVivo.conceptosPrevios?.length ?? 0) > 0)
+  );
+
+  // Una pregunta de seguimiento no trae palabras del dominio: sin el tema
+  // anterior no se sabría de qué está hablando, así que no se rechaza.
+  if (esFueraDelDominio(preguntaNormalizada) && !seguimiento) {
     return { mejor: null, alternativos: [] };
   }
 
-  const preguntaAmpliada = expandirPregunta(preguntaNormalizada, conceptosActivos);
+  const anterior = seguimiento && contextoVivo ? entradaPrevia(contextoVivo, entradas) : null;
+  const conceptosPrevios = new Set<string>([
+    ...(anterior?.conceptos ?? []),
+    ...(contextoVivo?.conceptosPrevios ?? []),
+  ]);
+
+  const preguntaAmpliada = `${expandirPregunta(preguntaNormalizada, conceptosActivos)} ${
+    anterior ? pistasDeContexto(anterior) : ""
+  }`
+    .replace(/\s+/g, " ")
+    .trim();
   const infantil = esPreguntaInfantil(preguntaNormalizada);
   const pesos = pesosPorPalabraClave(entradas);
   const pesosConcepto = pesosPorConcepto(entradas);
@@ -1291,7 +1465,17 @@ export function elegirEntrada(
       .filter((r) => r.puntaje > 0)
   );
 
-  if (evaluadas.length === 0) return { mejor: null, alternativos: [] };
+  if (evaluadas.length === 0 && !anterior) {
+    return { mejor: null, alternativos: [] };
+  }
 
-  return { mejor: evaluadas[0], alternativos: evaluadas.slice(1) };
+  const ordenadas = anclarEnTurnoAnterior(
+    evaluadas,
+    anterior,
+    conceptosPrevios
+  );
+
+  if (ordenadas.length === 0) return { mejor: null, alternativos: [] };
+
+  return { mejor: ordenadas[0], alternativos: ordenadas.slice(1) };
 }

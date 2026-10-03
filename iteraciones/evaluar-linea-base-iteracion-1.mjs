@@ -283,8 +283,8 @@ for (const f of fallas.slice(0, 15)) {
 
 // Guardar informe JSON
 writeFileSync(
-  join(raiz, "docs", "iteracion1_lineabase.json"),
+  join(raiz, "iteraciones", "iteracion-1-linea-base.json"),
   JSON.stringify({ resumen: { correctas, respondidas, noRespondidas, temaErroneo }, fallasPorCategoria, resultados }, null, 2),
   "utf8"
 );
-console.log(`\nResultados detallados guardados en docs/iteracion1_lineabase.json`);
+console.log(`\nResultados detallados guardados en iteraciones/iteracion-1-linea-base.json`);
