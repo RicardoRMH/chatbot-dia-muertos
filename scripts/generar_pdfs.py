@@ -53,6 +53,56 @@ ACCENTOS_CATEGORIA = {
 
 def categorias_legibles():
     return [ACCENTOS_CATEGORIA.get(c, c) for c in CATEGORIAS]
+
+
+def resultado_evaluacion():
+    """Lee el resumen medido de docs/evaluacion.md en vez de suponer un resultado.
+
+    El reporte lo escribe scripts/evaluacion.mjs al ejecutar `npm run evaluar`.
+    Si no existe, se dice con franqueza en lugar de inventar una cifra.
+    """
+    import re
+
+    ruta = os.path.join(DOCS, "evaluacion.md")
+    if not os.path.exists(ruta):
+        return [
+            "Todavía no hay un reporte de evaluación en docs/evaluacion.md. "
+            "Hay que ejecutar <b>npm run evaluar</b> y volver a generar los PDF "
+            "para que este documento reporte cifras reales."
+        ]
+
+    with open(ruta, encoding="utf-8") as fh:
+        texto = fh.read()
+
+    def valor(etiqueta):
+        m = re.search(rf"\*\*{re.escape(etiqueta)}:\*\*\s*(\d+)\s*de\s*(\d+)", texto)
+        return (int(m.group(1)), int(m.group(2))) if m else None
+
+    evaluacion_ = valor("Preguntas de evaluación")
+    control_ = valor("Preguntas de control fuera de alcance")
+    lineas = []
+    if evaluacion_:
+        aciertos, total = evaluacion_
+        linea = (
+            f"De las {total} preguntas de evaluación, el chatbot acertó {aciertos}. "
+            "Cada una se comprobó contra la entrada de conocimiento prevista, no solo "
+            "contra el hecho de que respondiera algo."
+        )
+        lineas.append(linea)
+    if control_:
+        aciertos, total = control_
+        lineas.append(
+            f"De las {total} preguntas de control, de otros temas y fuera de su base de "
+            f"conocimiento, el chatbot rechazó correctamente {aciertos}."
+        )
+    if len(lineas) == 0:
+        return [
+            "El reporte docs/evaluacion.md no contiene un resumen legible. "
+            "Hay que ejecutar <b>npm run evaluar</b> y volver a generar los PDF."
+        ]
+    return lineas
+
+
 PALABRAS_CLAVE = sum(len(e["palabras_clave"]) for e in ENTRADAS)
 
 estilos = getSampleStyleSheet()
@@ -245,8 +295,11 @@ def fundamentacion():
         "archivo data/fuentes.json del repositorio."
     ))
     e.append(tabla(
-        ["Institución", "Documento o página", "URL"],
-        [[f["institucion"], f["documento"], f["url"]] for f in FUENTES],
+        ["Institución", "Documento o página", "URL o ruta"],
+        [
+            [f["institucion"], f["documento"], f.get("url") or f.get("ruta", "")]
+            for f in FUENTES
+        ],
         [4.6 * cm, 5.8 * cm, 5.6 * cm],
     ))
 
@@ -297,27 +350,34 @@ def fundamentacion():
     ))
 
     e.append(p("9. Cómo se evaluará", H1))
+    evaluacion_ = [g for g in EVALUACION["grupos"] if g.get("tipo") != "control"]
+    control_ = [g for g in EVALUACION["grupos"] if g.get("tipo") == "control"]
+    total_preguntas = sum(len(g["preguntas"]) for g in evaluacion_)
+    total_control = sum(len(g["preguntas"]) for g in control_)
     e.append(p(
         "La evaluación se diseñó antes de escribir el chatbot y se ejecuta de forma automática, "
         "de modo que cualquier persona pueda reproducir el resultado. Las preguntas están en el "
-        "archivo data/evaluacion.json, agrupadas en " + str(len(EVALUACION["grupos"])) +
-        " niveles, y el script scripts/evaluacion.mjs las corre contra el motor de búsqueda y "
-        "genera el reporte docs/evaluacion.md."
+        "archivo data/evaluacion.json, agrupadas en " + str(len(evaluacion_)) +
+        " bloques de evaluación y " + str(len(control_)) +
+        " bloque de control, y el script scripts/evaluacion.mjs las corre contra el motor de "
+        "búsqueda y genera el reporte docs/evaluacion.md."
     ))
-    e.append(vinetas([
-        "<b>Básicas:</b> definición, fechas y la ofrenda.",
-        "<b>Intermedias:</b> significado de elementos concretos.",
-        "<b>Comparativas:</b> la diferencia con Halloween.",
-        "<b>Culturales:</b> variaciones regionales, significado, origen, sincretismo, Catrina, "
-        "patrimonio y mitología.",
-        "<b>De control:</b> preguntas de otros temas que el chatbot debe rechazar.",
-    ]))
+    vinetas_ = [
+        f"<b>{g['nivel']}:</b> {g['objetivo']}"
+        for g in EVALUACION["grupos"]
+    ]
+    e.append(vinetas(vinetas_))
     e.append(p(
+        f"En total son {total_preguntas} preguntas de evaluación y {total_control} de control. "
         "Una prueba se cuenta como acierto en dos situaciones: el chatbot responde con la entrada "
         "esperada cuando la pregunta sí es del tema, o bien rechaza la pregunta cuando el tema está "
         "fuera de su alcance. Un acierto en la segunda situación es tan importante como en la "
         "primera, porque demuestra que el sistema no improvisa."
     ))
+
+    e.append(p("Resultado medido de la evaluación", H2))
+    for linea in resultado_evaluacion():
+        e.append(p(linea))
 
     e.append(p("10. Ejemplos de preguntas", H1))
     e.append(tabla(
@@ -352,7 +412,7 @@ def fundamentacion():
             ["Sin arquitectura compleja", "Cuatro archivos de código y dos de datos"],
             ["Interfaz sencilla y presentable", "Un panel de chat con CSS propio"],
             ["Manejo de preguntas fuera de alcance", "Mensaje fijo, nunca inventa"],
-            ["Fuentes justificadas", "15 fuentes con institución, URL y uso documentados"],
+            ["Fuentes justificadas", f"{len(FUENTES)} fuentes con institución, URL y uso documentados"],
             ["Fácil de explicar a un estudiante", "Lógica de búsqueda en un solo archivo"],
         ],
         [7.0 * cm, 9.0 * cm],
@@ -365,13 +425,15 @@ def fundamentacion():
     e.append(vinetas([
         "<b>No entiende la intención.</b> El buscador no analiza la frase: compara palabras clave. "
         "Si alguien pregunta con una palabra que no está en la lista, la pregunta se rechaza aunque "
-        "el tema sí esté en la base. Es el precio de no usar modelos de lenguaje.",
+        "el tema sí esté en la base. Es el precio de no usar modelos de lenguaje. Para reducir ese "
+        "hueco, cada entrada declara sinónimos, la base tiene una versión para niños y el motor "
+        "agrupa las palabras en conceptos, pero la limitación no desaparece.",
         "<b>Sin memoria de conversación.</b> Cada pregunta se responde de forma independiente. "
         "Preguntar ¿Y el pan? después de otra pregunta no funciona, porque no hay contexto.",
         "<b>Cobertura finita.</b> La base tiene " + str(len(ENTRADAS)) + " entradas. Se quedaron "
-        "afuera temas reales porque no se encontró una fuente institucional que los respaldara: el "
-        "copal, la variedad de pan de muerto llamada llorón y el origen exacto del papel picado a "
-        "partir del recorte de papel chino, entre otros.",
+        "afuera temas que no se incorporaron: la fiesta de Janitzio en Pátzcuaro, la Xandú de "
+        "Oaxaca, la variedad de pan de muerto llamada llorón y el origen del papel picado en el "
+        "recorte de papel chino.",
         "<b>Sin análisis de imágenes, audio ni video.</b> Solo texto.",
         "<b>Puede quedar desactualizado.</b> La información cultural cambia cada año. Las "
         "actividades de cada edición se documentan en los comunicados de la Secretaría de Cultura, "

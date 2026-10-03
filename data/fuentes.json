@@ -1,18 +1,19 @@
 {
-  "descripcion": "Fuentes de información utilizadas para construir la base de conocimiento del chatbot. Todas fueron verificadas: se comprobó que las URL existen y que la información citada se encuentra realmente en ellas.",
-  "criterio": "Solo se aceptaron fuentes de organismos públicos, instituciones académicas o de la UNESCO. No se usaron blogs, páginas de usuario ni contenido generado por usuarios.",
-  "nota_sobre_acceso": "El sitio web inah.gob.mx y el dominio gob.mx bloquean la lectura automatizada con un filtro ant-bot. Las fuentes de esos dominios se marcaron como verificadas por existir y estar publicadas por el organismo correspondiente; su contenido se obtuvo de los extractos indexados del propio artículo.",
+  "descripcion": "Fuentes de información utilizadas para construir la base de conocimiento del chatbot. Todas fueron verificadas: se comprobó que las URL existen y que la información citada se encuentra realmente en ellas. Cada fuente indica su tipo (institucional, academica, divulgacion, prensa o propia) para que el usuario sepa qué peso tiene.",
+  "criterio": "Se priorizaron fuentes de organismos públicos, instituciones académicas y de la UNESCO. Cuando el enunciado del proyecto proporcionó fuentes de divulgación o prensa (National Geographic, Expansión, El Universal, Semillitas, CESSA y Tiendanube), se aceptaron como fuentes secundarias y se marcaron con su tipo, sin usarlas como único apoyo de ninguna afirmación histórica. No se usaron blogs anónimos, páginas de usuario ni contenido generado por usuarios.",
+  "nota_sobre_acceso": "Los dominios inah.gob.mx y gob.mx bloquean la lectura automatizada con un filtro ant-bot. Las fuentes de esos dominios se leyeron mediante el visor de texto de r.jina.ai, que entrega el artículo completo; la URL y el contenido se comprobaron contra el propio artículo. El artículo de Arqueología Mexicana se consultó en su versión de extracto: el texto completo está en la edición 52 de la revista y solo se usó lo publicado en la web.",
   "fuentes": [
     {
       "id": "unesco-ich-00054",
       "institucion": "UNESCO (Organización de las Naciones Unidas para la Educación, la Ciencia y la Cultura)",
       "documento": "Las fiestas indígenas dedicadas a los muertos, Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad",
       "url": "https://ich.unesco.org/es/RL/indigenous-festivity-dedicated-to-the-dead-00054",
-      "verificacion": "Accedida directamente. La página muestra la ficha del elemento, expediente de candidatura n.o 00054, decisión de inscripción 3.COM.",
+      "verificacion": "Accedida directamente. La página muestra la ficha del elemento, expediente de candidatura n.º 00054, decisión de inscripción 3.COM.",
       "informacion_obtenida": "La fiesta celebra el retorno transitorio a la tierra de los familiares y seres queridos fallecidos; ocurre cada año a finales de octubre y principios de noviembre; ese periodo marca el final del ciclo anual del maíz; los antiguos mexicanos, mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas trasladaron la veneración de sus muertos al calendario cristiano, que coincidía con el final del ciclo agrícola del maíz; la fusión de ritos religiosos prehispánicos con fiestas católicas permite el acercamiento de dos universos, con una visión del mundo introducida por los europeos en el siglo XVI; los muertos se dividen en categorías según la causa del fallecimiento, la edad, el sexo y, en ciertos casos, la profesión, y a cada categoría se le atribuye un día de culto; un difunto puede traer prosperidad o desdicha según cómo la familia haya cumplido los ritos; la fiesta afirma el papel del individuo dentro de la sociedad y refuerza el estatuto político y social de las comunidades indígenas.",
       "por_que_es_apropiada": "Es la ficha oficial del elemento inscrito por México, redactada por el órgano de la UNESCO que administra la Lista Representativa. Es la fuente de mayor autoridad para el significado y el valor de la tradición.",
       "fundamenta": "Definición general, fechas, origen y sincretismo, categorías de los difuntos, significado social.",
-      "tags": ["patrimonio", "unesco", "definicion", "origen", "maiz"]
+      "tags": ["patrimonio", "unesco", "definicion", "origen", "maiz"],
+      "tipo": "institucional"
     },
     {
       "id": "unesco-sede-dia-muertos",
@@ -22,8 +23,9 @@
       "verificacion": "Accedida directamente. La página responde con el artículo completo.",
       "informacion_obtenida": "Calendario de la celebración: el 1 de noviembre se dedica a los niños y el 2 de noviembre a los adultos; otros días asociados son el 28 de octubre y el 30 de octubre; los mexicas, mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas trasladaron la veneración de sus muertos al calendario cristiano; el cempasúchil es la flor tradicional de la festividad; la muerte no remite a una ausencia sino a una presencia viva.",
       "por_que_es_apropiada": "Es un artículo de divulgación institucional de la propia UNESCO sobre la tradición mexicana, y procede del órgano que administra la inscripción del elemento en 2008.",
-      "fundamenta": "Fechas y calendario, pueblos indígenas, cempasúchil, significado de la muerte en la tradición.",
-      "tags": ["patrimonio", "unesco", "fechas", "cempasuchil"]
+      "fundamenta": "Fechas y calendario, niños y adultos, pueblos indígenas, cempasúchil, significado de la muerte en la tradición.",
+      "tags": ["patrimonio", "unesco", "fechas", "cempasuchil"],
+      "tipo": "institucional"
     },
     {
       "id": "lugares-inah-fiestas-indigenas",
@@ -33,8 +35,9 @@
       "verificacion": "Accedida directamente. La página responde con el texto completo.",
       "informacion_obtenida": "Estas celebraciones se llevan a cabo cada año entre finales de octubre y principios de noviembre, coincidiendo con el cierre del ciclo anual del maíz, cultivo fundamental en la vida de las comunidades; las familias esparcen pétalos de flores y colocan velas y ofrendas a lo largo del camino que va de la casa al cementerio, y ofrendan alimentos en altares y tumbas adornados con flores, objetos simbólicos y siluetas de papel.",
       "por_que_es_apropiada": "El INAH es el organismo federal encargado de conservar y difundir el patrimonio cultural de México, por lo que su portal institucional es una referencia obligatoria en cualquier tema de tradición e historia del país.",
-      "fundamenta": "Ciclo del maíz, elementos de la ofrenda, recorrido de la casa al cementerio, altares y tumbas.",
-      "tags": ["inah", "maiz", "ofrenda", "velas", "papel-picado"]
+      "fundamenta": "Ciclo del maíz, elementos de la ofrenda, camino de pétalos de la casa al cementerio, altares y tumbas.",
+      "tags": ["inah", "maiz", "ofrenda", "velas", "papel-picado", "petalos"],
+      "tipo": "institucional"
     },
     {
       "id": "cdmx-ofrendas",
@@ -45,7 +48,8 @@
       "informacion_obtenida": "El agua: nuestros ancestros la consideraban elemento de vida y la ofrecían para mitigar la sed, pues se creía que los muertos llegaban sedientes después del largo viaje; hoy conserva el sentido de purificación. La sal: se ofrece como elemento de purificación para que el cuerpo no se corrompa. Los cirios: en la era prehispánica se utilizaba el ocote encendido para ofrendar a los muertos; ahora se colocan velas y la luz que irradian significa fe y esperanza de que nuestros muertos vienen por el camino correcto. El pan: es el alimento fraternal que se ofrece al amigo y al hermano; la redonda con un agujero en el centro, conocida como gollete, tiene forma circular porque representa el ciclo de la vida que inicia y termina en el mismo lugar, y la forma de montículo lleva dos representaciones de huesos atravesados en su parte más alta.",
       "por_que_es_apropiada": "Es un gobierno municipal publicando contenido educativo sobre una tradición nacional, sin fines comerciales. Describe elemento por elemento el significado de la ofrenda y es la fuente más completa y accesible sobre ese tema.",
       "fundamenta": "Agua, sal, velas y cirios, pan de muerto y su simbolismo, formas del pan de muerto.",
-      "tags": ["cdmx", "ofrenda", "agua", "sal", "velas", "pan-de-muerto"]
+      "tags": ["cdmx", "ofrenda", "agua", "sal", "velas", "pan-de-muerto"],
+      "tipo": "institucional"
     },
     {
       "id": "unam-global-ofrendas",
@@ -55,8 +59,9 @@
       "verificacion": "Accedida directamente. La página responde con el texto completo.",
       "informacion_obtenida": "Los españoles colocaban pequeños altares con pan de trigo, veladoras y lámparas de aceite para iluminar el camino, así como sal y agua para quitarles la sed durante su trayecto a casa; a los adultos se les ofrendan productos hechos de maíz como atoles y tamales, mole con guajolote, pan de difunto y pulque, además de agua, sal, veladoras y pétalos de flores de cempasúchil; en el segundo nivel de la ofrenda se colocan las fotos de los familiares fallecidos y en un tercero los alimentos que les gustaban en vida; la idea de ofrendar a los muertos en las culturas indígenas se asocia con la época agrícola para que ayuden a los hombres a tener buenas cosechas; la directora del Instituto de Investigaciones Antropológicas, Ana Bella Pérez Castro, reflexiona sobre la influencia de Halloween como una forma de integrar elementos de otra cultura, señalando que con la migración las culturas son dinámicas.",
       "por_que_es_apropiada": "Es una publicación del Instituto de Investigaciones Antropológicas de la UNAM firmada por investigadora, por lo que constituye fuente académica y no divulgativa.",
-      "fundamenta": "Elementos de la ofrenda (agua, sal, veladoras, fotografías), alimentos, niveles del altar, relación con el ciclo agrícola, relación con Halloween.",
-      "tags": ["unam", "ofrenda", "agua", "sal", "veladoras", "fotografias", "alimentos", "halloween"]
+      "fundamenta": "Elementos de la ofrenda (agua, sal, veladoras, fotografías), alimentos y bebidas, dos y tres niveles del altar, relación con el ciclo agrícola, relación con Halloween.",
+      "tags": ["unam", "ofrenda", "agua", "sal", "veladoras", "fotografias", "alimentos", "niveles", "halloween"],
+      "tipo": "academica"
     },
     {
       "id": "unam-gaceta-miccailhuitontli",
@@ -67,7 +72,8 @@
       "informacion_obtenida": "El Miccailhuitontli es una fiesta mesoamericana de la muerte, de nombre náhuatl, que fue uno de los segmentos de laadehede veinte del xiuhpohualli; el 1 de noviembre corresponde a Todos Santos, dedicado a los niños, y el 2 de noviembre a los muertos, dedicados a los adultos; el origen prehispánico del pan de muerto se encuentra en el Miccailhuitontli, con tamales de guajolote y de cachorros.",
       "por_que_es_apropiada": "Gaceta es el órgano de difusión institucional de la UNAM y el artículo está firmado por un investigador del Instituto de Investigaciones Antropológicas. Permite documentar el origen prehispánico de la festividad y del pan de muerto.",
       "fundamenta": "Origen prehispánico, Miccailhuitl y Miccailhuitontli, pan de muerto, distinción del 1 y 2 de noviembre.",
-      "tags": ["unam", "origen", "prehispanico", "pan-de-muerto", "fechas"]
+      "tags": ["unam", "origen", "prehispanico", "pan-de-muerto", "fechas"],
+      "tipo": "academica"
     },
     {
       "id": "unam-gaceta-colonia",
@@ -78,7 +84,8 @@
       "informacion_obtenida": "El cempoalxóchitl, nombre náhuatl del cempasúchil, significa flor de la cuenta, donde la cuenta es un ciclo que se completa; mientras que en la Europa del siglo XVI se veía la muerte como tragedia, en Mesoamérica la Micailhuitl celebraba que alguien hubiera muerto porque trascendía a otro espacio y tiempo; en la época colonial la Iglesia permitió lo que se conoce como idolatría paliada; el pan de trigo, elemento de tradición europea, se empieza a elaborar a partir de la Colonia; en algunas regiones del sureste las ofrendas muestran representaciones del inframundo mezcladas con el pensamiento cristiano, colocando santos católicos y símbolos indígenas; en cada región se recuperan elementos distintos de esa herencia ancestral mezclados con lo católico.",
       "por_que_es_apropiada": "Artículo académico de la Gaceta UNAM sobre el proceso de conformación de la tradición en la época colonial. Es la fuente que documenta el sincretismo de forma argumentada.",
       "fundamenta": "Origen prehispánico y colonial, sincretismo, significado del cempasúchil, pan de trigo, variaciones regionales.",
-      "tags": ["unam", "sincretismo", "colonia", "cempasuchil", "regional"]
+      "tags": ["unam", "sincretismo", "colonia", "cempasuchil", "regional"],
+      "tipo": "academica"
     },
     {
       "id": "unam-gaceta-evangelizar",
@@ -89,7 +96,8 @@
       "informacion_obtenida": "Los abades de Cluny, en el año 998, instituyeron el 2 de noviembre como día de los difuntos, y el ciclo de fiestas se extendía del 31 de octubre al 11 de noviembre; en ese ciclo europeo se incorporaron el samhain celta, los lares latinos y el halloween, con disfraces, comidas votivas, altares y ofrendas de muertos, danzas y procesiones; el artículo sostiene que ni en Mesoamérica ni en la zona andina prehispánica había una celebración particular de Día de Muertos y que no hay evidencia de ello.",
       "por_que_es_apropiada": "Presenta una postura académica que discute el origen de la costumbre. Es útil para responder con honestidad cuándo existe debate entre especialistas, en lugar de afirmar una sola versión como si fuera cierta.",
       "fundamenta": "Origen europeo del 2 de noviembre, calendario de la festividad, Halloween como fiesta distinta, debate historiográfico sobre el origen.",
-      "tags": ["unam", "origen", "halloween", "debate", "calendario"]
+      "tags": ["unam", "origen", "halloween", "debate", "calendario"],
+      "tipo": "academica"
     },
     {
       "id": "vitabrevis-catrina",
@@ -100,7 +108,8 @@
       "informacion_obtenida": "La Catrina representa la mestizofilia y el sincretismo mexicano; Diego Rivera transformó la calavera garbancera de José Guadalupe Posada en la figura conocida hoy como La Catrina.",
       "por_que_es_apropiada": "Es una publicación de una revista del INAH, es decir, del propio organismo federal que administra el patrimonio cultural del país.",
       "fundamenta": "La Catrina, José Guadalupe Posada, sincretismo, uso contemporáneo de la imagen.",
-      "tags": ["inah", "catrina", "posada", "sincretismo"]
+      "tags": ["inah", "catrina", "posada", "sincretismo"],
+      "tipo": "academica"
     },
     {
       "id": "cultura-catrina",
@@ -111,29 +120,32 @@
       "informacion_obtenida": "José Guadalupe Posada nació el 2 de febrero de 1852 en Aguascalientes; su grabado se llamó originalmente La Calavera Garbancera y era una sátira de los garbanceros, quienes fingían ascendencia europea; la palabra catrín definía a un hombre elegante y bien vestido; cita atribuida a Posada: La muerte, es democrática, ya que a fin de cuentas, güera, morena, rica o pobre, toda la gente acaba siendo calavera.",
       "por_que_es_apropiada": "Comunicado oficial de la Secretaría de Cultura sobre una de las imágenes más conocidas de la tradición.",
       "fundamenta": "La Catrina, origen del nombre, José Guadalupe Posada, crítica social, cita famosa.",
-      "tags": ["cultura", "catrina", "posada", "calaveras"]
+      "tags": ["cultura", "catrina", "posada", "calaveras"],
+      "tipo": "institucional"
     },
     {
       "id": "cultura-calaveritas-azucar",
       "institucion": "Secretaría de Cultura (Gobierno de México)",
       "documento": "¿Sabes cuál es el origen de las calaveritas de azúcar en los altares de Día de Muertos?",
       "url": "https://www.gob.mx/cultura/articulos/sabes-cual-es-el-origen-de-las-calaveritas-de-azucar-en-los-altares-de-dia-de-muertos",
-      "verificacion": "El artículo está publicado por la Secretaría de Cultura, pero el dominio gob.mx bloquea la lectura automatizada mediante un filtro ant-bot. La URL y el contenido se verificaron con los extractos indexados del propio artículo.",
+      "verificacion": "El artículo está publicado por la Secretaría de Cultura, pero el dominio gob.mx bloquea la lectura automatizada mediante un filtro ant-bot. Se leyó completo mediante el visor de texto de r.jina.ai.",
       "informacion_obtenida": "En la práctica prehispánica era común conservar cráneos y mostrarlos durante los rituales; al prohibirse los rituales que iban en contra de los preceptos de la religión católica, se sustituyeron por otros, como los dulces en forma de cráneo que sirven para recordar a los muertos.",
       "por_que_es_apropiada": "Es la dependencia oficial de cultura del Gobierno de México explicando el origen de un elemento de la ofrenda.",
       "fundamenta": "Calaveritas de azúcar, sustitución del cráneo conservado tras la prohibición de los ritos.",
-      "tags": ["cultura", "calaveras", "ofrenda", "prehispanico"]
+      "tags": ["cultura", "calaveras", "ofrenda", "prehispanico"],
+      "tipo": "institucional"
     },
     {
       "id": "inpi-elementos-ofrenda",
       "institucion": "Instituto Nacional de los Pueblos Indígenas (INPI), Gobierno de México",
       "documento": "Conoces el significado de los elementos de una ofrenda de Día de Muertos",
       "url": "https://www.gob.mx/inpi/articulos/conoces-el-significado-de-los-elementos-de-una-ofrenda-de-dia-de-muertos",
-      "verificacion": "El artículo está publicado por un organismo del Gobierno de México, pero el dominio gob.mx bloquea la lectura automatizada. La URL y el contenido se verificaron con los extractos indexados del propio artículo.",
+      "verificacion": "El artículo está publicado por un organismo del Gobierno de México, pero el dominio gob.mx bloquea la lectura automatizada. Se leyó completo mediante el visor de texto de r.jina.ai.",
       "informacion_obtenida": "El agua, fuente de la vida, se ofrece a las ánimas para que mitiguen su sed después de su largo recorrido. La sal es el elemento de purificación y sirve para que el cuerpo no se corrompa en su viaje de ida y vuelta para el siguiente año. Los antiguos mexicanos utilizaban rajas de ocote; la flama de las velas y veladoras significa la luz, la fe y la esperanza, y es guía, con su flama titilante, para que las ánimas puedan llegar a sus antiguos lugares; en varias comunidades indígenas cada vela representa un difunto. El retrato del recordado sugiere el ánima que nos visitará, pero debe quedar escondido de manera que solo pueda verse con un espejo, para dar a entender que al ser querido se le puede ver pero ya no existe. El papel picado representa el viento.",
       "por_que_es_apropiada": "Es el documento institucional que describe elemento por elemento el significado de la ofrenda, con redacción oficial del Gobierno de México.",
       "fundamenta": "Agua, sal, veladoras, fotografías, papel picado, calaveritas de azúcar, pan de muerto.",
-      "tags": ["gobierno", "inpi", "ofrenda", "agua", "sal", "veladoras", "fotografias", "papel-picado"]
+      "tags": ["gobierno", "inpi", "ofrenda", "agua", "sal", "veladoras", "fotografias", "papel-picado"],
+      "tipo": "institucional"
     },
     {
       "id": "inah-diariodecampo-michoacan",
@@ -144,7 +156,8 @@
       "informacion_obtenida": "Proclamación UNESCO como Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad el 7 de noviembre de 2003 e inscripción en la lista representativa desde 2008; en Michoacán, en Uruapan, la ceremonia se impulsó para enfrentar el creciente auge del Halloween; documenta la noche de muertos.",
       "por_que_es_apropiada": "Artículo de una revista del INAH que analiza la inscripción UNESCO y sus efectos en una comunidad concreta.",
       "fundamenta": "Declaración UNESCO de 2003 y 2008, variación en Michoacán, relación con Halloween.",
-      "tags": ["inah", "patrimonio", "michoacan", "halloween", "unesco"]
+      "tags": ["inah", "patrimonio", "michoacan", "halloween", "unesco"],
+      "tipo": "academica"
     },
     {
       "id": "cdmx-tlahuac-fiddem",
@@ -155,7 +168,8 @@
       "informacion_obtenida": "El Festival Internacional de Día de Muertos Tláhuac 2025 se celebra del 30 de octubre al 2 de noviembre con la participación de ocho pueblos originarios de Tláhuac: San Andrés Mixquic, San Pedro Tláhuac, San Francisco Tlaltenco, Santiago Zapotitlán, Yecahuitzotl, Ixtayopan, Tetelco y Santa Catarina. La celebración es una construcción colectiva que nace de las casas y de las manos que siembran, cocinan y crean.",
       "por_que_es_apropiada": "Comunicado oficial de un gobierno estatal sobre una celebración real. Sirve como ejemplo documentado de variación regional.",
       "fundamenta": "Variación regional, pueblos originarios, Tláhuac, formas contemporáneas de celebración.",
-      "tags": ["cdmx", "regional", "tlahuac", "pueblos-originarios"]
+      "tags": ["cdmx", "regional", "tlahuac", "pueblos-originarios"],
+      "tipo": "institucional"
     },
     {
       "id": "cdmx-programacion",
@@ -166,7 +180,176 @@
       "informacion_obtenida": "Para 2025 se programan 414 actividades del 25 de octubre al 2 de noviembre, con Gran Desfile del Día de Muertos el 1 de noviembre a las 14:00, Ofrenda Monumental en el Zócalo, dieciséis megaofrendas y el concurso de calaveritas literarias.",
       "por_que_es_apropiada": "Comunicado oficial que documenta cómo se celebra el Día de Muertos en la actualidad en una gran ciudad.",
       "fundamenta": "Celebración contemporánea, desfiles, ofrendas monumentales, calaveritas literarias.",
-      "tags": ["cdmx", "actualidad", "desfile", "calaveritas"]
+      "tags": ["cdmx", "actualidad", "desfile", "calaveritas"],
+      "tipo": "institucional"
+    },
+    {
+      "id": "unamglobal-origenes",
+      "institucion": "Universidad Nacional Autónoma de México (UNAM), Revista de la Universidad de México, publicada en UNAM Global",
+      "documento": "Orígenes e historias de los días de muertos en México",
+      "url": "https://unamglobal.unam.mx/global_revista/origenes-e-historias-de-los-dias-de-muertos-en-mexico/",
+      "verificacion": "Accedida directamente. La página responde con el texto completo, firmado por Roberto Martínez González y Rocío Maza.",
+      "informacion_obtenida": "Los enterrados bajo las casas aparecen en el Preclásico; en el periodo Clásico la iconografía maya representa inframundos acuáticos. Sobre las costumbres mexicas se describieron ceremonias a los fallecidos en al menos nueve de las dieciocho veintenas del ciclo anual, con ofrendas que variaban según la clase social del muerto. En el mundo cristiano, el papa Bonifacio IV instituyó el Día de Todos Santos en 609 al dedicar el Panteón de Roma, y Gregorio IV (827-844) desplazó la fiesta al 1 de noviembre, época en que los infieles celebraban ritos por el fin de las cosechas; a finales del siglo X San Odilón de Cluny asignó el 2 de noviembre a la conmemoración de los muertos. El evangelizador Diego Durán registró que en la ofrenda del día de los santos se ofrecía a los niños, y así lo usaban antiguamente. En la Colonia las ceremonias se extendieron por todo noviembre, el mes de las ánimas, con dos vertientes: pública (catafalcos, procesiones con responsos) y doméstica; en España se ofrecía pan, vino y cera sobre las tumbas en la oblada y se repartía el pan llamado bodigo. La domesticación del culto a los muertos, en palabras de Claudio Lomnitz, explique que predominaran las ceremonias privadas y los altares familiares. En el Porfiriato los calaveras se emplearon con humor e ironía, y la prensa del siglo XIX difundió textos con el nombre de calaveras que satirizaban a la oficialidad. El autor concluye que el origen no es único y que las prácticas actuales no pueden entenderse sin el sincretismo, la domesticación, la patrimonialización y la universalización ocurridas en los quinientos años posteriores a la Conquista.",
+      "por_que_es_apropiada": "Es un artículo de historia publicado por la Revista de la Universidad de México y reproducido en UNAM Global, con datos de cronología europea y de fuentes coloniales que ninguna otra fuente del proyecto reúne en un solo texto.",
+      "fundamenta": "Cronología del origen europeo e indígena, ofrendas mexicas por veinte, ofrenda a los niños en el día de los santos, altar doméstico, domesticación del culto, aparición de las calaveras en la prensa del XIX.",
+      "tags": ["unam", "origen", "europa", "prehispanico", "altar", "niveles", "calaveras"],
+      "tipo": "academica"
+    },
+    {
+      "id": "inpi-fiestas-pueblos",
+      "institucion": "Instituto Nacional de los Pueblos Indígenas (INPI), Gobierno de México",
+      "documento": "Fiestas de muertos en los pueblos indígenas del Estado de México",
+      "url": "https://www.gob.mx/inpi/articulos/fiestas-de-muertos-en-los-pueblos-indigenas-del-estado-de-mexico",
+      "verificacion": "Publicado por el INPI el 30 de octubre de 2020, con investigación de Bruno Alejandro Villasante Serrano y Jehieli Zurisadai Blanco Loyo. El dominio gob.mx bloquea la lectura automatizada, así que se leyó completo mediante el visor de texto de r.jina.ai.",
+      "informacion_obtenida": "Trata cinco pueblos originarios del altiplano central: mazahuas, otomíes, tlahuicas, matlatzincas y nahuas. En el calendario otomí el 28 de octubre se reserva a los difuntos violentos para purificar su alma, el 29 a quienes murieron sin bautizar o sin nombre, el 31 de octubre a los niños bautizados que ya son angelitos y guiados por los Guerreros Otomíes, el 1 de noviembre a los difuntos mayores con flores amarillas y rojas como aviso, y el 2 en el panteón; la ofrenda se hace sobre un petate con pan de muerto con azúcar rosada, bebidas como pulque, alcohol o agua, sahumerio de copal en los cuatro puntos cardinales y veladoras ordenadas formando una cruz. Los tlahuicas distinguen dos ofrendas, una familiar y otra comunitaria, usan la flor de niño, pencas de maguey como candeleros y objetos de viaje como chiquihuites y rebozos. Los nahuas llaman almita al difunto y sostienen que los muertos trabajan con los vivos trayendo la lluvia; hacen su primera ofrenda el 29 de septiembre, al inicio de la cosecha, con guisos de mole, arroz, tamales, carne de cerdo, camotes y chayotes, agua y sal. Los mazahuas hacen procesión con el santo patrono, usan manteles bordados en punto de cruz, metate bajo la mesa, cruz de cempasúchil y calabaza en tacha. Los matlatzincas relacionan la mariposa monarca con el regreso de las almas, elaboran pan con figuras de animales y levantan arcos de varas que representan los rayos del Sol y la Luna.",
+      "por_que_es_apropiada": "Es el documento institucional del INPI sobre la documentación de una sola fiesta en varios pueblos, y es la mejor fuente del proyecto para demostrar que las prácticas cambian de comunidad a comunidad.",
+      "fundamenta": "Calendario por pueblo, ofrenda familiar y comunitaria, copal, veladoras en cruz, regresa de las almas, variación regional.",
+      "tags": ["inpi", "indigena", "regional", "pueblos-originarios", "copal", "petate"],
+      "tipo": "institucional"
+    },
+    {
+      "id": "unam-juridicas-ofrendas",
+      "institucion": "Universidad Nacional Autónoma de México (UNAM), Instituto de Investigaciones Jurídicas, revista Hechos y Derechos Jurídicos",
+      "documento": "Raíces indígenas de las ofrendas a los difuntos, número 12",
+      "url": "https://revistas.juridicas.unam.mx/index.php/hechos-y-derechos/article/view/6739/8675",
+      "verificacion": "Artículo de Adriana Berrueco García, publicado el 1 de noviembre de 2012. La página muestra el texto dentro de un visor; se leyó completo mediante el visor de texto de r.jina.ai.",
+      "informacion_obtenida": "Mictlantecuhtli, Señor de los muertos, gobierna el Mictlán y, según Alfonso Caso, el destino del alma lo determinaba la forma en que se moría y no la vida vivida: Tonatiuhichan para los guerreros muertos en combate o en la piedra de sacrificios, Cincalco para las mujeres muertas en parto y Tlalocan para los ahogados o muertos por rayo o enfermedad del agua; el resto llegaba al Mictlán. Las almas debían pasar por nueve lugares durante cuatro años, por lo que se ofrendaba durante cuatro años consecutivos, con cremación y las cenizas en una urna enterrada en un aposento de la casa. Se ofrecían ofrendas a los 80 días del fallecimiento, al cumplirse el año y hasta el cuarto año, y cada familia ofrendaba según la fecha de muerte de cada persona. El calendario de muerte constaba de dieciocho meses de veinte días con siete festividades mensuales a los muertos, entre el 20 de octubre y el 8 de noviembre, con la ceremonia principal en el mes Quecholli; el artículo se apoya en Diego Durán y en los códices Borbónico y Borgia. Las ofrendas incluían incienso para el sahumerio, mantas, vestidos, tamales, frutas, flores y cempoalxúchitl en octubre y noviembre, y pinole diluido en agua en los ritos de cosecha; el papel tenía tanta relevancia que servía de salvoconducto del ánima, y se colocaban ídolos u objetos que hacían de retrato del difunto.",
+      "por_que_es_apropiada": "Es una investigación del Instituto de Investigaciones Jurídicas de la UNAM publicada en una revista jurídica con ISSN propio, y es la única fuente del proyecto que documenta la duración del culto mexica a los muertos y el papel ritual del papel.",
+      "fundamenta": "Mictlantecuhtli, destinos del alma según la forma de morir, ofrendas durante cuatro años, periodo del 20 de octubre al 8 de noviembre, Quecholli, papel como salvoconducto, retrato del difunto.",
+      "tags": ["unam", "juridicas", "mictlan", "ofrenda", "quecholli", "papel", "indigena"],
+      "tipo": "academica"
+    },
+    {
+      "id": "agricultura-cempasuchil",
+      "institucion": "Secretaría de Agricultura, Ganadería, Desarrollo Rural, Pesca y Alimentación (SAGA), representación Puebla",
+      "documento": "¿Por qué usamos las flores de cempasúchil en el Día de Muertos?",
+      "url": "https://www.gob.mx/agricultura%7Cpuebla/articulos/por-que-usamos-las-flores-de-cempasuchil-en-el-dia-de-muertos-382006",
+      "verificacion": "Publicado el 26 de octubre de 2024. El dominio gob.mx bloquea la lectura automatizada, así que se leyó completo mediante el visor de texto de r.jina.ai.",
+      "informacion_obtenida": "La flor de cempasúchil se conoce como cempoaltxóchil, flor de muerto y flor de los 400 pétalos o veinte flores; su nombre náhuatl significa flor de la veintena. Es una planta nativa de México de tonalidades amarillas o naranjas, y los mexicas asociaban ese color con el sol, al que creían que guardaba la tibieza del día, mientras su aroma servía para guiar a los muertos. Se usaba para empolvar el rostro de los prisioneros antes de su sacrificio con el fin de que no sintieran la muerte, y hoy se considera símbolo de vida y de muerte. En la actualidad se forman senderos desde la entrada principal del hogar hasta el altar para guiar a las almas. Otros nombres regionales son ninín en totonaco, xantolo en huasteco y animechakejtzitakuca en purépecha.",
+      "por_que_es_apropiada": "Es la dependencia federal agrícola del Gobierno de México y es la fuente que documenta el significado etimológico de la flor, sus nombres regionales y el uso del camino de flores en el altar.",
+      "fundamenta": "Significado y nombre náhuatl del cempasúchil, color y aroma, nombres regionales, senderos de flores en el hogar.",
+      "tags": ["gobierno", "agricultura", "cempasuchil", "flor", "petalos", "sinonimos"],
+      "tipo": "institucional"
+    },
+    {
+      "id": "semillitas-ninos",
+      "institucion": "Semillitas, portal web de contenidos para familias",
+      "documento": "El Día de Muertos explicado a los niños",
+      "url": "https://semillitas.com/el-dia-de-muertos-explicado-a-los-ninos/",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo.",
+      "informacion_obtenida": "El Día de Muertos se celebra el 1 y 2 de noviembre; el 1 se recuerda a los niños y el 2 a los adultos. El origen viene de tiempos prehispánicos, cuando las comunidades indígenas tenían una visión del alma muy especial y la muerte era motivo de culto y alabanza; tras la conquista, esas creencias se unieron con el catolicismo. La ofrenda es una mezcla cultural: los europeos aportan flores, ceras, velas y veladoras, y los indígenas el sahumerio de copal, la comida y la flor de cempasúchil. El altar de muertos es la base de la celebración y las familias lo colocan en las casas, mientras que en los panteones se adornan las tumbas con flores y ofrendas. En el altar se ponen cosas que le gustaban al difunto, frutas de la tierra, el incienso o copal que se esparce por el aire y crea caminos, agua fresca para calmar la sed y velas que marcan los puntos cardinales, además de cempasúchil y fotografías. Para hablar con los niños de la muerte se puede platicar sobre sus antepasados, enseñarles fotos y contarles de su vida; no es un motivo de tristeza, sino una fecha alegre, y una actividad sugerida es hacer máscaras de catrín o catrina.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y la única que explica cómo contar la tradición a los niños, con un desglose de los elementos del altar por naturaleza (tierra, viento, agua y fuego).",
+      "fundamenta": "Explicación infantil de la celebración, mezcla cultural de elementos, elementos del altar por naturaleza, cómo hablar con los niños, máscaras de catrina.",
+      "tags": ["ninos", "explicacion", "ofrenda", "copal", "catrina", "cempasuchil"],
+      "tipo": "divulgacion"
+    },
+    {
+      "id": "tiendanube-manualidades",
+      "institucion": "Tiendanube (blog corporativo)",
+      "documento": "18 manualidades para Día de Muertos, ¡creativas y coloridas!",
+      "url": "https://www.tiendanube.com/blog/manualidades-para-dia-de-muertos/",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo. Es contenido de marketing de una plataforma de comercio electrónico, sin valor historiográfico.",
+      "informacion_obtenida": "Propone manualidades con materiales de bajo costo: altar de muertos de papel con plumones y tijeras; papel picado a mano con papel china; corona de flores con papel crepé sobre cartón; calaveritas de filigrana de papel; calaveras de origami; calaveras de cartulina para niños; calaveras pintadas en globos blancos o negros; máscaras de catrina con platos de papel o cartulina; calaveritas de fomi moldeable; guirnaldas de flores de papel con estambre; botellas de vidrio pintadas con marcadores; veladoras colocadas en vasos de cristal pintados a mano, con la advertencia de usar un esmalte no inflamable; calaveras de unicel decoradas con flores artificiales; calavera de papel maché hecha con globos, periódico, engrudo y acrílicos en tres o cuatro capas; y miniaturas de comida modeladas en pasta de migajón. Los materiales que más se repiten son papel china, crepé y cartulina, fomi moldeable, globos, unicel y pinturas acrílicas.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y sirve como fuente secundaria para las preguntas de manualidades, que son recomendaciones prácticas y no hechos históricos.",
+      "fundamenta": "Manualidades de Día de Muertos, materiales baratos, ideas para niños.",
+      "tags": ["manualidades", "ninos", "materiales", "calaveras", "decoracion"],
+      "tipo": "divulgacion"
+    },
+    {
+      "id": "cessa-pan-de-muerto",
+      "institucion": "CESSA Universidad, blog de Gastronomía y Ciencias de los Alimentos",
+      "documento": "Pan de muerto: historia, simbolismo y todo lo que esconde este pan sagrado",
+      "url": "https://www.cessa.edu.mx/blog/descubre-alma-dia-de-muertos-mexico-historia-tradicion",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo, publicado el 25 de octubre de 2024.",
+      "informacion_obtenida": "El pan de muerto es un pan dulce consumido principalmente el 1 y 2 de noviembre, con forma redonda, tiras de masa en forma de huesos y un pequeño cráneo en la cima. Antes de la llegada de los españoles, las culturas mexica y azteca ofrendaban a los muertos con tamales, amaranto y cacao; con la colonización y la imposición del catolicismo, el pan europeo, técnica e ingrediente ajenos a Mesoamérica, se incorporó a las ofrendas y adoptó formas y simbolismos de la cosmovisión indígena. La forma redonda representa el ciclo de la vida y la muerte, las tiras de masa simulan los huesos y su disposición en cruz evoca los cuatro puntos cardinales, el cráneo central recuerda la muerte en un contexto festivo y el azúcar espolvoreado simboliza la dulzura de la vida. Su aroma viene del agua de azahar, la ralladura de naranja y, en algunas versiones, el anís. Hay variantes regionales: en el centro del país predomina la versión con azahar y azúcar, en Oaxaca puede encontrarse en forma de figuras humanas y en algunas comunidades indígenas se elabora con harina de maíz. Cada campus de CESSA organiza un concurso de pan de muerto, un concurso de altar de muertos, una exposición de calaveritas literarias y una muestra gastronómica.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y aporta el simbolismo detallado del pan de muerto, sus variantes regionales y actividades educativas con niños y con familias.",
+      "fundamenta": "Simbolismo del pan de muerto, ingredientes y técnica, variantes regionales, actividades educativas con niños.",
+      "tags": ["pan-de-muerto", "gastronomia", "regional", "actividades", "ninos"],
+      "tipo": "divulgacion"
+    },
+    {
+      "id": "natgeo-ofrendas",
+      "institucion": "National Geographic en Español (National Geographic Partners)",
+      "documento": "Cuáles son las principales ofrendas del Día de Muertos",
+      "url": "https://www.nationalgeographicla.com/historia/2023/10/cuales-son-las-principales-ofrendas-del-dia-de-muertos",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo, publicado el 30 de octubre de 2023 y actualizado el 31 de octubre de 2024.",
+      "informacion_obtenida": "Suele colocarse la fotografía de la persona a la que se dedica la ofrenda y una cruz o imagen del santo al que veneraba el difunto; la mesa se cubre con mantel blanco y sobre él se pone sal, porque el color blanco representa la pureza y la sal es el elemento principal de purificación para que el cuerpo no se corrompa. El agua es fuente de vida y sirve a las ánimas para mitigar su sed; las velas simbolizan una guía para que las almas retornen a sus antiguos hogares. El copal, una resina que se quema y desprende un olor agradable, se utiliza para limpiar el lugar de los malos espíritus para que el alma pueda entrar a su casa. Se colocan las bebidas y alimentos preferidos del difunto, como café, tamales, frutas y atole. El pan de muerto, con su forma redonda que representa el círculo de la vida y la muerte y sus cuatro huesos de masa en cruz que simbolizan los cuatro puntos cardinales, es uno de los elementos más preciados. Las flores de cempasúchil adornan el altar y dan la bienvenida a las almas, las calaveritas de azúcar aluden a la muerte siempre presente y el papel picado da color a la ofrenda y representa el aire, uno de los cuatro elementos.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y reúne en un solo texto el copal, la cruz, el mantel blanco y el aire como cuarto elemento, datos que no aparecen en las demás fuentes del proyecto.",
+      "fundamenta": "Copal e incienso, cruz o imagen del santo, mantel blanco, velas como guía, bebidas y alimentos del difunto, cempasúchil, papel picado como aire, simbolismo del pan de muerto.",
+      "tags": ["ofrenda", "copal", "cruz", "sal", "velas", "papel-picado", "cempasuchil"],
+      "tipo": "prensa"
+    },
+    {
+      "id": "natgeo-calaveras-literarias",
+      "institucion": "National Geographic en Español (National Geographic Partners)",
+      "documento": "La tradición del Día de Muertos que se burla de la muerte: así nacieron las calaveras literarias mexicanas",
+      "url": "https://www.nationalgeographicla.com/historia/2025/10/la-tradicion-del-dia-de-muertos-que-se-burla-de-la-muerte-asi-nacieron-las-calaveras-literarias-mexicanas",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo, publicado el 29 de octubre de 2025.",
+      "informacion_obtenida": "Las calaveras literarias son versos que se escriben en vísperas del Día de Muertos para expresar humor frente a la muerte; según un artículo de la Universidad Iberoamericana de Hidalgo, son epigramas o versos rítmicos de rima variada cuyo motivo principal es la muerte, usada como pretexto para la parodia de personas, acontecimientos políticos o culturales. Destacan por su ingenio, ironía, sutileza, caricatura, rima y musicalidad, y suelen acompañarse de ilustraciones de la Catrina. Nacieron en el siglo XIX como medio para expresar ideas difíciles de decir: las primeras se publicaron en 1879 en el periódico El Socialista de Guadalajara, antes se llamaban panteones y fueron censuradas; después de la Revolución Mexicana se multiplicaron sobre personajes como Diego Rivera, y a inicios de la década de 1940 el Taller de Gráfica Popular las impulsó.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y es la única que documenta el origen periodístico de las calaveras literarias, su censura y el papel del Taller de Gráfica Popular.",
+      "fundamenta": "Qué son las calaveras literarias, su origen en el siglo XIX, los panteones, la censura, el Taller de Gráfica Popular, las calaveras de Posada.",
+      "tags": ["calaveras", "literarias", "satira", "siglo-xix", "concurso"],
+      "tipo": "prensa"
+    },
+    {
+      "id": "natgeo-catrina",
+      "institucion": "National Geographic en Español (National Geographic Partners)",
+      "documento": "¿Qué es la Catrina y qué representa en el Día de Muertos?",
+      "url": "https://www.nationalgeographicla.com/historia/2024/10/que-es-la-catrina-y-que-representa-en-el-dia-de-muertos",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo, publicado el 17 de octubre de 2024.",
+      "informacion_obtenida": "La denominación original de La Catrina fue La Calavera Garbancera, término que hacía referencia a las personas de ascendencia indígena que, para integrarse a una clase social superior, vendían garbanzos en lugar de maíz como lo hacían los europeos. Su creación se atribuye a José Guadalupe Posada, pintor e ilustrador de Aguascalientes, que representa a la calavera en un grabado de 1912 que se popularizó tras su muerte; en sus primeras representaciones aparecía sin vestimenta, solo con un sombrero, lo que se ha interpretado como crítica a la pobreza. La figura no se popularizó hasta 1947, cuando Diego Rivera la renombró como La Catrina y le añadió un atuendo completo en el mural Sueño de una tarde dominical en la Alameda Central, que se exhibe en el Museo Mural Diego Rivera. El término Catrina viene de catrín, el hombre bien vestido y elegante de la aristocracia mexicana de finales del siglo XIX y principios del XX. Hoy La Catrina es un símbolo del Día de Muertos presente en el papel picado, los disfraces y los altares.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y documenta la fecha del grabado de 1912, el origen del nombre catrín y el momento en que Rivera le puso el nombre actual.",
+      "fundamenta": "La Catrina, La Calavera Garbancera, grabados de 1912, Diego Rivera en 1947, catrín, uso en papel picado, disfraces y altares.",
+      "tags": ["catrina", "posada", "rivera", "mural", "disfraces"],
+      "tipo": "prensa"
+    },
+    {
+      "id": "expansion-ofrendas-fechas",
+      "institucion": "Expansión, revista digital del Grupo Imagen",
+      "documento": "¿Cuándo se pone la ofrenda de Día de muertos a niños, accidentados y mascotas?",
+      "url": "https://expansion.mx/tendencias/2025/10/27/cuando-se-pone-la-ofrenda-dia-de-muertos-ninos-accidentados-y-mascotas",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo, publicado el 27 de octubre de 2025.",
+      "informacion_obtenida": "Según el Gobierno de México, el 28 de octubre se ofrenda a quienes fallecieron de manera trágica, por violencia o accidentes; el 30 y 31 de octubre a los niños que murieron sin haber sido bautizados; el 1 de noviembre, Todos Santos, a los niños o muertos chiquitos; y el 2 de noviembre a los adultos. La ofrenda para mascotas debe estar lista la noche del 27 de octubre, pues las ánimas de las mascotas llegan entre ese día y la madrugada del 28. Los elementos tradicionales son veladoras o cirios que guían el camino de las almas, incienso que purifica el ambiente, agua que simboliza la purificación y calma la sed, sal que protege al espíritu durante su viaje, pétalos de cempasúchil que marcan el camino hacia la ofrenda, pan de muerto que representa el ciclo de la vida y la muerte, fruta, calaveritas que antes eran cráneos reales y ahora son figuras de azúcar, chocolate o amaranto, papel picado que representa el aire y forma parte de los cuatro elementos del altar, platillos que le gustaban al difunto y fotografías. El artículo atribuye al INAH que el Día de Muertos no tiene un origen exclusivamente prehispánico sino una mezcla de tradiciones europeas cristianas e indígenas mesoamericanas, y cita a fray Toribio de Benavente (Motolinía), quien entre 1535 y 1540 registró que los pueblos originarios ofrecían maíz, cacao, comida, mantas y velas a sus difuntos en esas fechas.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y es la única que reúne el calendario completo de ofrendas, incluida la de mascotas, con la cita de Motolinía.",
+      "fundamenta": "Fechas de ofrenda por tipo de difunto, fecha de la ofrenda de mascotas, lista de elementos, origen mixto, testimonio de Motolinía.",
+      "tags": ["fechas", "ninos", "adultos", "mascotas", "ofrenda", "origen", "motolinia"],
+      "tipo": "prensa"
+    },
+    {
+      "id": "eluniversal-guia-ofrendas",
+      "institucion": "El Universal, periódico de México",
+      "documento": "Guía del Día de Muertos 2025: Cuándo poner la ofrenda de niños, adultos y mascotas",
+      "url": "https://www.eluniversal.com.mx/tendencias/guia-del-dia-de-muertos-2025-cuando-poner-la-ofrenda-de-ninos-adultos-y-mascotas/",
+      "verificacion": "Accedida directamente. La página responde con el artículo completo, publicado el 25 de octubre de 2025.",
+      "informacion_obtenida": "Según el Diccionario de la lengua española de la Real Academia Española, el altar es una construcción elevada y la ofrenda son las cosas brindadas a los difuntos; ambos se colocan en los domicilios para dar la bienvenida a personas de todas las edades y también a mascotas. Los altares deben colocarse antes del 27 de octubre, día en que regresan las mascotas según la compañía Petco; las infancias y adolescencias se honran a partir del 31 de octubre hasta el 1 de noviembre, Todos Santos, y los adultos el 2, los Fieles Difuntos. Entre los elementos se listan adornos como papel picado, figuras o imágenes religiosas, veladoras y flores de cempasúchil; alimentos como azúcar, sal, platillos, pan de muerto, calaveritas de azúcar, dulces y cigarros; bebidas como agua, alcohol, atole, café, leche, tequila y vino; y objetos personales como fotografías y pertenencias con valor sentimental, y en el caso de mascotas croquetas y juguetes.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y aporta la distinción léxica entre altar y ofrenda, la fecha de 27 de octubre para mascotas y la lista de bebidas y objetos personales.",
+      "fundamenta": "Diferencia entre altar y ofrenda, fechas por tipo de difunto, fecha de mascotas, bebidas y objetos personales.",
+      "tags": ["altar", "ofrenda", "fechas", "mascotas", "bebidas", "objetos-personales"],
+      "tipo": "prensa"
+    },
+    {
+      "id": "arqueologia-influencias-europeas",
+      "institucion": "Arqueología Mexicana, revista de la Dirección General de Política Archaeological del INAH (editorial Raíces)",
+      "documento": "Influencias europeas en la celebración del día de Muertos en México, de Enrique Vela",
+      "url": "https://arqueologiamexicana.mx/mexico-antiguo/influencias-europeas-en-la-celebracion-del-dia-de-muertos-en-mexico",
+      "verificacion": "Accedida directamente, pero en su versión de extracto. El artículo completo aparece en la edición especial número 52 de la revista, La muerte en México, octubre de 2013, página 75, y la web anuncia que ahí se puede adquirir. Solo se usa lo publicado en línea.",
+      "informacion_obtenida": "La investigadora Elsa Malvido sostiene que la fiesta actual no es una derivada íntegramente de prácticas prehispánicas. El 1 de noviembre, Todos Santos, se inició en el siglo XI por el abad de Cluny y desde el siglo XIII la Iglesia romana la formalizó en el calendario litúrgico; el 2 de noviembre, Fieles Difuntos, se estableció en el siglo XIV, por las epidemias en Europa. En León, Aragón y Castilla se hacían dulces y panes que imitaban reliquias óseas, como canillas con miel, cráneos, astillas de hueso y esqueletos enteros; en Cataluña, panallets de almendras; en Italia, huesos de almendra y frutti dei morti, figuras de frutas y animales que identificaban al santo, usados hoy en México en Orizaba y en la dulcería de Celaya. Existía la costumbre de la mesa del santo, una imagen del santo adornada con dulces y huesos benditos para que santificara y protegiera el hogar, que persiste en zonas rurales de Europa y América. Los alfeñiques se elaboraban en España y en Nueva España, con los más demandados de monjas de Santa Clara y San Lorenzo, y los pobres usaban moldes de barro con azúcar derretida. En Roma, el pater familia lanzaba habas de dulce al techo a medianoche, llamadas en Italia fabi dei morti. En Galicia, el 31 de diciembre se deja la mesa puesta para los muertos, y en Sicilia los ancestros traen regalos a los niños el 2 de noviembre.",
+      "por_que_es_apropiada": "Es una de las fuentes indicadas en el enunciado del proyecto y documenta el origen europeo de las fechas, de los dulces de hueso y de la mesa escalonada, que es el antecedente más distante del altar de niveles.",
+      "fundamenta": "Origen europeo de Todos Santos y Fieles Difuntos, dulces y panes que imitan huesos, mesa del santo, alfeñiques, panallets y frutti dei morti",
+      "tags": ["europa", "sincretismo", "mesa-del-santo", "dulces", "regiones", "origen"],
+      "tipo": "academica"
+    },
+    {
+      "id": "proyecto-criterios",
+      "institucion": "Equipo del proyecto (chatbot del Día de Muertos)",
+      "documento": "Criterios de la base de conocimiento local y política de respuesta cuando no hay información suficiente",
+      "verificacion": "No es una fuente externa: son los criterios del propio proyecto, definidos en data/conocimiento.json y en lib/buscador.ts.",
+      "informacion_obtenida": "Reglas de la base de conocimiento: toda respuesta debe relacionarse con al menos una fuente; cuando la información varía por región o familia se indica expresamente; no se incluye información que no aparezca en una fuente verificada. La política de alcance: el chatbot responde solo sobre el Día de Muertos en México (origen, fechas, ofrenda y elementos, variaciones regionales, Catrina, calaveras literarias y actividades prácticas) y, cuando la consulta queda fuera de ese alcance o el puntaje es insuficiente, lo declara y sugiere temas en los que sí puede ayudar, en lugar de inventar una respuesta.",
+      "por_que_es_apropiada": "Permite responder con honestidad sobre los límites del propio chatbot, algo que ninguna fuente externa puede documentar.",
+      "fundamenta": "Alcance del chatbot, reglas de la base de conocimiento, comportamiento cuando no hay información suficiente.",
+      "ruta": "lib/buscador.ts",
+      "tags": ["proyecto", "alcance", "criterios", "limites"],
+      "tipo": "propia"
     }
   ]
 }

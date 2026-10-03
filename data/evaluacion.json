@@ -1,55 +1,101 @@
 {
-  "descripcion": "Conjunto de preguntas de evaluación del chatbot, agrupadas por nivel. El script scripts/evaluacion.mjs ejecuta estas preguntas contra lib/buscador.ts y guarda los resultados en docs/evaluacion.md.",
+  "descripcion": "Conjunto de pruebas del chatbot. Los seis primeros grupos son las 50 preguntas de evaluación solicitadas; el último grupo son preguntas de control que el chatbot debe rechazar por estar fuera de su base de conocimiento.",
   "grupos": [
     {
       "nivel": "Básicas",
-      "objetivo": "Verificar que el chatbot explica la celebración, sus fechas y la ofrenda.",
+      "tipo": "evaluacion",
+      "objetivo": "Verificar que el chatbot explica la celebración, sus fechas, su origen y los elementos básicos de la ofrenda.",
       "preguntas": [
         { "pregunta": "¿Qué es el Día de Muertos?", "debeResponder": true, "temaEsperado": "Qué es el Día de Muertos" },
-        { "pregunta": "¿Cuándo se celebra el Día de Muertos?", "debeResponder": true, "temaEsperado": "Fechas de la celebración" },
-        { "pregunta": "¿Qué es una ofrenda?", "debeResponder": true, "temaEsperado": "La ofrenda o altar" }
+        { "pregunta": "¿Qué días se celebra?", "debeResponder": true, "temaEsperado": "Fechas de la celebración" },
+        { "pregunta": "¿Cuál es su origen?", "debeResponder": true, "temaEsperado": "Origen prehispánico" },
+        { "pregunta": "¿Es lo mismo que Halloween?", "debeResponder": true, "temaEsperado": "Día de Muertos frente a Halloween" },
+        { "pregunta": "¿Por qué se utiliza el cempasúchil?", "debeResponder": true, "temaEsperado": "El cempasúchil" },
+        { "pregunta": "¿Qué representa una ofrenda?", "debeResponder": true, "temaEsperado": "La ofrenda o altar" },
+        { "pregunta": "¿Qué elementos tiene una ofrenda?", "debeResponder": true, "temaEsperado": "Elementos de la ofrenda y su significado" },
+        { "pregunta": "¿Por qué se coloca agua?", "debeResponder": true, "temaEsperado": "El agua en la ofrenda" },
+        { "pregunta": "¿Por qué se utiliza papel picado?", "debeResponder": true, "temaEsperado": "El papel picado" },
+        { "pregunta": "¿Por qué se colocan veladoras?", "debeResponder": true, "temaEsperado": "Veladoras y velas" }
       ]
     },
     {
-      "nivel": "Intermedias",
-      "objetivo": "Verificar que el chatbot explica elementos concretos de la ofrenda y su significado.",
+      "nivel": "Cultura",
+      "tipo": "evaluacion",
+      "objetivo": "Verificar que el chatbot explica el significado de los elementos, las culturas que influyeron, el patrimonio y la diversidad regional.",
       "preguntas": [
-        { "pregunta": "¿Qué significa el cempasúchil?", "debeResponder": true, "temaEsperado": "El cempasúchil" },
-        { "pregunta": "¿Por qué se colocan veladoras?", "debeResponder": true, "temaEsperado": "Veladoras y velas" },
-        { "pregunta": "¿Qué elementos forman parte de una ofrenda?", "debeResponder": true, "temaEsperado": "Elementos de una ofrenda" },
-        { "pregunta": "¿Por qué se pone agua en la ofrenda?", "debeResponder": true, "temaEsperado": "El agua en la ofrenda" },
-        { "pregunta": "¿Para qué sirve la sal en la ofrenda?", "debeResponder": true, "temaEsperado": "La sal en la ofrenda" },
+        { "pregunta": "¿Qué representa el camino de pétalos de cempasúchil?", "debeResponder": true, "temaEsperado": "El camino de pétalos" },
+        { "pregunta": "¿Qué significado tiene el pan de muerto?", "debeResponder": true, "temaEsperado": "El pan de muerto" },
         { "pregunta": "¿Por qué se colocan fotografías?", "debeResponder": true, "temaEsperado": "Las fotografías en la ofrenda" },
-        { "pregunta": "¿Qué es el pan de muerto?", "debeResponder": true, "temaEsperado": "El pan de muerto" },
-        { "pregunta": "¿Qué son las calaveritas de azúcar?", "debeResponder": true, "temaEsperado": "Calaveras y calaveritas" },
-        { "pregunta": "¿Qué es el papel picado?", "debeResponder": true, "temaEsperado": "El papel picado" }
+        { "pregunta": "¿Por qué se coloca comida?", "debeResponder": true, "temaEsperado": "Comida y bebidas de la ofrenda" },
+        { "pregunta": "¿Qué representan los elementos de una ofrenda?", "debeResponder": true, "temaEsperado": "Elementos de la ofrenda y su significado" },
+        { "pregunta": "¿Qué relación tiene el Día de Muertos con las culturas indígenas?", "debeResponder": true, "temaEsperado": "Relación con las culturas indígenas" },
+        { "pregunta": "¿Qué culturas prehispánicas influyeron?", "debeResponder": true, "temaEsperado": "Culturas prehispánicas que influyeron" },
+        { "pregunta": "¿Por qué es considerado patrimonio cultural?", "debeResponder": true, "temaEsperado": "Declaración de patrimonio de la UNESCO" },
+        { "pregunta": "¿Qué diferencia existe entre el 1 y 2 de noviembre?", "debeResponder": true, "temaEsperado": "Diferencia entre el 1 y el 2 de noviembre" },
+        { "pregunta": "¿Todas las regiones lo celebran igual?", "debeResponder": true, "temaEsperado": "Variaciones regionales" }
       ]
     },
     {
-      "nivel": "Comparativas",
-      "objetivo": "Verificar que el chatbot distingue el Día de Muertos de Halloween.",
+      "nivel": "Razonamiento y aplicación",
+      "tipo": "evaluacion",
+      "objetivo": "Verificar que el chatbot aplica la información a situaciones concretas: Armar una ofrenda, explicar a un niño, preparar una exposición o una actividad escolar.",
       "preguntas": [
-        { "pregunta": "¿Cuál es la diferencia entre el Día de Muertos y Halloween?", "debeResponder": true, "temaEsperado": "Día de Muertos frente a Halloween" },
-        { "pregunta": "¿No es lo mismo que Halloween?", "debeResponder": true, "temaEsperado": "Día de Muertos frente a Halloween" }
+        { "pregunta": "Tengo una fotografía de mi abuelo, una vela, agua, pan de muerto y flores. ¿Qué elemento importante podría agregar y por qué?", "debeResponder": true, "temaEsperado": "Cómo hacer una ofrenda sencilla" },
+        { "pregunta": "Quiero hacer una ofrenda pero tengo poco espacio. ¿Qué elementos son prioritarios?", "debeResponder": true, "temaEsperado": "Cómo hacer una ofrenda sencilla" },
+        { "pregunta": "¿Cómo puede una familia hacer una ofrenda sencilla?", "debeResponder": true, "temaEsperado": "Cómo hacer una ofrenda sencilla" },
+        { "pregunta": "¿Cómo explicarías el Día de Muertos a un niño de 8 años?", "debeResponder": true, "temaEsperado": "Explicar el Día de Muertos a un niño" },
+        { "pregunta": "¿Cómo puedo explicar los elementos de una ofrenda en una exposición?", "debeResponder": true, "temaEsperado": "Exposición escolar sobre el Día de Muertos" },
+        { "pregunta": "¿Cómo puedo hacer una ofrenda utilizando materiales reciclados?", "debeResponder": true, "temaEsperado": "Una ofrenda con materiales reciclados" },
+        { "pregunta": "¿Cómo organizar una actividad escolar sobre Día de Muertos?", "debeResponder": true, "temaEsperado": "Actividades con niños" },
+        { "pregunta": "¿Qué elementos pueden variar según la familia o región?", "debeResponder": true, "temaEsperado": "No existe una única forma correcta ni auténtica de celebrar" }
       ]
     },
     {
-      "nivel": "Culturales",
-      "objetivo": "Verificar que el chatbot explica la diversidad regional y el significado cultural.",
+      "nivel": "Detección de información incorrecta",
+      "tipo": "evaluacion",
+      "objetivo": "Verificar que el chatbot corrige afirmaciones absolutas, obligatorias o únicas en lugar de confirmarlas.",
       "preguntas": [
-        { "pregunta": "¿El Día de Muertos se celebra igual en todo México?", "debeResponder": true, "temaEsperado": "Variaciones regionales" },
-        { "pregunta": "¿Por qué existen diferentes formas de celebrar esta tradición?", "debeResponder": true, "temaEsperado": "Variaciones regionales" },
-        { "pregunta": "¿Por qué es importante el Día de Muertos?", "debeResponder": true, "temaEsperado": "Significado cultural" },
-        { "pregunta": "¿Cuál es el origen prehispánico de esta tradición?", "debeResponder": true, "temaEsperado": "Origen prehispánico" },
-        { "pregunta": "¿Qué es el sincretismo en el Día de Muertos?", "debeResponder": true, "temaEsperado": "Sincretismo religioso" },
-        { "pregunta": "¿Quién es La Catrina?", "debeResponder": true, "temaEsperado": "La Catrina" },
-        { "pregunta": "¿El Día de Muertos es patrimonio de la humanidad?", "debeResponder": true, "temaEsperado": "Declaración de patrimonio de la UNESCO" },
-        { "pregunta": "¿Qué es Mictlantecuhtli?", "debeResponder": true, "temaEsperado": "Mictlantecuhtli y el inframundo" },
-        { "pregunta": "¿Cómo se celebra hoy en día?", "debeResponder": true, "temaEsperado": "Cómo se celebra en la actualidad" }
+        { "pregunta": "¿Es obligatorio colocar tequila en una ofrenda?", "debeResponder": true, "temaEsperado": "Lo que no es obligatorio en una ofrenda" },
+        { "pregunta": "¿Todas las ofrendas deben tener exactamente siete niveles?", "debeResponder": true, "temaEsperado": "La estructura de niveles del altar" },
+        { "pregunta": "¿El Día de Muertos nació completamente en la época prehispánica?", "debeResponder": true, "temaEsperado": "Por qué no es una tradición exclusivamente prehispánica o azteca" },
+        { "pregunta": "¿Es una celebración exclusiva de los aztecas?", "debeResponder": true, "temaEsperado": "Por qué no es una tradición exclusivamente prehispánica o azteca" },
+        { "pregunta": "¿Es cierto que las almas regresan físicamente a las casas?", "debeResponder": true, "temaEsperado": "El regreso de las almas: creencia y cómo se entiende" },
+        { "pregunta": "¿Todos los mexicanos celebran de la misma manera?", "debeResponder": true, "temaEsperado": "Variaciones regionales" },
+        { "pregunta": "¿La flor de cempasúchil tiene un único significado oficial?", "debeResponder": true, "temaEsperado": "Los significados del cempasúchil" },
+        { "pregunta": "¿Existe una única forma correcta de construir una ofrenda?", "debeResponder": true, "temaEsperado": "No existe una única forma correcta ni auténtica de celebrar" }
+      ]
+    },
+    {
+      "nivel": "Aplicación práctica",
+      "tipo": "evaluacion",
+      "objetivo": "Verificar que el chatbot responde consultas prácticas de costo, materiales, comida, decoración, actividades con niños y clasificación de|tradiciones.",
+      "preguntas": [
+        { "pregunta": "Quiero hacer una ofrenda para mi abuelo. ¿Qué necesito?", "debeResponder": true, "temaEsperado": "Cómo hacer una ofrenda sencilla" },
+        { "pregunta": "Tengo $300 pesos. ¿Cómo puedo hacer una ofrenda?", "debeResponder": true, "temaEsperado": "Una ofrenda con poco presupuesto" },
+        { "pregunta": "Necesito preparar una exposición de 5 minutos. ¿Qué debería explicar?", "debeResponder": true, "temaEsperado": "Exposición escolar sobre el Día de Muertos" },
+        { "pregunta": "¿Qué materiales puedo conseguir fácilmente para una ofrenda escolar?", "debeResponder": true, "temaEsperado": "Materiales fáciles de conseguir para una ofrenda escolar" },
+        { "pregunta": "¿Qué comida puedo poner?", "debeResponder": true, "temaEsperado": "Comida y bebidas de la ofrenda" },
+        { "pregunta": "¿Cómo decorar un salón escolar?", "debeResponder": true, "temaEsperado": "Decoración de un salón escolar" },
+        { "pregunta": "¿Qué actividades puedo hacer con niños?", "debeResponder": true, "temaEsperado": "Actividades con niños" },
+        { "pregunta": "¿Cómo diferenciar una tradición familiar de una tradición cultural?", "debeResponder": true, "temaEsperado": "Distinguir dato histórico, tradición popular y costumbre familiar" }
+      ]
+    },
+    {
+      "nivel": "Preguntas difíciles",
+      "tipo": "evaluacion",
+      "objetivo": "Verificar los casos más delicados: atribución histórica incorrecta, mezcla cultural, variación regional, autenticidad y límites del propio sistema.",
+      "preguntas": [
+        { "pregunta": "¿Por qué no sería correcto decir simplemente que el Día de Muertos es una tradición azteca?", "debeResponder": true, "temaEsperado": "Por qué no es una tradición exclusivamente prehispánica o azteca" },
+        { "pregunta": "¿Cómo se combinaron elementos indígenas y europeos?", "debeResponder": true, "temaEsperado": "Cómo se combinaron elementos indígenas y europeos" },
+        { "pregunta": "¿Por qué las prácticas cambian entre regiones?", "debeResponder": true, "temaEsperado": "Variaciones regionales" },
+        { "pregunta": "¿Existe una única forma auténtica de celebrar?", "debeResponder": true, "temaEsperado": "No existe una única forma correcta ni auténtica de celebrar" },
+        { "pregunta": "¿Cómo distinguir entre información histórica, tradición popular y creencias familiares?", "debeResponder": true, "temaEsperado": "Distinguir dato histórico, tradición popular y costumbre familiar" },
+        { "pregunta": "¿Qué debe hacer el chatbot cuando no tiene información suficiente?", "debeResponder": true, "temaEsperado": "Alcance del chatbot y límites de su base de conocimiento" }
       ]
     },
     {
       "nivel": "De control (fuera de alcance)",
+      "tipo": "control",
       "objetivo": "Verificar que el chatbot reconoce los límites de su base de conocimiento y no inventa respuestas.",
       "preguntas": [
         { "pregunta": "¿Cuál es la capital de Francia?", "debeResponder": false },
@@ -59,7 +105,9 @@
         { "pregunta": "¿Quién ganó el mundial de fútbol de 1998?", "debeResponder": false },
         { "pregunta": "Dame la receta de las enchiladas verdes.", "debeResponder": false },
         { "pregunta": "¿Cómo se hace un transistor?", "debeResponder": false },
-        { "pregunta": "¿Cuántos habitantes tiene Tokio?", "debeResponder": false }
+        { "pregunta": "¿Cuántos habitantes tiene Tokio?", "debeResponder": false },
+        { "pregunta": "¿Cuál es el precio del dólar hoy?", "debeResponder": false },
+        { "pregunta": "Recomendame una serie de Netflix.", "debeResponder": false }
       ]
     }
   ]

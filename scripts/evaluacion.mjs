@@ -24,6 +24,11 @@ const arriba = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 let aciertos = 0;
 let total = 0;
+let aciertosEvaluacion = 0;
+let totalEvaluacion = 0;
+let aciertosControl = 0;
+let totalControl = 0;
+const fallas = [];
 const lineas = [];
 
 const fecha = new Date().toISOString().slice(0, 10);
@@ -45,6 +50,7 @@ lineas.push(
 lineas.push("");
 
 for (const grupo of evaluacion.grupos) {
+  const esControl = grupo.tipo === "control";
   lineas.push(`## ${grupo.nivel}`);
   lineas.push("");
   lineas.push(`*${grupo.objetivo}*`);
@@ -52,10 +58,27 @@ for (const grupo of evaluacion.grupos) {
 
   for (const caso of grupo.preguntas) {
     total += 1;
+    if (esControl) totalControl += 1;
+    else totalEvaluacion += 1;
+
     const { mejor, alternativos } = elegirEntrada(caso.pregunta, entradas);
     const respondio = Boolean(mejor && mejor.puntaje >= UMBRAL_PUNTAJE);
     const correcto = respondio === caso.debeResponder;
-    if (correcto) aciertos += 1;
+    if (correcto) {
+      aciertos += 1;
+      if (esControl) aciertosControl += 1;
+      else aciertosEvaluacion += 1;
+    } else {
+      fallas.push({
+        pregunta: caso.pregunta,
+        grupo: grupo.nivel,
+        esperaba: caso.debeResponder ? "responder" : "no responder",
+        obtuvo: respondio
+          ? `responder con "${mejor.entrada.tema}" (${Math.round(mejor.puntaje * 100) / 100})`
+          : "no responder",
+        temaEsperado: caso.temaEsperado ?? null,
+      });
+    }
 
     const marca = correcto ? "Correcto" : "Revisar";
     lineas.push(
@@ -111,10 +134,45 @@ for (const grupo of evaluacion.grupos) {
 
 lineas.push("## Resumen");
 lineas.push("");
-lineas.push(`- **Aciertos:** ${aciertos} de ${total}`);
 lineas.push(
-  `- **Efectividad:** ${Math.round((aciertos / total) * 1000) / 10} %`
+  `- **Preguntas de evaluación:** ${aciertosEvaluacion} de ${totalEvaluacion} ` +
+    `(${Math.round((aciertosEvaluacion / totalEvaluacion) * 1000) / 10} %)`
 );
+lineas.push(
+  `- **Preguntas de control fuera de alcance:** ${aciertosControl} de ${totalControl} ` +
+    `(${Math.round((aciertosControl / totalControl) * 1000) / 10} %)`
+);
+lineas.push(`- **Aciertos totales:** ${aciertos} de ${total}`);
+lineas.push(
+  `- **Efectividad total:** ${Math.round((aciertos / total) * 1000) / 10} %`
+);
+lineas.push("");
+
+lineas.push("## Preguntas que fallan");
+lineas.push("");
+if (fallas.length === 0) {
+  lineas.push("Ninguna. Las 50 preguntas de evaluación y las de control se resuelven.");
+} else {
+  lineas.push("| Pregunta | Grupo | Se esperaba | El chatbot |");
+  lineas.push("| --- | --- | --- | --- |");
+  for (const falla of fallas) {
+    lineas.push(
+      `| ${falla.pregunta} | ${falla.grupo} | ${falla.esperaba} | ${falla.obtuvo} |`
+    );
+  }
+}
+lineas.push("");
+
+lineas.push("## Aciertos con el tema equivocado");
+lineas.push("");
+const temasDistintos = lineas.filter((l) => l.startsWith("> Nota: el tema esperado"));
+if (temasDistintos.length === 0) {
+  lineas.push(
+    "Ninguno. Cada pregunta de evaluación se resolvió con la entrada prevista."
+  );
+} else {
+  for (const l of temasDistintos) lineas.push(l);
+}
 lineas.push("");
 
 lineas.push("## Verificación de trazabilidad de las fuentes");
@@ -139,5 +197,9 @@ const salida = join(raiz, "docs", "evaluacion.md");
 writeFileSync(salida, lineas.join("\n"), "utf8");
 
 console.log(`Aciertos: ${aciertos}/${total}`);
+console.log(
+  `Evaluacion: ${aciertosEvaluacion}/${totalEvaluacion} | Control: ${aciertosControl}/${totalControl}`
+);
+console.log(`Fallas: ${fallas.length}`);
 console.log(`Referencias rotas: ${rotas.length}`);
 console.log(`Salida: ${salida}`);

@@ -162,6 +162,12 @@
   text-decoration: underline;
 }
 
+.fuenteInterna {
+  display: block;
+  color: #b08a5e;
+  word-break: break-word;
+}
+
 .sinFuente {
   align-self: flex-start;
   background: #2a1f1a;

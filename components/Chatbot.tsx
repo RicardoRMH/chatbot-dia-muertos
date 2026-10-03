@@ -21,16 +21,19 @@ interface Mensaje {
 
 const MENSAJE_INICIAL =
   "Hola, soy el chatbot del Día de Muertos. Mi especialidad es esta tradición mexicana: " +
-  "qué es, cuándo se celebra, su origen prehispánico, las ofrendas y cada uno de sus " +
-  "elementos, las variaciones por región, la Catrina y la declaración de patrimonio de la " +
-  "UNESCO.\n\nSi me preguntas algo que no está en mi base de conocimiento, te lo diré con " +
-  "franqueza. Escribe tu pregunta o elige una de las sugerencias.";
+  "qué es, cuándo se celebra, su origen prehispánico y el contacto con el calendario católico, " +
+  "las ofrendas y cada uno de sus elementos, las fechas para niños, adultos y mascotas, " +
+  "las variaciones por región, la Catrina, las calaveras literarias, las actividades " +
+  "prácticas con niños y la declaración de patrimonio de la UNESCO.\n\nSi me preguntas algo " +
+  "que no está en mi base de conocimiento, te lo diré con franqueza. Escribe tu pregunta o " +
+  "elige una de las sugerencias.";
 
 const SUGERENCIAS_INICIALES = [
   "¿Qué es el Día de Muertos?",
   "¿Qué elementos tiene una ofrenda?",
   "¿Cuál es la diferencia con Halloween?",
   "¿Qué significa el cempasúchil?",
+  "¿Qué manualidades puedo hacer?",
 ];
 
 let contador = 0;
@@ -109,7 +112,8 @@ export default function Chatbot() {
         <p className={estilos.subtitulo}>
           Experto digital sobre el Día de Muertos en México. Funciona con una base
           de conocimiento local de {TOTAL_ENTRADAS} temas y {TOTAL_FUENTES} fuentes
-          institucionales verificadas, sin usar servicios externos de pago.
+          verificadas —institucionales, académicas, de prensa y de divulgación—, sin
+          usar servicios externos de pago.
         </p>
       </header>
 
@@ -150,17 +154,31 @@ export default function Chatbot() {
                   <span className={estilos.fuentesTitulo}>
                     Fuentes de esta respuesta
                   </span>
-                  {mensaje.fuentes.map((fuente) => (
-                    <a
-                      key={fuente.id}
-                      className={estilos.fuenteEnlace}
-                      href={fuente.url}
-                      target="_blank"
-                      rel="noreferrer noopener"
-                    >
-                      {fuente.institucion} — {fuente.documento}
-                    </a>
-                  ))}
+                  {mensaje.fuentes.map((fuente) =>
+                    fuente.url ? (
+                      <a
+                        key={fuente.id}
+                        className={estilos.fuenteEnlace}
+                        href={fuente.url}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                      >
+                        {fuente.institucion} — {fuente.documento}
+                      </a>
+                    ) : (
+                      <span
+                        key={fuente.id}
+                        className={estilos.fuenteInterna}
+                        title={
+                          fuente.ruta
+                            ? `Criterio interno del proyecto (${fuente.ruta})`
+                            : "Criterio interno del proyecto"
+                        }
+                      >
+                        {fuente.institucion} — {fuente.documento}
+                      </span>
+                    )
+                  )}
                 </div>
               )}
             </div>

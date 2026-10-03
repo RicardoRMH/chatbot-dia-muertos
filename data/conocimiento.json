@@ -1,9 +1,11 @@
 {
-  "descripcion": "Base de conocimiento del chatbot sobre el Día de Muertos en México. Cada entrada relaciona un tema, una respuesta y las fuentes que la sustentan. La búsqueda del chatbot se basa en las palabras clave de cada entrada.",
+  "descripcion": "Base de conocimiento del chatbot sobre el Dia de Muertos en Mexico. Cada entrada relaciona un tema, una respuesta, una version para ninos y las fuentes que la sustentan. La busqueda del chatbot se basa en las palabras clave, los sinonimos, los conceptos y los ejemplos de pregunta de cada entrada.",
   "reglas": [
     "Toda respuesta debe poder relacionarse con al menos una fuente del archivo data/fuentes.json.",
-    "Cuando la información varía según la región o la tradición, se indica expresamente.",
-    "No se incluye información que no aparezca en alguna de las fuentes verificadas."
+    "Cuando la informacion varia segun la region o la tradicion, se indica expresamente.",
+    "No se incluye informacion que no aparezca en alguna de las fuentes verificadas.",
+    "Cuando las fuentes discrepan o existe un debate academico, se presentan las posturas en lugar de elegir una sin fundamento.",
+    "Las recomendaciones practicas se marcan como recomendaciones y no como reglas de la tradicion."
   ],
   "entradas": [
     {
@@ -13,9 +15,13 @@
       "preguntas_ejemplo": [
         "¿Qué es el Día de Muertos?",
         "explícame qué es el día de muertos",
-        "¿de qué trata esta celebración?"
+        "¿de qué trata esta celebración?",
+        "háblame del día de muertos",
+        "cuéntame del día de muertos",
+        "resumen del día de muertos"
       ],
-      "respuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Ocurre cada año a finales de octubre y principios de noviembre, en las fechas que el calendario católico marca con Todos Santos y los Fieles Difuntos.\n\nNo es un rito fúnebre: es una fiesta en la que la muerte se concibe como una presencia viva y no como una ausencia. La UNESCO la reconoce como patrimonio cultural inmaterial de la humanidad y la describe como una expresión integradora, representativa y comunitaria.\n\nEn la práctica, la familia arma un altar llamado ofrenda con elementos como flores de cempasúchil, veladoras, agua, sal, pan de muerto, comida y las fotografías de los difuntos.",
+      "respuesta": "El Día de Muertos es una tradición mexicana que celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Ocurre cada año a finales de octubre y principios de noviembre, en las fechas que el calendario católico marca con Todos Santos y los Fieles Difuntos.\n\nNo es un rito fúnebre: es una fiesta en la que la muerte se concibe como una presencia viva y no como una ausencia. La UNESCO la describe como una expresión integradora, representativa y comunitaria.\n\nEn la práctica, la familia arma un altar llamado ofrenda con elementos como flores de cempasúchil, veladoras, agua, sal, pan de muerto, comida y las fotografías de los difuntos.",
+      "respuesta_ninos": "El Día de Muertos es una fiesta de México para recordar a las personas que ya se fueron. Se celebra el 1 y el 2 de noviembre. Las familias ponen un altar con flores naranjas, velas, agua, comida y las fotos de sus seres queridos. Es una fecha alegre, no de tristeza: en esta celebración la muerte es algo normal, como si los que se fueron vinieran de visita.",
       "palabras_clave": [
         "que es el dia de muertos",
         "del dia de muertos",
@@ -27,15 +33,22 @@
         "de que trata",
         "que trata",
         "resumen",
-        "presentacion",
         "introduccion",
         "hablame del dia de muertos",
-        "cuentame del dia de muertos"
+        "cuentame del dia de muertos",
+        "que es"
+      ],
+      "sinonimos": [
+        "que es dia de muertos",
+        "explicacion del dia de muertos",
+        "en que consiste",
+        "de que se trata"
       ],
       "fuentes": [
         "unesco-ich-00054",
         "unesco-sede-dia-muertos"
       ],
+      "conceptos": [],
       "prioridad": 3
     },
     {
@@ -44,13 +57,22 @@
       "categoria": "fechas",
       "preguntas_ejemplo": [
         "¿Cuándo se celebra el Día de Muertos?",
+        "¿Qué días se celebra?",
         "¿qué fechas son?",
-        "¿por qué el 1 y el 2 de noviembre?"
+        "dime las fechas del día de muertos",
+        "¿en qué mes es?",
+        "qué días se celebra"
       ],
-      "respuesta": "La celebración se desarrolla entre finales de octubre y principios de noviembre:\n\n- 1 de noviembre: Todos Santos, dedicado a los niños.\n- 2 de noviembre: Fieles Difuntos, dedicado a los adultos.\n\nEsa división proviene de la fusión con el calendario católico. En muchas comunidades la ofrenda se comienza a instalar el 31 de octubre.\n\nHay además días menores asociados: el 28 de octubre a quienes murieron de forma trágica y el 30 de octubre a los limbritos, niños que no fueron bautizados.\n\nEl periodo completo es más amplio de lo que sugiere el nombre de la fiesta: el INAH y la UNESCO lo sitúan entre finales de octubre y principios de noviembre, y algunas comunidades añaden noches previas, como la noche de muertos en Michoacán.",
+      "respuesta": "La celebración se desarrolla entre finales de octubre y principios de noviembre:\n\n- 31 de octubre: muchas familias comienzan a instalar la ofrenda.\n- 1 de noviembre: Todos Santos, dedicado a los niños.\n- 2 de noviembre: Fieles Difuntos, dedicado a los adultos.\n\nEsa división proviene de la fusión con el calendario católico.\n\nHay además días menores asociados: el 28 de octubre a quienes murieron de forma trágica, por violencia o accidentes, y el 30 y el 31 de octubre a los niños que no fueron bautizados.\n\nEl periodo completo es más amplio de lo que sugiere el nombre de la fiesta: el INAH y la UNESCO lo sitúan entre finales de octubre y principios de noviembre, y algunas comunidades añaden noches previas, como la noche de muertos en Michoacán.",
+      "respuesta_ninos": "El Día de Muertos dura varios días. La mayoría de las familias empieza a poner el altar el 31 de octubre. El 1 de noviembre se recuerda a los niños y el 2 de noviembre a los adultos. También hay un día para los niños que no fueron bautizados, el 30 de octubre, y otro para las personas que murieron de manera violenta o en accidente, el 28 de octubre.",
       "palabras_clave": [
         "cuando",
         "cuándo",
+        "cuando se celebra",
+        "que dia se celebra",
+        "que dias se celebra",
+        "que dias",
+        "que dias se celebra",
         "fecha",
         "fechas",
         "que dia",
@@ -58,21 +80,128 @@
         "1 noviembre",
         "2 noviembre",
         "31 octubre",
+        "30 octubre",
+        "28 octubre",
         "noviembre",
         "octubre",
         "todos santos",
         "fieles difuntos",
         "calendario",
-        "cuando se celebra",
-        "que dia es"
+        "que dia es",
+        "en que mes"
+      ],
+      "sinonimos": [
+        "cuando es",
+        "dia de la celebracion",
+        "temporada de muertos",
+        "que dias tiene"
       ],
       "fuentes": [
         "unesco-ich-00054",
         "lugares-inah-fiestas-indigenas",
         "unam-gaceta-miccailhuitontli",
-        "unesco-sede-dia-muertos"
+        "unesco-sede-dia-muertos",
+        "expansion-ofrendas-fechas",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "ninos"
       ],
       "prioridad": 3
+    },
+    {
+      "id": "diferencia-1-y-2-noviembre",
+      "tema": "Diferencia entre el 1 y el 2 de noviembre",
+      "categoria": "fechas",
+      "preguntas_ejemplo": [
+        "¿Qué diferencia existe entre el 1 y el 2 de noviembre?",
+        "¿por qué hay dos días de muertos?",
+        "¿qué se celebra el 1 de noviembre y qué el 2?",
+        "diferencia entre todos santos y fieles difuntos"
+      ],
+      "respuesta": "Los dos días tienen destinatarios distintos, y esa división viene del calendario cristiano con el que se fusionó la costumbre.\n\n- 1 de noviembre, Todos Santos: se recuerda a los niños.\n- 2 de noviembre, Fieles Difuntos: se recuerda a los adultos.\n\nEl evangelizador Diego Durán registró que en la ofrenda del día de los santos se ofrecía a los niños, y que así se usaba antiguamente.\n\nSobre cuándo se fijaron esas fechas en Europa, las fuentes no coinciden del todo y conviene decirlo: la Gaceta de la UNAM indica que los abades de Cluny instituyeron el 2 de noviembre como día de los difuntos en el año 998, y que entre 827 y 844 el papa Gregorio IV desplazó Todos Santos al 1 de noviembre. La revista Arqueología Mexicana, en cambio, sitúa el inicio de Todos Santos en el siglo XI, su formalización en el calendario litúrgico romano en el siglo XIII y el 2 de noviembre en el siglo XIV, por las epidemias de Europa. Lo que sí comparten las fuentes es que se trata de fechas europeas que los pueblos indígenas de México adoptaron y a las que llenaron con su propio contenido.\n\nLa UNESCO añade un detalle: los muertos se dividen en categorías según la causa del fallecimiento, la edad, el sexo y, en ciertos casos, la profesión, y a cada categoría se le atribuye un día de culto.",
+      "respuesta_ninos": "El 1 de noviembre es el día de los niños y el 2 de noviembre el de los adultos. Esa separación viene de la iglesia católica, no de la tradición mexicana. Cuando los pueblos indígenas aceptaron esta costumbre, le dieron su propio sentido: el día de los niños y el día de los adultos.",
+      "palabras_clave": [
+        "1 y 2 de noviembre",
+        "1 de noviembre",
+        "2 de noviembre",
+        "todos santos",
+        "fieles difuntos",
+        "que diferencia",
+        "diferencia entre el 1",
+        "por que hay dos dias",
+        "dos dias de muertos",
+        "diferencia entre el 1 y el 2"
+      ],
+      "sinonimos": [
+        "1 y 2 noviembre",
+        "primer y segundo dia",
+        "diferencia entre todos santos y fieles difuntos",
+        "por que el 1 y el 2"
+      ],
+      "fuentes": [
+        "unesco-sede-dia-muertos",
+        "unam-gaceta-miccailhuitontli",
+        "unam-gaceta-evangelizar",
+        "unamglobal-origenes",
+        "arqueologia-influencias-europeas"
+      ],
+      "conceptos": [
+        "ninos"
+      ],
+      "prioridad": 5,
+      "nivel": "documentado",
+      "nota": "Las fuentes discrepan sobre la fecha exacta en que la Iglesia fijó el 1 y el 2 de noviembre. El chatbot presenta las dos versiones y no elige una."
+    },
+    {
+      "id": "halloween",
+      "tema": "Día de Muertos frente a Halloween",
+      "categoria": "comparativa",
+      "preguntas_ejemplo": [
+        "¿Cuál es la diferencia entre el Día de Muertos y Halloween?",
+        "¿Es lo mismo que Halloween?",
+        "¿no es lo mismo que Halloween?",
+        "compara el día de muertos con halloween"
+      ],
+      "respuesta": "No son lo mismo. Conviene distinguir sus orígenes y sus prácticas.\n\nEl Día de Muertos mexicano tiene raíces prehispánicas: es una fiesta de retorno de los muertos, ligada al final del ciclo del maíz, en la que la muerte es una presencia viva. Su calendario viene de Todos Santos, el 1 de noviembre, y de los Fieles Difuntos, el 2 de noviembre, adoptados en la época colonial.\n\nHalloween pertenece al ciclo de fiestas de otoño de Europa. En ese ciclo se incorporaron el Samhain celta y los Lares romanos, con disfraces, comidas votivas, altares y ofrendas de muertos, danzas y procesiones, y se extendía del 31 de octubre al 11 de noviembre.\n\nLas diferencias prácticas son notorias. En el Día de Muertos se construye una ofrenda con cempasúchil, veladoras, agua, sal, pan de muerto y calaveritas, y se recuerda a los muertos por su nombre y su fotografía. En Halloween se resuelve en disfraces, dulces y decoración, y el personaje es anónimo.\n\nTambién hay un punto de contacto: en la Ciudad de México y en otros lugares ambas festividades coinciden en fechas, y el INAH impulsó en Michoacán la ceremonia tradicional para fortalecerla frente al crecimiento del Halloween. La investigadora Ana Bella Pérez Castro, del Instituto de Investigaciones Antropológicas de la UNAM, señala que esa influencia es comprensible, porque con la migración las culturas son dinámicas y se integran elementos de otras culturas.",
+      "respuesta_ninos": "No son la misma fiesta. El Día de Muertos es de México y se hizo para recordar a los difuntos con un altar, flores, comida y fotos. Halloween viene de Europa y es más de disfraces y dulces para asustar. En México las dos cosas caen en las mismas fechas, por eso a veces se confunden, pero cada una tiene su propia historia.",
+      "palabras_clave": [
+        "halloween",
+        "diferencia",
+        "diferencias",
+        "comparar",
+        "comparativa",
+        "lo mismo",
+        "es lo mismo",
+        "parecido",
+        "parecida",
+        "samhain",
+        "lares",
+        "trick or treat",
+        "disfraces",
+        "bruja",
+        "calabaza",
+        "europa",
+        "europeo",
+        "anglosajon",
+        "se parece"
+      ],
+      "sinonimos": [
+        "halloween es igual",
+        "no es lo mismo que halloween",
+        "y halloween",
+        "diferencias con halloween"
+      ],
+      "fuentes": [
+        "unam-gaceta-evangelizar",
+        "unam-global-ofrendas",
+        "inah-diariodecampo-michoacan"
+      ],
+      "conceptos": [
+        "origen",
+        "regional"
+      ],
+      "prioridad": 6
     },
     {
       "id": "que-es-ofrenda",
@@ -80,56 +209,635 @@
       "categoria": "ofrenda",
       "preguntas_ejemplo": [
         "¿Qué es una ofrenda?",
+        "¿Qué representa una ofrenda?",
         "explícame el altar",
-        "¿para qué sirve la ofrenda?"
+        "¿para qué sirve la ofrenda?",
+        "¿qué es el altar de muertos?"
       ],
-      "respuesta": "La ofrenda es el altar que la familia prepara para recibir a los difuntos durante su visita. Se instala en la casa y, muchas veces, también se monta un altar en la tumba o en el panteón.\n\nSu estructura es por niveles:\n- Primer nivel: la imagen de un santo o la Cruz, que señala el carácter religioso de la ofrenda.\n- Segundo nivel: las fotografías de los familiares fallecidos.\n- Tercer nivel: los alimentos y bebidas que les gustaban en vida.\n- Cuarto nivel: las flores de cempasúchil, que con su aroma y su color guían el camino de las ánimas.\n\nLa ofrenda es el lugar de encuentro entre los vivos y los muertos durante la celebración.",
+      "respuesta": "La ofrenda es el conjunto de cosas que la familia brinda a los difuntos, y el altar es la construcción elevada donde se colocan. El diccionario de la Real Academia Española distingue ambos términos: el altar es la construcción y la ofrenda son las cosas brindadas a los difuntos.\n\nLa ofrenda se instala en la casa y, muchas veces, también se monta un altar en la tumba o en el panteón. Su estructura es por niveles:\n- Primer nivel: la imagen de un santo o la Cruz, que señala el carácter religioso de la ofrenda.\n- Segundo nivel: las fotografías de los familiares fallecidos.\n- Tercer nivel: los alimentos y bebidas que les gustaban en vida.\n- Cuarto nivel: las flores de cempasúchil, que con su aroma y su color guían el camino de las ánimas.\n\nLa ofrenda es el lugar de encuentro entre los vivos y los muertos durante la celebración.",
+      "respuesta_ninos": "La ofrenda es como una mesita especial donde ponemos todo lo que le gustaba a la persona que ya se fue. Es un altar: abajo va la comida, arriba la foto y la flor. Sirve para que el difunto se sienta como en casa y pueda comer, beber y descansar durante su visita.",
       "palabras_clave": [
         "ofrenda",
         "altar",
         "que es una ofrenda",
+        "que es el altar",
+        "que representa una ofrenda",
         "para que sirve la ofrenda",
-        "niveles",
+        "que es un altar",
         "estructura",
-        "altar de muertos"
+        "altar de muertos",
+        "construir el altar",
+        "que pongo en la mesa",
+        "que pongo en el altar",
+        "mesa de muertos"
+      ],
+      "sinonimos": [
+        "ofrenda de muertos",
+        "mesa de ofrenda",
+        "armar el altar",
+        "armar la ofrenda",
+        "poner la ofrenda",
+        "montar la ofrenda",
+        "que pongo",
+        "que va en la mesa"
       ],
       "fuentes": [
         "unam-global-ofrendas",
         "lugares-inah-fiestas-indigenas",
-        "inpi-elementos-ofrenda"
+        "inpi-elementos-ofrenda",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "ofrenda"
       ],
       "prioridad": 4
     },
     {
+      "id": "niveles-del-altar",
+      "tema": "La estructura de niveles del altar",
+      "categoria": "ofrenda",
+      "preguntas_ejemplo": [
+        "¿Todas las ofrendas deben tener exactamente siete niveles?",
+        "¿Cuántos niveles tiene que tener la ofrenda?",
+        "explica los niveles del altar",
+        "¿por qué son siete niveles?"
+      ],
+      "respuesta": "No hay un número obligatorio de niveles. La estructura de niveles es una descripción de un tipo de ofrenda muy difundida, no una regla.\n\nEn el modelo de cuatro niveles que documenta la UNAM: la imagen de un santo o la Cruz en el primero, las fotografías de los difuntos en el segundo, los alimentos y bebidas en el tercero y el cempasúchil en el cuarto.\n\nEl escalonado no es una invención de este país: la revista Arqueología Mexicana documenta que en la Europa medieval existía la costumbre de la mesa del santo, una imagen del santo adornada con dulces y huesos benditos, y que esa costumbre persiste en zonas rurales de Europa y de América. Ese escalonado es el antecedente más lejano del altar por niveles.\n\nEn la práctica hay altares de dos niveles, de cuatro, sobre una sola mesa, sobre un petate en el suelo o con arcos de varas. Lo que se repite en la mayoría de los casos es la idea de subir por niveles: abajo lo que sostiene al difunto, la comida; arriba lo que lo guía, la luz y las flores.",
+      "respuesta_ninos": "El altar no tiene que tener un número exacto de niveles. Lo normal es poner abajo la comida, luego las fotos y arriba las flores y las velas. Hay gente que lo hace con dos niveles, otros con cuatro y otros en una sola mesa. Lo importante es que quede con sentido para la persona que recordamos.",
+      "palabras_clave": [
+        "niveles",
+        "nivel",
+        "siete niveles",
+        "7 niveles",
+        "numero de niveles",
+        "escalonado",
+        "escalonada",
+        "mesa escalonada",
+        "estructura del altar",
+        "estructura de niveles",
+        "cuantos niveles"
+      ],
+      "sinonimos": [
+        "altar de niveles",
+        "niveles del altar",
+        "siete niveles del altar",
+        "niveles de la ofrenda"
+      ],
+      "fuentes": [
+        "unam-global-ofrendas",
+        "arqueologia-influencias-europeas",
+        "inpi-fiestas-pueblos"
+      ],
+      "conceptos": [
+        "niveles",
+        "ofrenda"
+      ],
+      "prioridad": 6,
+      "nivel": "tradicion",
+      "nota": "El número de niveles varía según la comunidad y la familia. La entrada presenta la estructura de cuatro niveles como un modelo frecuente, no como una obligación."
+    },
+    {
+      "id": "origen-prehispanico",
+      "tema": "Origen prehispánico",
+      "categoria": "origen",
+      "preguntas_ejemplo": [
+        "¿Cuál es su origen?",
+        "¿Cuál es el origen del Día de Muertos?",
+        "¿de dónde viene esta tradición?",
+        "háblame del origen prehispánico",
+        "explica el origen"
+      ],
+      "respuesta": "La raíz de la celebración es prehispánica. Los antiguos mexicanos, junto con los mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas, trasladaron la veneración de sus muertos al calendario cristiano cuando llegó la Colonia, en el siglo XVI.\n\nEl nombre de la fiesta de los muertos en náhuatl es Miccailhuitl o Miccailhuitontli. El Miccailhuitontli era uno de los segmentos de un calendario ritual de 260 días, llamado xiuhpohualli, y se situaba al final de la temporada de lluvias.\n\nLa UNESCO señala que estas celebraciones coinciden con el final del ciclo anual del maíz, el cultivo fundamental en la vida de las comunidades. Por eso la ofrenda pide al difunto que ayude a las cosechas y a la vida de los vivos.\n\nHay prácticas que empiezan antes de octubre: las comunidades nahuas del Estado de México hacen su primera ofrenda el 29 de septiembre, al inicio de la cosecha, con guisos de mole, arroz, tamales, carne de cerdo, camotes y chayotes, agua y sal. Y el evangelizador Diego Durán registró que en la ofrenda del día de los santos se ofrecía a los niños.\n\nSobre el origen hay un debate académico abierto: hay investigadores que sostienen que ni en Mesoamérica ni en la zona andina prehispánica existía una celebración particular de Día de Muertos, y que no hay evidencia de ello. El chatbot presenta las dos posturas para no elegir una sin fundamento.",
+      "respuesta_ninos": "El Día de Muertos viene de antes de que llegaran los españoles. Los pueblos que ya vivían en México tenían la costumbre de recordar a sus muertos con ofrendas de comida y flores, cuando terminaba la temporada de lluvias y empezaba la cosecha del maíz. Después llegó el calendario católico y la fiesta se acomodó al 1 y al 2 de noviembre.",
+      "palabras_clave": [
+        "origen",
+        "cual es el origen",
+        "prehispanico",
+        "prehispánico",
+        "prehispanica",
+        "mesoamerica",
+        "mesoamericano",
+        "indigena",
+        "indígena",
+        "indigenas",
+        "raiz",
+        "raíz",
+        "de donde viene",
+        "historia",
+        "pasado",
+        "antiguo",
+        "antiguos",
+        "comenzo",
+        "comenzó",
+        "nacio",
+        "nació",
+        "xiuhpohualli",
+        "calendario ritual",
+        "260 dias",
+        "miccailhuitl",
+        "miccailhuitontli",
+        "antes de la conquista"
+      ],
+      "sinonimos": [
+        "raiz de la tradicion",
+        "antecedentes",
+        "desde cuando existe",
+        "comienzos"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "lugares-inah-fiestas-indigenas",
+        "unam-gaceta-miccailhuitontli",
+        "unam-gaceta-evangelizar",
+        "inpi-fiestas-pueblos"
+      ],
+      "conceptos": [
+        "origen"
+      ],
+      "prioridad": 4
+    },
+    {
+      "id": "culturas-prehispanicas",
+      "tema": "Culturas prehispánicas que influyeron",
+      "categoria": "influencia-indigena",
+      "preguntas_ejemplo": [
+        "¿Qué culturas prehispánicas influyeron?",
+        "cuéntame del origen prehispánico",
+        "explica las culturas prehispánicas que participaban",
+        "explícame el origen prehispánico de esta tradición"
+      ],
+      "respuesta": "La lista de pueblos y culturas prehispánicas está documentada por la UNESCO:\n\n- Mexicas y antiguos mexicanos.\n- Mixtecas.\n- Texcocanos.\n- Zapotecas.\n- Tlaxcaltecas.\n- Totonacas.\n\nLa tradición actual también incorpora a los pueblos que viven en el centro del país y que el INPI documenta por separado: mazahuas, otomíes, tlahuicas, matlatzincas y nahuas. Y hay que sumar a los pueblos mayenses, de los que se conserva la iconografía de inframundos acuáticos.\n\nSobre el caso mexica en particular, el artículo de la revista Hechos y Derechos Jurídicos de la UNAM describe un calendario de muerte de dieciocho meses de veinte días, con siete festividades mensuales a los muertos entre el 20 de octubre y el 8 de noviembre, y la ceremonia principal en el mes Quecholli. En esas ceremonias se ofrecían incienso, mantas, vestidos, tamales, frutas, flores y cempoalxúchitl, y se colocaban ídolos u objetos que hacían de retrato del difunto. También se describe que las almas debían pasar por nueve lugares durante cuatro años, por lo que se ofrendaba durante cuatro años consecutivos, con cremación y las cenizas en una urna enterrada en un aposento de la casa.",
+      "respuesta_ninos": "Varios pueblos de México ya celebraban a sus muertos antes de la conquista. Los más mencionados son los mexicas, los mixtecos, los texcocanos, los zapotecos, los tlaxcaltecas y los totonacas. Cada uno lo hacía un poco distinto, y por eso hoy la celebración cambia según la región.",
+      "palabras_clave": [
+        "culturas prehispanicas",
+        "culturas prehispánicas",
+        "pueblos prehispanicos",
+        "que culturas",
+        "mexicas",
+        "mexica",
+        "mixtecas",
+        "mixteca",
+        "texcocanos",
+        "zapotecas",
+        "zapoteca",
+        "tlaxcaltecas",
+        "tlaxcalteca",
+        "totonacas",
+        "mazahuas",
+        "otomies",
+        "otomi",
+        "tlahuicas",
+        "matlatzincas",
+        "nahuas",
+        "quecholli",
+        "veinte dias",
+        "dieciocho meses"
+      ],
+      "sinonimos": [
+        "culturas mesoamericanas",
+        "pueblos que participaban",
+        "grupos indigenas prehispanicos",
+        "culturas indigenas"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "inpi-fiestas-pueblos",
+        "unam-juridicas-ofrendas",
+        "unamglobal-origenes"
+      ],
+      "conceptos": [
+        "culturas",
+        "origen",
+        "regional"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "influencia-indigena",
+      "tema": "Relación con las culturas indígenas",
+      "categoria": "influencia-indigena",
+      "preguntas_ejemplo": [
+        "¿Qué relación tiene el Día de Muertos con las culturas indígenas?",
+        "háblame de las culturas indígenas del día de muertos",
+        "explica la relación con las culturas indígenas",
+        "¿qué tiene que ver con los pueblos indígenas?"
+      ],
+      "respuesta": "El Día de Muertos es, en su origen y en su calendario, una fiesta de los pueblos indígenas de México. La UNESCO lo explica así: la inscripción oficial se titula Las fiestas indígenas dedicadas a los muertos, y la fiesta afirma el papel del individuo dentro de la sociedad y refuerza el estatuto político y social de las comunidades indígenas.\n\nLos pueblos originarios que hoy la conservan mantienen cada uno su propia forma:\n- Los nahuas llaman almita al difunto y sostienen que los muertos trabajan con los vivos trayendo la lluvia.\n- Los matlatzincas relacionan la mariposa monarca con el regreso de las almas, hacen pan con figuras de animales y levantan arcos de varas que representan los rayos del Sol y la Luna.\n- Los mazahuas hacen procesión con el santo patrono, usan manteles bordados en punto de cruz y una cruz de cempasúchil.\n- Los tlahuicas distinguen dos ofrendas, una familiar y otra comunitaria.\n- En Tláhuac, el Festival Internacional de Día de Muertos reúne a ocho pueblos originarios: San Andrés Mixquic, San Pedro Tláhuac, San Francisco Tlaltenco, Santiago Zapotitlán, Yecahuitzotl, Ixtayopan, Tetelco y Santa Catarina.\n\nEs decir: la relación no es decorativa ni añadida después. La raíz de la fiesta es indígena, y lo que llegó de Europa se desarrolló encima de esa raíz.",
+      "respuesta_ninos": "El Día de Muertos es una fiesta de los pueblos indígenas de México. Los nahuas, los matlatzincas, los mazahuas, los tlahuicas y muchos otros pueblos lo celebraban antes de que llegaran los españoles, cada uno a su manera. Hoy siguen haciéndolo y por eso hay tantas versiones distintas de la fiesta.",
+      "palabras_clave": [
+        "culturas indigenas",
+        "culturas indígenas",
+        "pueblos indigenas",
+        "pueblos indígenas",
+        "pueblos originarios",
+        "relacion con las culturas",
+        "que relacion tiene",
+        "indigena",
+        "indígena",
+        "indigenas",
+        "indígenas",
+        "originarios",
+        "comunidad",
+        "comunidades",
+        "matlatzinca",
+        "mazahua",
+        "tlahuica",
+        "almita",
+        "monarca",
+        "tlahuac",
+        "mixquic"
+      ],
+      "sinonimos": [
+        "comunidades indigenas",
+        "relacion con los pueblos indigenas",
+        "que pueblos lo celebraban"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "inpi-fiestas-pueblos",
+        "cdmx-tlahuac-fiddem"
+      ],
+      "conceptos": [
+        "culturas",
+        "regional",
+        "origen"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "influencia-europea",
+      "tema": "Cómo se combinaron elementos indígenas y europeos",
+      "categoria": "influencia-europea",
+      "preguntas_ejemplo": [
+        "¿Cómo se combinaron elementos indígenas y europeos?",
+        "explica las influencias indígenas y europeas",
+        "háblame de las influencias europeas",
+        "¿qué aporta europa a esta tradición?"
+      ],
+      "respuesta": "La fiesta actual es una mezcla documentada de dos mundos, y se puede seguir paso a paso.\n\nLo europeo:\n- Las fechas: el 1 de noviembre, Todos Santos, y el 2 de noviembre, Fieles Difuntos.\n- El pan de trigo, que empieza a elaborarse a partir de la Colonia, con técnica e ingredientes ajenos a Mesoamérica.\n- Las veladoras y las lámparas de aceite que iluminaban el camino en los altares que levantaban los españoles.\n- Los dulces de hueso: en León, Aragón y Castilla se hacían dulces y panes que imitaban reliquias óseas, como canillas con miel, cráneos, astillas de hueso y esqueletos enteros; en Cataluña, panallets de almendras; en Italia, huesos de almendra y frutti dei morti, figuras de frutas y animales que identificaban al santo, usados hoy en México en Orizaba y en la dulcería de Celaya. También los alfeñiques, que se elaboraban en España y en Nueva España.\n- La mesa escalonada o mesa del santo, una imagen del santo adornada con dulces y huesos benditos.\n- El marco doméstico: en España se ofrecía pan, vino y cera sobre las tumbas en la oblada, y se repartía el pan llamado bodigo.\n\nLo indígena:\n- La flor de cempasúchil, el copal y el sahumerio.\n- La comida de maíz: tamales, atoles, amaranto, cacao, mole con guajolote.\n- El ritual de recibir a los difuntos y el regalo de comida, agua y sal.\n\nEl resultado no es una mezcla desordenada: es un sincretismo. El autor que reúne la cronología completa resume el proceso en cuatro movimientos, en los quinientos años posteriores a la Conquista: sincretismo, domesticación, patrimonialización y universalización.",
+      "respuesta_ninos": "La fiesta juntó dos mundos. De los pueblos indígenas quedaron la flor naranja, el copal, la comida de maíz y la costumbre de recibir a los difuntos. De los españoles quedaron las fechas del 1 y del 2 de noviembre, el pan de trigo, las velas y los dulces con forma de hueso. Al final todo se mezcló y quedó una tradición nueva.",
+      "palabras_clave": [
+        "combinaron",
+        "combinacion",
+        "combinaron elementos",
+        "elementos indigenas y europeos",
+        "influencia europea",
+        "influencias europeas",
+        "influencia indigena",
+        "influencias indigenas",
+        "europeo",
+        "europea",
+        "europeos",
+        "espana",
+        "español",
+        "colonia",
+        "colonial",
+        "conquista",
+        "mezcla",
+        "mestizaje",
+        "mesa del santo",
+        "alfeñiques",
+        "panallets",
+        "frutti dei morti",
+        "bodigo"
+      ],
+      "sinonimos": [
+        "influencia de europa",
+        "mezcla de culturas",
+        "herencia prehispanica y de la colonia",
+        "fusion de culturas"
+      ],
+      "fuentes": [
+        "unam-gaceta-colonia",
+        "unamglobal-origenes",
+        "arqueologia-influencias-europeas",
+        "unam-global-ofrendas"
+      ],
+      "conceptos": [
+        "origen",
+        "sincretismo"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "no-exclusivamente-prehispanica",
+      "tema": "Por qué no es una tradición exclusivamente prehispánica o azteca",
+      "categoria": "origen",
+      "preguntas_ejemplo": [
+        "¿El Día de Muertos nació completamente en la época prehispánica?",
+        "¿Es una celebración exclusiva de los aztecas?",
+        "¿Por qué no sería correcto decir simplemente que el Día de Muertos es una tradición azteca?",
+        "¿es verdad que es una tradición puramente indígena?"
+      ],
+      "respuesta": "No, y hay varias razones distintas para decirlo.\n\nPrimera: el origen no es único. El artículo de la Revista de la Universidad de México sobre los orígenes e historias de los días de muertos concluye que la costumbre actual no puede entenderse sin el sincretismo, la domesticación, la patrimonialización y la universalización ocurridas en los quinientos años posteriores a la Conquista. El autor atribuye a Claudio Lomnitz la domesticación del culto a los muertos, lo que explica que predominaran las ceremonias privadas y los altares familiares.\n\nSegunda: no fue un solo pueblo. La UNESCO nombra a los antiguos mexicanos, los mixtecas, los texcocanos, los zapotecas, los tlaxcaltecas y los totonacas. Decir únicamente azteca reduce la fiesta a un solo pueblo.\n\nTercera: la aportación europea está documentada. El pan de trigo, las veladoras, las lámparas de aceite, la sal y el agua de los altares que levantaban los españoles, los dulces que imitaban huesos, la mesa escalonada del santo y las fechas del 1 y el 2 de noviembre.\n\nPor eso la respuesta correcta es: es una tradición de raíz indígena, formada en un proceso de mezcla con el catolicismo.\n\nConviene corregir el error contrario: tampoco sería correcto decir que es una tradición europea. El INAH sostiene que no tiene un origen exclusivamente prehispánico, pero tampoco europeo: es una mezcla de tradiciones europeas cristianas e indígenas mesoamericanas. Y la raíz mesoamericana está documentada, aunque hay un debate académico sobre si existía una fiesta única antes de la Colonia.",
+      "respuesta_ninos": "Decir que el Día de Muertos es solo de los aztecas no es correcto. Varios pueblos de México tenían la costumbre antes de la conquista, y después se le mezclaron cosas de los españoles, como las fechas de noviembre y el pan de trigo. Por eso es una tradición de México hecha de varias partes.",
+      "palabras_clave": [
+        "exclusiva de los aztecas",
+        "exclusivamente prehispanica",
+        "exclusivamente azteca",
+        "nacio completamente en la epoca prehispanica",
+        "nacio completamente",
+        "puro",
+        "puramente",
+        "es una tradicion azteca",
+        "tradicion azteca",
+        "solo azteca",
+        "un solo pueblo",
+        "no es solo azteca"
+      ],
+      "sinonimos": [
+        "no es solo prehispanica",
+        "no es exclusivamente indígena",
+        "no es solo indígena",
+        "por que no es azteca"
+      ],
+      "fuentes": [
+        "unamglobal-origenes",
+        "unesco-ich-00054",
+        "arqueologia-influencias-europeas",
+        "unam-gaceta-colonia",
+        "expansion-ofrendas-fechas"
+      ],
+      "conceptos": [
+        "origen",
+        "sincretismo",
+        "culturas",
+        "afirmacion"
+      ],
+      "prioridad": 7,
+      "nivel": "documentado",
+      "nota": "El chatbot corrige las dos versiones: la fiesta no es exclusivamente azteca ni prehispánica, y tampoco es de origen europeo."
+    },
+    {
+      "id": "sincretismo",
+      "tema": "Sincretismo religioso",
+      "categoria": "origen",
+      "preguntas_ejemplo": [
+        "¿Qué es el sincretismo en el Día de Muertos?",
+        "explica el sincretismo",
+        "¿cómo se mezcla la tradición con el catolicismo?",
+        "cuéntame del sincretismo"
+      ],
+      "respuesta": "El sincretismo es la combinación de dos mundos: los ritos prehispánicos y las fiestas católicas que llegaron con los españoles en el siglo XVI.\n\nEl resultado se ve en el calendario: los pueblos indígenas trasladaron a su calendario la veneración de sus muertos, y el 1 y el 2 de noviembre, Todos Santos y Fieles Difuntos, substituieron a las fechas del calendario anterior. Eso es un sincretismo de calendario.\n\nEn el contenido de la ofrenda se ven las dos culturas: el pan de muerto y los tamales conviven con el pan de trigo, las veladoras y las imágenes de santos. En la época colonial la Iglesia llegó a permitir lo que se conoce como idolatría paliada, es decir, la tolerancia de ciertas prácticas dentro de un marco cristiano.\n\nHoy el Día de Muertos es un ejemplo claro de mestizaje: la Catrina resume esa mezcla cultural en una sola imagen.",
+      "respuesta_ninos": "El sincretismo quiere decir que se juntaron dos religiones. Los indígenas tenían sus ritos para los muertos y los españoles llevaron una fiesta parecida, la del 1 y del 2 de noviembre. En vez de prohibir la costumbre, se aceptó junto con el calendario católico, y hoy las dos cosas viven juntas.",
+      "palabras_clave": [
+        "sincretismo",
+        "catolicismo",
+        "catolica",
+        "católico",
+        "cristian",
+        "cristiana",
+        "religion",
+        "religiosa",
+        "iglesia",
+        "mezcla",
+        "mestizaje",
+        "convento",
+        "idolatria",
+        "mestizofilia"
+      ],
+      "sinonimos": [
+        "sincretismo religioso",
+        "mezcla religiosa",
+        "catolicismo y tradicion"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "unam-gaceta-colonia",
+        "vitabrevis-catrina"
+      ],
+      "conceptos": [
+        "sincretismo",
+        "origen"
+      ],
+      "prioridad": 4
+    },
+    {
+      "id": "mictlantecuhtli",
+      "tema": "Mictlantecuhtli y el inframundo",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿qué es Mictlantecuhtli?",
+        "háblame del inframundo",
+        "¿qué es el Mictlán?",
+        "cuéntame de Mictlantecuhtli"
+      ],
+      "respuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muertos, más Tecutli, señor: el señor de la mansión de los muertos. En la mitología mexica el reino de Mictlán tiene nueve niveles, y su equivalente en el mundo maya es Xibalba.\n\nConviene ser cuidadoso con un error frecuente: Mictlantecuhtli es una deidad de la mitología mexica, no el nombre de la fiesta del Día de Muertos. La fiesta de los muertos en náhuatl se llama Miccailhuitl o Miccailhuitontli.\n\nSegún un artículo del Instituto de Investigaciones Jurídicas de la UNAM, el destino del alma no lo determinaba la vida vivida sino la forma en que se moría: Tonatiuhichan para los guerreros muertos en combate o en la piedra de sacrificios, Cincalco para las mujeres muertas en parto y Tlalocan para los ahogados o muertos por rayo o por enfermedad del agua. El resto llegaba al Mictlán, y las almas debían pasar por nueve lugares durante cuatro años, por lo que se ofrendaba durante cuatro años consecutivos.\n\nAun así, el inframundo es el imaginario al que sigue la tradición. En algunas ofrendas del sureste aparecen representaciones del inframundo junto a los santos católicos, muestra de la mezcla de las dos culturas. Ese camino de varios días de viaje es el que la ofrenda busca hacer más corto y más amable con agua, sal, pan, flores y luz.",
+      "respuesta_ninos": "Mictlantecuhtli es el dios de la muerte de los mexicas. Los muertos iban a un lugar llamado Mictlán, que tenía nueve pisos, como un camino muy largo de escaleras. La ofrenda no es para el dios, es para las personas: para que lleguen con sed, cansadas y con hambre, y puedan descansar.",
+      "palabras_clave": [
+        "mictlantecuhtli",
+        "mictlan",
+        "inframundo",
+        "xibalba",
+        "deidad",
+        "mitologia",
+        "mitología",
+        "reino de los muertos",
+        "nueve niveles",
+        "dios de la muerte",
+        "tonatiuhichan",
+        "cincalco",
+        "tlalocan"
+      ],
+      "sinonimos": [
+        "dios de los muertos",
+        "reino de mictlan",
+        "mundo de los muertos"
+      ],
+      "fuentes": [
+        "unam-gaceta-colonia",
+        "unesco-ich-00054",
+        "unam-juridicas-ofrendas"
+      ],
+      "conceptos": [
+        "origen",
+        "culturas"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "patrimonio-unesco",
+      "tema": "Declaración de patrimonio de la UNESCO",
+      "categoria": "patrimonio",
+      "preguntas_ejemplo": [
+        "¿Por qué es considerado patrimonio cultural?",
+        "¿El Día de Muertos es patrimonio de la humanidad?",
+        "háblame de la UNESCO",
+        "¿qué dijo la UNESCO?",
+        "por qué es patrimonio"
+      ],
+      "respuesta": "Sí. El Día de Muertos está reconocido como Patrimonio Cultural Inmaterial de la Humanidad.\n\nLos datos exactos son estos:\n- Proclamado Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad el 7 de noviembre de 2003.\n- Inscrito en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad en 2008, en la sesión 3.COM, con el expediente de candidatura número 00054 y el nombre de Las fiestas indígenas dedicadas a los muertos.\n\nConviene señalar el nombre oficial: la UNESCO no lo titula Día de Muertos, sino Las fiestas indígenas dedicadas a los muertos, porque la inscripción incluye la diversidad de celebraciones de los pueblos indígenas de México y no solo una versión de la Ciudad de México.\n\nSobre por qué se considera patrimonio, la propia ficha de la UNESCO ofrece tres razones:\n- La fiesta afirma el papel del individuo dentro de la sociedad y refuerza el estatuto político y social de las comunidades indígenas.\n- Es integradora, representativa y comunitaria: la fusión de ritos religiosos prehispánicos con fiestas católicas permite el acercamiento de dos universos, con una visión del mundo introducida por los europeos en el siglo XVI.\n- La inscripción es un compromiso de la comunidad internacional para proteger la tradición y transmitirla a las nuevas generaciones, no un premio ni un congelamiento de la costumbre.",
+      "respuesta_ninos": "Sí, el Día de Muertos es patrimonio de la humanidad. Eso quiere decir que no solo importa en México: la UNESCO, que es la organización de la ONU para la educación y la cultura, lo proclamó el 7 de noviembre de 2003 y lo inscribió en una lista en 2008. Lo hizo porque es una fiesta de todo un pueblo, no de una sola familia.",
+      "palabras_clave": [
+        "unesco",
+        "patrimonio",
+        "patrimonio cultural",
+        "patrimonio de la humanidad",
+        "humanidad",
+        "obra maestra",
+        "lista representativa",
+        "reconocimiento",
+        "inscripcion",
+        "inscrito",
+        "declaratoria",
+        "internacional",
+        "reconocer",
+        "reconocido",
+        "nomina"
+      ],
+      "sinonimos": [
+        "declarado patrimonio",
+        "inscripcion en la unesco",
+        "reconocimiento de la unesco",
+        "por que es patrimonio cultural"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "inah-diariodecampo-michoacan",
+        "vitabrevis-catrina"
+      ],
+      "conceptos": [
+        "patrimonio"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "significado-cultural",
+      "tema": "Significado cultural",
+      "categoria": "significado",
+      "preguntas_ejemplo": [
+        "¿por qué es importante el Día de Muertos?",
+        "¿qué significa culturalmente?",
+        "explica el significado de esta tradición",
+        "¿por qué se celebra?"
+      ],
+      "respuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se materializa en el altar.\n\nSu valor está en tres planos:\n- Familiar: es el momento de recordar a los tuyos con su nombre, su comida y su fotografía.\n- Social: la fiesta afirma el papel del individuo dentro de la sociedad y refuerza el estatuto político y social de las comunidades, según la UNESCO.\n- Cultural: es una expresión integradora, representativa y comunitaria, donde conviven raíces indígenas, catolicismo europeo y mestizaje.\n\nLa UNESCO lo reconoce como patrimonio cultural inmaterial de la humanidad, y por eso no es solo una costumbre festiva: es un ritual de memoria que organiza la identidad de un país.",
+      "respuesta_ninos": "El Día de Muertos es importante porque es la forma que tiene México de hablar de la muerte sin miedo. Es el día en que una familia se reúne, cocina, pone flores y recuerda a sus muertos por su nombre. Y también es importante para el país entero, porque la UNESCO dijo que es un patrimonio de toda la humanidad.",
+      "palabras_clave": [
+        "significado",
+        "importante",
+        "importancia",
+        "cultural",
+        "cultura",
+        "valor",
+        "que representa",
+        "significado cultural",
+        "sentido",
+        "reflexion",
+        "reflexión",
+        "porque se celebra",
+        "para que sirve la tradicion",
+        "que significa culturalmente"
+      ],
+      "sinonimos": [
+        "para que sirve esta costumbre",
+        "por que importa",
+        "significado de la fiesta"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "unesco-sede-dia-muertos",
+        "vitabrevis-catrina"
+      ],
+      "conceptos": [
+        "patrimonio",
+        "difunto"
+      ],
+      "prioridad": 4
+    },
+    {
+      "id": "almas-regresan",
+      "tema": "El regreso de las almas: creencia y cómo se entiende",
+      "categoria": "significado",
+      "preguntas_ejemplo": [
+        "¿Es cierto que las almas regresan físicamente a las casas?",
+        "¿las almas vuelven de verdad?",
+        "explícame lo del regreso de los difuntos",
+        "¿es real que los muertos regresan?"
+      ],
+      "respuesta": "Es una creencia y una práctica de la tradición, no un hecho comprobable. Conviene distinguir tres cosas.\n\n- Lo que dice la tradición: la fiesta celebra el retorno temporal de las personas fallecidas a la Tierra, para abrazar con sus familias. Eso es lo que afirma la UNESCO al describir el elemento inscrito.\n- Lo que hacen las familias: colocar la ofrenda, la comida, la fotografía, el agua y la luz. Son acciones reales, verificables, que se hacen en la casa.\n- Lo que no se puede afirmar: que un alma viaje físicamente por el mundo y entre a la casa. La tradición lo trata como una creencia, y el chatbot la presenta así, sin decir que sea un hecho.\n\nLos pueblos indígenas tienen su propia visión del alma: los nahuas dicen que el difunto, al que llaman almita, trabaja con los vivos trayendo la lluvia; los matlatzincas relacionan la mariposa monarca con el regreso de las almas. Para ellos no es un mito, es parte de su manera de entender el mundo.\n\nPor eso la pregunta no admite un sí o un no seco: la intención de la costumbre es real y la práctica es real, y la explicación del viaje pertenece al imaginario de cada comunidad.",
+      "respuesta_ninos": "Nadie puede comprobar si los muertos entran a la casa. Lo que sí es cierto es que las familias los esperan: ponen su comida, su foto, su vela y su flor. Para muchas personas creer que el difunto regresa y se siente con su familia hace que el día sea menos triste. Es una creencia, no un dato.",
+      "palabras_clave": [
+        "almas regresan",
+        "regresan fisicamente",
+        "almas vuelven",
+        "fisicamente",
+        "regreso de las almas",
+        "vuelven los muertos",
+        "los muertos vuelven",
+        "los muertos regresan",
+        "regreso",
+        "retorno"
+      ],
+      "sinonimos": [
+        "las almas regresan a las casas",
+        "regreso temporal de los difuntos",
+        "vienen de visita"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "inpi-fiestas-pueblos",
+        "proyecto-criterios"
+      ],
+      "conceptos": [
+        "creencia",
+        "difunto"
+      ],
+      "prioridad": 7,
+      "nivel": "tradicion",
+      "nota": "El regreso de las almas pertenece a la creencia de la tradición. El chatbot no lo presenta como un hecho verificable."
+    },
+    {
       "id": "elementos-de-la-ofrenda",
-      "tema": "Elementos de una ofrenda",
+      "tema": "Elementos de la ofrenda y su significado",
       "categoria": "elementos",
       "preguntas_ejemplo": [
+        "¿Qué elementos tiene una ofrenda?",
         "¿Qué elementos forman parte de una ofrenda?",
+        "¿Qué representan los elementos de una ofrenda?",
         "dime todos los elementos de la ofrenda",
-        "¿qué se pone en el altar?"
+        "¿qué se pone en el altar?",
+        "lista los elementos de la ofrenda"
       ],
-      "respuesta": "Estos son los elementos principales y su significado:\n\n- Cempasúchil: la flor que da la bienvenida y guía con su aroma a los difuntos.\n- Veladoras: la luz que representa fe, esperanza y el camino de regreso.\n- Agua: para que los muertos mitiguen la sed del largo viaje; hoy también como purificación.\n- Sal: elemento de purificación, para que el cuerpo no se corrompa.\n- Pan de muerto: alimento fraternal, cuya forma circular representa el ciclo de la vida.\n- Comida y bebida: lo que el difunto gustaba, como tamales, mole, atoles o pulque.\n- Fotografías: el retrato del ser querido, que representa al ánima que nos visitará.\n- Papel picado: las siluetas de papel que adornan altares, tumbas y caminos.\n- Calaveritas de azúcar: dulces con forma de cráneo que sirven para recordar a los muertos.\n- Ademas: incienso e imágenes de santos completan el conjunto.\n\nCada comunidad, cada región y cada familia puede modificar este conjunto.",
+      "respuesta": "Estos son los elementos principales y su significado:\n\n- Cempasúchil: la flor que da la bienvenida y guía con su aroma a los difuntos.\n- Veladoras: la luz que representa fe, esperanza y el camino de regreso.\n- Agua: para que los muertos mitiguen la sed del largo viaje; hoy también como purificación.\n- Sal: elemento de purificación, para que el cuerpo no se corrompa.\n- Copal: la resina que se quema y cuyo aroma limpia el lugar de los malos espíritus para que el alma pueda entrar a su casa.\n- Pan de muerto: alimento fraternal, cuya forma circular representa el ciclo de la vida.\n- Comida y bebida: lo que el difunto gustaba, como tamales, mole, atoles o pulque.\n- Fotografías: el retrato del ser querido, que representa al ánima que nos visitará.\n- Papel picado: las siluetas de papel que adornan altares, tumbas y caminos, y que representan el viento, el aire.\n- Calaveritas de azúcar: dulces con forma de cráneo que sirven para recordar a los muertos.\n- Cruz o imagen del santo: señala el carácter religioso de la ofrenda.\n- Mantel blanco: el color blanco representa la pureza.\n\nAdemás: incienso, objetos personales con valor sentimental y, en el caso de mascotas, croquetas y juguetes.\n\nCada comunidad, cada región y cada familia puede modificar este conjunto.",
+      "respuesta_ninos": "En el altar van muchas cosas y cada una significa algo: flores naranjas para guiar, velas para dar luz, agua porque llegan con sed, sal para limpiar, comida porque la persona tenía hambre, una foto para reconocerla, papel picado de colores, dulces con cara de calavera y el copal que huele rico y limpia el lugar. No hace falta poner todo: cada casa pone lo que puede.",
       "palabras_clave": [
         "elementos",
         "que elementos",
+        "que elementos tiene",
         "elemento",
         "forman parte",
         "parten de una ofrenda",
         "que se pone en el altar",
         "componentes",
-        "lista",
         "todos los elementos",
         "ofrenda lleva",
         "cuales son los elementos",
-        "que lleva la ofrenda"
+        "que lleva la ofrenda",
+        "que representa cada elemento",
+        "significado de cada elemento",
+        "significado de los elementos",
+        "que se pone en la ofrenda"
+      ],
+      "sinonimos": [
+        "partes de la ofrenda",
+        "objetos de la ofrenda",
+        "que contiene la ofrenda",
+        "elementos basicos"
       ],
       "fuentes": [
         "cdmx-ofrendas",
         "inpi-elementos-ofrenda",
         "unam-global-ofrendas",
         "lugares-inah-fiestas-indigenas",
-        "cultura-calaveritas-azucar"
+        "cultura-calaveritas-azucar",
+        "natgeo-ofrendas",
+        "expansion-ofrendas-fechas",
+        "eluniversal-guia-ofrendas",
+        "semillitas-ninos"
+      ],
+      "conceptos": [
+        "ofrenda"
       ],
       "prioridad": 5
     },
@@ -138,28 +846,137 @@
       "tema": "El cempasúchil",
       "categoria": "elementos",
       "preguntas_ejemplo": [
+        "¿Por qué se utiliza el cempasúchil?",
         "¿Qué significa el cempasúchil?",
-        "¿por qué se usa la flor de cempasúchil?",
-        "cuéntame del cempasúchil"
+        "cuéntame del cempasúchil",
+        "¿por qué ponemos flores naranjas en la ofrenda?",
+        "por qué se usa la flor de cempasúchil"
       ],
-      "respuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se esparcen sus pétalos desde la puerta de la casa hasta el cementerio, porque se creía que su aroma y su color guiaban el camino de las ánimas. El INAH señala que las familias también ofrendan alimentos en altares y tumbas adornados con flores.\n\nSu nombre viene del náhuatl cempoalxóchitl, que significa flor de la cuenta. La cuenta es el ciclo que se completa, y la flor se asocia a ese ciclo que termina y vuelve a empezar, igual que el ciclo agrícola del maíz.\n\nEs la flor tradicional de la festividad y aparece en ella en todas las regiones del país.",
+      "respuesta": "El cempasúchil (Tagetes erecta, la flor de San Antonio) es la flor más característica de la celebración.\n\nSe coloca en la ofrenda, en las tumbas y se esparcen sus pétalos desde la puerta de la casa hasta el cementerio, porque se creía que su aroma y su color guiaban el camino de las ánimas. El INAH señala que las familias también ofrendan alimentos en altares y tumbas adornados con flores. En la actualidad se forman senderos desde la entrada principal del hogar hasta el altar para guiar a las almas.\n\nSu nombre viene del náhuatl cempoalxóchitl, que significa flor de la cuenta. La cuenta es el ciclo que se completa, y la flor se asocia a ese ciclo que termina y vuelve a empezar, igual que el ciclo agrícola del maíz.\n\nLa Secretaría de Agricultura explica el color: los mexicas asociaban el amarillo y el naranja de la flor con el sol, al que creían que guardaba la tibieza del día, mientras el aroma servía para guiar a los muertos. Además, se usaba para empolvar el rostro de los prisioneros antes de su sacrificio con el fin de que no sintieran la muerte. Por eso hoy se considera símbolo de vida y de muerte a la vez.\n\nEs la flor tradicional de la festividad y aparece en ella en todas las regiones del país.",
+      "respuesta_ninos": "El cempasúchil es la flor naranja del Día de Muertos. Se llama así porque es la flor más conocida de la fiesta. Su olor y su color le sirven a los difuntos para encontrar el camino de su casa, por eso se ponen en el altar, en las tumbas y en todo el camino de pétalos desde la puerta hasta el altar. En náhuatl su nombre quiere decir flor de la cuenta.",
       "palabras_clave": [
         "cempasuchil",
         "cempasúchil",
-        "cempasúchil",
-        "flor",
-        "petalos",
-        "pétalos",
+        "flor de cempasuchil",
+        "flor de muerto",
+        "flores naranjas",
+        "flor naranja",
         "cempoalxochitl",
+        "cempoaltxochitl",
         "flor de san antonio",
+        "flor de octubre",
+        "flores de la ofrenda",
+        "flor de la ofrenda",
         "aroma",
         "tagetes",
-        "flores"
+        "flores",
+        "flor"
+      ],
+      "sinonimos": [
+        "flores de cempasuchil",
+        "flor de los 400 petalos",
+        "flor de la cuenta",
+        "flores naranjas de la ofrenda",
+        "xantolo",
+        "ninín"
       ],
       "fuentes": [
         "lugares-inah-fiestas-indigenas",
         "unesco-sede-dia-muertos",
-        "unam-gaceta-colonia"
+        "unam-gaceta-colonia",
+        "agricultura-cempasuchil"
+      ],
+      "conceptos": [
+        "flor",
+        "ofrenda"
+      ],
+      "prioridad": 6
+    },
+    {
+      "id": "cempasuchil-significados",
+      "tema": "Los significados del cempasúchil",
+      "categoria": "elementos",
+      "preguntas_ejemplo": [
+        "¿La flor de cempasúchil tiene un único significado oficial?",
+        "¿el cempasúchil significa una sola cosa?",
+        "explica los significados de la flor de cempasúchil"
+      ],
+      "respuesta": "No. El cempasúchil tiene varios significados documentados y ninguno de ellos es el significado oficial.\n\n- Guía: su aroma y su color guían a las ánimas por el camino de regreso. Es el uso más extendido y el que aparece en la mayoría de las fuentes.\n- Ciclo: su nombre, cempoalxóchitl, significa flor de la cuenta, y la cuenta es el ciclo que se completa, igual que el ciclo del maíz que termina y vuelve a empezar.\n- Sol y calor: los mexicas asociaban su amarillo y su naranja con el sol, al que creían que guardaba la tibieza del día.\n- Vida y muerte: la Secretaría de Agricultura lo considera símbolo de vida y de muerte al mismo tiempo, porque se usaba también para empolvar el rostro de los prisioneros antes del sacrificio.\n- Nombre regional: la flor cambia de nombre según el lugar: cempasúchil o cempoaltxóchil en el centro de México, xantolo en huasteco, ninín en totonaco y animechakejtzitakuca en purépecha.\n\nCuando una fuente dice que la flor representa algo, está describiendo una interpretación, no una norma. La respuesta honesta es que el significado depende de la comunidad y de la fuente que se cite.",
+      "respuesta_ninos": "La flor naranja no significa una sola cosa. Para unos guía a los difuntos, para otros lembra el ciclo de la vida como el maíz, y para otros es el sol. Y según la región tiene nombre diferente. Por eso, cuando alguien dice qué significa el cempasúchil, hay que preguntar quién lo dice y de dónde.",
+      "palabras_clave": [
+        "unico significado",
+        "único significado",
+        "significado unico",
+        "un solo significado",
+        "significado oficial",
+        "que significa el cempasuchil",
+        "significados del cempasuchil",
+        "cempasuchil significa"
+      ],
+      "sinonimos": [
+        "la flor tiene un solo significado",
+        "cempasuchil tiene un significado unico",
+        "significado de la flor naranja"
+      ],
+      "fuentes": [
+        "agricultura-cempasuchil",
+        "unam-gaceta-colonia",
+        "lugares-inah-fiestas-indigenas"
+      ],
+      "conceptos": [
+        "flor",
+        "alternativa",
+        "creencia"
+      ],
+      "prioridad": 7,
+      "nivel": "documentado",
+      "nota": "No existe un significado único del cempasúchil. Las fuentes registran varios, y cambian según la región."
+    },
+    {
+      "id": "camino-de-petalos",
+      "tema": "El camino de pétalos",
+      "categoria": "elementos",
+      "preguntas_ejemplo": [
+        "¿Qué representa el camino de pétalos de cempasúchil?",
+        "¿por qué se ponen pétalos en el camino?",
+        "explica el camino de flores",
+        "¿qué es el sendero de flores?"
+      ],
+      "respuesta": "El camino de pétalos es la guía que la familia construye para que el difunto encuentre el camino de su casa. Es uno de los gestos más reconocibles de la celebración.\n\nCómo se hace y qué representa:\n- Las familias esparcen pétalos de flores a lo largo del camino que va de la casa al cementerio, según el INAH.\n- En la actualidad se forman senderos desde la entrada principal del hogar hasta el altar, según la Secretaría de Agricultura.\n- Las flores se eligen por su aroma y su color, que son los que orientan a las ánimas.\n- Las siluetas de papel se colocan también en ese recorrido, y el papel picado representa el viento, el aire que acompaña a los difuntos durante su regreso.\n- La lista de prensa sobre las ofrendas incluye los pétalos de cempasúchil entre los elementos que marcan el camino hacia la ofrenda.\n\nConviene separar el hecho documentado de la explicación simbólica: lo documentado es que se trazan senderos de flores; lo simbólico es que ese sendero funciona como mapa. Ambas cosas se sostienen en las fuentes.",
+      "respuesta_ninos": "El camino de pétalos es cuando la familia pone flores por el suelo para hacer un camino de la puerta de la casa hasta el altar o hasta el cementerio. Es para que el difunto no se pierda y llegue a su casa, porque lleva mucho tiempo de viaje.",
+      "palabras_clave": [
+        "camino de petalos",
+        "camino de pétalos",
+        "camino",
+        "caminos",
+        "petalos",
+        "pétalos",
+        "sendero",
+        "senderos",
+        "ruta",
+        "guia",
+        "guía",
+        "entrada principal",
+        "puerta de la casa",
+        "hasta el cementerio",
+        "hacia el altar"
+      ],
+      "sinonimos": [
+        "camino de flores",
+        "sendero de flores",
+        "petalos en el suelo",
+        "ruta de las almas"
+      ],
+      "fuentes": [
+        "lugares-inah-fiestas-indigenas",
+        "agricultura-cempasuchil",
+        "inpi-elementos-ofrenda",
+        "expansion-ofrendas-fechas"
+      ],
+      "conceptos": [
+        "flor",
+        "camino",
+        "ofrenda"
       ],
       "prioridad": 6
     },
@@ -170,9 +987,12 @@
       "preguntas_ejemplo": [
         "¿Por qué se colocan veladoras?",
         "¿qué significa la vela en la ofrenda?",
-        "¿qué son las veladoras?"
+        "¿qué son las veladoras?",
+        "por qué se ponen velas",
+        "explica las velas de la ofrenda"
       ],
-      "respuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino de regreso a su antiguo hogar durante la larga travesía.\n\nSu origen es prehispánico. En la era anterior a la Colonia no se usaba cera: se ofrendaba a los muertos con rajas de ocote, es decir, madera de pino encendida, que cumplía la misma función de iluminar el camino.\n\nEn varias comunidades indígenas cada vela representa a un difunto específico, por lo que el número de velas se calcula según las personas que se van a recordar.\n\nEn la Ciudad de México se les llama también cirios, y son las responsables de iluminar el altar y el camino que va de la casa al cementerio.",
+      "respuesta": "Las veladoras y las velas representan la luz, la fe y la esperanza, y funcionan como guía: se colocan para que las ánimas puedan encontrar el camino de regreso a su antiguo hogar durante la larga travesía.\n\nSu origen es prehispánico. En la era anterior a la Colonia no se usaba cera: se ofrendaba a los muertos con rajas de ocote, es decir, madera de pino encendida, que cumplía la misma función de iluminar el camino. Los españoles, por su parte, colocaban veladoras y lámparas de aceite en los altares que levantaban para las ánimas.\n\nHay dos usos prácticos que también están documentados:\n- En varias comunidades indígenas cada vela representa a un difunto específico, por lo que el número de velas se calcula según las personas que se van a recordar.\n- En Tláhuac se usan pencas de maguey como candeleros.\n- Una práctica de manualidad consiste en colocar las veladoras en vasos de cristal pintados a mano, con la advertencia de usar un esmalte no inflamable.\n\nEn la Ciudad de México se les llama también cirios, y son las responsables de iluminar el altar y el camino que va de la casa al cementerio.",
+      "respuesta_ninos": "Las velas son la luz del altar. Antes de los españoles no había velas de cera: usaban rajas de ocote, que es madera de pino prendida. Las velas se ponen para que el difunto vea el camino y llegue a su casa. En algunas comunidades se pone una vela por cada persona que se recuerda.",
       "palabras_clave": [
         "veladora",
         "veladoras",
@@ -184,12 +1004,27 @@
         "cera",
         "luz",
         "candela",
-        "candle"
+        "candelas",
+        "candelero",
+        "candeleros",
+        "maguey"
+      ],
+      "sinonimos": [
+        "velas de la ofrenda",
+        "luz de la ofrenda",
+        "cirios",
+        "fuego de la ofrenda"
       ],
       "fuentes": [
         "cdmx-ofrendas",
         "inpi-elementos-ofrenda",
-        "lugares-inah-fiestas-indigenas"
+        "lugares-inah-fiestas-indigenas",
+        "inpi-fiestas-pueblos",
+        "tiendanube-manualidades"
+      ],
+      "conceptos": [
+        "luz",
+        "ofrenda"
       ],
       "prioridad": 6
     },
@@ -198,24 +1033,42 @@
       "tema": "El agua en la ofrenda",
       "categoria": "elementos",
       "preguntas_ejemplo": [
+        "¿Por qué se coloca agua?",
         "¿Por qué se pone agua en la ofrenda?",
         "¿qué significa el agua en el altar?",
         "para qué es el agua el día de muertos"
       ],
-      "respuesta": "El agua representa la fuente de la vida y la purificación.\n\nSu significado original está ligado al viaje: se colocaba en la ofrenda para que los muertos mitigaran la sed, porque se creía que llegaban sedientes después de un trayecto largo.\n\nCon el tiempo su significado se amplió y hoy también se entiende como un elemento de purificación. Se coloca en un vaso o en un aguamanos a los lados de la ofrenda.\n\nEl agua es, junto con la sal, de los pocos elementos que los españoles conservaron en los altares que levantaban para las ánimas: ellos dejaban pan de trigo, veladoras, lámparas de aceite, sal y agua para que los difuntos tuvieran algo de beber durante su trayecto a casa.",
+      "respuesta": "El agua representa la fuente de la vida y la purificación.\n\nSu significado original está ligado al viaje: se colocaba en la ofrenda para que los muertos mitigaran la sed, porque se creía que llegaban sedientes después de un trayecto largo.\n\nCon el tiempo su significado se amplió y hoy también se entiende como un elemento de purificación. Se coloca en un vaso o en un aguamanos a los lados de la ofrenda.\n\nEl agua es, junto con la sal, de los pocos elementos que los españoles conservaron en los altares que levantaban para las ánimas: ellos dejaban pan de trigo, veladoras, lámparas de aceite, sal y agua para que los difuntos tuvieran algo de beber durante su trayecto a casa.\n\nSu lugar también varía: en las comunidades nahuas del Estado de México el agua se ofrece desde el 29 de septiembre, y en las listas de prensa aparece entre los elementos tradicionales de toda ofrenda.",
+      "respuesta_ninos": "El agua se pone porque los muertos llegan con mucha sed después de su viaje. Antes de los españoles ya se ponía agua en el altar. Hoy también significa limpieza, como cuando uno se baña antes de que lleguen las visitas.",
       "palabras_clave": [
         "agua",
+        "por que se coloca agua",
+        "por que se pone agua",
         "vaso",
         "aguamanos",
+        "aguamanil",
         "sed",
         "beber",
-        "bebida",
-        "purificacion"
+        "purificacion",
+        "sedientes"
+      ],
+      "sinonimos": [
+        "agua en la ofrenda",
+        "agua del altar",
+        "vaso de agua",
+        "por que el agua"
       ],
       "fuentes": [
         "cdmx-ofrendas",
         "inpi-elementos-ofrenda",
-        "unam-global-ofrendas"
+        "unam-global-ofrendas",
+        "expansion-ofrendas-fechas",
+        "natgeo-ofrendas",
+        "inpi-fiestas-pueblos"
+      ],
+      "conceptos": [
+        "agua-sal",
+        "ofrenda"
       ],
       "prioridad": 6
     },
@@ -225,20 +1078,74 @@
       "categoria": "elementos",
       "preguntas_ejemplo": [
         "¿Para qué sirve la sal en la ofrenda?",
-        "¿qué significa la sal el día de muertos?"
+        "¿qué significa la sal el día de muertos?",
+        "por qué se pone sal"
       ],
-      "respuesta": "La sal es el elemento de purificación de la ofrenda.\n\nSu significado es de cuidado: se ofrece para que el cuerpo del difunto no se corrompa durante su viaje de ida y vuelta, y para que regrese al año siguiente en buenas condiciones.\n\nSe coloca en un platillo o en un recipiente cerca de la ofrenda, a veces junto al agua, y se combina con la comida y con la flor de cempasúchil.\n\nAl igual que el agua, la sal era uno de los elementos que los españoles dejaban en los altares que levantaban para las ánimas.",
+      "respuesta": "La sal es el elemento de purificación de la ofrenda.\n\nSu significado es de cuidado: se ofrece para que el cuerpo del difunto no se corrompa durante su viaje de ida y vuelta, y para que regrese al año siguiente en buenas condiciones.\n\nSe coloca en un platillo o en un recipiente cerca de la ofrenda, a veces junto al agua, y se combina con la comida y con la flor de cempasúchil. En el altar con mantel blanco se pone la sal encima de la mesa, porque el color blanco representa la pureza.\n\nAl igual que el agua, la sal era uno de los elementos que los españoles dejaban en los altares que levantaban para las ánimas.\n\nLas comunidades nahuas del Estado de México también ofrecen sal en su primera ofrenda, la del 29 de septiembre.",
+      "respuesta_ninos": "La sal es para limpiar y para cuidar. Se ofrece para que el cuerpo del difunto no se dane durante el viaje y pueda volver al año siguiente. Se pone en un platillito, a veces junto al agua.",
       "palabras_clave": [
         "sal",
-        "purificacion",
+        "sal en la ofrenda",
+        "para que sirve la sal",
         "corromp",
         "salita",
         "y sal"
       ],
+      "sinonimos": [
+        "sal del altar",
+        "por que la sal",
+        "sal y agua"
+      ],
       "fuentes": [
         "cdmx-ofrendas",
         "inpi-elementos-ofrenda",
-        "unam-global-ofrendas"
+        "unam-global-ofrendas",
+        "natgeo-ofrendas",
+        "inpi-fiestas-pueblos"
+      ],
+      "conceptos": [
+        "agua-sal",
+        "ofrenda"
+      ],
+      "prioridad": 6
+    },
+    {
+      "id": "copal-e-incienso",
+      "tema": "El copal y el incienso",
+      "categoria": "elementos",
+      "preguntas_ejemplo": [
+        "¿Por qué se usa el copal?",
+        "háblame del incienso",
+        "¿qué es el copal?",
+        "por qué se sahuma el altar"
+      ],
+      "respuesta": "El copal es la resina que se quema para sahumar el lugar. La National Geographic lo explica así: su aroma sirve para limpiar el lugar de los malos espíritus, para que el alma pueda entrar a su casa.\n\nSu origen es prehispánico y se usaba como ofrenda desde antes de la Colonia: el artículo de la revista Hechos y Derechos Jurídicos de la UNAM incluye el incienso para el sahumerio entre los ofrendas del calendario de muerte mexica. En la investigación del INPI sobre cinco pueblos del Estado de México aparece el sahumerio de copal colocado en los cuatro puntos cardinales del altar, con las veladoras ordenadas formando una cruz.\n\nLa explicación para niños suele enlistar los elementos del altar por naturaleza, y en esa lectura el copal es el aire o el humo, la tierra es la comida, el agua es el agua y el fuego son las velas.\n\nEn la práctica el copal se enciende en un sahumerio o en un brasero y se pasa por toda la casa, sobre todo por las entradas y los cuartos donde estuvieron los difuntos.",
+      "respuesta_ninos": "El copal es una resina que huele muy rico. Se prende y el humo llena la casa para limpiarla, para que las malas ánimas no se queden y el difunto pueda entrar tranquilo. Se usaba mucho antes de los españoles y se pone en un sahumerio.",
+      "palabras_clave": [
+        "copal",
+        "incienso",
+        "sahumerio",
+        "sahumio",
+        "humo",
+        "resina",
+        "brasero",
+        "por que se usa el copal",
+        "inciensario"
+      ],
+      "sinonimos": [
+        "copal en la ofrenda",
+        "sahumerio de copal",
+        "incienso de la ofrenda"
+      ],
+      "fuentes": [
+        "natgeo-ofrendas",
+        "inpi-fiestas-pueblos",
+        "semillitas-ninos",
+        "unam-juridicas-ofrendas"
+      ],
+      "conceptos": [
+        "incienso",
+        "ofrenda"
       ],
       "prioridad": 6
     },
@@ -249,9 +1156,11 @@
       "preguntas_ejemplo": [
         "¿Por qué se colocan fotografías?",
         "¿qué significa la foto del difunto?",
-        "para qué son las fotos en el altar"
+        "para qué son las fotos en el altar",
+        "por qué se pone la fotografía"
       ],
-      "respuesta": "La fotografía del difunto ocupa un lugar central en la ofrenda: se coloca en el segundo nivel del altar, debajo de la imagen del santo y encima de los alimentos.\n\nSu significado es que el retrato representa al ánima que nos va a visitar. Por eso se coloca y se cuida con esmero.\n\nEn algunas comunidades hay una costumbre más estricta: el retrato debe quedar escondido de manera que solo pueda verse con un espejo, para expresar que al ser querido se le puede ver, pero ya no existe. Otras familias, en cambio, colocan la fotografía a la vista.\n\nEs un ejemplo claro de cómo un mismo elemento puede variar de una comunidad a otra.",
+      "respuesta": "La fotografía del difunto ocupa un lugar central en la ofrenda: se coloca en el segundo nivel del altar, debajo de la imagen del santo y encima de los alimentos.\n\nSu significado es que el retrato representa al ánima que nos va a visitar. Por eso se coloca y se cuida con esmero.\n\nEn algunas comunidades hay una costumbre más estricta: el retrato debe quedar escondido de manera que solo pueda verse con un espejo, para expresar que al ser querido se le puede ver, pero ya no existe. Otras familias, en cambio, colocan la fotografía a la vista.\n\nEn la época prehispánica el mismo lugar lo ocupaban ídolos u objetos que hacían de retrato del difunto, según el estudio del Instituto de Investigaciones Jurídicas de la UNAM. Las familias también suelen poner objetos personales con valor sentimental, y El Universal los lista entre los elementos de la ofrenda junto a las fotografías.\n\nEs un ejemplo claro de cómo un mismo elemento puede variar de una comunidad a otra.",
+      "respuesta_ninos": "La foto es para que el difunto sea reconocido cuando llega. Se pone en un lugar alto, debajo de la imagen del santo. Hay pueblos donde la foto se tapa con un paño y solo se ve en el espejo, para decir que al ser querido se le ve pero ya no está. En otras casas la foto se ve normalmente.",
       "palabras_clave": [
         "fotografia",
         "fotografias",
@@ -260,11 +1169,26 @@
         "fotos",
         "retrato",
         "espejo",
-        "imagen del difunto"
+        "imagen del difunto",
+        "por que se colocan fotografias",
+        "por que se pone la foto"
+      ],
+      "sinonimos": [
+        "fotografias en la ofrenda",
+        "foto del difunto",
+        "retrato en el altar",
+        "por que la foto"
       ],
       "fuentes": [
         "unam-global-ofrendas",
-        "inpi-elementos-ofrenda"
+        "inpi-elementos-ofrenda",
+        "eluniversal-guia-ofrendas",
+        "unam-juridicas-ofrendas",
+        "natgeo-ofrendas"
+      ],
+      "conceptos": [
+        "recuerdo",
+        "ofrenda"
       ],
       "prioridad": 6
     },
@@ -273,53 +1197,89 @@
       "tema": "El papel picado",
       "categoria": "elementos",
       "preguntas_ejemplo": [
+        "¿Por qué se utiliza papel picado?",
         "¿Qué es el papel picado?",
         "háblame del papel picado del día de muertos",
         "¿qué representa el papel picado?"
       ],
-      "respuesta": "El papel picado es el adorno de papel de las ofrendas, las tumbas y los caminos de la festividad. Se reconoce por sus siluetas recortadas y por sus colores intensos, y su función es dar color a la celebración.\n\nLas fuentes del INAH describen a las familias decorando altares y tumbas, y coloca las siluetas de papel en el recorrido de la casa al cementerio.\n\nSobre su significado, los documentos oficiales del Gobierno de México señalan que el papel picado representa el viento: el aire que acompaña y guía a los difuntos durante su regreso.\n\nConviene ser cuidadoso con el origen. El papel tiene una raíz ritual prehispánica en Mesoamérica, donde se usaba en ceremonias y adornos funerarios, y la técnica del recorte de papel es de influencia asiática. Sin embargo, la UNESCO registra el recorte de papel chino como patrimonio de China, y no se encontró una fuente oficial mexicana que documente el traslado exacto de esa técnica al papel picado mexicano. Por eso el chatbot no afirma una procedencia única.",
+      "respuesta": "El papel picado es el adorno de papel de las ofrendas, las tumbas y los caminos de la festividad. Se reconoce por sus siluetas recortadas y por sus colores intensos, y su función es dar color a la celebración.\n\nLas fuentes del INAH describen a las familias decorando altares y tumbas, y colocando las siluetas de papel en el recorrido de la casa al cementerio.\n\nSobre su significado, los documentos oficiales del Gobierno de México señalan que el papel picado representa el viento: el aire que acompaña y guía a los difuntos durante su regreso. La National Geographic lo reitera y lo sitúa como uno de los cuatro elementos del altar.\n\nConviene ser cuidadoso con el origen. El papel tiene una raíz ritual prehispánica en Mesoamérica, y el estudio del Instituto de Investigaciones Jurídicas de la UNAM señala que tenía tanta relevancia que servía de salvoconducto del ánima. Sin embargo, la UNESCO registra el recorte de papel chino como patrimonio cultural inmaterial de China, y no se encontró una fuente oficial mexicana que documente el traslado exacto de esa técnica al papel picado mexicano. Por eso el chatbot no afirma una procedencia única.",
+      "respuesta_ninos": "El papel picado son hojas de papel de colores con figuras recortadas, como calaveritas o flores. Se cuelgan en el altar, en las tumbas y en el camino. Según el Gobierno de México, representan el viento, y sus colores le dan alegría a la ofrenda.",
       "palabras_clave": [
         "papel picado",
         "papel-picado",
+        "por que se utiliza papel picado",
         "papel",
         "recorte",
         "silueta",
         "siluetas",
         "picado",
-        "papel de china"
+        "papel de china",
+        "papel maché",
+        "banderines"
+      ],
+      "sinonimos": [
+        "papel picado del altar",
+        "adornos de papel",
+        "siluetas de papel",
+        "por que el papel picado"
       ],
       "fuentes": [
         "lugares-inah-fiestas-indigenas",
-        "inpi-elementos-ofrenda"
+        "inpi-elementos-ofrenda",
+        "natgeo-ofrendas",
+        "expansion-ofrendas-fechas",
+        "unam-juridicas-ofrendas"
+      ],
+      "conceptos": [
+        "manualidad",
+        "ofrenda"
       ],
       "prioridad": 6,
-      "nota": "La UNESCO registra el arte chino del recorte de papel como patrimonio cultural inmaterial de China. La relación histórica entre esa técnica y el papel picado mexicano no está documentada en las fuentes oficiales verificadas, por lo que se presenta como una posibilidad y no como un hecho."
+      "nota": "La UNESCO registra el recorte de papel chino como patrimonio cultural inmaterial de China. La relación histórica entre esa técnica y el papel picado mexicano no está documentada en las fuentes oficiales verificadas, por lo que se presenta como una posibilidad y no como un hecho."
     },
     {
       "id": "pan-de-muerto",
       "tema": "El pan de muerto",
       "categoria": "elementos",
       "preguntas_ejemplo": [
+        "¿Qué significado tiene el pan de muerto?",
         "¿Qué es el pan de muerto?",
         "¿por qué se pone pan de muerto?",
-        "háblame del pan de muerto"
+        "háblame del pan de muerto",
+        "explica el pan de muerto"
       ],
-      "respuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Su significado es fraternal: es el alimento que se ofrece al amigo, al hermano y al pariente que ya partió, y expresa afecto.\n\nSu origen es prehispánico. Su antecedente es el Miccailhuitontli, la fiesta mesoamericana de los muertos, en la que se ofrecían tamales de guajolote y de cachorros. Con la Colonia entró el pan de trigo, que sustituyó a aquella preparación.\n\nSu forma también significa algo:\n- La redonda con un agujero en el centro, llamada gollete, representa el ciclo de la vida, que inicia y termina en el mismo lugar.\n- La de forma de montículo lleva en su parte más alta dos huesos atravesados.\n\nCada región tiene su propia variante, forma y sabor: hay panes de naranja, de azahar y de anís.",
+      "respuesta": "El pan de muerto es el pan que se coloca en la ofrenda y que se comparte con la familia. Se consume principalmente el 1 y el 2 de noviembre. Su significado es fraternal: es el alimento que se ofrece al amigo, al hermano y al pariente que ya partió, y expresa afecto.\n\nSu origen es prehispánico. Su antecedente es el Miccailhuitontli, la fiesta mesoamericana de los muertos, en la que se ofrecían tamales de guajolote y de cachorros, y en la que las culturas mexica y azteca ofrendaban amaranto y cacao. Con la Colonia entró el pan de trigo, con técnica e ingrediente ajenos a Mesoamérica, que sustituyó a aquella preparación.\n\nSu forma también significa algo:\n- La redonda con un agujero en el centro, llamada gollete, representa el ciclo de la vida, que inicia y termina en el mismo lugar.\n- La de forma de montículo lleva en su parte más alta dos huesos atravesados.\n- Las tiras de masa en forma de huesos simulan los huesos, y su disposición en cruz evoca los cuatro puntos cardinales.\n- El pequeño cráneo de la cima recuerda la muerte en un contexto festivo, y el azúcar espolvoreada simboliza la dulzura de la vida.\n\nEl aroma viene del agua de azahar, la ralladura de naranja y, en algunas versiones, el anís. Hay variantes regionales: en el centro del país predomina la versión con azahar y azúcar, en Oaxaca puede encontrarse en forma de figuras humanas y en algunas comunidades indígenas se elabora con harina de maíz.",
+      "respuesta_ninos": "El pan de muerto es un pan dulce que se pone en el altar y que la familia se come. Es redondo, con unos huesitos de masa encima y un cranecito. El redondo quiere decir que la vida es como un círculo: empieza y acaba en el mismo lugar. Antes de los españoles no había pan de trigo: se ofrecían tamales.",
       "palabras_clave": [
         "pan de muerto",
+        "significado del pan de muerto",
         "pan de difunto",
         "pan",
         "gollete",
         "postre",
         "huesos",
         "huesitos",
-        "rebozado"
+        "rebozado",
+        "azahar",
+        "anís",
+        "harina"
+      ],
+      "sinonimos": [
+        "pan dulce de muertos",
+        "pan de los muertos",
+        "que significa el pan de muerto"
       ],
       "fuentes": [
         "cdmx-ofrendas",
         "inpi-elementos-ofrenda",
         "unam-gaceta-miccailhuitontli",
-        "unam-gaceta-colonia"
+        "unam-gaceta-colonia",
+        "cessa-pan-de-muerto",
+        "natgeo-ofrendas"
+      ],
+      "conceptos": [
+        "comida",
+        "ofrenda"
       ],
       "prioridad": 6
     },
@@ -328,11 +1288,14 @@
       "tema": "Comida y bebidas de la ofrenda",
       "categoria": "elementos",
       "preguntas_ejemplo": [
+        "¿Por qué se coloca comida?",
+        "¿Qué comida puedo poner?",
         "¿qué comida y bebida se ponen en la ofrenda?",
         "¿qué se come el día de muertos?",
         "háblame de la comida de la ofrenda"
       ],
-      "respuesta": "En la ofrenda se coloca lo que el difunto gustaba en vida, porque la comida es una forma de recibirlo y de nutrirlo durante su visita. La tradición es formar un platillo plentiful y personalizado, no una receta fija.\n\nEntre los alimentos y bebidas más habituales están:\n- Productos hechos de maíz: tamales, atoles, tortillas.\n- Mole con guajolote.\n- Pan de difunto o pan de muerto.\n- Fruta y dulces.\n- Pulque, en las zonas donde se conserva esa bebida.\n\nEn la versión más tradicional, la ofrenda para adultos se completa con agua, sal, veladoras y pétalos de cempasúchil.\n\nLa variación de platillos es también una de las expresiones de la identidad regional del país.",
+      "respuesta": "En la ofrenda se coloca lo que el difunto gustaba en vida, porque la comida es una forma de recibirlo y de nutrirlo durante su visita. La tradición es formar un platillo plentiful y personalizado, no una receta fija.\n\nEntre los alimentos y bebidas más habituales están:\n- Productos hechos de maíz: tamales, atoles, tortillas.\n- Mole con guajolote.\n- Pan de difunto o pan de muerto.\n- Fruta y dulces, y en las comunidades nahuas del centro del país guisos de mole, arroz, carne de cerdo, camotes y chayotes.\n- Bebidas: agua, café, leche, atole, pulque, y en algunas familias vino, cerveza o tequila, porque eran lo que el difunto tomaba. En las comunidades otomíes se ofrecen pulque, alcohol o agua.\n\nEn la versión más tradicional, la ofrenda para adultos se completa con agua, sal, veladoras y pétalos de cempasúchil.\n\nLa variación de platillos es también una de las expresiones de la identidad regional del país: el INAH señala que las ofrendas de algunas zonas del sureste muestran representaciones del inframundo mezcladas con el pensamiento cristiano.",
+      "respuesta_ninos": "La comida es la parte más importante: se pone lo que le gustaba a la persona. Puede ser tamales, mole con guajolote, atole, pan de muerto, fruta y algún dulce. Si al difunto le gustaba el refresco, se pone refresco. No hay una receta obligatoria: cada casa cocina lo que su familiar prefería.",
       "palabras_clave": [
         "comida",
         "bebida",
@@ -350,43 +1313,127 @@
         "gastronomia",
         "dulces",
         "fruta",
-        "que se come"
+        "que se come",
+        "que comida",
+        "que comida puedo poner",
+        "por que se coloca comida"
+      ],
+      "sinonimos": [
+        "comida de la ofrenda",
+        "que se pone de comer",
+        "alimentos de la ofrenda",
+        "platos del dia de muertos"
       ],
       "fuentes": [
         "unam-global-ofrendas",
         "lugares-inah-fiestas-indigenas",
-        "cdmx-ofrendas"
+        "cdmx-ofrendas",
+        "inpi-fiestas-pueblos",
+        "eluniversal-guia-ofrendas",
+        "expansion-ofrendas-fechas",
+        "natgeo-ofrendas"
+      ],
+      "conceptos": [
+        "comida",
+        "ofrenda"
       ],
       "prioridad": 6
     },
     {
       "id": "calaveras-y-calaveritas",
       "tema": "Calaveras y calaveritas",
-      "categoria": "elementos",
+      "categoria": "calaveras",
       "preguntas_ejemplo": [
+        "¿Por qué hay calaveras?",
         "¿qué son las calaveras?",
         "¿qué son las calaveritas de azúcar?",
         "háblame de las calaveras del día de muertos"
       ],
-      "respuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar y de chocolate, que se colocan en los altares junto con el pan de muerto. Su forma es la de un cráneo y funcionan como recordatorio de la muerte con un tono festivo.\n\nSu origen está en las prácticas prehispánicas. En aquella época era común conservar cráneos y mostrarlos durante los rituales. Cuando la religión católica prohibió los ritos que iban en contra de sus preceptos, esos ritos fueron sustituidos por otros, entre ellos los dulces con forma de cráneo que sirven para recordar a los muertos.\n\nUn género aparte son las calaveritas literarias: pequeños textos poéticos y humorísticos dedicados a personas, con fecha de defunción ficticia. La Ciudad de México organiza un concurso anual de este tipo, y también se convocan concursos de calaveritas en distintos estados y municipios durante octubre.",
+      "respuesta": "Durante el Día de Muertos se elaboran calaveras de azúcar, de chocolate y de amaranto, que se colocan en los altares junto con el pan de muerto. Su forma es la de un cráneo y funcionan como recordatorio de la muerte con un tono festivo. En la versión más tradicional de la ofrenda, la calaverita se pone sobre un plato de azúcar.\n\nSu origen está en las prácticas prehispánicas. En aquella época era común conservar cráneos y mostrarlos durante los rituales. Cuando la religión católica prohibió los ritos que iban en contra de sus preceptos, esos ritos fueron sustituidos por otros, entre ellos los dulces con forma de cráneo que sirven para recordar a los muertos.\n\nUn género aparte son las calaveritas literarias: pequeños textos poéticos y humorísticos dedicados a personas, con fecha de defunción ficticia.\n\nHoy también se elaboran calaveras decorativas gigantes, de unicel o de azúcar, que aparecen en las instalaciones de la Ciudad de México.",
+      "respuesta_ninos": "Las calaveritas son dulces con forma de huesito y de cráneo. Antes de los españoles se guardaban cráneos de verdad y se mostraban en los ritos. Como la iglesia no lo permitió, se inventaron los dulces con esa forma. Las calaveritas literarias son rimas cortas que se escriben para alguien que ya se fue.",
       "palabras_clave": [
         "calavera",
         "calaveras",
         "calaverita",
         "calaveritas",
-        "calaveritas literarias",
+        "calaveritas de azúcar",
         "azucar",
         "azúcar",
         "craneo",
         "cráneo",
         "chocolate",
-        "calaca"
+        "calaca",
+        "por que hay calaveras",
+        "calaveritos",
+        "calaverito de azucar",
+        "calaveritas de azucar",
+        "calaveritas de dulce"
+      ],
+      "sinonimos": [
+        "calaveritas de azucar",
+        "dulces de calavera",
+        "calaveras del altar",
+        "por que las calaveras",
+        "calaveritas de azucar",
+        "calaveritos de azucar",
+        "calaveritas de manera"
       ],
       "fuentes": [
         "cultura-calaveritas-azucar",
         "inpi-elementos-ofrenda",
         "cultura-catrina",
-        "cdmx-programacion"
+        "cdmx-programacion",
+        "expansion-ofrendas-fechas",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "calavera",
+        "ofrenda"
+      ],
+      "prioridad": 6
+    },
+    {
+      "id": "calaveras-literarias",
+      "tema": "Calaveras literarias",
+      "categoria": "calaveras",
+      "preguntas_ejemplo": [
+        "háblame de las calaveras literarias",
+        "¿qué son las calaveritas literarias?",
+        "explica las calaveras literarias",
+        "cuéntame de las calaveritas literarias"
+      ],
+      "respuesta": "Las calaveras literarias son un género mexicano: versos que se escriben en vísperas del Día de Muertos para expresar humor frente a la muerte.\n\nSegún un artículo de la Universidad Iberoamericana de Hidalgo, son epigramas o versos rítmicos de rima variada cuyo motivo principal es la muerte, usada como pretexto para la parodia de personas, acontecimientos políticos o culturales. Destacan por su ingenio, ironía, sutileza, caricatura, rima y musicalidad, y suelen acompañarse de ilustraciones de la Catrina.\n\nSu historia:\n- Nacieron en el siglo XIX como medio para expresar ideas difíciles de decir.\n- Las primeras se publicaron en 1879 en el periódico El Socialista de Guadalajara.\n- Antes se llamaban panteones y fueron censuradas.\n- Después de la Revolución Mexicana se multiplicaron sobre personajes como Diego Rivera.\n- A inicios de la década de 1940 el Taller de Gráfica Popular las impulsó.\n\nHoy la Secretaría de Cultura de la Ciudad de México organiza un concurso anual de calaveritas literarias, y también se convocan concursos en distintos estados y municipios durante octubre.\n\nSu diferencia con las calaveritas de azúcar es de género: las de azúcar son un dulce que se pone en el altar, y las literarias son un texto que se lee.",
+      "respuesta_ninos": "Las calaveritas literarias son poemitas cortas que se escriben para alguien que ya se fue, con rimas y un poco de burla, para que la muerte dé risa y no miedo. Son como las calaveritas de azúcar, pero en vez de comerse se leen. Se escriben desde hace más de cien años.",
+      "palabras_clave": [
+        "calaveritas literarias",
+        "calaveras literarias",
+        "calaverita literaria",
+        "calavera literaria",
+        "epigrama",
+        "epigramas",
+        "poesia",
+        "verso",
+        "versos",
+        "rima",
+        "rimas",
+        "concurso de calaveritas",
+        "taller de grafica popular",
+        "panteones"
+      ],
+      "sinonimos": [
+        "calaveras escritas",
+        "poemas de dia de muertos",
+        "versos del dia de muertos",
+        "satiras del dia de muertos"
+      ],
+      "fuentes": [
+        "natgeo-calaveras-literarias",
+        "cdmx-programacion",
+        "unamglobal-origenes"
+      ],
+      "conceptos": [
+        "calaveras-literarias",
+        "calavera"
       ],
       "prioridad": 6
     },
@@ -397,15 +1444,21 @@
       "preguntas_ejemplo": [
         "¿quién es La Catrina?",
         "cuéntame sobre la Catrina",
-        "¿qué es la Catrina?"
+        "¿qué es la Catrina?",
+        "explica quién es la catrina"
       ],
-      "respuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad.\n\nSu historia es la siguiente: José Guadalupe Posada, nacido el 2 de febrero de 1852 en Aguascalientes, grabó una calavera que llamó La Calavera Garbancera, una sátira de los garbanceros, personas de ascendencia indígena que fingían ser de origen europeo en el México del Porfiriato. La palabra catrín definía entonces a un hombre elegante y bien vestido.\n\nFue Diego Rivera quien le dio a la figura el nombre y la forma con que hoy la conocemos, al pintar a una mujer vestida de pies a cabeza en el mural Sueño de una tarde dominical en la Alameda Central.\n\nLa Catrina llegó a ser símbolo de la mestizofilia y del sincretismo mexicano. De ella viene una frase atribuida a Posada: la muerte, es democrática, ya que a fin de cuentas, güera, morena, rica o pobre, toda la gente acaba siendo calavera.",
+      "respuesta": "La Catrina es la figura de la mujer esquelética con sombrero que hoy es el símbolo más reconocido de la festividad. Aparece en el papel picado, en los disfraces y en los altares.\n\nSu historia es la siguiente: José Guadalupe Posada, nacido el 2 de febrero de 1852 en Aguascalientes, grabó una calavera que llamó La Calavera Garbancera, una sátira de los garbanceros, personas de ascendencia indígena que fingían ser de origen europeo en el México del Porfiriato. Garbancero venía de vender garbanzos en lugar de maíz, como se suponía que hacían los europeos. En sus primeras representaciones aparecía sin vestimenta, solo con un sombrero, lo que se ha interpretado como crítica a la pobreza. La palabra catrín definía entonces a un hombre elegante y bien vestido, de la aristocracia de finales del siglo XIX.\n\nEl grabado es de 1912 y se popularizó después de su muerte.\n\nFue Diego Rivera quien le dio a la figura el nombre y la forma con que hoy la conocemos, en 1947, al pintar a una mujer vestida de pies a cabeza en el mural Sueño de una tarde dominical en la Alameda Central, que se exhibe en el Museo Mural Diego Rivera.\n\nLa Catrina llegó a ser símbolo de la mestizofilia y del sincretismo mexicano. De ella viene una frase atribuida a Posada: la muerte, es democrática, ya que a fin de cuentas, güera, morena, rica o pobre, toda la gente acaba siendo calavera.",
+      "respuesta_ninos": "La Catrina es el dibujo de una calavera de mujer con un sombrero grande y un vestido bonito. La inventó el dibujante Posada en 1912 para burlarse de los rico-mestizos que se hacían los europeos. En 1947 el muralista Diego Rivera le puso ese nombre y le hizo un vestido bonito, y desde entonces es el dibujo más famoso del Día de Muertos. Su mensaje es que la muerte es igual para todos.",
       "palabras_clave": [
         "catrina",
+        "catrinas",
+        "catrin",
         "posada",
         "guadalupe posada",
         "garbancera",
+        "garbanceros",
         "rivera",
+        "diego rivera",
         "mural",
         "alameda",
         "mestizaje",
@@ -413,143 +1466,166 @@
         "porfirio",
         "esqueleto"
       ],
+      "sinonimos": [
+        "la catrina de posada",
+        "calavera garbancera",
+        "quien es la catrina",
+        "simbolo del dia de muertos"
+      ],
       "fuentes": [
         "cultura-catrina",
-        "vitabrevis-catrina"
+        "vitabrevis-catrina",
+        "natgeo-catrina"
+      ],
+      "conceptos": [
+        "catrina",
+        "calavera"
       ],
       "prioridad": 7
     },
     {
-      "id": "origen-prehispanico",
-      "tema": "Origen prehispánico",
-      "categoria": "origen",
+      "id": "ofrenda-ninos",
+      "tema": "La ofrenda para niños",
+      "categoria": "ninos",
       "preguntas_ejemplo": [
-        "¿Cuál es el origen del Día de Muertos?",
-        "¿de dónde viene esta tradición?",
-        "háblame del origen prehispánico"
+        "¿Cuándo se pone la ofrenda para los niños?",
+        "¿qué se pone en la ofrenda de los niños?",
+        "háblame de la ofrenda infantil",
+        "¿cómo es la ofrenda de los niños muertos?"
       ],
-      "respuesta": "La raíz de la celebración es prehispánica. Los antiguos mexicanos, junto con los mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas, trasladaron la veneración de sus muertos al calendario cristiano cuando llegó la Colonia, en el siglo XVI.\n\nEl nombre de la fiesta de los muertos en náhuatl es Miccailhuitl o Miccailhuitontli. El Miccailhuitontli era uno de los segmentos de laCalendario Ritual de 260 días, llamado xiuhpohualli, y se situaba al final de la temporada de lluvias.\n\nLa UNESCO señala que estas celebraciones coinciden con el final del ciclo anual del maíz, el cultivo fundamental en la vida de las comunidades. Por eso la ofrenda pide al difunto que ayude a las cosechas y a la vida de los vivos.\n\nSobre el origen hay un debate académico abierto: hay investigadores que sostienen que ni en Mesoamérica ni en la zona andina prehispánica existía una celebración particular de Día de Muertos, y que no hay evidencia de ello. El chatbot presenta las dos posturas para no elegir una sin fundamento.",
+      "respuesta": "La ofrenda para niños se instala antes que la de los adultos.\n\nCuándo:\n- El 30 y el 31 de octubre: a los niños que murieron sin haber sido bautizados, los limbritos o angelitos.\n- El 1 de noviembre, Todos Santos: a los niños y muertos chiquitos.\n- El 2 de noviembre: a los adultos.\n\nQué se pone: es una versión más pequeña y más dulce de la ofrenda de adultos. Lleva flores, calaveritas de azúcar, veladoras pequeñas, juguetes, dulces y, según el calendario otomí que documenta el INPI, pan de muerto con azúcar rosada.\n\nEn ese calendario otomí del Estado de México, el 31 de octubre se reserva a los niños bautizados que ya son angelitos, y son guiados por los Guerreros Otomíes.\n\nEn la versión más tradicional, la ofrenda infantil también lleva agua, sal, veladoras y pétalos de cempasúchil.\n\nNo hay una sola forma de hacerla: cada familia y cada comunidad ajusta el altar a lo que sus difuntos menores compartían. La edad y la causa del fallecimiento se tienen en cuenta al asignar el día, según la UNESCO.",
+      "respuesta_ninos": "La ofrenda de los niños se pone antes, el 31 de octubre, y el 1 de noviembre es su día. Se pone más chiquita y con cosas de niños: dulces, florecitas, juguetes, velitas y calaveritas de azúcar. Los niños que murieron sin bautizar tienen su día, el 30 de octubre, y se les llama angelitos.",
       "palabras_clave": [
-        "origen",
-        "prehispanico",
-        "prehispánico",
-        "prehispanica",
-        "mesoamerica",
-        "mesoamericano",
-        "mexica",
-        "indigena",
-        "indígena",
-        "indigenas",
-        "azteca",
-        "miccailhuitl",
-        "miccailhuitontli",
-        "raiz",
-        "raíz",
-        "de donde viene",
-        "historia",
-        "pasado",
-        "antiguo",
-        "antiguos",
-        "comenzo",
-        "comenzó",
-        "nacio",
-        "nació",
-        "xiuhpohualli",
-        "calendario ritual",
-        "260 dias",
-        "miccailhuitl"
+        "ofrenda para ninos",
+        "ofrenda de los ninos",
+        "ofrenda infantil",
+        "ninos",
+        "nino",
+        "angelito",
+        "angelitos",
+        "muertos chiquitos",
+        "limbritos",
+        "sin bautizar",
+        "bautizados",
+        "no bautizados",
+        "guerreros otomies",
+        "31 de octubre para los ninos",
+        "1 de noviembre para los ninos"
+      ],
+      "sinonimos": [
+        "ofrenda de angelitos",
+        "para los ninos muertos",
+        "ninos el dia de muertos"
       ],
       "fuentes": [
-        "unesco-ich-00054",
-        "lugares-inah-fiestas-indigenas",
-        "unam-gaceta-miccailhuitontli",
-        "unam-gaceta-evangelizar"
+        "unesco-sede-dia-muertos",
+        "inpi-fiestas-pueblos",
+        "expansion-ofrendas-fechas",
+        "eluniversal-guia-ofrendas",
+        "semillitas-ninos"
       ],
-      "prioridad": 4
-    },
-    {
-      "id": "sincretismo",
-      "tema": "Sincretismo religioso",
-      "categoria": "origen",
-      "preguntas_ejemplo": [
-        "¿cómo se mezcla la tradición con el catolicismo?",
-        "¿qué es el sincretismo en el día de muertos?",
-        "explica el sincretismo"
-      ],
-      "respuesta": "El sincretismo es la mezcla de dos mundos: los ritos prehispánicos y las fiestas católicas que llegaron con los españoles en el siglo XVI.\n\nEl resultado se ve en el calendario: los pueblos indígenas trasladaron a su calendario la veneración de sus muertos, y el 1 y el 2 de noviembre, Todos Santos y Fieles Difuntos, substituieron a las fechas del calendario anterior. Eso es un sincretismo de calendario.\n\nEn el contenido de la ofrenda se ven las dos culturas: el pan de muerto y los tamales conviven con el pan de trigo, las veladoras y las imágenes de santos. En la época colonial la Iglesia llegó a permitir lo que se conoce como idolatría paliada, es decir, la tolerancia de ciertas prácticas con un marco cristiano.\n\nHoy el Día de Muertos es un ejemplo claro de mestizaje: la Catrina resume esa mezcla cultural en una sola imagen.",
-      "palabras_clave": [
-        "sincretismo",
-        "catolicismo",
-        "catolica",
-        "católico",
-        "cristian",
-        "cristiana",
-        "religion",
-        "religiosa",
-        "iglesia",
-        "conquista",
-        "colonia",
-        "colonial",
-        "mezcla",
-        "mestizaje",
-        "español",
-        "espana",
-        "convento",
-        "idolatria"
-      ],
-      "fuentes": [
-        "unesco-ich-00054",
-        "unam-gaceta-colonia"
-      ],
-      "prioridad": 4
-    },
-    {
-      "id": "halloween",
-      "tema": "Día de Muertos frente a Halloween",
-      "categoria": "comparativa",
-      "preguntas_ejemplo": [
-        "¿Cuál es la diferencia entre el Día de Muertos y Halloween?",
-        "¿no es lo mismo que Halloween?",
-        "compara el día de muertos con halloween"
-      ],
-      "respuesta": "No son lo mismo. Conviene distinguir sus orígenes y sus prácticas.\n\nEl Día de Muertos mexicano tiene raíces prehispánicas: es una fiesta de retorno de los muertos, ligada al final del ciclo del maíz, en la que la muerte es una presencia viva. Su calendario viene de Todos Santos, el 1 de noviembre, y de los Fieles Difuntos, el 2 de noviembre, adoptados en la época colonial.\n\nHalloween pertenece al ciclo de fiestas de otoño de Europa. En ese ciclo se incorporaron el Samhain celta y los Lares romanos, con disfraces, comidas votivas, altares, danzas y procesiones, y se extendía del 31 de octubre al 11 de noviembre.\n\nLas diferencias prácticas son notorias. En el Día de Muertos se construye una ofrenda con cempasúchil, veladoras, agua, sal, pan de muerto y calaveritas, y se recuerda a los muertos por su nombre y su fotografía. En Halloween se resuelve en disfraces, dulces y decoración, y el personaje es anónimo.\n\nTambién hay un punto de contacto: en la Ciudad de México y en otros lugares ambas festividades coinciden en fechas, y el INAH impulsó en Michoacán la ceremonia tradicional para fortalecerla frente al crecimiento del Halloween. La investigadora Ana Bella Pérez Castro, del Instituto de Investigaciones Antropológicas de la UNAM, señala que esa influencia es comprensible, porque con la migración las culturas son dinámicas y se integran elementos de otras culturas.",
-      "palabras_clave": [
-        "halloween",
-        "diferencia",
-        "diferencias",
-        "comparar",
-        "comparativa",
-        "lo mismo",
-        "parecido",
-        "parecida",
-        "samhain",
-        "lares",
-        "trick or treat",
-        "disfraces",
-        "bruja",
-        "calabaza",
-        "europa",
-        "europeo",
-        "anglosajon",
-        "se parece"
-      ],
-      "fuentes": [
-        "unam-gaceta-evangelizar",
-        "unam-global-ofrendas",
-        "inah-diariodecampo-michoacan"
+      "conceptos": [
+        "ninos",
+        "ofrenda"
       ],
       "prioridad": 6
+    },
+    {
+      "id": "ofrenda-adultos",
+      "tema": "La ofrenda para adultos",
+      "categoria": "adultos",
+      "preguntas_ejemplo": [
+        "¿Cuándo se pone la ofrenda para los adultos?",
+        "¿qué se pone en la ofrenda de adultos?",
+        "cuándo se pone la ofrenda para adultos"
+      ],
+      "respuesta": "La ofrenda para adultos se instala el 2 de noviembre, día de los Fieles Difuntos, y en la mayoría de las casas se prepara junto con la de los niños.\n\nQué se pone: es la versión completa de la ofrenda. La UNAM describe los niveles del altar: en el segundo, las fotografías de los familiares fallecidos, y en un tercero, los alimentos que les gustaban en vida, además de agua, sal, veladoras y pétalos de flores de cempasúchil. El Gobierno de México añade que la ofrenda para adultos se completa con productos hechos de maíz, como atoles y tamales, mole con guajolote, pan de difunto y pulque.\n\nTambién se pueden añadir objetos personales con valor sentimental, y en los cementarios se decora la tumba o el panteón con flores y ofrendas.\n\nConviene recordar que en algunas comunidades la ofrenda es comunitaria y no solo familiar, como en el caso de los tlahuicas, que distinguen una ofrenda familiar y una ofrenda comunitaria.",
+      "respuesta_ninos": "La ofrenda de los adultos es la grande: se pone el 2 de noviembre. Lleva la foto de la persona, su comida favorita, agua, sal, velas, flores y pan de muerto. También se pone en la tumba, en el panteón, con flores.",
+      "palabras_clave": [
+        "ofrenda para adultos",
+        "ofrenda de adultos",
+        "adultos",
+        "2 de noviembre",
+        "fieles difuntos",
+        "que se pone en la ofrenda de adultos"
+      ],
+      "sinonimos": [
+        "ofrenda de los difuntos",
+        "para adultos",
+        "ofrenda del 2 de noviembre"
+      ],
+      "fuentes": [
+        "unam-global-ofrendas",
+        "inpi-fiestas-pueblos",
+        "expansion-ofrendas-fechas",
+        "semillitas-ninos",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "difunto",
+        "ofrenda"
+      ],
+      "prioridad": 6
+    },
+    {
+      "id": "ofrenda-mascotas",
+      "tema": "La ofrenda para mascotas",
+      "categoria": "mascotas",
+      "preguntas_ejemplo": [
+        "¿Cuándo se pone la ofrenda para mascotas?",
+        "¿qué se pone en la ofrenda de una mascota?",
+        "háblame de la ofrenda para mascotas"
+      ],
+      "respuesta": "Sí existe la ofrenda para mascotas, y se prepara antes que las de las personas.\n\nCuándo:\n- Debe estar lista la noche del 27 de octubre, porque las ánimas de las mascotas llegan entre ese día y la madrugada del 28.\n- Los altares deben colocarse antes del 27 de octubre.\n\nQué se pone: la misma estructura de la ofrenda de personas, adaptada a un animal: agua, sal, flores de cempasúchil, veladoras, comida para la mascota, sus croquetas, su juguete favorito y su fotografía. La guía de El Universal menciona específicamente croquetas y juguetes entre los elementos propios de las mascotas.\n\nEsa adaptación no es un caso aislado: la revista Arqueología Mexicana documenta que en Sicilia los ancestros traen regalos a los niños el 2 de noviembre, muestra de que la ofrenda a los difuntos se extiende también a los animales.\n\nLo que no está documentado es un calendario específico para los animales, así que la fecha del 27 de octubre proviene de la costumbre reportada por la prensa y por una compañía comercial, no de un documento oficial de la Iglesia.",
+      "respuesta_ninos": "También se puede hacer una ofrenda para una mascota que murió. Se pone el 27 de octubre, porque dicen que las almas de los animales llegan esa noche. Se le pone su plato, sus croquetas, su juguete, su foto, flores y una vela. Es la misma ofrenda de siempre, pero con las cosas de tu animalito.",
+      "palabras_clave": [
+        "ofrenda para mascotas",
+        "ofrenda de mascotas",
+        "mascota",
+        "mascotas",
+        "mascotas muertas",
+        "perro",
+        "perros",
+        "gato",
+        "gatos",
+        "croquetas",
+        "juguetes",
+        "27 de octubre",
+        "28 de octubre",
+        "animales"
+      ],
+      "sinonimos": [
+        "ofrenda para perros",
+        "ofrenda de mi mascota",
+        "altar para mascotas",
+        "cuando se pone la ofrenda de mascotas"
+      ],
+      "fuentes": [
+        "expansion-ofrendas-fechas",
+        "eluniversal-guia-ofrendas",
+        "arqueologia-influencias-europeas"
+      ],
+      "conceptos": [
+        "mascotas",
+        "ofrenda"
+      ],
+      "prioridad": 6,
+      "nivel": "tradicion",
+      "nota": "La fecha del 27 de octubre para mascotas proviene de fuentes de prensa y de una compañía comercial, no de un documento oficial. Se presenta como costumbre, no como norma."
     },
     {
       "id": "celebracion-nacional-variaciones",
       "tema": "Variaciones regionales",
       "categoria": "regional",
       "preguntas_ejemplo": [
+        "¿Todas las regiones lo celebran igual?",
+        "¿Todos los mexicanos celebran de la misma manera?",
         "¿El Día de Muertos se celebra igual en todo México?",
         "¿por qué hay diferentes formas de celebrar?",
         "háblame de las diferencias entre regiones"
       ],
-      "respuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recupera de su historia ancestral elementos distintos y los mezcla con lo católico.\n- Los pueblos originarios mantienen formas propias: en la Ciudad de México, Tláhuac celebra un Festival Internacional de Día de Muertos del 30 de octubre al 2 de noviembre con ocho pueblos originarios.\n- En el sureste, las ofrendas muestran representaciones del inframundo mezcladas con el pensamiento cristiano, porque se colocan santos católicos y símbolos indígenas.\n- En Oaxaca, los zapotecas celebraban su fiesta de muertos en octubre, y los cronistas registran una diferencia interna entre el Altiplano y el valle.\n- En Michoacán se mantiene la noche de muertos, y el INAH impulsó ahí la ceremonia para fortalecerla frente al crecimiento del Halloween.\n\nEn general, la explicación es histórica y social: la llegada del calendario cristiano creó un molde común, y cada comunidad lo rellenó con su propio pasado. Por eso un mismo elemento, como el pan de muerto o la flor, cambia de forma y de nombre según el lugar.",
+      "respuesta": "No se celebra igual en todo México, y esa variación es uno de los rasgos más importantes de la tradición.\n\nLas razones son varias:\n- Cada región recupera de su historia ancestral elementos distintos y los mezcla con lo católico.\n- Los pueblos originarios mantienen formas propias: en la Ciudad de México, Tláhuac celebra un Festival Internacional de Día de Muertos del 30 de octubre al 2 de noviembre con ocho pueblos originarios.\n- En el sureste, las ofrendas muestran representaciones del inframundo mezcladas con el pensamiento cristiano, porque se colocan santos católicos y símbolos indígenas.\n- En Oaxaca, los zapotecas celebraban su fiesta de muertos en octubre, y los cronistas registran una diferencia interna entre el Altiplano y el valle.\n- En Michoacán se mantiene la noche de muertos, y el INAH impulsó ahí la ceremonia para fortalecerla frente al crecimiento del Halloween.\n- En el Estado de México, el INPI documenta cinco calendarios distintos: el otomí, el tlahuica, el nahua, el mazahua y el matlatzinca.\n\nEn general, la explicación es histórica y social: la llegada del calendario cristiano creó un molde común, y cada comunidad lo rellenó con su propio pasado. Por eso un mismo elemento, como el pan de muerto o la flor, cambia de forma y de nombre según el lugar.",
+      "respuesta_ninos": "No se celebra igual en todas partes de México. En Tláhuac hay ocho pueblos originarios que hacen su propia fiesta. En el sureste ponen imágenes del inframundo junto con santos. En Oaxaca hay otra versión. Y en cada estado hay hasta un calendario distinto para cada pueblo. Por eso la tradición cambia de un lugar a otro.",
       "palabras_clave": [
         "igual",
         "diferente",
@@ -581,111 +1657,707 @@
         "sur",
         "diferentes formas",
         "formas de celebrar",
-        "distintas formas"
+        "distintas formas",
+        "todos los mexicanos"
+      ],
+      "sinonimos": [
+        "cambia de region a region",
+        "no es igual en todas partes",
+        "diferencias entre estados",
+        "por que cambia la costumbre"
       ],
       "fuentes": [
         "cdmx-tlahuac-fiddem",
         "unam-gaceta-colonia",
         "inah-diariodecampo-michoacan",
+        "cdmx-programacion",
+        "inpi-fiestas-pueblos",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "regional",
+        "culturas"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "ofrenda-pueblos-originarios",
+      "tema": "Ofrendas en los pueblos originarios del centro del país",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "cuéntame de las ofrendas de los pueblos indígenas",
+        "explica las ofrendas de los pueblos originarios",
+        "¿qué ofrendas hacen los pueblos indígenas?",
+        "háblame de las ofrendas de otomíes y nahuas"
+      ],
+      "respuesta": "El INPI documenta las ofrendas de cinco pueblos originarios del altiplano central, y cada una tiene su propio calendario y sus propios elementos.\n\n- Otomíes: el 28 de octubre a los difuntos violentos, para purificar su alma; el 29 a quienes murieron sin bautizar o sin nombre; el 31 de octubre a los niños bautizados que ya son angelitos, guiados por los Guerreros Otomíes; el 1 de noviembre a los difuntos mayores, con flores amarillas y rojas como aviso; y el 2 en el panteón. La ofrenda se hace sobre un petate con pan de muerto con azúcar rosada, bebidas como pulque, alcohol o agua, sahumerio de copal en los cuatro puntos cardinales y veladoras ordenadas formando una cruz.\n- Tlahuicas: distinguen dos ofrendas, una familiar y otra comunitaria, usan la flor de niño, pencas de maguey como candeleros y objetos de viaje como chiquihuites y rebozos.\n- Nahuas: llaman almita al difunto y sostienen que los muertos trabajan con los vivos trayendo la lluvia. Su primera ofrenda es el 29 de septiembre, al inicio de la cosecha, con guisos de mole, arroz, tamales, carne de cerdo, camotes y chayotes, agua y sal.\n- Mazahuas: hacen procesión con el santo patrono, usan manteles bordados en punto de cruz, metate bajo la mesa, cruz de cempasúchil y calabaza en tacha.\n- Matlatzincas: relacionan la mariposa monarca con el regreso de las almas, elaboran pan con figuras de animales y levantan arcos de varas que representan los rayos del Sol y la Luna.\n\nEsta documentación sirve para una conclusión sencilla: los elementos de la ofrenda no son fijos.",
+      "respuesta_ninos": "Cada pueblo tiene su propia ofrenda. Los nahuas creen que los muertos ayudan a traer la lluvia y ofrendan desde el 29 de septiembre. Los matlatzincas hacen pan con animales y unos arcos de ramas. Los mazahuas hacen una procesión con el santo. Los otomíes usan flores amarillas y rojas. Y los tlahuicas hacen dos ofrendas, una en la casa y una para todo el pueblo.",
+      "palabras_clave": [
+        "ofrenda otomí",
+        "ofrenda nahua",
+        "ofrenda tlahuica",
+        "ofrenda mazahua",
+        "ofrenda matlatzinca",
+        "petate",
+        "chiquihuite",
+        "metate",
+        "punto de cruz",
+        "calabaza en tacha",
+        "arcos de varas",
+        "flor de niño",
+        "guerreros otomíes",
+        "almita",
+        "sahumerio de copal",
+        "cuatro puntos cardinales"
+      ],
+      "sinonimos": [
+        "ofrendas indigenas",
+        "ofrenda de las comunidades",
+        "ejemplos de ofrendas regionales",
+        "ofrenda de pueblo"
+      ],
+      "fuentes": [
+        "inpi-fiestas-pueblos"
+      ],
+      "conceptos": [
+        "culturas",
+        "regional",
+        "ofrenda"
+      ],
+      "prioridad": 5
+    },
+    {
+      "id": "no-una-forma-autentica",
+      "tema": "No existe una única forma correcta ni auténtica de celebrar",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿Existe una única forma correcta de construir una ofrenda?",
+        "¿Existe una única forma auténtica de celebrar?",
+        "¿cuál es la forma correcta de armar la ofrenda?",
+        "¿hay una manera correcta de celebrar el día de muertos?",
+        "¿Qué elementos pueden variar según la familia o región?"
+      ],
+      "respuesta": "No, y esa respuesta está documentada, no es una cortesía.\n\n- La UNESCO titula la fiesta Las fiestas indígenas dedicadas a los muertos, en plural y con la palabra indígenas: la inscripción abarca la diversidad de celebraciones de los pueblos de México, no una sola versión.\n- El INPI documenta cinco calendarios y cinco conjuntos de elementos distintos entre cinco pueblos del mismo Estado de México. Si hubiera una única forma correcta, no podrían ser cinco.\n- Las fuentes describen variantes dentro de un mismo elemento: el pan de muerto tiene versión con azahar en el centro del país, forma de figura humana en Oaxaca y harina de maíz en algunas comunidades indígenas; la flor se llama cempasúchil, xantolo, ninín o animechakejtzitakuca según la región; la fotografía puede estar a la vista o escondida para que solo se vea con un espejo.\n- El número de niveles del altar también varía: hay altares de dos, de cuatro, sobre una sola mesa o sobre un petate.\n\nLo que sí se puede decir es qué es común: la ofrenda con fotografía, comida, agua, sal, luz y flores, y el recuerdo por el nombre del difunto. Eso es el núcleo compartido; todo lo demás varía.\n\nLa UNESCO, además, no congela la tradición: la inscripción es un compromiso de la comunidad internacional para protegerla y transmitirla, no un sello que prohíba cambiar.",
+      "respuesta_ninos": "No hay una sola forma correcta. Hay muchas formas de celebrar porque hay muchos pueblos. Lo que sí debe estar es el recuerdo: la foto, el nombre, la comida, la vela y la flor. Si haces tu ofrenda con lo que tienes, bien hecha está. Nadie te va a decir que está mal.",
+      "palabras_clave": [
+        "unica forma correcta",
+        "única forma correcta",
+        "forma correcta",
+        "unica forma de construir una ofrenda",
+        "unica forma autentica",
+        "forma autentica",
+        "hay una forma correcta",
+        "de que manera es correcto",
+        "como debe ser la ofrenda",
+        "que elementos pueden variar",
+        "pueden variar",
+        "varia segun la familia",
+        "varian segun la familia",
+        "familia o region",
+        "segun la familia o la region"
+      ],
+      "sinonimos": [
+        "existe una sola manera de celebrar",
+        "hay una forma unica de armar la ofrenda",
+        "que ofrenda es la correcta",
+        "que elementos cambian segun la familia",
+        "cambia segun la region"
+      ],
+      "fuentes": [
+        "unesco-ich-00054",
+        "inpi-fiestas-pueblos",
+        "cessa-pan-de-muerto",
+        "agricultura-cempasuchil",
+        "inpi-elementos-ofrenda"
+      ],
+      "conceptos": [
+        "alternativa",
+        "regional",
+        "afirmacion"
+      ],
+      "prioridad": 7,
+      "nivel": "documentado",
+      "nota": "El chatbot no presenta ninguna forma de ofrenda como la única correcta. Lo común a las fuentes es el conjunto de elementos básicos, no su cantidad ni su orden."
+    },
+    {
+      "id": "no-obligatorio",
+      "tema": "Lo que no es obligatorio en una ofrenda",
+      "categoria": "mitos",
+      "preguntas_ejemplo": [
+        "¿Es obligatorio colocar tequila en una ofrenda?",
+        "¿qué es obligatorio en una ofrenda?",
+        "¿hay que poner algo obligatorio?",
+        "¿es necesario el tequila en el altar?"
+      ],
+      "respuesta": "No hay ningún elemento obligatorio. La ofrenda es un acto familiar: se pone lo que la familia quiere y lo que puede.\n\nSobre el tequila y las bebidas alcohólicas: el Gobierno de México y El Universal listan entre las bebidas posibles el agua, el alcohol, el atole, el café, la leche, el tequila y el vino. Aparecen en listas de lo que la gente pone, no en una lista de lo que es obligatorio. La versión documentada de la ofrenda para adultos incluye agua, sal, veladoras y pétalos de cempasúchil, y el pulque aparece en las zonas donde se conserva esa bebida. Si en una casa se pone tequila es porque al difunto le gustaba, igual que el atole o la cerveza: es una preferencia personal, no una regla.\n\nSobre los siete niveles: tampoco son obligatorios. La estructura por niveles es una descripción frecuente, no un requisito, y el número de niveles varía entre comunidades.\n\nLo único que las fuentes coinciden en llamar común es el núcleo de la ofrenda: la fotografía, la comida, el agua, la sal, la luz y las flores, en la versión tradicional. Y aun eso es la versión más común, no una obligación legal ni religiosa.",
+      "respuesta_ninos": "No hay que poner nada obligatorio. El tequila no es obligatorio: si al difunto le gustaba, se pone, y si no, no. Lo mismo con los siete niveles. Lo que sí hace la mayoría es poner una foto, comida, agua, sal, velas y flores. Puedes hacer una ofrenda con poco o con mucho, como puedas.",
+      "palabras_clave": [
+        "es obligatorio",
+        "es necesario",
+        "obligatorio",
+        "obligatoria",
+        "hay que poner",
+        "se debe poner",
+        "tequila",
+        "alcohol",
+        "vino",
+        "cerveza",
+        "licor",
+        "siete niveles",
+        "obligatorio poner",
+        "que es obligatorio"
+      ],
+      "sinonimos": [
+        "es obligatorio el tequila",
+        "tengo que poner tequila",
+        "hay que poner siete niveles",
+        "que cosas son obligatorias"
+      ],
+      "fuentes": [
+        "eluniversal-guia-ofrendas",
+        "unam-global-ofrendas",
+        "inpi-elementos-ofrenda",
+        "expansion-ofrendas-fechas",
+        "proyecto-criterios"
+      ],
+      "conceptos": [
+        "obligatoriedad",
+        "comida",
+        "niveles",
+        "afirmacion"
+      ],
+      "prioridad": 7,
+      "nivel": "documentado",
+      "nota": "El tequila, el vino y los siete niveles aparecen en listas de lo que la gente suele poner, nunca como requisito. El chatbot no los presenta como obligatorios."
+    },
+    {
+      "id": "ofrenda-sencilla",
+      "tema": "Cómo hacer una ofrenda sencilla",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "Quiero hacer una ofrenda para mi abuelo. ¿Qué necesito?",
+        "Quiero hacer una ofrenda pero tengo poco espacio. ¿Qué elementos son prioritarios?",
+        "¿Cómo puede una familia hacer una ofrenda sencilla?",
+        "Tengo una fotografía de mi abuelo, una vela, agua, pan de muerto y flores. ¿Qué elemento importante podría agregar y por qué?"
+      ],
+      "respuesta": "Una ofrenda sencilla no es una ofrenda incompleta: es una ofrenda con lo que hay. La tradición no exige cantidad.\n\nSi ya tienes una fotografía, una vela, agua, pan de muerto y flores, el elemento que más aporta falta es la sal. Su función documentada es la purificación y el cuidado del difunto durante el viaje, y se coloca en un platillo, a veces junto al agua. Cuesta casi nada y está en cualquier cocina.\n\nDespués, en orden de importancia práctica:\n1. La comida que le gustaba: es el elemento con el que se recibe al difunto.\n2. Un objeto personal con valor sentimental: una taza, un libro, un rebozo, una herramienta de trabajo. No tiene precio, se busca en la casa.\n3. Papel picado o una guirnalda de papel: da color y se arma con tijeras y hojas.\n4. Una vela más por cada persona adicional que se quiera recordar, porque en varias comunidades indígenas cada vela representa a un difunto específico.\n\nSi el espacio es muy poco, hay una versión mínima que las fuentes sostienen: la ofrenda puede hacerse sobre un petate, como documentan las comunidades otomíes del Estado de México, o sobre una sola mesa, sin niveles.\n\nUn apunte regional: los tlahuicas distinguen una ofrenda familiar y otra comunitaria. Si el espacio o el tiempo no alcanzan para la familiar, la comunidad puede asumir la comunitaria. Ese camino existe.",
+      "respuesta_ninos": "Una ofrenda sencilla es una ofrenda normal. Si ya tienes foto, vela, agua, pan de muerto y flores, lo que falta es la sal, que es para limpiar y proteger. Después ponle algo de la persona: su taza, su libro, su ropa. Y si no hay lugar, la ofrenda puede ir en el suelo, sobre un petate. Nadie dice que esté incompleta.",
+      "palabras_clave": [
+        "ofrenda sencilla",
+        "que necesito",
+        "que necesito para hacer una ofrenda",
+        "poco espacio",
+        "elementos prioritarios",
+        "ofrenda para mi abuelo",
+        "ofrenda minima",
+        "ofrenda simple",
+        "que elementos son prioritarios",
+        "como hacer una ofrenda",
+        "pasos para hacer una ofrenda",
+        "ofrenda pequena",
+        "armar una ofrenda",
+        "que elemento importante",
+        "poco espacio",
+        "sin espacio",
+        "no hay espacio",
+        "que hago si no hay espacio",
+        "que elementos son prioritarios",
+        "espacio"
+      ],
+      "sinonimos": [
+        "ofrenda basica",
+        "ofrenda facil",
+        "como hago la ofrenda",
+        "que pongo en la ofrenda",
+        "ofrenda de casa",
+        "ofrenda de familia",
+        "no hay lugar",
+        "poco lugar",
+        "mesa pequena"
+      ],
+      "fuentes": [
+        "inpi-fiestas-pueblos",
+        "inpi-elementos-ofrenda",
+        "cdmx-ofrendas",
+        "unam-global-ofrendas",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "practico",
+        "ofrenda"
+      ],
+      "prioridad": 7,
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "ofrenda-presupuesto",
+      "tema": "Una ofrenda con poco presupuesto",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "Tengo $300 pesos. ¿Cómo puedo hacer una ofrenda?",
+        "¿cómo hago una ofrenda barata?",
+        "no tengo dinero, ¿cómo hago la ofrenda?",
+        "cuánto cuesta una ofrenda"
+      ],
+      "respuesta": "La ofrenda no tiene un costo fijo. Los elementos más baratos de la lista son los que se preparan en la cocina y los que se buscan en la casa.\n\nReparto posible con presupuesto muy limitado:\n- La fotografía: no cuesta, se imprime o se busca entre los objetos de la casa.\n- La vela y el agua: se compran en cualquier tienda y son de los precios más bajos.\n- La sal: casi no cuesta y es el elemento de purificación.\n- El pan de muerto: se compra hecho en la panadería más cercana y es de los panes más económicos.\n- La comida: lo que haya en la cocina. Los guisos de mole, el arroz, los tamales y las verduras de la cosecha son la opción más barata y también la más antigua: la ofrenda de los nahuas del 29 de septiembre se hace con guisos de mole, arroz, tamales, carne de cerdo, camotes y chayotes.\n- Las flores: el cempasúchil se puede sustituir con cualquier flor naranja o amarilla que haya en el jardín, y si no hay flor, con papel de colores.\n- El adorno: papel picado hecho con hojas de papel y tijeras.\n\nSobre el presupuesto concreto: ninguna de las fuentes consultadas publica precios, así que el chatbot no puede darte un desglose en pesos. Lo que sí puede decirte es qué elementos se obtienen gratis o a muy bajo costo.",
+      "respuesta_ninos": "Una ofrenda no cuesta mucho. Lo más barato es lo que ya tienes en la casa: la foto, una taza, un libro. Y lo más fácil de comprar son la vela, el agua, la sal y el pan de muerto. En lugar de flores puedes usar hojas verdes o flores de un jardín. Un altar bonito no necesita cosas caras.",
+      "palabras_clave": [
+        "presupuesto",
+        "pesos",
+        "300 pesos",
+        "barato",
+        "barata",
+        "economico",
+        "no tengo dinero",
+        "cuanto cuesta",
+        "bajo costo",
+        "poco dinero"
+      ],
+      "sinonimos": [
+        "cuanto cuesta una ofrenda",
+        "ofrenda economica",
+        "ofrenda sin dinero",
+        "precio de la ofrenda"
+      ],
+      "fuentes": [
+        "cessa-pan-de-muerto",
+        "inpi-fiestas-pueblos",
+        "tiendanube-manualidades",
+        "eluniversal-guia-ofrendas",
+        "proyecto-criterios"
+      ],
+      "conceptos": [
+        "practico",
+        "ofrenda"
+      ],
+      "prioridad": 7,
+      "nivel": "recomendacion",
+      "nota": "Ninguna de las fuentes consultadas publica precios, así que el chatbot no puede desglosar un costo. Solo indica qué elementos se obtienen gratis o a muy bajo costo."
+    },
+    {
+      "id": "ofrenda-reciclada",
+      "tema": "Una ofrenda con materiales reciclados",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "¿Cómo puedo hacer una ofrenda utilizando materiales reciclados?",
+        "cómo reutilizar materiales para la ofrenda",
+        "ofrenda con cartón y botellas"
+      ],
+      "respuesta": "La vía del material reciclado es la más documentada para una ofrenda escolar o secundaria, y se apoya en las manualidades de bajo costo.\n\nQué se puede hacer con material reciclado:\n- Botellas de vidrio pintadas con marcadores, que sirven de bases para las veladoras. La advertencia importante es usar un esmalte no inflamable.\n- Vasos de cristal pintados a mano como candeleros.\n- Calaveritas de unicel decoradas con flores artificiales.\n- Una calavera de papel maché hecha con globos, periódico, engrudo y acrílicos, aplicada en tres o cuatro capas.\n- Altar de muertos de papel, armado con plumones y tijeras.\n- Calaveritas de filigrana de papel y de origami.\n- Guirnaldas de flores de papel con estambre.\n- Calaveritas de fomi moldeable, que se pueden hacer con la ayuda de un adulto.\n\nLa clave práctica es separar lo que se recicla, como envases, papel, cartón y unicel, de lo que no se puede reciclar ni reutilizar, como las velas encendidas y el copal encendido.",
+      "respuesta_ninos": "Puedes hacer la ofrenda con cosas que ibas a tirar: botellas de vidrio pintadas para las velas, vasos pintados, cartón, papel de periódico hecho maché y globos para la calavera. Solo hay que tener cuidado de no pintar con algo que prenda fuego, porque hay velas prendidas.",
+      "palabras_clave": [
+        "reciclado",
+        "reciclados",
+        "reciclar",
+        "reutilizar",
+        "materiales reciclados",
+        "botellas",
+        "carton",
+        "cartulina",
+        "unicel",
+        "botella de vidrio",
+        "papel maché",
+        "mache",
+        "reaprovechar"
+      ],
+      "sinonimos": [
+        "ofrenda con material reciclado",
+        "ofrenda ecologica",
+        "reutilizar cosas para el altar",
+        "ofrenda de segunda mano"
+      ],
+      "fuentes": [
+        "tiendanube-manualidades",
+        "cdmx-programacion",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "practico",
+        "manualidad"
+      ],
+      "prioridad": 6,
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "materiales-faciles",
+      "tema": "Materiales fáciles de conseguir para una ofrenda escolar",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "¿Qué materiales puedo conseguir fácilmente para una ofrenda escolar?",
+        "qué necesito para una ofrenda de la escuela",
+        "dónde consigo materiales para la ofrenda"
+      ],
+      "respuesta": "Los materiales que más se repiten en las manualidades de Día de Muertos son estos:\n\n- Papel china, papel crepé y cartulina: para el papel picado, las coronas de flores y las calaveritas de cartulina.\n- Fomi moldeable: para calaveritas, con ayuda de un adulto.\n- Globos, periódico, engrudo y pinturas acrílicas: para la calavera de papel maché en tres o cuatro capas.\n- Marcadores, tijeras y plumones: para el altar de papel.\n- Botellas de vidrio y vasos de cristal pintados, que sirven de bases para las veladoras. La advertencia es usar un esmalte no inflamable.\n- Unicel y flores artificiales: para calaveras decoradas.\n- Estambre: para las guirnaldas de flores de papel.\n\nPara una ofrenda escolar, la combinación más barata es: un petate o una mesa cubierta con un mantel blanco, una vela, agua, sal, pan de muerto, flores o papel de color, y calaveritas de azúcar compradas.\n\nSi el trabajo es para un grupo escolar, la propia fuente de manualidades propone el concurso: hay concursos de altar de muertos, de pan de muerto y de calaveritas literarias que organizan las escuelas y las universidades.",
+      "respuesta_ninos": "Para una ofrenda de la escuela hay cosas fáciles: cartulina, papel china, tijeras, plumones, marcadores, unicel, papel de periódico y engrudo. Y en la tienda: velas, agua, sal y pan de muerto. Todo eso lo encuentras en una papelería y en una tienda de barrio.",
+      "palabras_clave": [
+        "materiales",
+        "material",
+        "materiales faciles",
+        "materiales economicos",
+        "donde consigo",
+        "ofrenda escolar",
+        "ofrenda de la escuela",
+        "materiales baratos",
+        "insumos",
+        "que materiales necesito"
+      ],
+      "sinonimos": [
+        "que necesito para la ofrenda escolar",
+        "materiales para manualidades",
+        "materiales de bajo costo",
+        "que cosas se necesitan"
+      ],
+      "fuentes": [
+        "tiendanube-manualidades",
+        "cessa-pan-de-muerto",
+        "eluniversal-guia-ofrendas"
+      ],
+      "conceptos": [
+        "practico",
+        "manualidad",
+        "ninos"
+      ],
+      "prioridad": 6,
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "manualidades",
+      "tema": "Manualidades del Día de Muertos",
+      "categoria": "manualidades",
+      "preguntas_ejemplo": [
+        "¿Qué manualidades puedo hacer?",
+        "dime manualidades de día de muertos",
+        "háblame de las manualidades",
+        "¿qué puedo hacer en clase?"
+      ],
+      "respuesta": "Estas son las manualidades más mencionadas para el Día de Muertos, con materiales de bajo costo:\n\n- Altar de muertos de papel, armado con plumones y tijeras.\n- Papel picado a mano, con papel china.\n- Corona de flores con papel crepé sobre cartón.\n- Calaveritas de filigrana de papel.\n- Calaveras de origami.\n- Calaveras de cartulina para niños.\n- Calaveras pintadas en globos blancos o negros.\n- Máscaras de catrina con platos de papel o cartulina.\n- Calaveritas de fomi moldeable.\n- Guirnaldas de flores de papel con estambre.\n- Botellas de vidrio pintadas con marcadores.\n- Veladoras colocadas en vasos de cristal pintados a mano, con la advertencia de usar un esmalte no inflamable.\n- Calaveras de unicel decoradas con flores artificiales.\n- Calavera de papel maché hecha con globos, periódico, engrudo y acrílicos, en tres o cuatro capas.\n- Miniaturas de comida modeladas en pasta de migajón.\n\nLos materiales que más se repiten son papel china, crepé y cartulina, fomi moldeable, globos, unicel y pinturas acrílicas.\n\nSon recomendaciones prácticas, no partes obligatorias de la tradición.",
+      "respuesta_ninos": "Manualidades sencillas: pintar una calavera en un globo, hacer una calavera de cartulina, cortar papel picado, hacer una máscara de catrina con un plato de papel, o una calavera de papel maché con globos y periódico. Todas se hacen con cosas de papelería.",
+      "palabras_clave": [
+        "manualidad",
+        "manualidades",
+        "artesania",
+        "artesanias",
+        "que puedo hacer",
+        "mascara de catrina",
+        "mascaras de catrina",
+        "calavera de origami",
+        "filigrana",
+        "guirnalda",
+        "migajon",
+        "dibujar",
+        "dibujo",
+        "pintar",
+        "pintura"
+      ],
+      "sinonimos": [
+        "ideas para manualidades",
+        "talleres del dia de muertos",
+        "proyectos de artesania",
+        "que manualidades hacer"
+      ],
+      "fuentes": [
+        "tiendanube-manualidades",
+        "semillitas-ninos",
+        "cessa-pan-de-muerto",
         "cdmx-programacion"
       ],
-      "prioridad": 5
+      "conceptos": [
+        "manualidad",
+        "ninos"
+      ],
+      "prioridad": 6,
+      "nivel": "recomendacion"
     },
     {
-      "id": "significado-cultural",
-      "tema": "Significado cultural",
-      "categoria": "significado",
+      "id": "actividades-ninos",
+      "tema": "Actividades con niños",
+      "categoria": "ninos",
       "preguntas_ejemplo": [
-        "¿por qué es importante el Día de Muertos?",
-        "¿qué significa culturalmente?",
-        "explica el significado de esta tradición"
+        "¿Qué actividades puedo hacer con niños?",
+        "qué puedo hacer con mi hijo el día de muertos",
+        "actividades para niños el día de muertos",
+        "dime actividades con niños",
+        "¿Cómo organizar una actividad escolar sobre Día de Muertos?",
+        "necesito ideas para un proyecto del colegio"
       ],
-      "respuesta": "El Día de Muertos dice algo sobre la relación con la muerte en la cultura mexicana: la muerte no es una ausencia, sino una presencia viva que se materializa en el altar.\n\nSu valor está en tres planos:\n- Familiar: es el momento de recordar a los tuyos con su nombre, su comida y su fotografía.\n- Social: la fiesta afirma el papel del individuo dentro de la sociedad y refuerza el estatuto político y social de las comunidades, según la UNESCO.\n- Cultural: es una expresión integradora, representativa y comunitaria, donde conviven raíces indígenas, catolicismo europeo y mestizaje.\n\nLa UNESCO lo reconoce como patrimonio cultural inmaterial de la humanidad, y por eso no es solo una costumbre festiva: es un ritual de memoria que organiza la identidad de un país.",
+      "respuesta": "La fuente que explica la tradición a los niños propone una forma concreta de hacerlo: platicar con ellos sobre sus antepasados, enseñarles las fotos y contarles de su vida. Y es importante el tono: la muerte no se presenta como un motivo de tristeza, sino como una fecha alegre.\n\nActividades que se desprenden de las fuentes:\n- Ver fotos de la familia y contar quién es cada persona. La fuente de Semillitas lo propone de forma explícita.\n- Hacer máscaras de catrín o catrina: es la actividad que esa misma fuente sugiere.\n- Armar la ofrenda juntos, explicando el significado de cada elemento.\n- Elaborar calaveritas literarias para la familia: es un concurso que la Ciudad de México organiza y que las escuelas también convocan.\n- Hacer manualidades: calaveras de cartulina, de origami o de papel maché.\n- Participar en un concurso escolar de altar de muerto, de pan de muerto o de calaveritas literarias, que es lo que organizan las escuelas y las universidades.\n- Recorrer una ofrenda o un panteón con un adulto.\n\nCriterio general: cualquier actividad sirve si mantiene el enfoque de celebración y no de terror, y si reconoce que hay niños para quienes el tema sí resulta difícil.",
+      "respuesta_ninos": "Con los niños puedes hacer muchas cosas: ver fotos de la familia y contar quién es cada uno, hacer una máscara de catrina, armar la ofrenda juntos y explicar para qué es cada cosa, hacer calaveritas de cartulina y escribir calaveritas literarias para la familia. Lo más importante es hablarlo con calma, porque para la familia es un día de alegría, no de miedo.",
       "palabras_clave": [
-        "significado",
-        "importante",
-        "importancia",
-        "cultural",
-        "cultura",
-        "valor",
-        "que representa",
-        "significado cultural",
-        "sentido",
-        "reflexion",
-        "reflexión",
-        "porque se celebra",
-        "para que sirve la tradicion",
-        "que significa culturalmente"
+        "actividades",
+        "actividad",
+        "que actividades",
+        "actividades con ninos",
+        "para ninos",
+        "hijos",
+        "hijo",
+        "hija",
+        "mi hijo",
+        "mi hija",
+        "que hago con mi hijo",
+        "juegos",
+        "taller",
+        "actividad escolar",
+        "organizar una actividad",
+        "actividad escolar sobre dia de muertos",
+        "que organizo en la escuela",
+        "actividad de la escuela",
+        "proyecto del colegio",
+        "proyecto escolar",
+        "colegio",
+        "idea",
+        "ideas",
+        "tarea",
+        "que ideas"
+      ],
+      "sinonimos": [
+        "que hacer con los ninos",
+        "ideas con ninos",
+        "actividades familiares",
+        "plan para ninos",
+        "plan escolar",
+        "actividad para la escuela",
+        "proyecto del dia de muertos",
+        "ideas para la escuela"
+      ],
+      "fuentes": [
+        "semillitas-ninos",
+        "cessa-pan-de-muerto",
+        "cdmx-programacion",
+        "tiendanube-manualidades"
+      ],
+      "conceptos": [
+        "ninos",
+        "practico"
+      ],
+      "prioridad": 6,
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "exposicion-escolar",
+      "tema": "Exposición escolar sobre el Día de Muertos",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "¿Cómo puedo explicar los elementos de una ofrenda en una exposición?",
+        "Necesito preparar una exposición de 5 minutos. ¿Qué debería explicar?",
+        "cómo hago una exposición del día de muertos",
+        "¿Cómo puedo explicar los elementos de una ofrenda en una exposición escolar?"
+      ],
+      "respuesta": "Una exposición sobre el Día de Muertos puede sostenerse con cinco bloques, y todos salen de las fuentes.\n\n1. Qué es y por qué se celebra. La fiesta celebra el retorno temporal de los difuntos y coincide con el final del ciclo del maíz. Incluir que la muerte se ve como presencia viva y no como ausencia.\n\n2. De dónde viene. Raíz prehispánica, Miccailhuitl, traslado al calendario cristiano en el siglo XVI, con los pueblos que la UNESCO nombra: antiguos mexicanos, mixtecas, texcocanos, zapotecas, tlaxcaltecas y totonacas. Mencionar que hay un debate académico sobre si existía una fiesta única en Mesoamérica antes de la Colonia.\n\n3. Los elementos y su significado, uno por uno: cempasúchil, veladoras, agua, sal, copal, pan de muerto, comida, fotografías, papel picado y calaveritas.\n\n4. El calendario: 1 de noviembre para los niños, 2 de noviembre para los adultos, y cómo se combinan.\n\n5. La variedad regional: por qué cambia según el lugar, con un ejemplo concreto, como los cinco pueblos que documenta el INPI o la Catrina como símbolo del mestizaje.\n\nPara una exposición de cinco minutos el orden importa: una idea por minuto, con la Catrina y el altar como apoyo visual. Cerrar con la frase atribuida a Posada, que resume el mensaje: la muerte, es democrática, ya que a fin de cuentas, güera, morena, rica o pobre, toda la gente acaba siendo calavera.\n\nSi además quieres una actividad práctica, el concurso de calaveritas literarias sirve como cierre: la Ciudad de México lo organiza cada año y también hay convocatorias escolares.",
+      "respuesta_ninos": "Si tienes que hacer una explicación o una exposición, cuéntalo así: el Día de Muertos es una fiesta de México para recordar a los que ya se fueron. Viene de los pueblos indígenas y se mezcló con la fiesta católica del 1 y del 2 de noviembre. Se pone un altar con flores, velas, comida, agua y fotos. Y como cada pueblo tiene su forma, en cada lugar se celebra un poquito diferente.",
+      "palabras_clave": [
+        "exposicion",
+        "exposiciones",
+        "exposicion escolar",
+        "exponer",
+        "exposicion de 5 minutos",
+        "5 minutos",
+        "cinco minutos",
+        "trabajo escolar",
+        "explicar en una exposicion",
+        "que debo explicar",
+        "charla",
+        "conferencia",
+        "presentacion",
+        "exposicion de elementos",
+        "explicar los elementos en una exposicion",
+        "exposicion de la ofrenda"
+      ],
+      "sinonimos": [
+        "exposicion del dia de muertos",
+        "explicacion escolar",
+        "ponencia",
+        "presentacion de cinco minutos",
+        "como hacer una expo",
+        "exposicion de elementos de la ofrenda",
+        "exposicion para la escuela"
       ],
       "fuentes": [
         "unesco-ich-00054",
-        "unesco-sede-dia-muertos",
-        "vitabrevis-catrina"
+        "unamglobal-origenes",
+        "inpi-fiestas-pueblos",
+        "natgeo-ofrendas",
+        "cdmx-programacion",
+        "unam-juridicas-ofrendas"
       ],
-      "prioridad": 4
+      "conceptos": [
+        "exposicion",
+        "ninos",
+        "practico"
+      ],
+      "prioridad": 7,
+      "nivel": "recomendacion"
     },
     {
-      "id": "patrimonio-unesco",
-      "tema": "Declaración de patrimonio de la UNESCO",
-      "categoria": "patrimonio",
+      "id": "decoracion-salon",
+      "tema": "Decoración de un salón escolar",
+      "categoria": "practico",
       "preguntas_ejemplo": [
-        "¿El Día de Muertos es patrimonio de la humanidad?",
-        "háblame de la UNESCO",
-        "¿qué dijo la UNESCO?"
+        "¿Cómo decorar un salón escolar?",
+        "cómo adornar el salón para el día de muertos",
+        "ideas para decorar el aula"
       ],
-      "respuesta": "Sí. El Día de Muertos está reconocido como Patrimonio Cultural Inmaterial de la Humanidad.\n\nLos datos exactos son estos:\n- Proclamado Obra Maestra del Patrimonio Oral e Inmaterial de la Humanidad el 7 de noviembre de 2003.\n- Inscrito en la Lista Representativa del Patrimonio Cultural Inmaterial de la Humanidad en 2008, en la sesión 3.COM, con el expediente de candidatura número 00054 y el nombre de Las fiestas indígenas dedicadas a los muertos.\n\nConviene señalar el nombre oficial: la UNESCO no lo titula Día de Muertos, sino Las fiestas indígenas dedicadas a los muertos, porque la inscripción incluye la diversidad de celebraciones de los pueblos indígenas de México y no solo una versión de la Ciudad de México.\n\nLa inscripción no es un premio ni un congelamiento: es un compromiso de la comunidad internacional para proteger la tradición y transmitirla a las nuevas generaciones.",
+      "respuesta": "La decoración de un salón escolar se arma con los adornos que las fuentes ya mencionan para altares, tumbas y caminos, cambiados de escala.\n\nQué funciona bien y es barato:\n- Papel picado hecho a mano o comprado, para las paredes y el marco del pizarrón.\n- Guirnaldas de flores de papel con estambre, colgadas del techo.\n- Máscaras de catrina de platos de papel o cartulina, pegadas en la pared.\n- Calaveritas literarias escritas a mano y pegadas en un mural, que es la versión escolar del concurso de calaveritas.\n- Calaveritas de azúcar en una mesa de entrada, como bienvenida.\n- Flores: cempasúchil si hay, o cualquier flor naranja o amarilla.\n- Velas en vasos o botellas pintadas, con la advertencia de usar un esmalte no inflamable y de no dejarlas prendidas sin supervisión adulta.\n\nCriterio práctico de seguridad: las veladoras y el copal encendido no se dejan cerca de papel, y en un salón con niños la supervisión es adulta. Eso no lo dicen las fuentes: es una recomendación de sentido común del propio proyecto, y por eso se marca como recomendación y no como parte de la tradición.",
+      "respuesta_ninos": "Para decorar el salón puedes hacer papel picado, colgar guirnaldas de flores de papel, hacer máscaras de catrina y pegar calaveritas escritas a mano en un mural. Si hay niños chiquitos lo mejor es que ellos mismos hagan las calaveritas de cartulina. Y cuidado: las velas se apagan cuando ya no esté el maestro.",
       "palabras_clave": [
-        "unesco",
-        "patrimonio",
-        "patrimonio cultural",
-        "humanidad",
-        "obra maestra",
-        "lista representativa",
-        "reconocimiento",
-        "inscripcion",
-        "inscrito",
-        "declaratoria",
-        "internacional",
-        "unesco",
-        "reconocer",
-        "reconocido",
-        "nomina"
+        "decorar",
+        "decoracion",
+        "decorado",
+        "salon",
+        "salon escolar",
+        "aula",
+        "como decorar",
+        "adornos",
+        "ornamentar",
+        "ambientar"
+      ],
+      "sinonimos": [
+        "decorar el salon de clases",
+        "como adornar el aula",
+        "ideas de decoracion",
+        "ambientar la escuela"
       ],
       "fuentes": [
+        "tiendanube-manualidades",
+        "lugares-inah-fiestas-indigenas",
+        "inpi-elementos-ofrenda",
+        "cdmx-programacion",
+        "proyecto-criterios"
+      ],
+      "conceptos": [
+        "manualidad",
+        "practico",
+        "ninos"
+      ],
+      "prioridad": 6,
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "explicar-a-ninos",
+      "tema": "Explicar el Día de Muertos a un niño",
+      "categoria": "ninos",
+      "preguntas_ejemplo": [
+        "¿Cómo explicarías el Día de Muertos a un niño de 8 años?",
+        "¿cómo se lo explico a mi hijo?",
+        "explícame el día de muertos como se lo explicaría a un niño",
+        "cómo le explico el día de muertos a un niño"
+      ],
+      "respuesta": "La clave es el tono y el orden. La fuente que explica la tradición a los niños propone tres cosas: platicar sobre los antepasados, enseñar fotos y contar su vida, y aclarar que no es un motivo de tristeza sino una fecha alegre.\n\nUn guion de cinco minutos, con palabras simples:\n\n1. Empieza por lo cercano: hoy es el día en que recordamos a tu bisabuelo. Los niños responden mejor cuando el tema empieza por alguien que conocen.\n\n2. Di qué es la ofrenda, sin palabras difíciles: es una mesita donde ponemos todo lo que le gustaba a la persona. La comida, porque llegaba con hambre; el agua, porque llegaba con sed; la vela, para que vea el camino; la flor naranja, para que sepa a qué casa ir.\n\n3. Explica la mezcla de la fiesta en dos frases: la costumbre empezó entre los pueblos que ya vivían aquí, antes de que llegaran los españoles, y después se le juntaron las fechas del 1 y del 2 de noviembre de los cristianos.\n\n4. Dales algo que hacer, porque es la parte que no se olvida: hacer una calavera de cartulina, un globo pintado o una máscara de catrina.\n\n5. Cierra con la idea de la Catrina: la frase atribuida a Posada, la muerte, es democrática, ya que a fin de cuentas, güera, morena, rica o pobre, toda la gente acaba siendo calavera. Esa frase también funciona con niños, porque quita el miedo sin quitar el respeto.",
+      "respuesta_ninos": "Si se lo explicas a un niño, hazlo así: el Día de Muertos es el día en que recordamos a las personas que ya se fueron. Las familias ponen un altar con su comida, su foto, una vela y flores naranjas, como si el difunto viniera a comer. Antes de los españoles, los pueblos de aquí ya hacían esto. Y no es un día triste: es un día para estar juntos.",
+      "palabras_clave": [
+        "explicar a un nino",
+        "como le explico",
+        "como se lo explico",
+        "explicar el dia de muertos a un nino",
+        "nino de 8 anos",
+        "8 anos",
+        "a un nino",
+        "para un nino",
+        "explicar a los ninos",
+        "como lo explico a un nino",
+        "ocho anos"
+      ],
+      "sinonimos": [
+        "como explicarselo a un nino",
+        "explicar a un pequeno",
+        "explicacion para ninos",
+        "como se lo cuento a un nino",
+        "explicar a un nino de ocho anos"
+      ],
+      "fuentes": [
+        "semillitas-ninos",
+        "agricultura-cempasuchil",
+        "cultura-catrina",
+        "tiendanube-manualidades",
+        "unam-global-ofrendas"
+      ],
+      "conceptos": [
+        "ninos",
+        "practico"
+      ],
+      "prioridad": 7
+    },
+    {
+      "id": "tipos-informacion",
+      "tema": "Distinguir dato histórico, tradición popular y costumbre familiar",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "¿Cómo diferenciar una tradición familiar de una tradición cultural?",
+        "¿Cómo distinguir entre información histórica, tradición popular y creencias familiares?",
+        "cómo sé si algo es histórico o es costumbre",
+        "explica los tipos de información"
+      ],
+      "respuesta": "Se puede distinguir usando la procedencia de la fuente. El proyecto ordena sus fuentes en tipos, y cada tipo sostiene un tipo distinto de afirmación.\n\n- Dato histórico o documentado: viene de un archivo o de un organismo público. Por ejemplo, la inscripción de la UNESCO del 7 de noviembre de 2003, con el expediente 00054, o la lista de seis culturas que la propia UNESCO enumera. Eso se puede citar y verificar.\n- Tradición popular o cultural: viene de lo que hacen las comunidades y está documentado por una institución que las estudió. Por ejemplo, el INPI documenta el calendario otomí, con el 28 de octubre para los difuntos violentos. Es real y verificable, pero es una práctica, no una ley.\n- Costumbre o creencia familiar: no aparece en ningún archivo. Son las cosas que hace una casa: la receta del mole de la abuela, la fecha en que se enciende la primera vela, la canción que se canta en el panteón. El chatbot no puede verificarlas y no debe presentarlas como tradición documentada.\n\nLa prueba rápida es preguntar: esto está en un documento oficial, en un estudio de una institución, o solo en mi familia. Si la respuesta es solo en mi familia, es costumbre familiar, y la respuesta debe decirlo así.\n\nEste criterio es el que permite decir que algo es una tradición regional o que depende de la familia, sin convertir nada en regla universal.",
+      "respuesta_ninos": "Hay tres tipos de cosas sobre el Día de Muertos. Una es lo que está escrito en un documento, como que la UNESCO lo declaró patrimonio. Otra es lo que hacen en algunos pueblos, como los otomíes que tienen su propio calendario. Y otra es lo que hace tu familia, como la receta del mole de tu abuela. Las tres son valiosas, pero solo la primera se puede comprobar con un documento.",
+      "palabras_clave": [
+        "tradicion familiar",
+        "tradicion cultural",
+        "diferenciar",
+        "distinguir",
+        "diferencia entre",
+        "informacion historica",
+        "tradicion popular",
+        "creencias familiares",
+        "como se si es historico",
+        "tipos de informacion",
+        "que es historico"
+      ],
+      "sinonimos": [
+        "diferencia entre tradicion y costumbre",
+        "como distinguir informacion de creencia",
+        "tipos de afirmaciones",
+        "diferenciar hecho de costumbre"
+      ],
+      "fuentes": [
+        "proyecto-criterios",
         "unesco-ich-00054",
-        "inah-diariodecampo-michoacan",
-        "vitabrevis-catrina"
+        "inpi-fiestas-pueblos"
       ],
-      "prioridad": 5
+      "conceptos": [
+        "tipos-informacion"
+      ],
+      "prioridad": 7,
+      "nivel": "proyecto"
     },
     {
-      "id": "mictlantecuhtli",
-      "tema": "Mictlantecuhtli y el inframundo",
-      "categoria": "mitologia",
+      "id": "alcances-del-chatbot",
+      "tema": "Alcance del chatbot y límites de su base de conocimiento",
+      "categoria": "proyecto",
       "preguntas_ejemplo": [
-        "¿qué es Mictlantecuhtli?",
-        "háblame del inframundo",
-        "¿qué es el Mictlán?"
+        "¿Qué debe hacer el chatbot cuando no tiene información suficiente?",
+        "¿qué pasa si no sabes la respuesta?",
+        "¿qué puedes y qué no puedes responder?",
+        "explica los límites de este chatbot"
       ],
-      "respuesta": "Mictlantecuhtli es el dios mexica de la muerte. Su nombre viene de Mictlán, la mansión de los muertos, más Tecutli, señor: el señor de la mansión de los muertos. En la mitología mexica el reino de Mictlán tiene nueve niveles, y su equivalente en el mundo maya es Xibalba.\n\nConviene ser cuidadoso con un error frecuente: Mictlantecuhtli es una deidad de la mitología mexica, no el nombre de la fiesta del Día de Muertos. La fiesta de los muertos en náhuatl se llama Miccailhuitl o Miccailhuitontli.\n\nAun así, el inframundo es el imaginario al que sigue la tradición. En algunas ofrendas del sureste aparecen representaciones del inframundo junto a los santos católicos, muestra de la mezcla de las dos culturas. Ese camino de varios días de viaje es el que la ofrenda busca hacer más corto y más amable con agua, sal, pan, flores y luz.",
+      "respuesta": "Este chatbot trabaja con una base de conocimiento local, escrita a mano en un archivo, con fuentes verificadas. No usa modelos de lenguaje, ni embeddings, ni servicios externos. Eso tiene una consecuencia clara: cuando la pregunta queda fuera de esa base, el chatbot no debe inventar.\n\nLa regla del proyecto es esta:\n1. Si la consulta pertenece al tema y hay información suficiente, responde con la entrada correspondiente, indica su fuente y, cuando el dato es una tradición regional o una costumbre familiar, lo dice.\n2. Si la consulta pertenece al tema pero la base no alcanza para responder con fundamento, lo declara y sugiere los temas en los que sí puede ayudar.\n3. Si la consulta está fuera del tema, lo dice con franqueza. No improvisa.\n\nEl motivo es sencillo: una respuesta inventada es peor que una respuesta honesta. Un chatbot que dice no tengo información suficiente enseña al usuario dónde está el límite del conocimiento, y quien lo consulta puede verificar lo que le entrega porque cada respuesta viene con su fuente.\n\nLos criterios del proyecto están documentados en la fuente interna del proyecto, que es la única fuente propia del sistema.",
+      "respuesta_ninos": "Este chatbot solo sabe cosas del Día de Muertos que están escritas en sus apuntes, y cada respuesta te dice de dónde la sacó. Si le preguntas algo que no sabe, te lo dice en vez de inventar. Es como un compañero de clase que lleva una guía: te ayuda con lo que tiene y te avisa cuando no puede.",
       "palabras_clave": [
-        "mictlantecuhtli",
-        "mictlan",
-        "inframundo",
-        "xibalba",
-        "deidad",
-        "mitologia",
-        "mitología",
-        "mexica",
-        "reino de los muertos",
-        "nueve niveles",
-        "dios de la muerte"
+        "informacion suficiente",
+        "no sabe",
+        "no tiene informacion",
+        "que puede responder",
+        "alcance",
+        "limites",
+        "fuera de alcance",
+        "no puedes",
+        "no inventas",
+        "inventar",
+        "limite del conocimiento",
+        "base de conocimiento"
+      ],
+      "sinonimos": [
+        "cuando no sabes algo",
+        "que haces si no hay informacion",
+        "politica de alcance",
+        "por que no sabes la respuesta"
       ],
       "fuentes": [
-        "unam-gaceta-colonia",
-        "unesco-ich-00054"
+        "proyecto-criterios"
       ],
-      "prioridad": 5
+      "conceptos": [
+        "limites"
+      ],
+      "prioridad": 8,
+      "nivel": "proyecto"
     },
     {
       "id": "como-se-celebra-hoy",
@@ -696,7 +2368,8 @@
         "¿qué hacen en la ciudad de mexico?",
         "háblame de la celebración actual"
       ],
-      "respuesta": "Hoy el Día de Muertos se vive de dos formas al mismo tiempo: en casa, con la ofrenda y la comida familiar, y en la calle, con desfiles y actividades públicas.\n\nEn la Ciudad de México, por ejemplo, la Secretaría de Cultura programa cada octubre y noviembre cientos de actividades: desfiles, ofrendas monumentales en el Zócalo, megaofrendas, funciones de teatro y concursos de calaveritas literarias. El Gran Desfile del Día de Muertos se realiza el 1 de noviembre.\n\nEn Tláhuac, el Festival Internacional de Día de Muertos reúne a ocho pueblos originarios durante cuatro días, del 30 de octubre al 2 de noviembre.\n\nTambién ha crecido la diversificación de las formas: instalaciones artísticas, calaveras de azúcar gigantes y catrinas hechas con materiales reciclados. Todo eso muestra que la tradición no está quieta: se adapta, y por eso los especialistas la llaman una tradición viva.",
+      "respuesta": "Hoy el Día de Muertos se vive de dos formas al mismo tiempo: en casa, con la ofrenda y la comida familiar, y en la calle, con desfiles y actividades públicas.\n\nEn la Ciudad de México, por ejemplo, la Secretaría de Cultura programó para 2025 cuatrocientas catorce actividades del 25 de octubre al 2 de noviembre: el Gran Desfile del Día de Muertos el 1 de noviembre a las 14:00, la Ofrenda Monumental en el Zócalo, dieciséis megaofrendas, funciones de teatro y el concurso de calaveritas literarias.\n\nEn Tláhuac, el Festival Internacional de Día de Muertos reúne a ocho pueblos originarios durante cuatro días, del 30 de octubre al 2 de noviembre, con San Andrés Mixquic, San Pedro Tláhuac, San Francisco Tlaltenco, Santiago Zapotitlán, Yecahuitzotl, Ixtayopan, Tetelco y Santa Catarina.\n\nTambién ha crecido la diversificación de las formas: instalaciones artísticas, calaveras de azúcar gigantes y catrinas hechas con materiales reciclados. Todo eso muestra que la tradición no está quieta: se adapta, y por eso los especialistas la llaman una tradición viva.",
+      "respuesta_ninos": "Hoy se celebra de dos maneras: en la casa, con el altar y la comida de la familia, y en la calle, con desfiles y festivals. En la Ciudad de México hay desfiles el 1 de noviembre y un festival en Tláhuac con ocho pueblos originarios. Además, mucha gente ya hace catrinas y calaveras gigantes con materiales reciclados. La tradición se va actualizando.",
       "palabras_clave": [
         "hoy",
         "actualmente",
@@ -718,9 +2391,18 @@
         "público",
         "zocalo"
       ],
+      "sinonimos": [
+        "celebracion actual",
+        "como se celebra hoy",
+        "que hacen hoy en dia",
+        "desfiles y eventos"
+      ],
       "fuentes": [
         "cdmx-programacion",
         "cdmx-tlahuac-fiddem"
+      ],
+      "conceptos": [
+        "regional"
       ],
       "prioridad": 5
     }
