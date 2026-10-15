@@ -1,4 +1,9 @@
-import type { ContextoConversacion, EntradaConocimiento } from "./tipos";
+import type {
+  ContextoConversacion,
+  EntradaConocimiento,
+  TipoInteraccionSocial,
+} from "./tipos";
+
 
 /**
  * Puntaje mínimo para considerar que la base de conocimiento responde con
@@ -480,7 +485,16 @@ const FONETICAS: Record<string, string> = {
   belas: "velas",
   uesos: "huesos",
   salal: "sal al",
+  ola: "hola",
+  holis: "hola",
+  oli: "hola",
+  weno: "bueno",
+  grax: "gracias",
+  salu2: "saludos",
+  porfa: "por favor",
+  pofa: "por favor",
 };
+
 
 /** Los mapas de fragmentos se consultan del más largo al más corto. */
 const CONCATENADOS_ORDENADOS = [...CONCATENADOS].sort(
@@ -701,7 +715,11 @@ export function esFueraDelDominio(preguntaNormalizada: string): boolean {
   const pregunta = preguntaNormalizada.trim();
   if (pregunta.length === 0) return true;
 
+  // Las interacciones sociales (saludos, presentaciones, identidad) nunca están fuera de dominio
+  if (clasificarInteraccionSocial(pregunta) !== null) return false;
+
   const conEspacios = ` ${pregunta} `;
+
   if (DOMINIO.some((termino) => contienePalabra(conEspacios, termino))) {
     return false;
   }
@@ -1260,13 +1278,19 @@ export function puntuarEntrada(
   };
 }
 
-export type TipoInteraccionSocial =
-  | "saludo"
-  | "agradecimiento"
-  | "despedida"
-  | "cortesia"
-  | "confirmacion"
-  | "identidad";
+export function extraerNombreUsuario(texto: string): string | null {
+  if (!texto) return null;
+  const match = texto.match(/\b(?:me\s+llamo|me\s+llam|mi\s+nombre\s+es|soy|aqui)\s+([A-Za-zÁÉÍÓÚáéíóúñÑ]+)/i);
+  if (!match) return null;
+  const candidato = match[1].trim();
+  const palabrasComunes = new Set([
+    "un", "una", "el", "la", "los", "las", "de", "del", "al", "mi", "tu", "su",
+    "amigo", "amiga", "bot", "usuario", "nuevo", "aqui", "pregunta", "persona",
+    "catrina", "calavera", "muerto", "muerta", "mexicano", "mexicana"
+  ]);
+  if (candidato.length < 2 || palabrasComunes.has(candidato.toLowerCase())) return null;
+  return candidato.charAt(0).toUpperCase() + candidato.slice(1).toLowerCase();
+}
 
 export function clasificarInteraccionSocial(
   preguntaNormalizada: string
@@ -1274,9 +1298,22 @@ export function clasificarInteraccionSocial(
   if (!preguntaNormalizada) return null;
   const texto = ` ${preguntaNormalizada} `;
 
+  // Detección de pregunta por su propio nombre (debe evaluarse antes que presentación)
+  if (/\b(como\s+me\s+llamo|cual\s+es\s+mi\s+nombre|te\s+acuerdas\s+de\s+mi\s+nombre|sabes\s+mi\s+nombre|recuerdas\s+mi\s+nombre)\b/i.test(preguntaNormalizada)) {
+    return "pregunta_nombre";
+  }
+  // Detección de presentación de nombre
+  if (/\b(me\s+llamo|me\s+llam|mi\s+nombre\s+es)\b/i.test(preguntaNormalizada)) {
+    return "presentacion";
+  }
+
+
   const patrones = {
     saludo: [
       "hola",
+      "ola",
+      "holis",
+      "oli",
       "buenos dias",
       "buenas tardes",
       "buenas noches",
@@ -1284,7 +1321,6 @@ export function clasificarInteraccionSocial(
       "saludos",
       "buen dia",
       "que onda",
-      "quiubole",
       "quiubole",
       "buenas",
       "hola bot",
@@ -1376,9 +1412,6 @@ export function clasificarInteraccionSocial(
   for (const [tipo, claves] of Object.entries(patrones)) {
     for (const clave of claves) {
       if (texto.includes(` ${clave} `) || texto.startsWith(`${clave} `) || texto.endsWith(` ${clave}`) || texto === ` ${clave} `) {
-        if (clave.length > 1 && texto.includes(clave)) {
-          // comprobación simple
-        }
         return tipo as TipoInteraccionSocial;
       }
     }
@@ -1386,12 +1419,13 @@ export function clasificarInteraccionSocial(
   // Casos especiales con regex
   if (/\b(ok|vale)\b/.test(preguntaNormalizada)) return "confirmacion";
   if (/\b(gracias)\b/.test(preguntaNormalizada)) return "agradecimiento";
-  if (/\b(hola|buenos\s+dias|buenas\s+tardes|buenas\s+noches)\b/.test(preguntaNormalizada)) return "saludo";
+  if (/\b(hola|ola|holis|oli|buenos\s+dias|buenas\s+tardes|buenas\s+noches|que\s+onda|quiubole|hey)\b/i.test(preguntaNormalizada)) return "saludo";
   if (/\b(adios|hasta\s+luego|hasta\s+pronto|nos\s+vemos|chao|bye)\b/.test(preguntaNormalizada)) return "despedida";
   if (/\b(de\s+nada|por\s+nada|no\s+hay\s+de\s+que|con\s+gusto)\b/.test(preguntaNormalizada)) return "cortesia";
   if (/\b(quien\s+eres|como\s+te\s+llamas|que\s+puedes\s+hacer|como\s+estas)\b/.test(preguntaNormalizada)) return "identidad";
   return null;
 }
+
 
 export function ordenarPorPuntaje(
   evaluadas: EvaluacionEntrada[]

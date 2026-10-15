@@ -69,7 +69,9 @@ export type TipoInteraccionSocial =
   | "despedida"
   | "cortesia"
   | "confirmacion"
-  | "identidad";
+  | "identidad"
+  | "presentacion"
+  | "pregunta_nombre";
 
 /**
  * Memoria de la conversación que se entrega a `responder` en cada turno.
@@ -85,7 +87,10 @@ export interface ContextoConversacion {
   entradaPreviaId?: string | null;
   /** Conceptos del tema anterior, para saber de qué se estaba hablando. */
   conceptosPrevios?: string[];
+  /** Nombre del usuario reconocido durante la sesión. */
+  nombreUsuario?: string | null;
 }
+
 
 export interface RespuestaBot {
   encontrado: boolean;

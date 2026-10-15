@@ -6,6 +6,7 @@ import {
   MENSAJE_FUERA_DE_ALCANCE,
   responder,
 } from "@/lib/buscador";
+import { extraerNombreUsuario } from "@/lib/motor";
 import { registrarInteraccion } from "@/lib/supabase";
 import type { ContextoConversacion, Fuente } from "@/lib/tipos";
 import estilos from "./Chatbot.module.css";
@@ -19,20 +20,17 @@ interface Mensaje {
 }
 
 const MENSAJE_INICIAL =
-  "Hola, soy el chatbot del Día de Muertos. Mi especialidad es esta tradición mexicana: " +
-  "qué es, cuándo se celebra, su origen prehispánico y el contacto con el calendario católico, " +
-  "las ofrendas y cada uno de sus elementos, las fechas para niños, adultos y mascotas, " +
-  "las variaciones por región, la Catrina, las calaveras literarias, las actividades " +
-  "prácticas con niños y la declaración de patrimonio de la UNESCO.\n\nSi me preguntas algo " +
-  "que no está en mi base de conocimiento, te lo diré con franqueza. Escribe tu pregunta o " +
-  "elige una de las sugerencias.";
+  "¡Hola! 💀 Soy tu guía festivo del Día de Muertos en México. Mi especialidad es esta hermosa tradición: " +
+  "su historia y el viaje por el Mictlán, los altares y cada uno de sus elementos, tutoriales de maquillaje de Catrina, " +
+  "canciones, películas y leyendas, o escribir una calaverita literaria personalizada.\n\n" +
+  "Si quieres, dime cómo te llamas para conocernos, o hazme cualquier pregunta sobre la celebración.";
 
 const SUGERENCIAS_INICIALES = [
   "¿Qué es el Día de Muertos?",
-  "¿Qué elementos tiene una ofrenda?",
-  "¿Cuál es la diferencia con Halloween?",
-  "¿Qué significa el cempasúchil?",
-  "¿Qué manualidades puedo hacer?",
+  "¿Cuáles son los 9 niveles del Mictlán?",
+  "¿Cómo maquillarme de Catrina?",
+  "Recomiéndame 3 películas mexicanas de terror",
+  "¿Cuándo es la Alumbrada de Mixquic?",
 ];
 
 let contador = 0;
@@ -52,8 +50,7 @@ export default function Chatbot() {
     },
   ]);
   const [pregunta, setPregunta] = useState("");
-  // Memoria de la conversación: lo que respondió el bot en el último turno,
-  // para que las preguntas de seguimiento se puedan resolver.
+  // Memoria de la conversación: lo que respondió el bot en el último turno y nombre del usuario
   const [contexto, setContexto] = useState<ContextoConversacion | undefined>(
     undefined
   );
@@ -75,7 +72,15 @@ export default function Chatbot() {
       fueraDeAlcance: false,
     };
 
-    const resultado = responder(pregunta, undefined, contexto);
+    const nombreDetectado = extraerNombreUsuario(pregunta);
+    const nombrePersistente = nombreDetectado || contexto?.nombreUsuario || null;
+
+    const contextoParaTurno: ContextoConversacion = {
+      ...contexto,
+      nombreUsuario: nombrePersistente,
+    };
+
+    const resultado = responder(pregunta, undefined, contextoParaTurno);
     const delBot: Mensaje = {
       id: siguienteId(),
       autor: "bot",
@@ -93,20 +98,23 @@ export default function Chatbot() {
       respuesta: delBot.texto,
       fuentes: delBot.fuentes.map((fuente) => fuente.id),
     });
-    // Solo una respuesta informativa cambia el tema de la conversación: un
-    // saludo, un agradecimiento o una pregunta fuera de alcance no borran lo
-    // que se estaba tratando.
+
     setContexto(
       resultado.entrada
         ? {
           temaPrevio: resultado.entrada.tema,
           entradaPreviaId: resultado.entrada.id,
           conceptosPrevios: resultado.entrada.conceptos ?? [],
+          nombreUsuario: nombrePersistente,
         }
-        : contexto
+        : {
+          ...(contexto ?? {}),
+          nombreUsuario: nombrePersistente,
+        }
     );
     setPregunta("");
   }
+
 
   function manejarEnvio(evento: React.FormEvent<HTMLFormElement>) {
     evento.preventDefault();

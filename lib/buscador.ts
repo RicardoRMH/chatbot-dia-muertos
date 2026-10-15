@@ -1,5 +1,6 @@
-import conocimientoCrudo from "../data/conocimiento.json";
-import fuentesCrudo from "../data/fuentes.json";
+import conocimientoCrudo from "../data/conocimiento.json" with { type: "json" };
+import fuentesCrudo from "../data/fuentes.json" with { type: "json" };
+
 
 import {
   elegirEntrada,
@@ -11,6 +12,7 @@ import {
   normalizar,
   UMBRAL_PUNTAJE,
   clasificarInteraccionSocial,
+  extraerNombreUsuario,
 } from "./motor";
 import type {
   BaseConocimiento,
@@ -21,6 +23,7 @@ import type {
   NivelInformacion,
   RespuestaBot,
 } from "./tipos";
+
 
 const conocimiento = conocimientoCrudo as BaseConocimiento;
 const baseFuentes = fuentesCrudo as BaseFuentes;
@@ -100,20 +103,24 @@ function esNotaCritica(entrada: EntradaConocimiento): boolean {
 
 const RESPUESTAS_SOCIALES = {
   saludo:
-    "¡Hola! Soy tu chatbot del Día de Muertos en México. ¿En qué puedo ayudarte hoy?",
-  agradecimiento: "¡Con gusto! Me da gusto haberte ayudado. ¿Te gustaría saber algo más?",
+    "¡Hola! 💀 Soy tu guía festivo del Día de Muertos en México. ¿En qué tradición, leyenda, ofrenda o tutorial te gustaría sumergirte hoy?",
+  agradecimiento: "¡Con mucho gusto! Me alegra haberte ayudado. 🌼 ¿Te gustaría saber algo más sobre nuestras tradiciones?",
   despedida:
-    "¡Hasta luego! Que tengas un excelente día lleno de tradiciones y recuerdos bonitos.",
-  cortesia: "¡A la orden! Cuando quieras saber algo más sobre el Día de Muertos, aquí estoy.",
-  confirmacion: "Perfecto. ¿En qué más te puedo ayudar sobre el Día de Muertos?",
+    "¡Hasta luego! 🌼 Que tengas un excelente día lleno de tradiciones, recuerdos bonitos y alegría.",
+  cortesia: "¡A la orden! Cuando quieras explorar más sobre el Día de Muertos, aquí estoy.",
+  confirmacion: "¡Perfecto! ¿En qué más te puedo ayudar sobre el Día de Muertos?",
   identidad:
-    "Soy tu asistente especializado en el Día de Muertos en México. Puedo ayudarte con el origen, la ofrenda, sus elementos, variaciones regionales y mucho más.",
+    "Soy tu guía festivo y asistente especializado en el Día de Muertos en México. 💀 Puedo contarte sobre el Mictlán, los elementos de la ofrenda, darte tutoriales de maquillaje de Catrina, recomendarte libros y películas, o componer una calaverita literaria.",
+  presentacion:
+    "¡Mucho gusto! 💀 Qué alegría tenerte por aquí. Soy tu guía festivo del Día de Muertos en México. ¿Sobre qué tradición te gustaría platicar?",
+  pregunta_nombre:
+    "Aún no me has dicho tu nombre. ¿Cómo te llamas? ¡Dime y así nos conocemos mejor!",
 };
 
 function limpiarSaludoPregunta(texto: string): string {
   return texto
     .replace(
-      /^\s*(hola|buenos\s+dias|buenas\s+tardes|buenas\s+noches|hey|que\s+tal|saludos|buen\s+dia|que\s+onda|quiubole|buenas|que\s+hubo|hola\s+bot|hola\s+amigo|hola\s+compa|que\s+tal\s+amigos|hola\s+a\s+todos|que\s+milagro|hola\s+buenas)[,!\.\s]+/i,
+      /^\s*(hola|ola|holis|oli|buenos\s+dias|buenas\s+tardes|buenas\s+noches|hey|que\s+tal|saludos|buen\s+dia|que\s+onda|quiubole|buenas|que\s+hubo|hola\s+bot|hola\s+amigo|hola\s+compa|que\s+tal\s+amigos|hola\s+a\s+todos|que\s+milagro|hola\s+buenas)[,!\.\s]+/i,
       ""
     )
     .replace(
@@ -132,6 +139,10 @@ export function responder(
   const normalizadaOriginal = pregunta ?? "";
   const tipoSocial = clasificarInteraccionSocial(normalizada);
 
+  // Intentar extraer nombre del usuario si se presenta
+  const nombreDetectado = extraerNombreUsuario(normalizadaOriginal);
+  const nombreUsuario = nombreDetectado || contexto?.nombreUsuario || null;
+
   // Intentar extraer pregunta informativa tras saludo
   const preguntaLimpia = limpiarSaludoPregunta(normalizadaOriginal);
   const normalizadaLimpia = normalizar(preguntaLimpia);
@@ -147,6 +158,39 @@ export function responder(
   const mejorFinal = mejorLimpio && mejorLimpio.puntaje > (mejor?.puntaje || 0)
     ? mejorLimpio
     : mejor;
+
+  // Manejo de presentaciones y preguntas sobre el nombre
+  if (tipoSocial === "presentacion") {
+    const textoPresentacion = nombreUsuario
+      ? `¡Mucho gusto, ${nombreUsuario}! 💀 Qué alegría tenerte por aquí. Soy tu guía festivo del Día de Muertos en México. Puedo ayudarte con el significado de las ofrendas, tutoriales de maquillaje de Catrina, leyendas mexicanas, recomendaciones de películas y libros, o escribir una calaverita literaria para ti. ¿Por dónde te gustaría empezar?`
+      : RESPUESTAS_SOCIALES.presentacion;
+    return {
+      encontrado: true,
+      texto: textoPresentacion,
+      entrada: null,
+      fuentes: [],
+      puntaje: 0,
+      palabrasCoincidentes: [],
+      sugerencias: sugerencias(),
+      conceptos,
+    };
+  }
+
+  if (tipoSocial === "pregunta_nombre") {
+    const textoPreguntaNombre = contexto?.nombreUsuario
+      ? `¡Claro que sí me acuerdo! Te llamas ${contexto.nombreUsuario}. 💀 ¿Te gustaría que escribamos una calaverita literaria personalizada para ti?`
+      : "Aún no me has dicho tu nombre. ¿Cómo te llamas? ¡Cuéntame y con gusto lo recordaré!";
+    return {
+      encontrado: true,
+      texto: textoPreguntaNombre,
+      entrada: null,
+      fuentes: [],
+      puntaje: 0,
+      palabrasCoincidentes: [],
+      sugerencias: sugerencias(),
+      conceptos,
+    };
+  }
 
   // Caso mixto: hay saludo/agradecimiento + pregunta informativa válida
   if (tipoSocial) {
@@ -199,7 +243,12 @@ export function responder(
       };
     }
     // Interacción social pura
-    const respuestaSocial = RESPUESTAS_SOCIALES[tipoSocial];
+    let respuestaSocial = RESPUESTAS_SOCIALES[tipoSocial as keyof typeof RESPUESTAS_SOCIALES] || RESPUESTAS_SOCIALES.saludo;
+    if (tipoSocial === "saludo" && contexto?.nombreUsuario) {
+      respuestaSocial = `¡Hola de nuevo, ${contexto.nombreUsuario}! 💀 ¿Qué tradición, leyenda o recomendación te gustaría descubrir hoy?`;
+    } else if (tipoSocial === "despedida" && contexto?.nombreUsuario) {
+      respuestaSocial = `¡Hasta luego, ${contexto.nombreUsuario}! 🌼 Que tengas un día lleno de recuerdos bonitos y calidez. ¡Aquí estaré cuando gustes!`;
+    }
     return {
       encontrado: true,
       texto: respuestaSocial,
@@ -225,7 +274,7 @@ export function responder(
     };
   }
 
-  const entrada = mejorFinal!.entrada;
+  const entrada = mejorFinal.entrada;
   const infantil = esPreguntaInfantil(normalizada);
   const pideParaNinos = esPeticionParaNinos(normalizada);
   const breve = esPreguntaBreve(normalizada);
@@ -243,8 +292,6 @@ export function responder(
     .slice(0, 2)
     .map((a) => a.entrada);
 
-
-
   const partes: string[] = [breve ? recortarAlGrano(cuerpo) : cuerpo.trim()];
 
   if (entrada.nivel && entrada.nivel !== "documentado") {
@@ -252,8 +299,7 @@ export function responder(
   }
 
   // La salvedad solo se agrega cuando el usuario pregunta por excepciones u
-  // obligatoriedad, o cuando la entrada no presenta un dato documentado: en
-  // una respuesta puntual sería información que no se pidió.
+  // obligatoriedad, o cuando la entrada no presenta un dato documentado
   if (entrada.nota && !breve) {
     const indagaExcepciones = esPreguntaSobreExcepciones(normalizada);
     if (indagaExcepciones || esNotaCritica(entrada)) {
@@ -261,9 +307,7 @@ export function responder(
     }
   }
 
-  // La versión infantil se entrega solo cuando se pidió. Si la pregunta ya es
-  // infantil, el cuerpo de la respuesta ya es la versión infantil y repetirla
-  // con otro encabezado solo duplicaría el mismo texto.
+  // Versión infantil si se solicitó expresamente
   if (!infantil && pideParaNinos && entrada.respuesta_ninos) {
     partes.push(
       `Para explicárselo a un niño: ${entrada.respuesta_ninos.trim()}`

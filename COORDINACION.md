@@ -101,4 +101,70 @@ Las tareas se dividen en módulos atómicos ejecutados por OpenCode en la rama `
 - **Estado:** APROBADO.
 - **Evidencia validada:** Cero referencias rotas, 60/60 en suite de regresión y resolución demostrada de los 5 casos de telemetría recuperados incorrectamente. Se autoriza commit atómico y paso a la Tarea 2.
 
+---
+
+### TAREA 2: TASK-ROUTER-02 — Router de Intenciones, Normalización Fonética y Memoria de Nombre
+
+#### Instrucciones de Antigravity (Arquitecto y Supervisor)
+- **Identificador:** TASK-ROUTER-02
+- **Objetivo:** Diseñar e implementar un router de intenciones robusto y un preprocesador fonético que elimine los falsos fallbacks en saludos informales (`ola`), gestione presentaciones (`Me llamo Ricardo`, `Me llam Ricardo`), extraiga y recuerde el nombre del usuario en el estado conversacional, y dirija las consultas a la estrategia de respuesta adecuada sin pasar por búsquedas vectoriales innecesarias ni bloqueos por dominio.
+- **Diagnóstico y Evidencia:**
+  - `ola` fallaba porque no estaba en el vocabulario de saludos ni en correcciones fonéticas.
+  - `Me llam Ricardo` y `Me llamo Ricardo` fallaban porque el sistema carecía de reconocimiento de intenciones de presentación y el filtro de dominio los catalogaba como fuera de alcance.
+  - El contexto conversacional solo guardaba `temaPrevio` e `id`, pero no el nombre del interlocutor.
+- **Archivos Afectados:**
+  - `lib/tipos.ts` (extender `ContextoConversacion` con `nombreUsuario`)
+  - `lib/motor.ts` (ampliar normalización fonética, patrones sociales y extracción de nombre)
+  - `lib/buscador.ts` (conectar el router previo a la búsqueda y generar respuestas personalizadas)
+  - `components/Chatbot.tsx` (persistir `nombreUsuario` en el estado de React entre turnos)
+- **Cambios Solicitados:**
+  1. Agregar `nombreUsuario?: string | null;` a `ContextoConversacion`.
+  2. Implementar extracción de nombres en expresiones: `me llamo [X]`, `me llam [X]`, `mi nombre es [X]`, `soy [X]`, `aqui [X]`.
+  3. Reconocer `ola`, `holis`, `que onda`, `quiubole`, `hey` como saludos válidos.
+  4. Responder a "¿cómo me llamo?" o "¿recuerdas mi nombre?" utilizando la memoria conversacional de la sesión.
+  5. Asegurar que una interacción social o presentación no sea rechazada por `esFueraDelDominio()`.
+- **Restricciones Técnicas:**
+  - No romper el soporte de preguntas de seguimiento ("¿y para qué sirve?").
+  - Mantener las respuestas de las 60 preguntas de evaluación intactas.
+- **Pruebas Obligatorias:**
+  - Probar `ola`, `Hola`, `HOla`, `HOLa`, `Me llamo Ricardo`, `Me llam Ricardo`.
+  - Probar secuencia: Turno 1: `Me llamo Ricardo` -> Turno 2: `¿Cómo me llamo?` -> Turno 3: `¿Qué es el cempasúchil?`.
+  - Ejecutar `npm run evaluar` y verificar 60/60.
+- **Criterios de Aceptación:**
+  - `ola`, `Me llam Ricardo` y `Me llamo Ricardo` ya no devuelven mensaje de fuera de alcance.
+  - El bot saluda amigablemente reconociendo el nombre del usuario y lo recuerda en el siguiente turno.
+
+#### Informe de OpenCode (Ingeniero de Software y Ejecutor)
+- **Tarea ejecutada:** TASK-ROUTER-02 — Router de Intenciones, Normalización Fonética y Memoria de Nombre.
+- **Archivos modificados:**
+  - `lib/tipos.ts`: Incorporado `nombreUsuario?: string | null;` en `ContextoConversacion` y nuevos tipos en `TipoInteraccionSocial` (`presentacion`, `pregunta_nombre`).
+  - `lib/motor.ts`:
+    - Ampliado `FONETICAS` con variantes coloquiales y errores comunes (`ola: "hola"`, `holis`, `oli`, `weno`, `grax`, `salu2`, `porfa`, `pofa`).
+    - Añadida función `extraerNombreUsuario()` con soporte para patrones `me llamo [X]`, `me llam [X]`, `mi nombre es [X]`, `soy [X]`, sanitizando y capitalizando el nombre.
+    - Modificado `clasificarInteraccionSocial()` para priorizar `pregunta_nombre` y `presentacion`, y tolerar saludos informales.
+    - Actualizado `esFueraDelDominio()` para garantizar que interacciones sociales y presentaciones nunca sean descartadas por el filtro de vocabulario temático.
+  - `lib/buscador.ts`: Integrado el router en `responder()` para generar respuestas cálidas con identidad festiva, reconociendo el nombre del usuario y respondiendo a preguntas sobre su identidad.
+  - `components/Chatbot.tsx`: Actualizado el estado de conversación para retener `nombreUsuario` entre turnos y saludo inicial amigable.
+- **Pruebas y Comandos:**
+  - Casos aislados validados:
+    - `ola` -> Responde con saludo festivo (encontrado: true).
+    - `Me llam Ricardo` -> Responde saludando a Ricardo (encontrado: true).
+    - `Me llamo Ricardo` -> Responde saludando a Ricardo (encontrado: true).
+    - `Hola`, `HOla`, `HOLa` -> Responden con saludo (encontrado: true).
+  - Secuencia conversacional con memoria validada:
+    - Turno 1: `Me llamo Ricardo` -> `¡Mucho gusto, Ricardo! 💀 Qué alegría tenerte por aquí...`
+    - Turno 2: `¿Cómo me llamo?` -> `¡Claro que sí me acuerdo! Te llamas Ricardo. 💀...`
+    - Turno 3: `¿Qué significa el cempasúchil?` -> Responde con conocimiento sobre cempasúchil reteniendo a Ricardo en memoria.
+    - Turno 4: `Hola` -> `¡Hola de nuevo, Ricardo! 💀...`
+    - Turno 5: `Hasta luego` -> `¡Hasta luego, Ricardo! 🌼...`
+  - Suite de regresión: `npm run evaluar` -> 60/60 aciertos (0 fallas, 0 rotas).
+  - Verificación de tipos: `npm run typecheck` -> Exitoso (cero errores).
+  - Compilación de producción: `npm run build` -> Exitoso (Next.js Turbopack).
+
+#### Revisión y Aprobación de Antigravity (Supervisor)
+- **Estado:** APROBADO.
+- **Evidencia validada:** Se eliminaron los falsos fallbacks en saludos informales y presentaciones, la memoria de sesión retiene el nombre del interlocutor y se preservó el 100% de compatibilidad con la suite de pruebas. Se autoriza commit atómico y paso a la Tarea 3.
+
+
+
 
