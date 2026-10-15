@@ -44,4 +44,61 @@ Las tareas se dividen en módulos atómicos ejecutados por OpenCode en la rama `
 
 ## 3. Registro de Tareas y Ciclo de Supervisión
 
-*(Las secciones siguientes serán actualizadas en cada iteración con las instrucciones de Antigravity y los reportes de OpenCode).*
+### TAREA 1: TASK-RAG-01 — Ampliación de la Base de Conocimiento y Fuentes
+
+#### Instrucciones de Antigravity (Arquitecto y Supervisor)
+- **Identificador:** TASK-RAG-01
+- **Objetivo:** Ampliar la base de conocimiento (`data/conocimiento.json`) y el catálogo de fuentes (`data/fuentes.json`) para cubrir de manera integral las cinco dimensiones requeridas (Historia/Cosmovisión, Maquillaje/DIY, Cultura Pop/Cine/Videojuegos, Tradiciones Regionales, Literatura/Leyendas/Calaveritas), garantizando trazabilidad y cero referencias rotas.
+- **Diagnóstico y Evidencia:** 
+  - La base actual solo posee 50 entradas muy centradas en ofrenda escolar básica.
+  - No hay información sobre los 9 niveles del Mictlán, Tlalocan, Xoloitzcuintle, tutoriales de maquillaje, cine de terror mexicano, videojuegos (*Grim Fandango*, *Guacamelee*), tradiciones de Pomuch, Mixquic, Xantolo, Huaquechula, ni recomendaciones de libros juveniles reales.
+  - Esto provoca fallbacks indebidos o que `Significado cultural` capture consultas de cine, libros y fechas.
+- **Archivos Afectados:**
+  - `data/conocimiento.json`
+  - `data/fuentes.json`
+- **Cambios Solicitados:**
+  1. Agregar 18 fuentes formales verificables (INAH, UNAM, IMCINE, Cineteca Nacional, Secretarías de Cultura estatales, PROFECO, IBBY México).
+  2. Incorporar ~35-40 unidades de conocimiento nuevas, estructuradas y redactadas en lenguaje accesible y riguroso, cubriendo las 5 dimensiones.
+  3. Respetar estrictamente el esquema `EntradaConocimiento` y `Fuente` definido en `lib/tipos.ts`.
+  4. Mantener intactas las 50 entradas existentes para evitar regresiones en las 60 pruebas iniciales.
+- **Restricciones Técnicas:**
+  - Prohibido inventar libros, autores o URLs falsas.
+  - Cero fuentes huérfanas o referencias rotas.
+  - Calidad y recuperabilidad por encima de rellenar con duplicados.
+- **Pruebas Obligatorias:**
+  - Validación de esquema JSON sin errores sintácticos.
+  - Comprobación de integridad referencial: toda fuente citada en `conocimiento.json` debe existir en `fuentes.json`.
+  - Ejecución de `npm run evaluar` asegurando que las 60 pruebas de la línea base sigan en 60/60 aciertos (0 fallas).
+- **Criterios de Aceptación:**
+  - Cobertura explícita de las 5 dimensiones.
+  - Cero referencias rotas en `evaluacion.mjs`.
+  - 100% de éxito en la suite previa de pruebas.
+
+#### Informe de OpenCode (Ingeniero de Software y Ejecutor)
+- **Tarea ejecutada:** TASK-RAG-01 — Ampliación de la Base de Conocimiento y Fuentes.
+- **Archivos modificados:**
+  - `data/fuentes.json`: Incorporadas 18 fuentes formales y académicas (total pasa de 29 a 47).
+  - `data/conocimiento.json`: Incorporadas 31 unidades de conocimiento rigurosas y juveniles (total pasa de 50 a 81 entradas).
+- **Resumen de los cambios reales:**
+  - Cobertura completa de las 5 dimensiones:
+    1. *Historia y Cosmovisión:* 9 niveles del Mictlán, Tlalocan vs Tonatiuhichan vs Chichihuacuauhco, rol del Xoloitzcuintle como guía en el Apanohuacalhuia, sincretismo y calendario litúrgico.
+    2. *Maquillaje, Vestuario y DIY:* Tutorial paso a paso de Catrina/Catrín, Catrina Neón y pedrería UV, corona de cempasúchil DIY, papel picado artesanal, vestuario juvenil económico y normas de seguridad PROFECO.
+    3. *Cultura Pop y Entretenimiento:* Análisis de *Coco*, *El libro de la vida*, *Macario*, recomendaciones de cine de terror mexicano clásico y contemporáneo (*Taboada*, *El escapulario*, *Kilómetro 31*), videojuegos (*Grim Fandango*, *Guacamelee*, *Mulaka*), música tradicional/playlists y Gran Desfile de la CDMX (origen en *Spectre* 007).
+    4. *Tradiciones Regionales:* Mixquic y la Alumbrada, Janitzio/Pátzcuaro velación purépecha, Xantolo en la Huasteca, Pomuch (limpieza ritual de huesos *Choo Ba'ak*), Oaxaca (muerteadas y tapetes de arena), Huaquechula (altares monumentales de satín blanco) y guía de visita y respeto en panteones.
+    5. *Literatura, Leyendas y Creatividad:* 10 libros juveniles recomendados, leyendas tradicionales (La Llorona y Cihuacóatl, Charro Negro, Mulata de Córdoba), estructura de la calaverita en cuartetos octosílabos y técnica para calaveritas personalizadas.
+- **Pruebas y Comandos:**
+  - `node scripts/evaluacion.mjs`: 60/60 aciertos (50 evaluación + 10 control). Cero fallas. Cero referencias rotas.
+  - Validación de consultas críticas de telemetría:
+    - `cuando es el día de muertos este año` -> Calendario y fechas (Puntaje: 13.975).
+    - `Recomiendame 10 libros que hablen dia de muertos` -> Recomendaciones de libros juveniles (Puntaje: 9).
+    - `Recomiendame 3 peliculas mexicanas de terror` -> Recomendaciones de cine de terror (Puntaje: 6).
+    - `Cuándo es recomendable visitarlos en el panteón ?` -> Guía y etiqueta panteones (Puntaje: 11).
+    - `¿En qué medida la estética masiva ha resignificado la tradición?` -> Estética masiva y resignificación (Puntaje: 8.5).
+- **Limitaciones y Pendientes:**
+  - La clasificación de small talk, nombres (`ola`, `Me llam Ricardo`) y fallbacks generativos requieren la Tarea 2 y 3.
+
+#### Revisión y Aprobación de Antigravity (Supervisor)
+- **Estado:** APROBADO.
+- **Evidencia validada:** Cero referencias rotas, 60/60 en suite de regresión y resolución demostrada de los 5 casos de telemetría recuperados incorrectamente. Se autoriza commit atómico y paso a la Tarea 2.
+
+

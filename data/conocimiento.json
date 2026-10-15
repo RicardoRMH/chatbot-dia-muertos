@@ -2443,6 +2443,1210 @@
         "regional"
       ],
       "prioridad": 5
+    },
+    {
+      "id": "mictlan-nueve-niveles",
+      "tema": "Los nueve niveles del Mictlán",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿Cuáles son los nueve niveles del Mictlán?",
+        "¿Cómo era el camino por el Mictlán?",
+        "¿Qué pruebas debe pasar el alma en el Mictlán?",
+        "¿Cuánto dura el viaje al inframundo mexica?"
+      ],
+      "respuesta": "En la cosmovisión mexica, quienes morían por causas naturales o enfermedades comunes debían emprender una travesía de cuatro años a través de los nueve niveles del Mictlán (el inframundo gobernado por Mictlantecuhtli y Mictecacíhuatl) para alcanzar el descanso eterno:\n\n1. **Itzcuintlan:** Un caudaloso río (Apanohuacalhuia) que solo se podía cruzar con la ayuda de un perro xoloitzcuintle.\n2. **Tepeme Monamicyan:** El lugar donde dos grandes montañas chocaban constantemente.\n3. **Itztepetl:** Una colina escarpada cubierta de filosos pedernales y navajas de obsidiana.\n4. **Cehuecayan:** La región del viento helado que cortaba como navajas.\n5. **Pancuecuetlacayan:** El sitio donde las banderas ondeaban y las almas eran arrastradas por corrientes invisibles.\n6. **Temiminaloyan:** Un sendero donde flechas invisibles eran disparadas a los viajeros.\n7. **Teyollocualoyan:** La morada de fieras salvajes (como jaguares) que devoraban simbólicamente el corazón del difunto.\n8. **Itzmictlan Apochcalocan:** El paso de aguas negras y niebla densa donde el alma debía perder sus ataduras terrenales.\n9. **Chiconahupan:** El noveno y más profundo nivel, donde tras superar todos los obstáculos, el alma alcanzaba la quietud y la disolución total.",
+      "palabras_clave": [
+        "mictlan",
+        "nueve niveles",
+        "niveles del mictlan",
+        "inframundo",
+        "itzcuintlan",
+        "tepeme monamicyan",
+        "itztepetl",
+        "cehuecayan",
+        "pancuecuetlacayan",
+        "temiminaloyan",
+        "teyollocualoyan",
+        "itzmictlan",
+        "chiconahupan",
+        "mictlantecuhtli",
+        "viaje de cuatro anos"
+      ],
+      "sinonimos": [
+        "las nueve pruebas del mictlan",
+        "etapas del inframundo",
+        "inframundo mexica",
+        "sendero de los muertos prehispano",
+        "prueba de las almas"
+      ],
+      "fuentes": [
+        "inah-mictlan-cosmovision",
+        "unamglobal-origenes"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Para los mexicas, el Mictlán tenía 9 niveles como si fuera un videojuego antiguo de retos: cruzar un río con un perrito xoloitzcuintle, pasar entre montañas que chocaban, aguantar vientos fríos y caminar con cuidado entre piedras de obsidiana. Al terminar todos los niveles después de cuatro años, las almas encontraban paz y descanso.",
+      "conceptos": [
+        "origen",
+        "creencia"
+      ],
+      "nivel": "documentado",
+      "nota": "El Mictlán no era un lugar de castigo ni un infierno; era simplemente el destino para quienes fallecían de muerte natural, sin importar si habían sido 'buenos' o 'malos'."
+    },
+    {
+      "id": "destinos-muerte-prehispanica",
+      "tema": "Destinos del alma según la muerte: Mictlán, Tlalocan, Tonatiuhichan y Chichihuacuauhco",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿A dónde iban los muertos según los mexicas?",
+        "¿Cuál es la diferencia entre Mictlán, Tlalocan y Tonatiuhichan?",
+        "¿Qué es el Tlalocan?",
+        "¿Qué es el Tonatiuhichan y quiénes iban ahí?"
+      ],
+      "respuesta": "En el México prehispánico, el destino del alma tras la muerte no dependía de la conducta moral en vida, sino de la forma en que la persona fallecía:\n\n- **Mictlán:** Destino de quienes morían por vejez, causas naturales o enfermedades comunes. Era un viaje arduo de 4 años supervisado por Mictlantecuhtli.\n- **Tlalocan:** El paraíso verde y fértil del dios de la lluvia, Tláloc. Iban quienes morían por ahogamiento, rayos, hidropesía o enfermedades asociadas al agua. Se describía lleno de flores, frutas y abundancia perenne.\n- **Tonatiuhichan (Casa del Sol):** Iban los guerreros caídos en batalla y las mujeres fallecidas durante el parto (*mocihuaquetzque*), consideradas guerreras sagradas. Acompañaban al Sol en su trayecto diario y tras 4 años se transformaban en mariposas o colibríes.\n- **Chichihuacuauhco:** Lugar reservado para los infantes que fallecían antes de alimentarse de maíz. En este sitio había un árbol nodriza que goteaba leche de sus ramas para amamantarlos mientras aguardaban una nueva oportunidad de renacer.",
+      "palabras_clave": [
+        "tlalocan",
+        "tonatiuhichan",
+        "chichihuacuauhco",
+        "destinos del alma",
+        "tlaloc",
+        "forma de morir",
+        "casa del sol",
+        "mocihuaquetzque",
+        "guerreros",
+        "arbol nodriza",
+        "inframundo mexica",
+        "muerte prehispanica"
+      ],
+      "sinonimos": [
+        "diferencia entre mictlan y tlalocan",
+        "los cuatro destinos",
+        "donde iban los muertos mexicas",
+        "paraisos prehispanicos"
+      ],
+      "fuentes": [
+        "arqueologia-mictlan-tlalocan",
+        "unamglobal-origenes"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Los mexicas creían que según cómo te tocaba partir ibas a un lugar diferente: los valientes guerreros y mamás heroicas iban con el Sol (Tonatiuhichan) y se convertían en mariposas; los que partían por agua iban al jardín verde de Tláloc (Tlalocan); los bebés a un árbol mágico de leche (Chichihuacuauhco); y los demás al Mictlán guiados por un fiel perrito.",
+      "conceptos": [
+        "origen",
+        "creencia"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "xoloitzcuintle-guia",
+      "tema": "El xoloitzcuintle: guía sagrado hacia el Mictlán",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿Qué significa el xoloitzcuintle en el Día de Muertos?",
+        "¿Por qué se pone un perro xoloitzcuintle en la ofrenda?",
+        "¿Cómo ayudaba el xoloitzcuintle a cruzar el río Apanohuacalhuia?",
+        "¿Cuál es la leyenda del xoloitzcuintle?"
+      ],
+      "respuesta": "El xoloitzcuintle es una raza canina endémica de México con más de 3,000 años de historia. Su nombre proviene del náhuatl *Xólotl* (dios del ocaso, los gemelos y la transformación) e *itzcuintli* (perro).\n\nEn la tradición mesoamericana, era el compañero leal del ser humano tanto en la vida como en la muerte. Según el mito mexica:\n- Al llegar al primer nivel del Mictlán (el río Apanohuacalhuia), el difunto solo podía cruzar sobre el lomo de un xoloitzcuintle.\n- Sin embargo, el perro solo ayudaba a quien en vida había tratado con amor y respeto a los animales. Si la persona había sido cruel con ellos, el xoloitzcuintle se negaba a auxiliarlo y el alma quedaba varada en la orilla.\n- La tradición sostenía que el perro no debía ser totalmente negro (porque creía que ya se había manchado en el río) ni totalmente blanco (porque aún estaba limpio), sino de tono grisáceo o bermejo para cumplir su deber de guía.\n\nHoy en día, colocar figuras o fotografías de xoloitzcuintles en la ofrenda simboliza la fidelidad y la protección espiritual para nuestros difuntos y mascotas.",
+      "palabras_clave": [
+        "xoloitzcuintle",
+        "xolo",
+        "perro",
+        "perros",
+        "guia",
+        "xolotl",
+        "itzcuintli",
+        "apanohuacalhuia",
+        "rio del mictlan",
+        "perro sagrado",
+        "psicopompo",
+        "mascotas en la ofrenda"
+      ],
+      "sinonimos": [
+        "perro mexica",
+        "perro pelon mexicano",
+        "xolos",
+        "leyenda del perro que cruza el rio"
+      ],
+      "fuentes": [
+        "inah-xoloitzcuintle",
+        "expansion-ofrendas-fechas"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "El xoloitzcuintle es el perrito mexicano sin pelo que, según las leyendas antiguas, acompañaba a las personas cuando partían. Si fuiste bueno y cuidaste a los animales, un fiel xolo te ayudaba a nadar y cruzar un gran río para llegar a tu destino.",
+      "conceptos": [
+        "mascotas",
+        "difunto",
+        "origen"
+      ],
+      "nivel": "tradicion"
+    },
+    {
+      "id": "calendario-detallado-ofrenda",
+      "tema": "Calendario y fechas de llegada de las ofrendas (niños, mascotas y adultos)",
+      "categoria": "fechas",
+      "preguntas_ejemplo": [
+        "¿Cuándo es el Día de Muertos este año?",
+        "¿Qué días se pone la ofrenda para mascotas, niños y adultos?",
+        "¿Cuándo llegan las mascotas a la ofrenda?",
+        "¿Cuál es el calendario completo de la ofrenda de muertos?"
+      ],
+      "respuesta": "El Día de Muertos oficial se conmemora los días **1 y 2 de noviembre de cada año** (calendario fijo), pero en la tradición popular contemporánea el altar recibe visitas escalonadas desde finales de octubre:\n\n- **27 de octubre:** Noche dedicada a las mascotas que han fallecido (perritos, gatitos y animales de compañía). Se colocan croquetas, agua y sus juguetes favoritos.\n- **28 de octubre:** Llegan las ánimas de quienes murieron de forma trágica, violenta o en accidentes. Se enciende una veladora blanca y se coloca sal y agua.\n- **29 de octubre:** Dedicado a los difuntos ahogados o que fallecieron sin auxilio.\n- **30 y 31 de octubre:** Se recuerda a los niños que fallecieron sin haber sido bautizados (ánimas del limbo) y a las almas olvidadas que no tienen familia que los recuerde.\n- **1 de noviembre (Día de Todos los Santos):** Llegan las almas de los niños y jóvenes (*los angelitos*). En la ofrenda se acostumbra poner dulces tradicionales, juguetes, panecitos pequeños y alimentos sin picante.\n- **2 de noviembre (Día de los Fieles Difuntos):** Llegan las almas de los adultos. Se sirven sus platillos favoritos (mole, tamales, café, tequila o cerveza) y se realiza la visita solemne a los panteones.",
+      "palabras_clave": [
+        "cuando es el dia de muertos este ano",
+        "fechas de la ofrenda",
+        "calendario",
+        "27 de octubre",
+        "28 de octubre",
+        "1 de noviembre",
+        "2 de noviembre",
+        "ofrenda mascotas",
+        "llegada de las almas",
+        "todos los santos",
+        "fieles difuntos"
+      ],
+      "sinonimos": [
+        "que dias se celebra",
+        "cuando llegan los angelitos",
+        "cuando llegan las mascotas",
+        "fecha de los ninos y adultos",
+        "cronologia de la ofrenda"
+      ],
+      "fuentes": [
+        "expansion-ofrendas-fechas",
+        "eluniversal-guia-ofrendas",
+        "unamglobal-origenes"
+      ],
+      "prioridad": 9,
+      "respuesta_ninos": "El Día de Muertos se celebra el 1 y 2 de noviembre. Pero desde el 27 de octubre llegan nuestras queridas mascotas, el 1 de noviembre nos visitan los niños angelitos para jugar y comer dulces, y el 2 de noviembre llegan los abuelitos y adultos a disfrutar su comida favorita.",
+      "conceptos": [
+        "difunto",
+        "ninos",
+        "mascotas"
+      ],
+      "nivel": "tradicion",
+      "nota": "Las fechas previas al 1 y 2 de noviembre (como la noche de mascotas el 27 de octubre) son tradiciones populares recientes extendidas por las familias y redes, mientras que el 1 y 2 de noviembre tienen sustento histórico y litúrgico documentado."
+    },
+    {
+      "id": "tutorial-catrina-paso-a-paso",
+      "tema": "Tutorial paso a paso para maquillaje de Catrina y Catrín",
+      "categoria": "manualidades",
+      "preguntas_ejemplo": [
+        "¿Cómo maquillarme de Catrina paso a paso?",
+        "¿Qué materiales necesito para maquillarme de Catrín?",
+        "¿Cómo hacer un maquillaje fácil de Catrina?",
+        "Tutorial de maquillaje de Catrina para adolescentes"
+      ],
+      "respuesta": "Maquillarse de Catrina o Catrín es una actividad creativa clásica. Aquí tienes un tutorial paso a paso seguro y con gran acabado:\n\n**Materiales necesarios:**\n- Crema hidratante facial.\n- Maquillaje acuacolor o base en crema hipoalergénica blanca y negra.\n- Sombras para ojos en colores vivos (morado, fucsia, azul o naranja).\n- Delineador líquido negro de punta fina.\n- Pinceles sintéticos de diferente grosor y esponja de maquillaje.\n- Opcional: pedrería facial autoadhesiva y fijador de maquillaje.\n\n**Pasos ordenados:**\n1. **Preparación (5 min):** Lava tu rostro e hidrátalo con crema para proteger los poros y facilitar el desmaquillado.\n2. **Base blanca (10 min):** Con una esponja húmeda, aplica el maquillaje blanco de forma uniforme por todo el rostro, evitando el contorno inmediato de los ojos.\n3. **Cuencas oculares (10 min):** Con sombra o pintura negra, dibuja círculos alrededor de tus ojos (siguiendo el hueso de la órbita). Rellena y rodea con pequeños semicírculos o pétalos decorativos usando sombras de colores brillantes.\n4. **Nariz cadavérica (5 min):** Pinta la punta de la nariz en forma de corazón invertido o dos gotas negras alargadas para simular la fosa nasal de una calavera.\n5. **Boca y sonrisa de calavera (5 min):** Dibuja una línea horizontal a lo largo de los labios extendiéndola hacia las mejillas, y cruza líneas verticales delgadas simulando los dientes.\n6. **Detalles decorativos (5 min):** Agrega grecas, arabescos en la frente o barbilla, o pega gemas autoadhesivas.\n\n**Tiempo estimado:** 35 a 45 minutos. **Dificultad:** Intermedia.",
+      "palabras_clave": [
+        "tutorial catrina",
+        "maquillaje catrina",
+        "maquillaje catrin",
+        "como maquillarse",
+        "pasos catrina",
+        "pintarse de calavera",
+        "maquillaje para adolescentes",
+        "disfraz catrina"
+      ],
+      "sinonimos": [
+        "caracterizacion catrina",
+        "tutorial maquillaje dia de muertos",
+        "pintar cara de calaca",
+        "maquillaje sencillo catrina"
+      ],
+      "fuentes": [
+        "cultura-catrina",
+        "profeco-maquillaje-seguridad"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Para pintarte de calaverita amigable: hidrata tu carita, pon base blanca con esponja, haz círculos oscuros alrededor de los ojos con flores de colores alrededor, dibuja una colita de corazón negro en la nariz y una linda sonrisa con rayitas en los labios.",
+      "conceptos": [
+        "catrina",
+        "manualidad",
+        "practico"
+      ],
+      "nivel": "recomendacion",
+      "nota": "Asegúrate de usar maquillaje cosmético registrado. Nunca utilices pinturas acrílicas, témperas ni pegamento escolar sobre la piel."
+    },
+    {
+      "id": "tutorial-catrina-neon",
+      "tema": "Maquillaje de Catrina Neón y pedrería facial",
+      "categoria": "manualidades",
+      "preguntas_ejemplo": [
+        "¿Cómo maquillarme de Catrina neón?",
+        "¿Cómo hacer un maquillaje de Catrina brillante o fluorescente?",
+        "¿Qué pedrería o pigmentos neón se usan para la Catrina?",
+        "Catrina moderna con luz UV"
+      ],
+      "respuesta": "El maquillaje de Catrina Neón es una tendencia juvenil moderna y llamativa que destaca bajo luces negras (UV) o en eventos nocturnos:\n\n**Materiales clave:**\n- Pigmentos o pinturas acuacolor fluorescentes (amarillo, verde lima, rosa mexicano, fucsia y turquesa reactivos a UV).\n- Base facial negra o blanca.\n- Delineador blanco de alta pigmentación (sirve de base para que los colores neón resalten el doble).\n- Gemas o perlas autoadhesivas faciales.\n- Pincel delineador fino (0 o 00).\n\n**Técnica de aplicación:**\n1. **Fondo de contraste:** Puedes optar por un fondo blanco tradicional o un estilo 'mitad rostro negro' (*half-skull*) para que el brillo fluorescente resalte con mayor dramatismo.\n2. **Trazado con base clara:** Para que el color neón no se apague, traza primero las líneas, pétalos y ornamentos con delineador blanco fino.\n3. **Capa fluorescente:** Aplica los pigmentos neón encima de los trazos blancos. Combina tonos complementarios (ej. rosa neón con turquesa en los pétalos oculares).\n4. **Pedrería facial:** Coloca pedrería autoadhesiva alrededor de los ojos y en la frente siguiendo el diseño de una tiara o corona.\n5. **Sellado:** Aplica bruma fijadora de maquillaje para evitar que el sudor corra los pigmentos durante la noche.",
+      "palabras_clave": [
+        "catrina neon",
+        "maquillaje neon",
+        "luz ultravioleta",
+        "luz uv",
+        "fluorescente",
+        "pedreria facial",
+        "gemas",
+        "catrina moderna",
+        "colores brillantes"
+      ],
+      "sinonimos": [
+        "catrina luminosa",
+        "maquillaje fosforescente",
+        "catrina con brillos y piedras"
+      ],
+      "fuentes": [
+        "profeco-maquillaje-seguridad",
+        "tiendanube-manualidades"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "La Catrina Neón usa colores mágicos que brillan en la oscuridad o bajo focos morados. Se ponen diamantitos adhesivos en la frente y flores fosforescentes alrededor de los ojos.",
+      "conceptos": [
+        "catrina",
+        "manualidad",
+        "practico"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "diy-corona-cempasuchil",
+      "tema": "Cómo hacer una corona de flores de cempasúchil",
+      "categoria": "manualidades",
+      "preguntas_ejemplo": [
+        "¿Cómo puedo hacer una corona de cempasúchil?",
+        "¿Cómo hacer una diadema de flores para Catrina?",
+        "Tutorial de corona de flores de Día de Muertos",
+        "Corona de cempasúchil económica con papel o flores naturales"
+      ],
+      "respuesta": "La corona o diadema de cempasúchil es el accesorio emblemático para acompañar el vestuario de Catrina. Puedes elaborarla en 20 minutos de dos formas:\n\n**Opción A: Con flores naturales:**\n- **Materiales:** Diadema plástica ancha, 8 a 10 cabezas de flor de cempasúchil frescas, cinta floral verde (*floratape*) o silicón frío, y ramitas de follaje o nube blanca.\n- **Pasos:** Corta el tallo de las flores dejando solo 2 cm. Sujeta cada flor a la diadema enrollando firmemente la cinta floral verde alrededor del tallo y la base. Añade ramitas de flor de nube entre los cempasúchiles para dar volumen y contraste.\n\n**Opción B: Con papel crepé (duradera y económica):**\n- **Materiales:** Pliegos de papel crepé naranja y amarillo, tijeras, limpia-pipas o alambre delgado, y diadema base.\n- **Pasos:** Corta tiras de papel crepé de 10 cm de ancho y 1 metro de largo. Dóblalas en forma de acordeón, amarra el centro con un limpia-pipas y redondea los bordes con tijeras. Ve abriendo capa por capa hacia arriba hasta formar un pompón esponjoso idéntico al cempasúchil. Pega 5 a 7 flores de papel sobre la diadema.\n\n**Tiempo:** 20 a 30 minutos. **Costo aproximado:** Muy económico (menos de $50 MXN).",
+      "palabras_clave": [
+        "corona de cempasuchil",
+        "diadema de flores",
+        "como hacer corona",
+        "manualidad cempasuchil",
+        "flores de papel crepe",
+        "corona para catrina",
+        "tocado de catrina"
+      ],
+      "sinonimos": [
+        "diadema catrina diy",
+        "adorno de flores cabeza",
+        "tocado floral dia de muertos"
+      ],
+      "fuentes": [
+        "tiendanube-manualidades",
+        "agricultura-cempasuchil"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "Puedes hacer una hermosa corona doblando tiritas de papel crepé naranja en forma de acordeón, amarrando el centro y despegando los pétalos como un pompón esponjoso. Luego las pegas en una diadema y ¡listo!",
+      "conceptos": [
+        "flor",
+        "manualidad",
+        "practico"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "diy-papel-picado",
+      "tema": "Cómo elaborar papel picado tradicional paso a paso",
+      "categoria": "manualidades",
+      "preguntas_ejemplo": [
+        "¿Cómo se hace el papel picado artesanal?",
+        "Tutorial de papel picado fácil con tijeras",
+        "¿Qué figuras se pueden recortar en el papel picado?",
+        "Materiales para hacer papel picado en casa o escuela"
+      ],
+      "respuesta": "El papel picado representa el elemento **viento** en la ofrenda y su movimiento avisa la llegada de las almas. Para elaborarlo artesanalmente en casa o salón de clases:\n\n**Materiales:**\n- Hojas de papel de china de colores vivos (morado, naranja, amarillo, rosa mexicano).\n- Tijeras de punta redonda o cúter para detalles.\n- Hilo de cáñamo o estambre y pegamento en barra.\n\n**Paso a paso:**\n1. **Pestaña superior:** Dobla unos 2 cm en la parte superior del papel de china (será la pestaña por donde pasará el hilo) y no recortes esa zona.\n2. **Doblado simétrico:** Dobla la hoja a la mitad a lo largo, luego a la mitad otra vez y en triángulo (similar a recortar copos de nieve).\n3. **Cortes geométricos:** Con las tijeras, realiza pequeños cortes triangulares, semicirculares y en forma de rombos en los bordes de los pliegues. Al desdoblar, estos cortes formarán calaveras, cruces, flores o grecas simétricas.\n4. **Montaje:** Desdobla con mucho cuidado para no rasgarlo. Pasa el hilo de cáñamo por el doblez de la pestaña superior y sella con pegamento en barra para armar tu guirnalda.\n\n**Simbolismo de los colores:** Naranja (luto y cempasúchil), morado (duelo y solemnidad católica), rosa (celebración y alegría de recibir a los muertos), blanco (pureza de los niños).",
+      "palabras_clave": [
+        "como hacer papel picado",
+        "tutorial papel picado",
+        "papel de china",
+        "guirnalda",
+        "figuras de papel picado",
+        "elemento viento",
+        "manualidad escolar"
+      ],
+      "sinonimos": [
+        "elaboracion de papel picado",
+        "banderines de dia de muertos",
+        "papel recortado ofrenda"
+      ],
+      "fuentes": [
+        "tiendanube-manualidades",
+        "inpi-elementos-ofrenda"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "El papel picado se hace doblando papel de china de colores como un abanico y haciéndole cortecitos con tijeras. Cuando lo abres con cuidado, ¡aparecen calaveritas y figuras mágicas que vuelan con el viento!",
+      "conceptos": [
+        "manualidad",
+        "practico",
+        "ofrenda"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "disfraz-juvenil-economico",
+      "tema": "Ideas de vestuario y disfraz de Día de Muertos económico",
+      "categoria": "manualidades",
+      "preguntas_ejemplo": [
+        "¿Cómo vestirme de Catrina sin gastar mucho dinero?",
+        "Ideas de vestuarios de Día de Muertos con ropa que ya tengo",
+        "Disfraz juvenil de Catrín o calavera barato",
+        "Vestuario para concurso de Catrinas escolar"
+      ],
+      "respuesta": "No necesitas rentar disfraces costosos para lucir un vestuario impactante de Catrina o Catrín. Puedes armarlo con ropa básica y creatividad:\n\n**Para Catrina:**\n- **Prendas base:** Un vestido negro largo, o falda larga y blusa negra o blanca campesina que tengas en casa.\n- **Toque tradicional:** Añade un rebozo cruzado al pecho o sobre los hombros, o una mascada floreada.\n- **Accesorios DIY:** Diadema de flores de cempasúchil hechas con papel crepé o flores de tela recicladas, collares de cuentas o perlas de fantasía y guantes de encaje.\n\n**Para Catrín:**\n- **Prendas base:** Pantalón negro de vestir, camisa blanca y saco oscuro o chaleco.\n- **Detalles elegantes:** Corbata de moño o pañuelo rojo/negro al cuello, un sombrero de ala ancha decorado con una cinta satinada o una pequeña flor, y un bastón o paraguas clásico de mano.\n\n**Elementos unisex alternativos:**\n- Si prefieres un estilo casual o urbano: chamarra de mezclilla o cuero con una playera negra estampada con calavera, tenis y sombrero fedora intervenido con flores secas.",
+      "palabras_clave": [
+        "disfraz economico",
+        "vestuario catrina",
+        "vestuario catrin",
+        "ropa reciclada",
+        "disfraz barato dia de muertos",
+        "ideas para vestirse",
+        "concurso escolar catrinas"
+      ],
+      "sinonimos": [
+        "traje de catrina casero",
+        "como vestirse de catrin",
+        "outfit dia de muertos"
+      ],
+      "fuentes": [
+        "tiendanube-manualidades",
+        "cultura-catrina"
+      ],
+      "prioridad": 6,
+      "respuesta_ninos": "Con un vestido negro, un rebozo bonito de mamá y una diadema de flores de papel te conviertes en una Catrina maravillosa; o con pantalón negro, camisa blanca y sombrero en un elegante Catrín.",
+      "conceptos": [
+        "catrina",
+        "practico"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "seguridad-maquillaje-jovenes",
+      "tema": "Recomendaciones de seguridad en maquillaje y cosméticos para jóvenes",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "¿Qué precauciones tener al maquillarse la cara de calavera?",
+        "¿Es seguro el maquillaje para Día de Muertos?",
+        "¿Cómo evitar alergias con la pintura de Catrina?",
+        "Recomendaciones de PROFECO para maquillaje de disfraces"
+      ],
+      "respuesta": "Para disfrutar la caracterización sin poner en riesgo la piel ni los ojos, la Procuraduría Federal del Consumidor (PROFECO) y dermatólogos recomiendan:\n\n1. **Verificar etiquetado:** Usa únicamente cosméticos y pinturas formuladas para uso facial y corporal. Deben señalar fecha de caducidad e ingredientes. Nunca uses pinturas de vinilo, aerosoles, acrílicos escolares ni tinturas para calzado.\n2. **Prueba de parche:** 24 horas antes de la fiesta, aplica una pequeña cantidad de pintura detrás de la oreja o en el antebrazo. Si se presenta enrojecimiento, comezón o ardor, suspende su uso de inmediato.\n3. **Cuidado del área ocular:** No apliques pigmentos no certificados ni pegamento cerca de los ojos o en las mucosas. Evita colocar pedrería en los párpados móviles.\n4. **Pegamentos seguros:** Si usas aplicaciones, utiliza pegamento especial para pestañas o adhesivos cosméticos faciales con base acuosa; nunca pegamento blanco escolar ni pegamentos instantáneos tipo cianoacrilato.\n5. **Retiro adecuado:** No te duermas con el maquillaje puesto. Retíralo con agua tibia, desmaquillante bifásico o aceite vegetal (como de coco o almendras), y lava con jabón neutro.",
+      "palabras_clave": [
+        "seguridad maquillaje",
+        "profeco",
+        "alergias maquillaje",
+        "cuidados piel catrina",
+        "pintura toxica",
+        "desmaquillar",
+        "prueba de parche",
+        "adhesivo facial"
+      ],
+      "sinonimos": [
+        "cuidados al pintarse la cara",
+        "precauciones maquillaje calavera",
+        "maquillaje seguro adolescentes"
+      ],
+      "fuentes": [
+        "profeco-maquillaje-seguridad"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "Siempre pide ayuda a un adulto para revisar que la pintura sea suave para la piel, no pongas brillantina cerca de los ojos y antes de dormir lávate bien la carita con agua y jabón.",
+      "conceptos": [
+        "practico"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "pelicula-coco",
+      "tema": "La película 'Coco' (2017) y su representación del Día de Muertos",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿Qué tan acertada es la película Coco sobre el Día de Muertos?",
+        "¿Qué significado tiene la película Coco?",
+        "¿Cómo retrata Coco el mundo de los muertos y la ofrenda?",
+        "Análisis de Coco de Pixar y las tradiciones mexicanas"
+      ],
+      "respuesta": "Dirigida por Lee Unkrich y Adrian Molina, **Coco** (Pixar/Disney, 2017) es una de las películas animadas más influyentes sobre el Día de Muertos. Logró proyectar la tradición a nivel global gracias a una profunda investigación en comunidades de Michoacán, Oaxaca y Guanajuato:\n\n- **Aciertos culturales fundamentales:** Refleja con precisión la importancia de la **fotografía en la ofrenda** como puente de memoria, el **camino de pétalos de cempasúchil** que conecta ambos mundos, el rol del **xoloitzcuintle** (Dante) como guía espiritual y la música folclórica mexicana (son jarocho, mariachi y trova tradicional).\n- **Ficción cinematográfica vs tradición real:** En la película, los difuntos solo existen mientras alguien vivo los recuerde ('la última muerte'). En la tradición popular y católica mexicana, en cambio, la oración y la eucaristía abarcan a todas las 'ánimas del purgatorio', incluso a las olvidadas. Asimismo, la 'Tierra de los Muertos' se representa como una deslumbrante metrópoli victoriana/virreinal con aduanas, una convención dramática moderna que difiere de la cosmovisión indígena del Mictlán.",
+      "palabras_clave": [
+        "pelicula coco",
+        "coco pixar",
+        "miguel y hector",
+        "tierra de los muertos coco",
+        "analisis de coco",
+        "cempasuchil en coco",
+        "dante xoloitzcuintle",
+        "cultura pop dia de muertos"
+      ],
+      "sinonimos": [
+        "pelicula de dia de muertos coco",
+        "aciertos culturales de coco",
+        "pelicula animada coco"
+      ],
+      "fuentes": [
+        "disney-coco-analisis",
+        "unam-global-ofrendas"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Coco es una película hermosa donde el niño Miguel viaja a la Tierra de los Recordados gracias al puente de pétalos de cempasúchil y descubre que recordar a su familia con amor y música mantiene vivos sus recuerdos para siempre.",
+      "conceptos": [
+        "origen",
+        "creencia"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "pelicula-el-libro-de-la-vida",
+      "tema": "La película 'El libro de la vida' (2014) y el folclore mexicano",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿De qué trata El libro de la vida?",
+        "¿Quién dirigió El libro de la vida y cómo representa el Día de Muertos?",
+        "Diferencia entre Coco y El libro de la vida",
+        "Personajes de La Muerte y Xibalba en El libro de la vida"
+      ],
+      "respuesta": "**El libro de la vida** (The Book of Life, 2014), producida por Guillermo del Toro y dirigida por el animador mexicano Jorge R. Gutiérrez, es un tributo visual fascinante al folclore, el arte popular de madera y el Día de Muertos:\n\n- **Estilo visual único:** Los personajes están diseñados como figuras talladas de madera tradicionales mexicanas con articulaciones a la vista, inspiradas en las artesanías de los mercados populares.\n- **Mitología y reinos:** Introduce dos dimensiones gobernadas por deidades del folclore: la deslumbrante **Tierra de los Recordados** (gobernada por una Catrina festiva hecha de azúcar) y la oscura **Tierra de los Olvidados** (gobernada por Xibalba, inspirada en el inframundo maya).\n- **Historia y música:** Sigue a Manolo, Joaquín y María en una historia de valentía donde el protagonista rechaza la violencia de la tauromaquia y conquista su destino a través de la música y la memoria de sus ancestros.",
+      "palabras_clave": [
+        "el libro de la vida",
+        "jorge r gutierrez",
+        "guillermo del toro",
+        "manolo sanchez",
+        "la muerte y xibalba",
+        "tierra de los recordados",
+        "animacion mexicana",
+        "pelicula dia de muertos"
+      ],
+      "sinonimos": [
+        "pelicula book of life",
+        "animacion de madera dia de muertos",
+        "el libro de la vida del toro"
+      ],
+      "fuentes": [
+        "disney-coco-analisis"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "El libro de la vida es una película con muñequitos de madera mágicos donde Manolo viaja a la fiesta más brillante del más allá para salvar a su pueblo cantando con su guitarra.",
+      "conceptos": [
+        "creencia"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "pelicula-macario",
+      "tema": "La película clásica 'Macario' (1960) y la alegoría de la muerte",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿De qué trata la película Macario?",
+        "¿Por qué es importante Macario para el Día de Muertos?",
+        "¿Quién protagonizó la película Macario?",
+        "Las velas de la vida en la película Macario"
+      ],
+      "respuesta": "**Macario** (1960), dirigida por Roberto Gavaldón y basada en el relato de B. Traven, es una obra cumbre del cine mexicano y la primera película nacional nominada al Óscar a Mejor Película Extranjera:\n\n- **Trama y simbolismo:** Ambientada en el virreinato, sigue a Macario (interpretado magistralmente por Ignacio López Tarso), un leñador sumido en la extrema pobreza cuyo mayor anhelo es comerse un pavo asado entero él solo, sin tener que repartirlo con sus hambrientos hijos. En el bosque se le presentan el Diablo, Dios y la Muerte; Macario solo comparte su comida con la Muerte, argumentando que a ella no le importa la riqueza ni el poder, pues siempre llega a tiempo para todos.\n- **Las velas de la existencia:** En agradecimiento, la Muerte le entrega un agua milagrosa capaz de curar cualquier enfermedad, siempre y cuando la Muerte se pare a los pies del enfermo y no a la cabeza. La escena culminante en las grutas de Cacahuamilpa, rodeadas de miles de velas titilantes que representan las vidas humanas, es una de las metáforas visuales más impactantes de la historia cinematográfica sobre la fragilidad humana.",
+      "palabras_clave": [
+        "macario",
+        "roberto gavaldon",
+        "ignacio lopez tarso",
+        "cine mexicano clasico",
+        "velas de macario",
+        "pavo de macario",
+        "alegoria de la muerte",
+        "cine dia de muertos"
+      ],
+      "sinonimos": [
+        "pelicula macario 1960",
+        "macario y la muerte",
+        "cine de oro dia de muertos"
+      ],
+      "fuentes": [
+        "cineteca-macario"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Macario es una película clásica mexicana donde un leñador comparte un pavo con la Muerte en el bosque, y ella le muestra una cueva con miles de velitas donde cada flama representa la vida de una persona.",
+      "conceptos": [
+        "luz",
+        "difunto",
+        "creencia"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "cine-terror-mexicano",
+      "tema": "Recomendaciones de cine de terror mexicano para Día de Muertos",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿Qué películas mexicanas de terror me recomiendas?",
+        "Recomiéndame 3 películas mexicanas de terror",
+        "Cine de terror clásico y moderno en México",
+        "Películas de miedo mexicanas para ver en noviembre"
+      ],
+      "respuesta": "México tiene una rica tradición cinematográfica en el género de horror y suspenso gótico. Aquí tienes recomendaciones destacadas divididas por épocas:\n\n**Clásicos del terror gótico mexicano:**\n1. **Hasta el viento tiene miedo (1968, Dir. Carlos Enrique Taboada):** Obra maestra del terror psicológico ambientada en un internado de señoritas acechado por el fantasma de una alumna que busca justicia.\n2. **El escapulario (1968, Dir. Servando González):** Durante la Revolución Mexicana, un sacerdote escucha la confesión de una mujer que posee un escapulario milagroso que protege a quien lo use de morir, pero desata fatídicas ironías del destino.\n3. **Veneno para las hadas (1984, Dir. Carlos Enrique Taboada):** Inquietante filme sobre la sugestión, la infancia y la maldad, donde una niña convence a su amiga de que es una auténtica bruja con poderes oscuros.\n4. **Más negro que la noche (1975, Dir. Carlos Enrique Taboada):** Cuatro jóvenes heredan una tétrica mansión con la condición de cuidar al gato negro de la tía fallecida; el descuido del animal desata apariciones mortales.\n\n**Terror contemporáneo:**\n5. **Kilómetro 31 (2006, Dir. Rigoberto Castañeda):** Inspirada en la leyenda de La Llorona y apariciones en carreteras, combina mitología ancestral y misterio forense moderno.\n6. **Huesera (2022, Dir. Michelle Garza Cervera):** Aclamada película de terror corporal y psicológico que aborda la maternidad y el folclore de la brujería urbana.",
+      "palabras_clave": [
+        "peliculas de terror mexicanas",
+        "cine de terror mexicano",
+        "carlos enrique taboada",
+        "hasta el viento tiene miedo",
+        "el escapulario",
+        "veneno para las hadas",
+        "kilometro 31",
+        "huesera",
+        "terror gotico mexicano",
+        "peliculas de miedo"
+      ],
+      "sinonimos": [
+        "recomiendame peliculas de terror",
+        "mejores peliculas mexicanas de miedo",
+        "cine de horror nacional"
+      ],
+      "fuentes": [
+        "imcine-cine-terror"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "El cine mexicano tiene películas de misterio muy famosas como 'Hasta el viento tiene miedo' y 'El escapulario', que cuentan historias de fantasmas y leyendas misteriosas en internados antiguos o durante la Revolución.",
+      "conceptos": [
+        "creencia"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "videojuegos-dia-muertos",
+      "tema": "Videojuegos inspirados en el Día de Muertos y el inframundo",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿Qué videojuegos tienen relación con el Día de Muertos o el Mictlán?",
+        "Videojuegos sobre el folclore mexicano y el inframundo",
+        "¿De qué trata Grim Fandango?",
+        "¿De qué trata Guacamelee?"
+      ],
+      "respuesta": "El Día de Muertos y la mitología mesoamericana han inspirado títulos aclamados en la industria de los videojuegos:\n\n1. **Grim Fandango (LucasArts, 1998, Dir. Tim Schafer):** Una de las mayores joyas de las aventuras gráficas interactivas. Ambientado en una fascinante mezcla de cine negro policíaco (*film noir*) y folclore del Día de Muertos, juegas como Manny Calavera, un agente de viajes en el Departamento de la Muerte que debe ayudar a las almas a ganar su boleto en el tren 'Número Nueve' a través de la Tierra de los Muertos.\n2. **Guacamelee! y Guacamelee! 2 (DrinkBox Studios, 2013/2018):** Un vertiginoso juego de acción y plataformas estilo *Metroidvania* ambientado en un colorido México mágico. Controlas a Juan Aguacate, un luchador con máscara mística que puede cambiar en tiempo real entre el **Mundo de los Vivos** y el **Mundo de los Muertos** para resolver acertijos y derrotar a Carlos Calaca.\n3. **Mulaka (Lienzo, 2018):** Creado por un estudio mexicano de Chihuahua, es un juego de acción y aventura en 3D basado en la rica mitología del pueblo indígena Rarámuri (Tarahumara), donde combates seres del inframundo utilizando poderes de los semidioses locales.",
+      "palabras_clave": [
+        "videojuegos dia de muertos",
+        "grim fandango",
+        "manny calavera",
+        "guacamelee",
+        "juan aguacate",
+        "mulaka",
+        "mundo de los muertos videojuegos",
+        "juegos de video folclore mexicano"
+      ],
+      "sinonimos": [
+        "gaming dia de muertos",
+        "juegos basados en el mictlan",
+        "videojuegos de calaveras"
+      ],
+      "fuentes": [
+        "proyecto-criterios"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "En los videojuegos, títulos como 'Grim Fandango' y 'Guacamelee!' te permiten jugar con calaveritas simpáticas y luchadores mágicos que viajan entre el mundo de los vivos y el de los muertos.",
+      "conceptos": [
+        "calavera"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "musica-playlists-dia-muertos",
+      "tema": "Música tradicional, sones y playlists para el Día de Muertos",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿Qué música se escucha en el Día de Muertos?",
+        "Recomendaciones de canciones para el Día de Muertos",
+        "Playlist de canciones de Día de Muertos para jóvenes",
+        "Sones tradicionales y rock mexicano de Día de Muertos"
+      ],
+      "respuesta": "La música de Día de Muertos combina melodías fúnebres solemnes, sones festivos y adaptaciones de rock y folclore contemporáneo:\n\n**Canciones tradicionales indispensables:**\n1. **La Llorona:** El himno no oficial del Día de Muertos, de origen oaxaqueño (Itsmo de Tehuantepec). Versiones legendarias de Chavela Vargas, Lila Downs, Eugenia León y Ángela Aguilar.\n2. **La Martiniana:** Célebre son jarocho y tehuano atribuido a Andrés Henestrosa, cuya letra resume la filosofía de la fiesta: *'No me llores, no, porque si lloras yo peno; en cambio si tú me cantas, yo siempre vivo y nunca muero'*\n3. **La Bruja y El Cascabel:** Tradicionales sones jarochos que acompañan las comparsas con arpa, jarana y zapateado festivo.\n4. **Dios Nunca Muere:** Vals del compositor oaxaqueño Macedonio Alcalá, himno solemne de respeto a los antepasados.\n\n**Fusiones contemporáneas para jóvenes:**\n5. **Calaveras y Diablitos (Los Fabulosos Cadillacs):** Rock/ska latinoamericano que celebra la vida y la caducidad con espíritu alegre.\n6. **Vienen Bajando (ChocQuibTown) y La Calaca (Amparo Ochoa):** Ritmos alegres que festejan el retorno temporal de las almas.",
+      "palabras_clave": [
+        "musica dia de muertos",
+        "canciones dia de muertos",
+        "la llorona",
+        "la martiniana",
+        "playlist dia de muertos",
+        "son jarocho",
+        "sones tradicionales",
+        "chavela vargas",
+        "lila downs"
+      ],
+      "sinonimos": [
+        "que musica poner en la ofrenda",
+        "canciones tipicas de noviembre",
+        "canciones de calaveras"
+      ],
+      "fuentes": [
+        "fonoteca-musica-muertos"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "En la ofrenda se escuchan canciones muy bonitas como 'La Llorona' o 'La Martiniana', que nos recuerdan que mientras cantemos y recordemos con alegría a quienes queremos, ellos nunca mueren.",
+      "conceptos": [
+        "origen"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "desfile-dia-muertos-cdmx",
+      "tema": "El Gran Desfile de Día de Muertos de la CDMX y la resignificación urbana",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿Cómo nació el desfile de Día de Muertos en la CDMX?",
+        "¿El desfile de Día de Muertos fue inventado por James Bond?",
+        "Historia del Gran Desfile de la Ciudad de México",
+        "Resignificación contemporánea del Día de Muertos en la capital"
+      ],
+      "respuesta": "El **Gran Desfile de Día de Muertos de la Ciudad de México** es un ejemplo fascinante de cómo la cultura masiva contemporánea dialoga y se apropia de la tradición comunitaria:\n\n- **El origen en el cine (2015):** En la película *Spectre* (saga James Bond 007, 2015), rodada en el Centro Histórico de la CDMX, los guionistas inventaron un majestuoso desfile de calaveras monumentales y catrinas que en realidad no existía como tradición histórica en la capital.\n- **La adopción popular (2016 en adelante):** Al ver el impacto mundial de la estética cinematográfica, el Gobierno de la CDMX y colectivos de artesanos crearon formalmente en 2016 el primer desfile ciudadano. Lo que comenzó como una escena de película de Hollywood fue rápidamente resignificado por la sociedad mexicana: miles de familias, bailarines, artistas cartoneros de FAROS (Fábricas de Artes y Oficios) y carros alegóricos convirtieron el desfile en un carnaval de identidad nacional que hoy congrega a más de un millón de asistentes en Paseo de la Reforma.\n- **Tradición viva:** Muestra que las tradiciones culturales no son piezas inmóviles de museo, sino procesos vivos que incorporan nuevas formas de festejo urbano sin borrar las ofrendas íntimas en los hogares.",
+      "palabras_clave": [
+        "desfile cdmx",
+        "gran desfile dia de muertos",
+        "james bond",
+        "spectre",
+        "paseo de la reforma",
+        "resignificacion",
+        "desfile de calaveras",
+        "cultura masiva"
+      ],
+      "sinonimos": [
+        "carnaval dia de muertos mexico",
+        "origen del desfile en reforma",
+        "cuando empezo el desfile de catrinas"
+      ],
+      "fuentes": [
+        "cdmx-desfile-historia",
+        "cdmx-programacion"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "El gran desfile de calaveritas gigantes que pasa por Reforma nació cuando filmaron una película de acción en 2015; a la gente le gustó tanto que desde entonces cada año artistas y familias se visten de catrines para desfilar juntos.",
+      "conceptos": [
+        "catrina",
+        "patrimonio"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "tradicion-mixquic-alumbrada",
+      "tema": "San Andrés Mixquic y la Alumbrada en el panteón",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿Cómo se celebra el Día de Muertos en Mixquic?",
+        "¿Qué es la Alumbrada de San Andrés Mixquic?",
+        "¿Cuándo se visita el panteón en Mixquic?",
+        "Tradiciones de Tláhuac y Mixquic en Día de Muertos"
+      ],
+      "respuesta": "**San Andrés Mixquic**, pueblo originario de la alcaldía Tláhuac al sur de la Ciudad de México, conserva una de las expresiones comunitarias más famosas del culto a los difuntos:\n\n- **La Alumbrada (noche del 2 de noviembre):** Alrededor de las 8 de la noche, las luces eléctricas del pueblo y del templo de San Andrés Apóstol se apagan por completo. El camposanto, que rodea la parroquia, se ilumina exclusivamente con la luz dorada de miles de cirios, veladoras y fogatas.\n- **Convivencia sobre las tumbas:** Las familias adornan las tumbas de sus deudos con alfombras espesas de pétalos de cempasúchil, flores de terciopelo morado y nubes blancas. Los deudos limpian los sepulcros, conviven en silencio, rezan o cantan mientras comparten café de olla, pan de muerto y tamales con los visitantes.\n- **Campanadas solemnes:** Desde el campanario virreinal, el toque de ánimas dobla rítmicamente durante toda la noche para guiar a los espíritus de regreso a su morada.",
+      "palabras_clave": [
+        "mixquic",
+        "san andres mixquic",
+        "la alumbrada",
+        "panteon de mixquic",
+        "tlahuac",
+        "visita al panteon",
+        "cirios en tumbas",
+        "2 de noviembre noche"
+      ],
+      "sinonimos": [
+        "alumbrada en tlahuac",
+        "cementerio iluminado mixquic",
+        "dia de muertos en san andres mixquic"
+      ],
+      "fuentes": [
+        "inah-mixquic-alumbrada",
+        "cdmx-tlahuac-fiddem"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "En Mixquic apagan todas las luces eléctricas del pueblo la noche del 2 de noviembre y encienden miles de velas doradas sobre las tumbas llenas de flores para despedir a los seres queridos en una noche mágica.",
+      "conceptos": [
+        "toponimos",
+        "regional",
+        "luz"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "tradicion-janitzio-patzcuaro",
+      "tema": "Janitzio y Pátzcuaro: La velación purépecha de las ánimas",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿Cómo es el Día de Muertos en Janitzio y Pátzcuaro?",
+        "¿Qué es la fiesta de Animecha Kejtzitakua?",
+        "¿Cómo se celebra la noche de muertos en Michoacán?",
+        "Canoas y mariposas en el lago de Pátzcuaro"
+      ],
+      "respuesta": "En la región lacustre de Pátzcuaro, Michoacán (incluyendo las islas de Janitzio, Pacanda, Yunuén y los pueblos ribereños de Tzintzuntzan e Ihuatzio), la comunidad indígena **purépecha** celebra el ritual ancestral de **Animecha Kejtzitakua** (fiesta de las ánimas):\n\n- **Las canoas con redes mariposa:** Durante la noche del 1 al 2 de noviembre, los pescadores surcan las aguas brumosas del lago de Pátzcuaro en canoas tradicionales con redes en forma de mariposa iluminadas por antorchas y cirios encendidos.\n- **Velación en el camposanto:** En el panteón de la isla de Janitzio, las mujeres y niños purépechas se sientan en silencio arropados con rebozos oscuros frente a las tumbas, cubiertas por arcos monumentales de cempasúchil y flores amarillas, mientras los hombres entonan cánticos en lengua purépecha y los sacerdotes incensan con copal.\n- **Ambiente solemne:** A diferencia de la fiesta urbana ruidosa, en Janitzio y Tzintzuntzan el ambiente tradicional es de profunda reverencia mística, respeto espiritual y amor familiar.",
+      "palabras_clave": [
+        "janitzio",
+        "patzcuaro",
+        "michoacan",
+        "animecha kejtzitakua",
+        "purepecha",
+        "redes de mariposa",
+        "lago de patzcuaro",
+        "tzintzuntzan",
+        "velacion nocturna"
+      ],
+      "sinonimos": [
+        "noche de muertos en janitzio",
+        "panteon de tzintzuntzan",
+        "tradicion purepecha de muertos"
+      ],
+      "fuentes": [
+        "inah-janitzio-purepecha",
+        "inah-diariodecampo-michoacan"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "En la isla de Janitzio la gente llega en barquitos con luces sobre el agua del lago. Las familias se sientan en el panteón junto a arcos gigantes de cempasúchil encendidos con velas para platicar con el corazón con sus abuelitos.",
+      "conceptos": [
+        "toponimos",
+        "regional",
+        "luz"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "tradicion-xantolo-huasteca",
+      "tema": "Xantolo: La gran fiesta de los muertos en la Huasteca",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿Qué es el Xantolo y dónde se celebra?",
+        "¿Cómo se celebra el Día de Muertos en la Huasteca?",
+        "¿Qué son las cuadrillas y los huehues en Xantolo?",
+        "¿Qué comida típica se prepara en Xantolo?"
+      ],
+      "respuesta": "**Xantolo** (palabra derivada del latín *Sanctorum* o Todos los Santos) es la máxima festividad tradicional de la región **Huasteca**, compartida por comunidades indígenas teenek y nahuas de San Luis Potosí, Hidalgo, Veracruz y Tamaulipas:\n\n- **Danzas y cuadrillas de comparsas:** Los habitantes se organizan en *cuadrillas* de danzantes (*huehues* o ancianos) que usan máscaras artesanales de madera tallada (representando a la Muerte, el Diablo, el Comiteco y mujeres tradicionales). Bailan por las calles al ritmo de sones huastecos con violín y jarana para confundir a la muerte y celebrar la vida.\n- **El Zacahuil tradicional:** En lo gastronómico, el platillo estelar es el **zacahuil**, un tamal monumental de masa martajada de maíz, chile ancho y carne, envuelto en hojas de plátano y horneado en pozo de tierra durante 12 a 14 horas, suficiente para alimentar a familias enteras y visitantes comunitarios.\n- **Arcos de palma y flor:** En lugar de mesas simples, se construyen arcos curvos con varas de árbol cubiertas de flores de cempasúchil y mano de león, que representan la puerta celestial por donde cruzan las ánimas.",
+      "palabras_clave": [
+        "xantolo",
+        "huasteca",
+        "san luis potosi",
+        "hidalgo",
+        "cuadrillas",
+        "huehues",
+        "mascaras de madera",
+        "zacahuil",
+        "son huasteco",
+        "arcos de palma"
+      ],
+      "sinonimos": [
+        "fiesta del xantolo",
+        "dia de muertos en la huasteca hidalguense",
+        "danzantes de xantolo"
+      ],
+      "fuentes": [
+        "cultura-xantolo-huasteca",
+        "inpi-fiestas-pueblos"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "El Xantolo es una fiesta alegre en la Huasteca donde bailarines con máscaras de madera chistosas bailan en las calles para despistar a la muerte, mientras preparan un tamal gigante llamado zacahuil que alcanza para todo el pueblo.",
+      "conceptos": [
+        "toponimos",
+        "regional",
+        "comida"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "tradicion-pomuch-limpieza-huesos",
+      "tema": "Pomuch, Campeche y el ritual de limpieza de huesos (Choo Ba'ak)",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿En qué lugar de México limpian los huesos de los difuntos?",
+        "¿Cómo es el ritual de Pomuch en Campeche?",
+        "¿Qué es la tradición de Choo Ba'ak?",
+        "La limpia de osamentas en el panteón de Pomuch"
+      ],
+      "respuesta": "En la villa maya de **Pomuch** (municipio de Hecelchakán, Campeche), se practica una de las tradiciones funerarias más singulares, respetuosas y documentadas del país: el **Choo Ba'ak** o limpia ritual de huesos:\n\n- **El proceso ritual:** Cuando una persona fallece, permanece sepultada durante tres años. Transcurrido ese periodo de descanso y secado natural, los familiares exhuman los restos y depositan la osamenta en una pequeña caja de madera abierta (osario).\n- **La caricia de la memoria:** Cada año, entre el 25 de octubre y el 1 de noviembre, los familiares acuden al cementerio, sacan cuidadosamente los huesos de la cajita y los limpian uno por uno con brochas finas y paños suaves, retirando el polvo acumulado mientras conversan con el difunto y le cuentan las novedades de la familia.\n- **Paños bordados nuevos:** Los huesos se acomodan ordenadamente (los más grandes en la base y el cráneo en la parte superior viendo hacia el exterior) sobre un paño de tela blanca nuevo, primorosamente bordado a mano con flores, cruces y el nombre del familiar.\n- **Significado:** Lejos de ser una práctica morbosa, para la comunidad maya de Pomuch es el mayor acto de amor, higiene espiritual y cariño filial hacia sus ancestros.",
+      "palabras_clave": [
+        "pomuch",
+        "campeche",
+        "limpieza de huesos",
+        "limpia de huesos",
+        "choo baak",
+        "osarios",
+        "mayas",
+        "panos bordados",
+        "panteon de pomuch",
+        "exhumacion ritual"
+      ],
+      "sinonimos": [
+        "limpieza de restos pomuch",
+        "tradicion de huesos en campeche",
+        "donde limpian los huesos de muertos"
+      ],
+      "fuentes": [
+        "inah-pomuch-limpieza-huesos"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "En Pomuch, Campeche, las familias mayas van al cementerio con mucho cariño a limpiar con brochitas suaves los huesitos de sus abuelitos y colocarlos sobre mantitas blancas bordadas con flores para cuidarlos como si estuvieran en casa.",
+      "conceptos": [
+        "regional",
+        "difunto"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "tradicion-oaxaca-muerteadas",
+      "tema": "Oaxaca: Comparsas, muerteadas y tapetes de arena de Valles Centrales",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿Cómo es el Día de Muertos en Oaxaca?",
+        "¿Qué son las muerteadas y comparsas oaxaqueñas?",
+        "¿Dónde se hacen tapetes de arena para Día de Muertos?",
+        "Panteones de Santa Cruz Xoxocotlán y San Felipe del Agua"
+      ],
+      "respuesta": "En **Oaxaca**, particularmente en los Valles Centrales (Oaxaca de Juárez, Santa Cruz Xoxocotlán, Etla y Zaachila), el Día de Muertos es una de las manifestaciones más vivas y coloridas de México:\n\n- **Muerteadas y comparsas:** Son desfiles teatrales y carnavalescos vecinales donde personas de todas las edades se disfrazan con trajes de cascabeles y espejos, bailando toda la noche por las calles acompañados de bandas de viento filarmónicas tradicionales.\n- **Tapetes monumentales de arena:** En patios, plazas y panteones se elaboran majestuosos tapetes efímeros hechos con arena cernida, aserrín de colores y pigmentos minerales, representando calaveras, santos o alegorías mitológicas zapotecas y mixtecas.\n- **Velaciones en panteones:** En los panteones de **Santa Cruz Xoxocotlán** y **San Felipe del Agua**, la gente pasa la noche entera iluminando las sepulturas con cientos de veladoras, rezando y compartiendo pan de yema, mole negro y chocolate oaxaqueño con agua.",
+      "palabras_clave": [
+        "oaxaca",
+        "muerteadas",
+        "comparsas oaxaquenas",
+        "tapetes de arena",
+        "xoxocotlan",
+        "san felipe del agua",
+        "pan de yema",
+        "mole negro",
+        "valles centrales"
+      ],
+      "sinonimos": [
+        "dia de muertos en oaxaca",
+        "fiestas de noviembre en oaxaca",
+        "comparsa de muertos etla"
+      ],
+      "fuentes": [
+        "oaxaca-muerteadas-tapetes",
+        "inpi-elementos-ofrenda"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "En Oaxaca la fiesta es gigante: hay bandas de música que tocan toda la noche mientras la gente baila con trajes llenos de cascabeles y hacen tapetes gigantes de arena de colores en el suelo que parecen pinturas mágicas.",
+      "conceptos": [
+        "regional",
+        "comida",
+        "luz"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "tradicion-huaquechula-altares",
+      "tema": "Huaquechula, Puebla: Altares monumentales de satín blanco",
+      "categoria": "regional",
+      "preguntas_ejemplo": [
+        "¿Cómo son las ofrendas monumentales de Huaquechula?",
+        "¿Por qué los altares de Huaquechula son blancos?",
+        "Tradición de Día de Muertos en Huaquechula, Puebla",
+        "Ofrendas monumentales de cabo de año"
+      ],
+      "respuesta": "En la comunidad de **Huaquechula**, a los pies del volcán Popocatépetl en el estado de Puebla, se construyen los espectaculares **altares monumentales de satín blanco**, declarados Patrimonio Cultural de Puebla:\n\n- **Estructura piramidal blanca:** A diferencia de las ofrendas comunes llenas de coloridos papeles y flores naranjas, los altares de Huaquechula alcanzan de 3 a 5 metros de altura y están completamente tapizados en tela de satín blanco brillante con pliegues perfectos.\n- **Niveles arquitectónicos:**\n  1. *Primer nivel (lo terrenal):* La fotografía del difunto reflejada en un espejo (para que no esté atrapada directamente), rodeada de platillos favoritos, pan blanco de agua y frutas.\n  2. *Segundo nivel (la unión cielo-tierra):* Adornado con ángeles de yeso, querubines y candelabros que simbolizan el tránsito de las almas al paraíso.\n  3. *Tercer nivel (lo celestial):* Rematado por una cruz, un crucifijo o la imagen de la Virgen María.\n- **Dedicados al 'cabo de año':** Se levantan en las casas para quienes fallecieron durante el año transcurrido. Las familias abren las puertas de sus hogares a cualquier visitante que desee honrar al difunto con una cera o veladora, ofreciéndoles a cambio chocolate caliente y pan de Huaquechula.",
+      "palabras_clave": [
+        "huaquechula",
+        "puebla",
+        "altares monumentales",
+        "altares blancos",
+        "satin blanco",
+        "cabo de ano",
+        "espejo en la ofrenda",
+        "angeles de yeso"
+      ],
+      "sinonimos": [
+        "ofrendas gigantes de puebla",
+        "altares de huaquechula",
+        "tradicion blanca de huaquechula"
+      ],
+      "fuentes": [
+        "puebla-huaquechula-altares"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "En Huaquechula hacen pirámides enormes de tela blanca brillante con angelitos y espejos. Quien pasa por la casa puede entrar a ver el altar y la familia le regala un rico chocolate caliente.",
+      "conceptos": [
+        "regional",
+        "ofrenda",
+        "niveles"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "guia-visita-panteones",
+      "tema": "Guía y etiqueta para visitar panteones en Día de Muertos",
+      "categoria": "practico",
+      "preguntas_ejemplo": [
+        "¿Cuándo es recomendable visitar los panteones?",
+        "¿Cuándo es recomendable visitarlos en el panteón?",
+        "¿Qué días y horarios se va al panteón en Día de Muertos?",
+        "Reglas de respeto para visitar cementerios en Día de Muertos"
+      ],
+      "respuesta": "La visita a los panteones es uno de los momentos más íntimos y tradicionales de la festividad. Aquí tienes la guía de fechas y recomendaciones de respeto:\n\n**¿Cuándo es recomendable ir?**\n- **1 de noviembre (tarde y noche):** Si en la familia se recuerda a un infante (*angelito*), las familias suelen acudir durante la tarde a llevar flores blancas y juguetes.\n- **2 de noviembre (madrugada y todo el día):** Es el día central de la visita general para adultos. En comunidades con tradición de velación nocturna (como Mixquic, Janitzio, Xoxocotlán), la visita más emotiva ocurre desde la noche del 1 hasta el amanecer del 2 de noviembre.\n\n**Reglas de etiqueta y respeto comunitario:**\n1. **Respeta los espacios de duelo:** No pises las losas, tumbas ni las alfombras de flores. Pide permiso siempre antes de tomar fotografías a familiares rezando o conviviendo.\n2. **Silencio y prudencia:** Aunque hay música en algunas zonas, evita bocinas ruidosas personales o conductas inapropiadas.\n3. **Cero basura:** Todo residuo de comida, envases o ceras debe recogerse para mantener digno el camposanto.\n4. **Apoya a la comunidad:** Si visitas un pueblo tradicional, consume alimentos y flores con los productores locales.",
+      "palabras_clave": [
+        "cuando es recomendable visitarlos en el panteon",
+        "visitar el panteon",
+        "ir al cementerio",
+        "horarios panteon dia de muertos",
+        "respeto en el panteon",
+        "etiqueta en cementerios",
+        "visita a los panteones",
+        "velacion panteon"
+      ],
+      "sinonimos": [
+        "que dia se va al panteon",
+        "a que hora ir al cementerio dia de muertos",
+        "visitar tumbas de difuntos"
+      ],
+      "fuentes": [
+        "inah-mixquic-alumbrada",
+        "lugares-inah-fiestas-indigenas"
+      ],
+      "prioridad": 9,
+      "respuesta_ninos": "Al panteón se va el 1 y 2 de noviembre llevando flores y velitas para arreglar la tumba familiar. Se debe caminar despacito, sin pisar las flores y respetando a todas las personas que están recordando a sus seres queridos.",
+      "conceptos": [
+        "difunto",
+        "practico",
+        "luz"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "recomendacion-libros-juveniles",
+      "tema": "Recomendaciones de libros juveniles sobre Día de Muertos, mitos y leyendas",
+      "categoria": "calaveras",
+      "preguntas_ejemplo": [
+        "Recomiéndame 10 libros sobre el Día de Muertos",
+        "Recomiéndame libros que hablen del Día de Muertos",
+        "Libros juveniles mexicanos sobre la muerte y el Mictlán",
+        "¿Qué libros puedo leer sobre el Día de Muertos para secundaria o preparatoria?"
+      ],
+      "respuesta": "Aquí tienes 10 libros reales, reconocidos y recomendados para adolescentes y jóvenes sobre el Día de Muertos, leyendas e inframundo mexicano:\n\n1. **El libro salvaje** (Juan Villoro / FCE): Novela juvenil entrañable sobre el poder de los libros vivos, la memoria familiar y los recuerdos que perduran.\n2. **Huesos de lagartija** (Federico Navarrete / SM): Novela histórica donde un anciano mexica relata a sus nietos la caída de Tenochtitlan y el choque entre dos cosmovisiones sobre la muerte.\n3. **Los fantasmas de Fernando** (Jaime Alfonso Sandoval / SM): Divertida y conmovedora novela de humor negro donde un joven convive con fantasmas familiares mientras elabora su propio duelo.\n4. **Macario** (B. Traven): El clásico relato filosófico sobre la pobreza, el hambre y el encuentro inevitable entre un leñador y la Muerte.\n5. **Mictlán: La leyenda de los nueve niveles** (Colectivo editorial INAH): Divulgación ilustrada sobre el viaje de las almas al inframundo mexica.\n6. **Cuentos de espantos y aparecidos** (Coedición Latinoamericana): Antología imprescindible de leyendas tradicionales de fantasmas, ánimas y aparecidos de México y Latinoamérica.\n7. **La muerte tiene permiso** (Edmundo Valadés): Cuentos clásicos de justicia popular y crítica social con la muerte como telón de fondo.\n8. **Leyendas de la Ciudad de México** (Bernardo Couto Castillo y varios autores): Recopilación de crónicas virreinales: La Llorona, El Callejón del Aguacate y Don Juan Manuel.\n9. **Monstruos mexicanos** (Carmen Leñero / CONACULTA): Bestiario ilustrado que describe a los nahuales, aluches, la Tlanchana y criaturas míticas del folclore.\n10. **Posada: Monografía de 400 grabados** (José Guadalupe Posada / RM): Catálogo histórico indispensable de calaveras, catrinas y grabados satíricos.",
+      "palabras_clave": [
+        "recomiendame 10 libros",
+        "libros dia de muertos",
+        "libros juveniles dia de muertos",
+        "juan villoro",
+        "federico navarrete",
+        "jaime alfonso sandoval",
+        "b traven",
+        "literatura juvenil mexicana",
+        "libros de leyendas"
+      ],
+      "sinonimos": [
+        "libros sobre el mictlan",
+        "lecturas de dia de muertos",
+        "novelas mexicanas de misterio juvenil"
+      ],
+      "fuentes": [
+        "ibby-mexico-literatura-juvenil",
+        "unam-literatura-calaveritas"
+      ],
+      "prioridad": 9,
+      "respuesta_ninos": "Hay libros geniales como 'El libro salvaje' de Juan Villoro o cuentos ilustrados de leyendas mexicanas que te cuentan cómo los recuerdos y las historias mágicas mantienen vivos a nuestros seres queridos.",
+      "conceptos": [
+        "calaveras-literarias",
+        "origen"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "leyenda-la-llorona",
+      "tema": "La leyenda de La Llorona: De la diosa Cihuacóatl a la leyenda popular",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿Cuál es el origen de la leyenda de La Llorona?",
+        "¿Quién era La Llorona en la mitología mexica?",
+        "¿Por qué La Llorona grita '¡Ay, mis hijos!'?",
+        "La Llorona virreinal y prehispánica"
+      ],
+      "respuesta": "La leyenda de **La Llorona** es una de las narraciones folclóricas más arraigadas de México, nacida de la fusión entre mitos prehispánicos y relatos coloniales:\n\n- **Raíz mesoamericana (Cihuacóatl):** Fray Bernardino de Sahagún registró en el *Códice Florentino* que antes de la llegada de los españoles, se escuchaban lamentos nocturnos en Tenochtitlan de la diosa **Cihuacóatl** (mujer serpiente y patrona de las mujeres muertas en el parto), quien lloraba desgarradoramente por las calles y lagos clamando: *'¡Hijos míos, ya nos tenemos que ir!'* o *'¡Hijos míos, ¿a dónde los llevaré?!'*, como presagio de la destrucción mexica.\n- **La leyenda virreinal novohispana:** En la época de la Colonia, la historia se transformó en la trágica crónica de una hermosa mujer indígena o criolla que se enamora de un caballero español; tras ser abandonada por este, en un arranque de desesperación ahoga a sus pequeños en el río y, consumida por la culpa, se quita la vida. Desde entonces, su alma en pena vaga vestida de blanco por callejones y acequias lanzando su desgarrador lamento.",
+      "palabras_clave": [
+        "la llorona",
+        "leyenda de la llorona",
+        "cihuacoatl",
+        "ay mis hijos",
+        "codice florentino",
+        "leyendas virreinales",
+        "alma en pena",
+        "mitos mexicanos"
+      ],
+      "sinonimos": [
+        "origen de la llorona",
+        "la mujer que llora",
+        "leyenda colonial de la llorona"
+      ],
+      "fuentes": [
+        "inah-leyendas-cihuacoatl"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "La leyenda de La Llorona empezó hace muchísimos años con la diosa Cihuacóatl, que cuidaba a los niños mexicas. Con el tiempo se convirtió en el cuento de la mujer que vestida de blanco busca a sus pequeños en los lagos y canales.",
+      "conceptos": [
+        "origen",
+        "creencia"
+      ],
+      "nivel": "tradicion"
+    },
+    {
+      "id": "leyenda-el-charro-negro",
+      "tema": "La leyenda del Charro Negro",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿Cuál es la leyenda del Charro Negro?",
+        "¿De qué trata la historia del Charro Negro?",
+        "¿Quién es el Charro Negro en el folclore mexicano?",
+        "Pacto con el diablo y el Charro Negro"
+      ],
+      "respuesta": "La leyenda del **Charro Negro** es un relato clásico de advertencia moral y folclore rural mexicano:\n\n- **El origen:** Cuenta la historia de un joven campesino muy vanidoso pero humilde que ambicionaba vestir con trajes de lujo y poseer riquezas sin esforzarse. En su desesperación, invoca al Diablo en una encrucijada y pacta con él a cambio de oro inagotable.\n- **La condena:** Tras disfrutar de banquetes y joyas, llega la hora de cobrar la deuda. El joven intenta huir a caballo con una bolsa de monedas de oro, pero es alcanzado por el Diablo en un paraje solitario. Su piel se carboniza, sus ojos se vuelven brazas ardientes y su caballo se transforma en una bestia con patas de fuego.\n- **El jinete espectral:** Quedó condenado a vagar por los caminos rurales de México con su impecable traje de charro con botonadura de plata y sombrero de ala ancha, buscando a algún viajero ambicioso que acepte una bolsa de monedas para tomar su lugar y liberar su alma de la eternidad.",
+      "palabras_clave": [
+        "el charro negro",
+        "leyenda del charro negro",
+        "charro espectral",
+        "pacto en el camino",
+        "folclore mexicano",
+        "leyendas mexicanas",
+        "jinete fantasmal"
+      ],
+      "sinonimos": [
+        "historia del charro negro",
+        "el charro y el diablo",
+        "aparicion del charro"
+      ],
+      "fuentes": [
+        "inah-leyendas-cihuacoatl"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "El Charro Negro es una historia tradicional sobre un jinete que viste de negro y cabalga de noche para recordar a la gente que la vanidad y la codicia nunca traen nada bueno.",
+      "conceptos": [
+        "creencia"
+      ],
+      "nivel": "tradicion"
+    },
+    {
+      "id": "leyenda-mulata-de-cordoba",
+      "tema": "La leyenda de la Mulata de Córdoba",
+      "categoria": "mitologia",
+      "preguntas_ejemplo": [
+        "¿Cuál es la leyenda de la Mulata de Córdoba?",
+        "¿Quién fue la Mulata de Córdoba?",
+        "¿Cómo escapó la Mulata de Córdoba de la cárcel?",
+        "Leyenda veracruzana de la inquisición"
+      ],
+      "respuesta": "La leyenda novohispana de **La Mulata de Córdoba** es uno de los relatos más bellos de inteligencia, magia y libertad de Veracruz:\n\n- **La mujer sabia:** En la Córdoba virreinal del siglo XVII vivía Soledad, una mujer de ascendencia africana y española de extraordinaria belleza y profundos conocimientos de herbolaria y medicina natural. Ayudaba a curar a los enfermos y desamparados, pero su independencia despertaba la envidia y el recelo de las élites locales.\n- **El juicio de la Inquisición:** Al rechazar los cortejos de un influyente corregidor de la ciudad, este la acusó falsamente de brujería y pacto diabólico. Fue arrestada y encerrada en las sombrías celdas de la fortaleza de San Juan de Ulúa en el puerto de Veracruz.\n- **El barco en la pared:** La noche previa a su ejecución, Soledad pidió a un carcelero un trozo de carbón. En los muros de piedra de su celda dibujó un velero con velas desplegadas con asombroso realismo. Al preguntarle al guardia: *'¿Qué le falta a este barco?'*, el carcelero respondió: *'Solo le falta navegar'*. Soledad sonrió diciendo: *'Pues mira cómo navega'*, saltó al dibujo y el barco zarpó mágicamente entre los muros de piedra, desvaneciéndose en el horizonte para siempre.",
+      "palabras_clave": [
+        "la mulata de cordoba",
+        "leyenda de la mulata",
+        "veracruz",
+        "san juan de ulua",
+        "barco de carbon",
+        "soledad de cordoba",
+        "leyendas coloniales"
+      ],
+      "sinonimos": [
+        "historia de la mulata de cordoba",
+        "leyenda del barco dibujado con carbon"
+      ],
+      "fuentes": [
+        "inah-leyendas-cihuacoatl"
+      ],
+      "prioridad": 7,
+      "respuesta_ninos": "La Mulata de Córdoba era una mujer muy inteligente y bondadosa que ayudaba a curar enfermos. Cuando la encerraron injustamente, dibujó un barquito en la pared de piedra con un carbón, se subió en él y navegó hacia la libertad.",
+      "conceptos": [
+        "creencia"
+      ],
+      "nivel": "tradicion"
+    },
+    {
+      "id": "estructura-calaverita-literaria",
+      "tema": "Estructura poética de la calaverita literaria: métrica, rima y tono",
+      "categoria": "calaveras",
+      "preguntas_ejemplo": [
+        "¿Cómo se escribe una calaverita literaria?",
+        "¿Cuáles son las reglas de la calaverita literaria?",
+        "Estructura y rima de una calavera literaria",
+        "¿Qué métrica tienen las calaveritas literarias?"
+      ],
+      "respuesta": "La **calaverita literaria** es un género poético satírico único de México, originado como epitafio burlón en el siglo XIX para satirizar a personajes públicos y recordar que la muerte nos iguala a todos:\n\n**Reglas formales de composición:**\n1. **Estrofas:** Se compone en estrofas de cuatro versos (**cuartetos**).\n2. **Métrica octosílaba:** Cada verso debe tener idealmente **8 sílabas métricas** (el ritmo natural del verso popular en español).\n3. **Rima consonante o asonante:** El esquema clásico es **ABBA** (redondilla: rima el verso 1 con el 4, y el 2 con el 3) o **ABAB** (cuarteta: rima el verso 1 con el 3, y el 2 con el 4).\n4. **Personificación de la Muerte:** La Parca, Catrina, Flaca o Huesuda debe actuar como un personaje activo que llega por sorpresa al trabajo, escuela o casa de la persona.\n5. **Humor pícaro y afectuoso:** No busca ofender con crueldad, sino resaltar con picardía un defecto simpático, afición o manía del homenajeado.\n\n**Ejemplo clásico:**\n*Estaba la muerte flaca (8)*\n*sentadita en su sillón, (8)*\n*comiendo pan y mezcal (8)*\n*para alegrar el panteón. (8)*",
+      "palabras_clave": [
+        "como escribir una calaverita",
+        "estructura calaverita",
+        "versos octosilabos",
+        "rima calaverita",
+        "cuarteto",
+        "satira",
+        "la parca",
+        "poesia popular mexicana"
+      ],
+      "sinonimos": [
+        "reglas de las calaveritas literarias",
+        "metrica de calaveritas",
+        "como rimar una calaverita"
+      ],
+      "fuentes": [
+        "unam-literatura-calaveritas",
+        "natgeo-calaveras-literarias"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Una calaverita literaria es un poema chistoso de cuatro renglones que riman, donde la Flaca o Catrina se lleva de broma a un amigo o maestro por travieso, comelón o dormilón.",
+      "conceptos": [
+        "calaveras-literarias"
+      ],
+      "nivel": "documentado"
+    },
+    {
+      "id": "crear-calaverita-personalizada",
+      "tema": "Cómo crear una calaverita literaria personalizada para amigos o maestros",
+      "categoria": "calaveras",
+      "preguntas_ejemplo": [
+        "Escribe una calaverita literaria personalizada",
+        "¿Cómo hacer una calaverita con mi nombre?",
+        "Calaverita literaria para un amigo o profesor",
+        "Ejemplo de calaverita para dedicar"
+      ],
+      "respuesta": "Para crear una calaverita literaria personalizada dedicada a un amigo, familiar o maestro, sigue esta fórmula en 4 pasos sencillos:\n\n1. **Identifica el rasgo divertido:** Elige un rasgo característico (siempre llega tarde, ama los tacos, se la pasa en el celular, deja mucha tarea, juega fútbol todo el día).\n2. **Pon a la Catrina en la escena:** Haz que la Muerte llegue justo al lugar donde esa persona suele estar (el salón, el campo de fútbol, la oficina o la cocina).\n3. **Rima el nombre o acción:** Busca palabras que rimen con el nombre o apodo.\n4. **Final burlón:** Concluye diciendo cómo la Catrina se lo llevó al panteón para que le ayude a hacer lo mismo allá abajo.\n\n**Ejemplo para un amigo distraído:**\n*Estaba Ricardo en la sala,*\n*con el celular en la mano,*\n*cuando llegó doña Catrina*\n*diciéndole: 'Vámonos, hermano'.*\n*Ricardo no se dio cuenta*\n*por estar viendo un meme genial,*\n*y ahora baila con la Flaca*\n*en la fiesta funeral.*",
+      "palabras_clave": [
+        "calaverita personalizada",
+        "hacer calaverita para un amigo",
+        "calaverita literaria ejemplo",
+        "calaverita para maestro",
+        "escribe una calaverita",
+        "rimas con nombres"
+      ],
+      "sinonimos": [
+        "hazme una calaverita",
+        "inventar una calaverita literaria",
+        "calaverita rimada personalizada"
+      ],
+      "fuentes": [
+        "unam-literatura-calaveritas"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Para hacer una calaverita a tu amigo, piensa en lo que más le gusta hacer y rima cuatro versos contando cómo la Catrina vino a jugar con él al camposanto.",
+      "conceptos": [
+        "calaveras-literarias"
+      ],
+      "nivel": "recomendacion"
+    },
+    {
+      "id": "resignificacion-estetica-comercial",
+      "tema": "Estética masiva, cultura pop y la resignificación del Día de Muertos",
+      "categoria": "actualidad",
+      "preguntas_ejemplo": [
+        "¿En qué medida la estética masiva ha resignificado la tradición?",
+        "¿Cómo dialogan las tradiciones indígenas con la versión actual del Día de Muertos?",
+        "¿La comercialización del Día de Muertos afecta la tradición?",
+        "Impacto de la cultura pop global en el Día de Muertos"
+      ],
+      "respuesta": "El Día de Muertos contemporáneo se encuentra en un constante diálogo entre la tradición ancestral y la resignificación de la cultura pop masiva:\n\n- **De lo íntimo a lo espectacular:** Históricamente, el Día de Muertos era una celebración privada, doméstica y comunitaria centrada en la ofrenda familiar y la velación en el cementerio. En las últimas dos décadas, impulsado por el reconocimiento de la UNESCO (2003/2008), el cine global (*Coco*, *Spectre*) y festivales urbanos, adquirió una dimensión pública monumental caracterizada por desfiles de carros alegóricos, concursos de Catrinas con pedrería neón y mercadotecnia turística.\n- **¿Pérdida o revitalización?** Antropólogos de la UNAM e INAH señalan que la cultura viva no es estática: los jóvenes mexicanos han adoptado estas nuevas formas visuales no para sustituir la tradición, sino para reafirmar con orgullo su identidad frente a celebraciones foráneas como Halloween. En los hogares, el núcleo sagrado (encender una vela, poner agua y recordar con amor al difunto) permanece intocado.\n- **Conclusión cultural:** La estética comercial amplifica la fiesta hacia el exterior, pero la fuerza espiritual y el respeto a la memoria se mantienen vivos en el altar familiar y en los rituales de cada comunidad.",
+      "palabras_clave": [
+        "resignificacion de la tradicion",
+        "estetica masiva",
+        "cultura comercial",
+        "dialogo tradiciones indigenas y actual",
+        "comercializacion dia de muertos",
+        "globalizacion y dia de muertos",
+        "tradicion viva",
+        "coco y desfile"
+      ],
+      "sinonimos": [
+        "influencia de los medios en dia de muertos",
+        "el dia de muertos hoy en dia",
+        "como ha cambiado el dia de muertos"
+      ],
+      "fuentes": [
+        "unam-global-ofrendas",
+        "cdmx-desfile-historia",
+        "unesco-ich-00054"
+      ],
+      "prioridad": 8,
+      "respuesta_ninos": "Aunque hoy en día vemos desfiles gigantescos y películas en el cine sobre el Día de Muertos, lo más importante sigue estando en casita: encender una velita y recordar con mucho cariño a quienes amamos.",
+      "conceptos": [
+        "patrimonio",
+        "origen",
+        "catrina"
+      ],
+      "nivel": "documentado"
     }
   ]
 }

@@ -1,8 +1,8 @@
 # Resultados de la evaluación del chatbot
 
-- **Fecha de la prueba:** 2026-10-03
-- **Entradas en la base de conocimiento:** 50
-- **Fuentes documentadas:** 29
+- **Fecha de la prueba:** 2026-10-15
+- **Entradas en la base de conocimiento:** 81
+- **Fuentes documentadas:** 47
 - **Umbral de respuesta:** puntaje mínimo 3 y al menos un término del dominio del chatbot
 
 El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Este documento registra lo que respondió el chatbot a cada una.
@@ -17,7 +17,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** definicion
 - **Puntaje:** 12.2 (umbral 3)
 - **Palabras clave coincidentes:** que es el dia de muertos, que es
-- **Segundo candidato:** Significado cultural (6.77)
+- **Segundo candidato:** Calendario y fechas de llegada de las ofrendas (niños, mascotas y adultos) (6.32)
 - **Fuentes citadas:** unesco-ich-00054, unesco-sede-dia-muertos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -27,9 +27,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Fechas de la celebración
 - **Categoría:** fechas
-- **Puntaje:** 12 (umbral 3)
+- **Puntaje:** 11 (umbral 3)
 - **Palabras clave coincidentes:** que dias se celebra, que dias
-- **Segundo candidato:** Significado cultural (2.67)
+- **Segundo candidato:** Calendario y fechas de llegada de las ofrendas (niños, mascotas y adultos) (3.38)
 - **Fuentes citadas:** unesco-ich-00054, lugares-inah-fiestas-indigenas, unam-gaceta-miccailhuitontli, unesco-sede-dia-muertos, expansion-ofrendas-fechas, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -39,9 +39,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Origen prehispánico
 - **Categoría:** origen
-- **Puntaje:** 10.48 (umbral 3)
+- **Puntaje:** 9.67 (umbral 3)
 - **Palabras clave coincidentes:** origen
-- **Segundo candidato:** Culturas prehispánicas que influyeron (3.98)
+- **Segundo candidato:** La leyenda de La Llorona: De la diosa Cihuacóatl a la leyenda popular (3.84)
 - **Fuentes citadas:** unesco-ich-00054, lugares-inah-fiestas-indigenas, unam-gaceta-miccailhuitontli, unam-gaceta-evangelizar, inpi-fiestas-pueblos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -63,9 +63,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El cempasúchil
 - **Categoría:** elementos
-- **Puntaje:** 13.01 (umbral 3)
+- **Puntaje:** 12.58 (umbral 3)
 - **Palabras clave coincidentes:** cempasuchil, El cempasúchil
-- **Segundo candidato:** El camino de pétalos (3.98)
+- **Segundo candidato:** El camino de pétalos (3.79)
 - **Fuentes citadas:** lugares-inah-fiestas-indigenas, unesco-sede-dia-muertos, unam-gaceta-colonia, agricultura-cempasuchil
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -75,9 +75,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** La ofrenda o altar
 - **Categoría:** ofrenda
-- **Puntaje:** 13.88 (umbral 3)
+- **Puntaje:** 13.86 (umbral 3)
 - **Palabras clave coincidentes:** ofrenda, que representa una ofrenda
-- **Segundo candidato:** Una ofrenda con poco presupuesto (3.81)
+- **Segundo candidato:** Una ofrenda con poco presupuesto (3.8)
 - **Fuentes citadas:** unam-global-ofrendas, lugares-inah-fiestas-indigenas, inpi-elementos-ofrenda, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -87,9 +87,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Elementos de la ofrenda y su significado
 - **Categoría:** elementos
-- **Puntaje:** 15.54 (umbral 3)
+- **Puntaje:** 15.5 (umbral 3)
 - **Palabras clave coincidentes:** elementos, que elementos, que elementos tiene, elemento
-- **Segundo candidato:** La ofrenda o altar (7.05)
+- **Segundo candidato:** La ofrenda o altar (7.02)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-global-ofrendas, lugares-inah-fiestas-indigenas, cultura-calaveritas-azucar, natgeo-ofrendas, expansion-ofrendas-fechas, eluniversal-guia-ofrendas, semillitas-ninos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -99,7 +99,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El agua en la ofrenda
 - **Categoría:** elementos
-- **Puntaje:** 15.8 (umbral 3)
+- **Puntaje:** 15.55 (umbral 3)
 - **Palabras clave coincidentes:** agua, por que se coloca agua
 - **Segundo candidato:** La sal en la ofrenda (3.63)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-global-ofrendas, expansion-ofrendas-fechas, natgeo-ofrendas, inpi-fiestas-pueblos
@@ -111,9 +111,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El papel picado
 - **Categoría:** elementos
-- **Puntaje:** 16.5 (umbral 3)
+- **Puntaje:** 15.25 (umbral 3)
 - **Palabras clave coincidentes:** papel picado, por que se utiliza papel picado, papel, picado
-- **Segundo candidato:** El cempasúchil (0.96)
+- **Segundo candidato:** Cómo elaborar papel picado tradicional paso a paso (2.67)
 - **Fuentes citadas:** lugares-inah-fiestas-indigenas, inpi-elementos-ofrenda, natgeo-ofrendas, expansion-ofrendas-fechas, unam-juridicas-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -123,9 +123,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Veladoras y velas
 - **Categoría:** elementos
-- **Puntaje:** 15.4 (umbral 3)
+- **Puntaje:** 13.19 (umbral 3)
 - **Palabras clave coincidentes:** veladora, veladoras
-- **Segundo candidato:** Las fotografías en la ofrenda (1.5)
+- **Segundo candidato:** Guía y etiqueta para visitar panteones en Día de Muertos (2.57)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, lugares-inah-fiestas-indigenas, inpi-fiestas-pueblos, tiendanube-manualidades
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -139,9 +139,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El camino de pétalos
 - **Categoría:** elementos
-- **Puntaje:** 21.03 (umbral 3)
+- **Puntaje:** 20.35 (umbral 3)
 - **Palabras clave coincidentes:** camino de petalos, camino, petalos, El camino de pétalos
-- **Segundo candidato:** El cempasúchil (7.68)
+- **Segundo candidato:** El cempasúchil (7.24)
 - **Fuentes citadas:** lugares-inah-fiestas-indigenas, agricultura-cempasuchil, inpi-elementos-ofrenda, expansion-ofrendas-fechas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -151,9 +151,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El pan de muerto
 - **Categoría:** elementos
-- **Puntaje:** 19.55 (umbral 3)
+- **Puntaje:** 19.16 (umbral 3)
 - **Palabras clave coincidentes:** pan de muerto, pan, que significa el pan de muerto, El pan de muerto
-- **Segundo candidato:** Significado cultural (4.85)
+- **Segundo candidato:** Significado cultural (4.39)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-gaceta-miccailhuitontli, unam-gaceta-colonia, cessa-pan-de-muerto, natgeo-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -175,9 +175,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Comida y bebidas de la ofrenda
 - **Categoría:** elementos
-- **Puntaje:** 18.43 (umbral 3)
+- **Puntaje:** 18.14 (umbral 3)
 - **Palabras clave coincidentes:** comida, que comida, por que se coloca comida
-- **Segundo candidato:** El pan de muerto (4.43)
+- **Segundo candidato:** El pan de muerto (4.14)
 - **Fuentes citadas:** unam-global-ofrendas, lugares-inah-fiestas-indigenas, cdmx-ofrendas, inpi-fiestas-pueblos, eluniversal-guia-ofrendas, expansion-ofrendas-fechas, natgeo-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -187,9 +187,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Elementos de la ofrenda y su significado
 - **Categoría:** elementos
-- **Puntaje:** 12.54 (umbral 3)
+- **Puntaje:** 12.5 (umbral 3)
 - **Palabras clave coincidentes:** elementos, que elementos, elemento
-- **Segundo candidato:** La ofrenda o altar (9.38)
+- **Segundo candidato:** La ofrenda o altar (9.36)
 - **Fuentes citadas:** cdmx-ofrendas, inpi-elementos-ofrenda, unam-global-ofrendas, lugares-inah-fiestas-indigenas, cultura-calaveritas-azucar, natgeo-ofrendas, expansion-ofrendas-fechas, eluniversal-guia-ofrendas, semillitas-ninos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -199,9 +199,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Relación con las culturas indígenas
 - **Categoría:** influencia-indigena
-- **Puntaje:** 18.41 (umbral 3)
+- **Puntaje:** 18.21 (umbral 3)
 - **Palabras clave coincidentes:** culturas indigenas, que relacion tiene, indigena, indigenas
-- **Segundo candidato:** Culturas prehispánicas que influyeron (9.92)
+- **Segundo candidato:** Culturas prehispánicas que influyeron (9.78)
 - **Fuentes citadas:** unesco-ich-00054, inpi-fiestas-pueblos, cdmx-tlahuac-fiddem
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -223,9 +223,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Declaración de patrimonio de la UNESCO
 - **Categoría:** patrimonio
-- **Puntaje:** 13.8 (umbral 3)
+- **Puntaje:** 13.25 (umbral 3)
 - **Palabras clave coincidentes:** patrimonio, patrimonio cultural
-- **Segundo candidato:** Significado cultural (5.8)
+- **Segundo candidato:** Significado cultural (5.11)
 - **Fuentes citadas:** unesco-ich-00054, inah-diariodecampo-michoacan, vitabrevis-catrina
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -235,9 +235,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Diferencia entre el 1 y el 2 de noviembre
 - **Categoría:** fechas
-- **Puntaje:** 15 (umbral 3)
+- **Puntaje:** 14.75 (umbral 3)
 - **Palabras clave coincidentes:** 1 y 2 de noviembre, 2 de noviembre, que diferencia
-- **Segundo candidato:** Fechas de la celebración (5.75)
+- **Segundo candidato:** Fechas de la celebración (5.63)
 - **Fuentes citadas:** unesco-sede-dia-muertos, unam-gaceta-miccailhuitontli, unam-gaceta-evangelizar, unamglobal-origenes, arqueologia-influencias-europeas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -247,9 +247,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Variaciones regionales
 - **Categoría:** regional
-- **Puntaje:** 14.85 (umbral 3)
+- **Puntaje:** 14.7 (umbral 3)
 - **Palabras clave coincidentes:** igual, region, regional, regiones
-- **Segundo candidato:** No existe una única forma correcta ni auténtica de celebrar (5.45)
+- **Segundo candidato:** No existe una única forma correcta ni auténtica de celebrar (5.3)
 - **Fuentes citadas:** cdmx-tlahuac-fiddem, unam-gaceta-colonia, inah-diariodecampo-michoacan, cdmx-programacion, inpi-fiestas-pueblos, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -265,7 +265,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** practico
 - **Puntaje:** 9 (umbral 3)
 - **Palabras clave coincidentes:** que elemento importante
-- **Segundo candidato:** El pan de muerto (8.52)
+- **Segundo candidato:** El pan de muerto (8.13)
 - **Fuentes citadas:** inpi-fiestas-pueblos, inpi-elementos-ofrenda, cdmx-ofrendas, unam-global-ofrendas, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -275,9 +275,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Cómo hacer una ofrenda sencilla
 - **Categoría:** practico
-- **Puntaje:** 21.29 (umbral 3)
+- **Puntaje:** 21.15 (umbral 3)
 - **Palabras clave coincidentes:** poco espacio, elementos prioritarios, que elementos son prioritarios, espacio
-- **Segundo candidato:** Elementos de la ofrenda y su significado (8.04)
+- **Segundo candidato:** Elementos de la ofrenda y su significado (8)
 - **Fuentes citadas:** inpi-fiestas-pueblos, inpi-elementos-ofrenda, cdmx-ofrendas, unam-global-ofrendas, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -287,9 +287,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Cómo hacer una ofrenda sencilla
 - **Categoría:** practico
-- **Puntaje:** 13.29 (umbral 3)
+- **Puntaje:** 13.15 (umbral 3)
 - **Palabras clave coincidentes:** ofrenda sencilla
-- **Segundo candidato:** Una ofrenda con poco presupuesto (6.29)
+- **Segundo candidato:** Una ofrenda con poco presupuesto (6.15)
 - **Fuentes citadas:** inpi-fiestas-pueblos, inpi-elementos-ofrenda, cdmx-ofrendas, unam-global-ofrendas, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -299,9 +299,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Explicar el Día de Muertos a un niño
 - **Categoría:** ninos
-- **Puntaje:** 20.06 (umbral 3)
+- **Puntaje:** 20.03 (umbral 3)
 - **Palabras clave coincidentes:** nino de 8 anos, 8 anos, a un nino
-- **Segundo candidato:** Actividades con niños (5.32)
+- **Segundo candidato:** Calendario y fechas de llegada de las ofrendas (niños, mascotas y adultos) (7.35)
 - **Fuentes citadas:** semillitas-ninos, agricultura-cempasuchil, cultura-catrina, tiendanube-manualidades, unam-global-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -311,9 +311,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Exposición escolar sobre el Día de Muertos
 - **Categoría:** practico
-- **Puntaje:** 14.88 (umbral 3)
+- **Puntaje:** 14.75 (umbral 3)
 - **Palabras clave coincidentes:** exposicion
-- **Segundo candidato:** Elementos de la ofrenda y su significado (7.38)
+- **Segundo candidato:** Elementos de la ofrenda y su significado (7.33)
 - **Fuentes citadas:** unesco-ich-00054, unamglobal-origenes, inpi-fiestas-pueblos, natgeo-ofrendas, cdmx-programacion, unam-juridicas-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -323,9 +323,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Una ofrenda con materiales reciclados
 - **Categoría:** practico
-- **Puntaje:** 17.62 (umbral 3)
+- **Puntaje:** 17.29 (umbral 3)
 - **Palabras clave coincidentes:** reciclado, reciclados, materiales reciclados
-- **Segundo candidato:** Materiales fáciles de conseguir para una ofrenda escolar (9.62)
+- **Segundo candidato:** Materiales fáciles de conseguir para una ofrenda escolar (9.29)
 - **Fuentes citadas:** tiendanube-manualidades, cdmx-programacion, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -337,7 +337,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** ninos
 - **Puntaje:** 18 (umbral 3)
 - **Palabras clave coincidentes:** actividad, actividad escolar, organizar una actividad, actividad escolar sobre dia de muertos
-- **Segundo candidato:** Significado cultural (4.43)
+- **Segundo candidato:** Calendario y fechas de llegada de las ofrendas (niños, mascotas y adultos) (3.98)
 - **Fuentes citadas:** semillitas-ninos, cessa-pan-de-muerto, cdmx-programacion, tiendanube-manualidades
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -347,9 +347,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** No existe una única forma correcta ni auténtica de celebrar
 - **Categoría:** regional
-- **Puntaje:** 24.51 (umbral 3)
+- **Puntaje:** 24.37 (umbral 3)
 - **Palabras clave coincidentes:** que elementos pueden variar, pueden variar, varia segun la familia, varian segun la familia, familia o region
-- **Segundo candidato:** Variaciones regionales (8.85)
+- **Segundo candidato:** Variaciones regionales (8.7)
 - **Fuentes citadas:** unesco-ich-00054, inpi-fiestas-pueblos, cessa-pan-de-muerto, agricultura-cempasuchil, inpi-elementos-ofrenda
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -363,9 +363,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Lo que no es obligatorio en una ofrenda
 - **Categoría:** mitos
-- **Puntaje:** 25.77 (umbral 3)
+- **Puntaje:** 25.47 (umbral 3)
 - **Palabras clave coincidentes:** es obligatorio, obligatorio, obligatoria, tequila
-- **Segundo candidato:** El pan de muerto (5.39)
+- **Segundo candidato:** La ofrenda o altar (5.32)
 - **Fuentes citadas:** eluniversal-guia-ofrendas, unam-global-ofrendas, inpi-elementos-ofrenda, expansion-ofrendas-fechas, proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -375,9 +375,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** La estructura de niveles del altar
 - **Categoría:** ofrenda
-- **Puntaje:** 16.28 (umbral 3)
+- **Puntaje:** 15.73 (umbral 3)
 - **Palabras clave coincidentes:** niveles, nivel, siete niveles
-- **Segundo candidato:** Lo que no es obligatorio en una ofrenda (10.11)
+- **Segundo candidato:** Lo que no es obligatorio en una ofrenda (9.81)
 - **Fuentes citadas:** unam-global-ofrendas, arqueologia-influencias-europeas, inpi-fiestas-pueblos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -387,9 +387,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Por qué no es una tradición exclusivamente prehispánica o azteca
 - **Categoría:** origen
-- **Puntaje:** 15.48 (umbral 3)
+- **Puntaje:** 15.34 (umbral 3)
 - **Palabras clave coincidentes:** nacio completamente en la epoca prehispanica, nacio completamente
-- **Segundo candidato:** Origen prehispánico (8.16)
+- **Segundo candidato:** Origen prehispánico (7.56)
 - **Fuentes citadas:** unamglobal-origenes, unesco-ich-00054, arqueologia-influencias-europeas, unam-gaceta-colonia, expansion-ofrendas-fechas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -411,9 +411,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** El regreso de las almas: creencia y cómo se entiende
 - **Categoría:** significado
-- **Puntaje:** 16.3 (umbral 3)
+- **Puntaje:** 15.4 (umbral 3)
 - **Palabras clave coincidentes:** almas regresan, regresan fisicamente, fisicamente
-- **Segundo candidato:** Los significados del cempasúchil (2.64)
+- **Segundo candidato:** Lo que no es obligatorio en una ofrenda (2.35)
 - **Fuentes citadas:** unesco-ich-00054, inpi-fiestas-pueblos, proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -435,9 +435,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Los significados del cempasúchil
 - **Categoría:** elementos
-- **Puntaje:** 18.93 (umbral 3)
+- **Puntaje:** 18.75 (umbral 3)
 - **Palabras clave coincidentes:** unico significado, significado unico, significado oficial, cempasuchil significa
-- **Segundo candidato:** El cempasúchil (11.56)
+- **Segundo candidato:** El cempasúchil (11.04)
 - **Fuentes citadas:** agricultura-cempasuchil, unam-gaceta-colonia, lugares-inah-fiestas-indigenas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -449,7 +449,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** regional
 - **Puntaje:** 14.43 (umbral 3)
 - **Palabras clave coincidentes:** unica forma correcta, forma correcta
-- **Segundo candidato:** La ofrenda o altar (5.05)
+- **Segundo candidato:** La ofrenda o altar (5.02)
 - **Fuentes citadas:** unesco-ich-00054, inpi-fiestas-pueblos, cessa-pan-de-muerto, agricultura-cempasuchil, inpi-elementos-ofrenda
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -463,9 +463,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Cómo hacer una ofrenda sencilla
 - **Categoría:** practico
-- **Puntaje:** 16.29 (umbral 3)
+- **Puntaje:** 16.15 (umbral 3)
 - **Palabras clave coincidentes:** que necesito, ofrenda para mi abuelo
-- **Segundo candidato:** Una ofrenda con poco presupuesto (6.29)
+- **Segundo candidato:** Una ofrenda con poco presupuesto (6.15)
 - **Fuentes citadas:** inpi-fiestas-pueblos, inpi-elementos-ofrenda, cdmx-ofrendas, unam-global-ofrendas, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -475,9 +475,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Una ofrenda con poco presupuesto
 - **Categoría:** practico
-- **Puntaje:** 15.29 (umbral 3)
+- **Puntaje:** 15.15 (umbral 3)
 - **Palabras clave coincidentes:** pesos, 300 pesos
-- **Segundo candidato:** Cómo hacer una ofrenda sencilla (6.29)
+- **Segundo candidato:** Cómo hacer una ofrenda sencilla (6.15)
 - **Fuentes citadas:** cessa-pan-de-muerto, inpi-fiestas-pueblos, tiendanube-manualidades, eluniversal-guia-ofrendas, proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -487,9 +487,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Exposición escolar sobre el Día de Muertos
 - **Categoría:** practico
-- **Puntaje:** 20.88 (umbral 3)
+- **Puntaje:** 20.75 (umbral 3)
 - **Palabras clave coincidentes:** exposicion, exposicion de 5 minutos, 5 minutos
-- **Segundo candidato:** Cómo hacer una ofrenda sencilla (3.82)
+- **Segundo candidato:** Cómo hacer una ofrenda sencilla (3.71)
 - **Fuentes citadas:** unesco-ich-00054, unamglobal-origenes, inpi-fiestas-pueblos, natgeo-ofrendas, cdmx-programacion, unam-juridicas-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -499,9 +499,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Materiales fáciles de conseguir para una ofrenda escolar
 - **Categoría:** practico
-- **Puntaje:** 13.98 (umbral 3)
+- **Puntaje:** 13.85 (umbral 3)
 - **Palabras clave coincidentes:** materiales, material, ofrenda escolar
-- **Segundo candidato:** La ofrenda o altar (5.05)
+- **Segundo candidato:** La ofrenda o altar (5.02)
 - **Fuentes citadas:** tiendanube-manualidades, cessa-pan-de-muerto, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -511,9 +511,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Comida y bebidas de la ofrenda
 - **Categoría:** elementos
-- **Puntaje:** 17.93 (umbral 3)
+- **Puntaje:** 17.64 (umbral 3)
 - **Palabras clave coincidentes:** comida, que comida, que comida puedo poner
-- **Segundo candidato:** Lo que no es obligatorio en una ofrenda (5.43)
+- **Segundo candidato:** Lo que no es obligatorio en una ofrenda (5.14)
 - **Fuentes citadas:** unam-global-ofrendas, lugares-inah-fiestas-indigenas, cdmx-ofrendas, inpi-fiestas-pueblos, eluniversal-guia-ofrendas, expansion-ofrendas-fechas, natgeo-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -525,7 +525,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** practico
 - **Puntaje:** 17 (umbral 3)
 - **Palabras clave coincidentes:** decorar, decorado, salon, salon escolar, como decorar
-- **Segundo candidato:** Exposición escolar sobre el Día de Muertos (0.38)
+- **Segundo candidato:** Ideas de vestuario y disfraz de Día de Muertos económico (0.49)
 - **Fuentes citadas:** tiendanube-manualidades, lugares-inah-fiestas-indigenas, inpi-elementos-ofrenda, cdmx-programacion, proyecto-criterios
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -535,9 +535,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Actividades con niños
 - **Categoría:** ninos
-- **Puntaje:** 21.18 (umbral 3)
+- **Puntaje:** 20.72 (umbral 3)
 - **Palabras clave coincidentes:** actividades, actividad, que actividades
-- **Segundo candidato:** La ofrenda para niños (7.7)
+- **Segundo candidato:** La ofrenda para niños (7.23)
 - **Fuentes citadas:** semillitas-ninos, cessa-pan-de-muerto, cdmx-programacion, tiendanube-manualidades
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -549,7 +549,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** practico
 - **Puntaje:** 17.4 (umbral 3)
 - **Palabras clave coincidentes:** tradicion familiar, tradicion cultural, diferenciar
-- **Segundo candidato:** Significado cultural (2.99)
+- **Segundo candidato:** Significado cultural (2.85)
 - **Fuentes citadas:** proyecto-criterios, unesco-ich-00054, inpi-fiestas-pueblos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -563,9 +563,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Por qué no es una tradición exclusivamente prehispánica o azteca
 - **Categoría:** origen
-- **Puntaje:** 14.48 (umbral 3)
+- **Puntaje:** 14.34 (umbral 3)
 - **Palabras clave coincidentes:** es una tradicion azteca, tradicion azteca
-- **Segundo candidato:** Origen prehispánico (3.94)
+- **Segundo candidato:** El xoloitzcuintle: guía sagrado hacia el Mictlán (5.61)
 - **Fuentes citadas:** unamglobal-origenes, unesco-ich-00054, arqueologia-influencias-europeas, unam-gaceta-colonia, expansion-ofrendas-fechas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -575,9 +575,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Cómo se combinaron elementos indígenas y europeos
 - **Categoría:** influencia-europea
-- **Puntaje:** 24.91 (umbral 3)
+- **Puntaje:** 24.77 (umbral 3)
 - **Palabras clave coincidentes:** combinaron, combinacion, combinaron elementos, elementos indigenas y europeos, europeo, europeos
-- **Segundo candidato:** Origen prehispánico (5.34)
+- **Segundo candidato:** Relación con las culturas indígenas (5.14)
 - **Fuentes citadas:** unam-gaceta-colonia, unamglobal-origenes, arqueologia-influencias-europeas, unam-global-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -587,9 +587,9 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 
 - **Tema encontrado:** Variaciones regionales
 - **Categoría:** regional
-- **Puntaje:** 8.01 (umbral 3)
+- **Puntaje:** 7.87 (umbral 3)
 - **Palabras clave coincidentes:** region, regional, regiones
-- **Segundo candidato:** No existe una única forma correcta ni auténtica de celebrar (2.51)
+- **Segundo candidato:** Huaquechula, Puebla: Altares monumentales de satín blanco (2.37)
 - **Fuentes citadas:** cdmx-tlahuac-fiddem, unam-gaceta-colonia, inah-diariodecampo-michoacan, cdmx-programacion, inpi-fiestas-pueblos, eluniversal-guia-ofrendas
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -613,7 +613,7 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 - **Categoría:** practico
 - **Puntaje:** 19.9 (umbral 3)
 - **Palabras clave coincidentes:** distinguir, informacion historica, tradicion popular, creencias familiares
-- **Segundo candidato:** El regreso de las almas: creencia y cómo se entiende (2.64)
+- **Segundo candidato:** Destinos del alma según la muerte: Mictlán, Tlalocan, Tonatiuhichan y Chichihuacuauhco (1.92)
 - **Fuentes citadas:** proyecto-criterios, unesco-ich-00054, inpi-fiestas-pueblos
 - **Primeros 300 caracteres de la respuesta:**
 
@@ -702,6 +702,6 @@ Ninguno. Cada pregunta de evaluación se resolvió con la entrada prevista.
 
 ## Verificación de trazabilidad de las fuentes
 
-- Entradas de conocimiento: 50, cada una con al menos una fuente.
-- Fuentes distintas citadas por la base de conocimiento: 29 de 29.
+- Entradas de conocimiento: 81, cada una con al menos una fuente.
+- Fuentes distintas citadas por la base de conocimiento: 47 de 47.
 - Referencias rotas (fuentes citadas que no existen en data/fuentes.json): 0.
