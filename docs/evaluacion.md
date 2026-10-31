@@ -638,52 +638,52 @@ El archivo `data/evaluacion.json` contiene las preguntas agrupadas por nivel. Es
 ### OK — `¿Cuál es la capital de Francia?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `¿Cuánto cuesta un boleto de avión a Oaxaca?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `Explícame la Segunda Guerra Mundial.` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `¿Qué clima hace mañana en la Ciudad de México?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `¿Quién ganó el mundial de fútbol de 1998?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `Dame la receta de las enchiladas verdes.` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `¿Cómo se hace un transistor?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `¿Cuántos habitantes tiene Tokio?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `¿Cuál es el precio del dólar hoy?` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ### OK — `Recomendame una serie de Netflix.` (Correcto)
 
 - **Resultado:** el chatbot indicó que no tiene información suficiente.
-- **Mensaje mostrado:** "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México."
+- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").
 
 ## Resumen
 

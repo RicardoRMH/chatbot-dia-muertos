@@ -13,7 +13,15 @@ import {
   UMBRAL_PUNTAJE,
   clasificarInteraccionSocial,
   extraerNombreUsuario,
+  esFueraDelDominio,
+  coincidePalabraClave,
+  PARADAS,
 } from "./motor";
+import {
+  esPeticionCalaverita,
+  extraerDestinatarioCalaverita,
+  componerCalaverita,
+} from "./creativo";
 import type {
   BaseConocimiento,
   BaseFuentes,
@@ -36,10 +44,14 @@ export function obtenerFuente(id: string): Fuente | undefined {
 }
 
 export const MENSAJE_FUERA_DE_ALCANCE =
-  "No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. " +
-  "Mi especialidad es el Día de Muertos en México: su origen, las fechas, la ofrenda y " +
-  "sus elementos, las variaciones regionales, la Catrina, las calaveras literarias y las " +
-  "actividades prácticas. Puedes reformular tu pregunta con alguno de esos temas.";
+  "¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀 Soy tu guía del Día de Muertos, " +
+  "así que puedo acompañarte por estos cinco caminos:\n" +
+  "• Historia y cosmovisión (Mictlán, Tlalocan y el xoloitzcuintle)\n" +
+  "• Ofrendas, maquillaje de Catrina y manualidades\n" +
+  "• Cultura pop (películas, videojuegos y música)\n" +
+  "• Tradiciones regionales (Mixquic, Xantolo, Pomuch…)\n" +
+  "• Libros, leyendas y calaveritas literarias\n\n" +
+  "Cuéntame cuál te llama más la atención y lo exploramos juntos. 🌼";
 
 export const UMBRALES = { minimoParaResponder: UMBRAL_PUNTAJE };
 
@@ -130,6 +142,54 @@ function limpiarSaludoPregunta(texto: string): string {
     .trim();
 }
 
+/**
+ * Palabras de contenido de una consulta, sin las vacías del idioma.
+ * Sirve para reconocer consultas vagas de una sola palabra temática.
+ */
+function terminosSignificativos(normalizada: string): string[] {
+  return normalizada
+    .split(" ")
+    .filter((p) => p.length > 2 && !PARADAS.has(p));
+}
+
+/**
+ * Entradas que nombran literalmente el término dado. Al ser muchas, el chatbot
+ * prefiere ofrecer un menú en lugar de elegir una entrada al azar.
+ */
+function entradasQueMencionan(
+  termino: string,
+  lista: EntradaConocimiento[]
+): EntradaConocimiento[] {
+  return lista
+    .filter((entrada) =>
+      [entrada.tema, ...entrada.palabras_clave, ...(entrada.sinonimos ?? [])]
+        .map(normalizar)
+        .some((frase) => coincidePalabraClave(termino, frase))
+    )
+    .sort((a, b) => b.prioridad - a.prioridad);
+}
+
+/**
+ * Menú de desambiguación para una consulta vaga: orienta hacia subtemas
+ * concretos en lugar de devolver una respuesta genérica o un solo tema al azar.
+ */
+function menuDesambiguacion(
+  termino: string,
+  relacionadas: EntradaConocimiento[]
+): string {
+  const lineas = relacionadas
+    .slice(0, 4)
+    .map((e) => `• ${e.tema}`)
+    .join("\n");
+  const extras = sugerencias(4);
+  return (
+    `¡Vaya, te interesa «${termino}»! 💀 Tengo varios ángulos sobre ese tema. ` +
+    `¿Cuál de estos te gustaría explorar?\n\n${lineas}\n\n` +
+    `También puedo recomendarte: ${extras.join(", ")}. ` +
+    `Solo dime cuál y arrancamos. 🌼`
+  );
+}
+
 export function responder(
   pregunta: string,
   entradasActuales: EntradaConocimiento[] = entradas,
@@ -158,6 +218,26 @@ export function responder(
   const mejorFinal = mejorLimpio && mejorLimpio.puntaje > (mejor?.puntaje || 0)
     ? mejorLimpio
     : mejor;
+
+  // Composición creativa: calaverita literaria personalizada para un amigo,
+  // profesor, familiar o profesión. Va antes de la búsqueda temática para que
+  // no la capture una entrada teórica sobre las calaveras.
+  if (esPeticionCalaverita(normalizadaOriginal)) {
+    const destinatario = extraerDestinatarioCalaverita(
+      normalizadaOriginal,
+      nombreUsuario
+    );
+    return {
+      encontrado: true,
+      texto: componerCalaverita(destinatario),
+      entrada: null,
+      fuentes: [],
+      puntaje: 0,
+      palabrasCoincidentes: [],
+      sugerencias: sugerencias(),
+      conceptos,
+    };
+  }
 
   // Manejo de presentaciones y preguntas sobre el nombre
   if (tipoSocial === "presentacion") {
@@ -259,6 +339,26 @@ export function responder(
       sugerencias: sugerencias(),
       conceptos,
     };
+  }
+
+  // Consulta vaga de una sola palabra temática: en lugar de cargar una
+  // entrada completa al azar, se ofrece un menú de subtemas concretos.
+  const significativos = terminosSignificativos(normalizada);
+  if (significativos.length === 1 && !esFueraDelDominio(normalizada)) {
+    const termino = significativos[0];
+    const relacionadas = entradasQueMencionan(termino, entradasActuales);
+    if (relacionadas.length >= 2) {
+      return {
+        encontrado: true,
+        texto: menuDesambiguacion(termino, relacionadas),
+        entrada: null,
+        fuentes: [],
+        puntaje: 0,
+        palabrasCoincidentes: [],
+        sugerencias: sugerencias(),
+        conceptos,
+      };
+    }
   }
 
   if (!mejorFinal || mejorFinal.puntaje < UMBRAL_PUNTAJE) {

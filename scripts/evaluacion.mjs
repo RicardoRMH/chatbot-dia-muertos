@@ -120,7 +120,7 @@ for (const grupo of evaluacion.grupos) {
     } else {
       lineas.push("- **Resultado:** el chatbot indicó que no tiene información suficiente.");
       lineas.push(
-        "- **Mensaje mostrado:** \"No tengo información suficiente sobre ese tema dentro de mi base de conocimiento. Mi especialidad es el Día de Muertos en México.\""
+        '- **Mensaje mostrado:** redirección amable a los cinco ejes temáticos del chatbot ("¡Uy! De eso no tengo nada en mi baúl de recuerdos. 💀…").'
       );
       if (alternativos.length > 0) {
         lineas.push(

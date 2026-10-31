@@ -165,6 +165,69 @@ Las tareas se dividen en módulos atómicos ejecutados por OpenCode en la rama `
 - **Estado:** APROBADO.
 - **Evidencia validada:** Se eliminaron los falsos fallbacks en saludos informales y presentaciones, la memoria de sesión retiene el nombre del interlocutor y se preservó el 100% de compatibilidad con la suite de pruebas. Se autoriza commit atómico y paso a la Tarea 3.
 
+---
+
+### TAREA 3: TASK-ENGINE-03 — Fallbacks Inteligentes, Generación Creativa y Personalidad Juvenil
+
+#### Instrucciones de Antigravity (Arquitecto y Supervisor)
+- **Identificador:** TASK-ENGINE-03
+- **Objetivo:** Refinar el motor conversacional y el pipeline de fallback para:
+  1. Generar calaveritas literarias personalizadas cuando el usuario solicite una composición para un amigo, profesor, familiar o profesión (respetando métrica octosílaba y rima consonante).
+  2. Implementar un fallback inteligente y empático que reemplace la negativa rígida institucional por una redirección cálida y festiva propia de un guía juvenil.
+  3. Desambiguar consultas vagas o de una sola palabra ofreciendo opciones temáticas concretas.
+  4. Mantener la estricta proporcionalidad: respuestas concisas a preguntas sencillas, detalladas a solicitudes complejas y pasos estructurados a tutoriales.
+- **Diagnóstico y Evidencia:**
+  - Si un usuario pide una calaverita para un amigo, antes solo recibía un texto teórico sobre la historia de las calaveras.
+  - El mensaje de fallback anterior era seco, frío y académico (`No tengo información suficiente sobre ese tema dentro de mi base de conocimiento...`), lo cual resulta distante para adolescentes de 12 a 19 años.
+- **Archivos Afectados:**
+  - `lib/buscador.ts` (estrategia de fallbacks clasificados y generador creativo de calaveritas)
+  - `components/Chatbot.module.css` (detalles visuales de emojis y fluidez)
+- **Cambios Solicitados:**
+  - Crear motor de composición de calaveritas literarias personalizadas que detecte el destinatario (ej. "Carlos", "mi hermano", "el profesor Javier", "un programador") y genere versos en cuartetos octosílabos festivos.
+  - Sustituir `MENSAJE_FUERA_DE_ALCANCE` por una respuesta empática que invite a explorar los 5 ejes temáticos del bot sin sonar como error técnico.
+  - Desambiguar palabras sueltas temáticas orientando al usuario hacia temas específicos.
+- **Restricciones Técnicas:**
+  - Sin dependencias de APIs de pago ni llamadas externas de red. Todo debe funcionar en TypeScript puro local.
+  - Cero regresiones en la suite de 60 casos (`evaluacion.mjs`).
+- **Pruebas Obligatorias:**
+  - `Escribe una calaverita literaria para mi amigo Carlos` -> Genera estrofas con rima y el nombre Carlos.
+  - `Escribe una calaverita literaria para el profesor Javier` -> Genera estrofas escolares con humor respetuoso.
+  - `¿Quién ganó el mundial de fútbol?` -> Fallback amigable y reorientador al Día de Muertos.
+  - `npm run evaluar` y `npm run typecheck` deben pasar 100%.
+- **Criterios de Aceptación:**
+  - Calaveritas personalizadas funcionales con métrica y rima.
+  - Fallback humano, amigable y juvenil.
+
+#### Informe de OpenCode (Ingeniero de Software y Ejecutor)
+- **Tarea ejecutada:** TASK-ENGINE-03 — Fallbacks Inteligentes, Generación Creativa y Personalidad Juvenil.
+- **Archivos modificados:**
+  - `lib/creativo.ts` (nuevo módulo, ahora integrado): motor de composición de calaveritas literarias con detección de petición, extracción de destinatario y cinco plantillas temáticas (amigo, profesor, familiar, profesión y personal) en cuartetos con rima consonante.
+  - `lib/buscador.ts`: enrutamiento de peticiones creativas, sustitución del mensaje de fuera de alcance y desambiguación de consultas vagas.
+  - `scripts/evaluacion.mjs`: actualización del texto de referencia del fallback en el reporte generado.
+- **Resumen de los cambios reales:**
+  1. *Calaveritas personalizadas.* `responder()` detecta la intención de composición (`esPeticionCalaverita`), extrae el destinatario (`extraerDestinatarioCalaverita`) priorizando el nombre explícito (`mi amigo Carlos`), el rol (`el profesor Javier`, `mi hermano`, `un programador`) y, en su defecto, el `nombreUsuario` de la sesión, y devuelve los versos generados por `componerCalaverita()` sin pasar por la búsqueda vectorial (así una petición creativa ya no cae en la entrada teórica de las calaveras).
+  2. *Fallback empático.* `MENSAJE_FUERA_DE_ALCANCE` ya no es la negativa institucional, sino una redirección cálida que invita a recorrer los cinco ejes temáticos del bot (historia/cosmovisión, ofrendas y manualidades, cultura pop, tradiciones regionales, libros y leyendas).
+  3. *Desambiguación.* Las consultas de una sola palabra temática (`catrina`, `ofrenda`, `mictlan`) responden con un menú de subtemas concretos ordenados por prioridad más sugerencias, en lugar de descargar una entrada al azar. La regla solo se activa para palabras dentro del dominio, de modo que las preguntas de control fuera de alcance siguen rechazándose.
+- **Pruebas y Comandos:**
+  - `npm run evaluar` -> **60/60 aciertos** (50 evaluación + 10 control), 0 fallas y 0 referencias rotas. Sin regresiones.
+  - `npm run typecheck` -> exitoso (cero errores).
+  - `npm run build` -> exitoso (Next.js 16.3.6 + Turbopack).
+  - Validación funcional de los casos obligatorios:
+    - `Escribe una calaverita literaria para mi amigo Carlos` -> calaverita en cuartetos que menciona a **Carlos**.
+    - `Escribe una calaverita literaria para el profesor Javier` -> versos escolares con humor respetuoso y el nombre **Javier**.
+    - `Escribe una calaverita literaria para mi hermano` -> plantilla familiar (`tu hermano`).
+    - `Hazme una calaverita literaria para un programador` -> plantilla de profesión.
+    - `¿Quién ganó el mundial de fútbol?` -> fallback amigable y reorientador (contenido de control; la suite sigue marcándolo como fuera de alcance).
+    - `catrina`, `ofrenda`, `mictlan` -> menús de subtemas con sugerencias.
+    - Secuencia de memoria (Tarea 2) intacta: `Me llamo Ricardo` -> `¿Cómo me llamo?` -> pregunta temática con `nombreUsuario` conservado.
+- **Limitaciones y Pendientes:**
+  - La desambiguación se apoya en coincidencia de palabras clave; términos muy genéricos podrían incluir subtemas de prioridad alta poco relacionados. Ajustable afinando `prioridad` en `data/conocimiento.json`.
+  - El menú devuelve `encontrado: true` con `entrada: null` y por tanto no cita fuentes; es una respuesta de orientación, no un dato documentado.
+  - El motor creativo compone sobre plantillas fijas: no inventa anécdotas personales; el usuario puede editar los versos.
+  - Pendiente de revisión y aprobación de Antigravity (Supervisor).
+
+
+
 
 
 
